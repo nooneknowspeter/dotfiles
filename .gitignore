@@ -1,0 +1,11 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!.tmux.conf
+!README.md
+# etc...
+
+# ...even if they are in subdirectories
+!*/
