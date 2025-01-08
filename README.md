@@ -3,6 +3,7 @@
 ## clone files into ~ dir
 
 ```
+rm rf ~/README.md ~/.tmux.conf ~/.gitignore
 git clone https://github.com/nooneknowspeter/tmux-setup.git ~/
 
 ```
