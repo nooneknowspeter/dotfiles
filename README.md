@@ -1,4 +1,4 @@
-# tmux and bash terminal setup
+# terminal setup
 
 ## clone files into ~ dir
 
