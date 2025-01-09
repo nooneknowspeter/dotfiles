@@ -5,6 +5,7 @@
 !.gitignore
 !.tmux.conf
 !README.md
+!.config/nvim
 # etc...
 
 # ...even if they are in subdirectories
