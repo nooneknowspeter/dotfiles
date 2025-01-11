@@ -323,3 +323,7 @@ UPDATE_NEOVIM_CONFIG() {
 
 		UPDATE_SHELL_CONFIG
 
+		# exit script
+	elif [[ $INPUT == 0 ]]; then
+
+		echo -e "\n people fear what they don't know \n"
