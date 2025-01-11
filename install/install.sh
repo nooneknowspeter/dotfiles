@@ -315,3 +315,11 @@ UPDATE_NEOVIM_CONFIG() {
 		echo -e "\n updating neovim configuration \n"
 
 		UPDATE_NEOVIM_CONFIG
+
+		# update shell configuration
+	elif [[ $INPUT == 7 ]]; then
+
+		echo -e "\n updating shell configuration \n"
+
+		UPDATE_SHELL_CONFIG
+
