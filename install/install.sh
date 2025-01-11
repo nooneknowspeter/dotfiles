@@ -259,3 +259,12 @@ UPDATE_NEOVIM_CONFIG() {
 		INSTALL_NEOVIM
 
 		INSTALL_NEOVIM_CONFIG
+
+		# install and configure tmux
+	elif [[ $INPUT == 2 ]]; then
+
+		echo -e "\n installing and configuring tmux \n"
+
+		TMUX_INSTALL
+
+		TMUX_CONFIG
