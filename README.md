@@ -1,7 +1,7 @@
 # arch linux dev setup
 
-![Imgur](https://imgur.com/3oX66rZ,gif)   
-![Imgur](https://imgur.com/INQhcKH.png)
+![](https://imgur.com/3oX66rZ,gif)   
+![](https://imgur.com/INQhcKH.png)
 
 ## installation script
 
