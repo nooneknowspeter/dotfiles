@@ -139,3 +139,24 @@ UPDATE_SHELL_CONFIG() {
 
 	echo -e "installed $SHELL_CONFIG_TYPE config"
 }
+
+# install neovim
+INSTALL_NEOVIM() {
+
+	echo -e "\n 1 pacman install, arch btw \n"
+
+	echo -e "\n 2 homebrew install \n"
+
+	read -r NEOVIM_INSTALL_METHOD
+
+	if [[ $NEOVIM_INSTALL_METHOD == 1 ]]; then
+
+		sudo pacman -S neovim --noconfirm
+
+	else
+
+		brew install neovim
+
+	fi
+
+}
