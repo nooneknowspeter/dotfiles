@@ -277,3 +277,27 @@ UPDATE_NEOVIM_CONFIG() {
 		INSTALL_SHELL
 
 		UPDATE_SHELL_CONFIG
+
+		# install and configure neovim
+	elif [[ $INPUT == 4 ]]; then
+
+		echo -e "\n installing and configuring neovim \n"
+
+		UPDATE_SYSTEM
+
+		INSTALL_DEV_DEPS
+
+		# checks if homebrew is installed
+		if ! (command -v brew) >/dev/null 2>&1; then
+
+			echo -e "\n homebrew is not installed \n"
+
+			HOMEBREW_INSTALL
+
+		fi
+
+		echo -e "\n homebrew is installed \n"
+
+		INSTALL_NEOVIM
+
+		INSTALL_NEOVIM_CONFIG
