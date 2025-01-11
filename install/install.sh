@@ -301,3 +301,10 @@ UPDATE_NEOVIM_CONFIG() {
 		INSTALL_NEOVIM
 
 		INSTALL_NEOVIM_CONFIG
+
+		# update tmux configuration
+	elif [[ $INPUT == 5 ]]; then
+
+		echo -e "\n updating tmux configuration \n"
+
+		TMUX_CONFIG
