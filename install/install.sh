@@ -77,3 +77,30 @@ TMUX_CONFIG() {
 	sleep 1
 
 }
+
+# install and configure SHELL
+INSTALL_SHELL() {
+
+	echo -e "\n zsh or bash? \n"
+
+	echo -e "\n 1 zsh, duh \n"
+
+	echo -e "\n 2 bash, ew \n"
+
+	read -r SELECTED_SHELL
+
+	if [[ $SELECTED_SHELL == 1 ]]; then
+
+		sudo pacman -S zsh zsh-syntax-highlighting zsh-lovers zsh-history-substring-search zsh-completions zsh-autosuggestions powerline --noconfirm
+
+		chsh -s /usr/bin/zsh "$USER"
+
+	fi
+
+	echo -e "\n ewww \n"
+
+	brew install jandedobbeleer/oh-my-posh/oh-my-posh
+
+	oh-my-posh font install
+
+}
