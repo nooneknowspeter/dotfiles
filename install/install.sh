@@ -199,3 +199,28 @@ UPDATE_NEOVIM_CONFIG() {
 	git clone https://github.com/nooneknowspeter/nvim.git ~/.config/nvim && nvim
 
 }
+
+	# display options
+	DISPLAY_OPTIONS() {
+
+		echo -e "\n ???????????????????? \n"
+
+		sleep 0.5
+
+		echo -e "\n 1 -> install all \n"
+
+		echo -e "\n 2 -> install and configure tmux \n"
+
+		echo -e "\n 3 -> install and configure shell \n"
+
+		echo -e "\n 4 -> install and configure neovim \n"
+
+		echo -e "\n 5 -> update tmux config \n"
+
+		echo -e "\n 6 -> update neovim config \n"
+
+		echo -e "\n 7 -> update shell config \n"
+
+		echo -e "\n 0 -> exit \n"
+
+	}
