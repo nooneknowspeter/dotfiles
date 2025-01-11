@@ -268,3 +268,12 @@ UPDATE_NEOVIM_CONFIG() {
 		TMUX_INSTALL
 
 		TMUX_CONFIG
+
+		# install and configure shell
+	elif [[ $INPUT == 3 ]]; then
+
+		echo -e "\n installing and configuring shell \n"
+
+		INSTALL_SHELL
+
+		UPDATE_SHELL_CONFIG
