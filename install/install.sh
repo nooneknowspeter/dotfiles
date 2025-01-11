@@ -44,3 +44,36 @@ TMUX_INSTALL() {
 	sudo pacman -S tmate --noconfirm
 
 }
+
+# tmux function for installing config and tpm
+TMUX_CONFIG() {
+
+	TMUX_CONFIG_URL=https://raw.githubusercontent.com/nooneknowspeter/dotfiles/refs/heads/main/.tmux.conf
+
+	# install tmux config
+	echo -e "\n installing tmux config \n"
+
+	echo -e "\n removing old config \n"
+
+	rm ~/.tmux.conf
+
+	echo -e "\n copying config \n"
+
+	curl -o ~/.tmux.conf "$TMUX_CONFIG_URL"
+
+	echo -e "\n installed tmux config \n"
+
+	# install tmux plugin manager
+	echo "installing tmux plugin manager"
+
+	rm -rf ~/.tmux/plugins/tpm
+
+	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+	tmux source ~/.tmux.conf
+
+	echo -e "\n installed tmux plugin manager \n"
+
+	sleep 1
+
+}
