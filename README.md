@@ -1,19 +1,16 @@
 # arch linux dev setup
 
+![Imgur](https://imgur.com/3oX66rZ,gif)   
+![Imgur](https://imgur.com/INQhcKH.png)
 
- ▄▀▀▄ ▀▄  ▄▀▀▀▀▄   ▄▀▀▀▀▄   ▄▀▀▄ ▀▄  ▄▀▀█▄▄▄▄ 
-█  █ █ █ █      █ █      █ █  █ █ █ ▐  ▄▀   ▐ 
-▐  █  ▀█ █      █ █      █ ▐  █  ▀█   █▄▄▄▄▄  
-  █   █  ▀▄    ▄▀ ▀▄    ▄▀   █   █    █    ▌ 
-▄▀   █     ▀▀▀▀     ▀▀▀▀   ▄▀   █    ▄▀▄▄▄▄   
-█    ▐                     █    ▐    █    ▐   
-▐                          ▐         ▐        
-    
-
-## installation
+## installation script
 
 ```
-git clone https://github.com/nooneknowspeter/dotfiles.git ~/dotfiles
+curl -o desiredDir/install.sh https://raw.githubusercontent.com/nooneknowspeter/dotfiles/refs/heads/main/install/install.sh
+```
+
+```
+wget -o desiredDir/install.sh https://raw.githubusercontent.com/nooneknowspeter/dotfiles/refs/heads/main/install/install.sh
 
 ```
 
