@@ -308,3 +308,10 @@ UPDATE_NEOVIM_CONFIG() {
 		echo -e "\n updating tmux configuration \n"
 
 		TMUX_CONFIG
+
+		# update neovim configurations
+	elif [[ $INPUT == 6 ]]; then
+
+		echo -e "\n updating neovim configuration \n"
+
+		UPDATE_NEOVIM_CONFIG
