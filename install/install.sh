@@ -177,3 +177,16 @@ INSTALL_DEV_DEPS() {
 	yay -S python311 --noconfirm
 
 }
+
+# install neovim config
+INSTALL_NEOVIM_CONFIG() {
+
+	rm -rf ~/.config/nvim
+
+	rm -rf ~/.local/state/nvim
+
+	rm -rf ~/.local/share/nvim
+
+	git clone https://github.com/nooneknowspeter/nvim.git ~/.config/nvim && nvim
+
+}
