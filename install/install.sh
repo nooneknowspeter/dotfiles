@@ -200,6 +200,8 @@ UPDATE_NEOVIM_CONFIG() {
 
 }
 
+OPTIONS() {
+
 	# display options
 	DISPLAY_OPTIONS() {
 
@@ -224,6 +226,11 @@ UPDATE_NEOVIM_CONFIG() {
 		echo -e "\n 0 -> exit \n"
 
 	}
+
+	DISPLAY_OPTIONS
+
+	read -r INPUT
+
 	# install all software and dependencies
 	if [[ $INPUT == 1 ]]; then
 
@@ -335,3 +342,7 @@ UPDATE_NEOVIM_CONFIG() {
 		OPTIONS
 
 	fi
+
+}
+
+OPTIONS
