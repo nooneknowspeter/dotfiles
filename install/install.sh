@@ -104,3 +104,38 @@ INSTALL_SHELL() {
 	oh-my-posh font install
 
 }
+
+# updates shell configuration
+UPDATE_SHELL_CONFIG() {
+
+	ZSH_CONFIG_URL=https://raw.githubusercontent.com/nooneknowspeter/dotfiles/refs/heads/main/.zshrc
+
+	BASH_CONFIG_URL=https://raw.githubusercontent.com/nooneknowspeter/dotfiles/refs/heads/main/.bashrc
+
+	SHELL_CONFIG_TYPE=0
+
+	SHELL_CONFIG_URL=0
+
+	# checks shell
+	if [[ $SHELL == /usr/bin/zsh ]]; then
+
+		SHELL_CONFIG_TYPE=zshrc
+
+		SHELL_CONFIG_URL=$ZSH_CONFIG_URL
+
+		echo -e "\n using zsh \n"
+
+	else
+
+		SHELL_CONFIG_TYPE=bashrc
+
+		SHELL_CONFIG_URL=$BASH_CONFIG_URL
+
+		echo -e "\n using bash \n"
+
+	fi
+
+	curl -o ~/."$SHELL_CONFIG_TYPE" "$SHELL_CONFIG_URL"
+
+	echo -e "installed $SHELL_CONFIG_TYPE config"
+}
