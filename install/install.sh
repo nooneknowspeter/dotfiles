@@ -190,3 +190,12 @@ INSTALL_NEOVIM_CONFIG() {
 	git clone https://github.com/nooneknowspeter/nvim.git ~/.config/nvim && nvim
 
 }
+
+# update neovim config, does not delete installed packages
+UPDATE_NEOVIM_CONFIG() {
+
+	rm -rf ~/.config/nvim
+
+	git clone https://github.com/nooneknowspeter/nvim.git ~/.config/nvim && nvim
+
+}
