@@ -327,3 +327,11 @@ UPDATE_NEOVIM_CONFIG() {
 	elif [[ $INPUT == 0 ]]; then
 
 		echo -e "\n people fear what they don't know \n"
+
+	else
+
+		echo -e "\n enter a valid option \n"
+
+		OPTIONS
+
+	fi
