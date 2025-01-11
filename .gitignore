@@ -6,6 +6,7 @@
 !.tmux.conf
 !README.md
 !.config/nvim
+!.zshrc
 # etc...
 
 # ...even if they are in subdirectories
