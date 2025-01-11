@@ -160,3 +160,20 @@ INSTALL_NEOVIM() {
 	fi
 
 }
+
+# install dependencies; languages, packages, ...
+INSTALL_DEV_DEPS() {
+
+	# install yay
+	git clone https://aur.archlinux.org/yay.git
+
+	cd yay || return
+
+	makepkg -si
+
+	# install developer essentials
+	sudo pacman -S git base-devel cmake python lua lua5.1 -noconfirm
+
+	yay -S python311 --noconfirm
+
+}
