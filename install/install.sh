@@ -33,3 +33,14 @@ HOMEBREW_INSTALL() {
 	test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 	echo "eval ""$("$(brew --prefix)"/bin/brew shellenv)" >>~/.bashrc
 }
+
+# tmux install
+TMUX_INSTALL() {
+
+	echo -e "\n installing tmux \n"
+
+	sudo pacman -S tmux --noconfirm
+
+	sudo pacman -S tmate --noconfirm
+
+}
