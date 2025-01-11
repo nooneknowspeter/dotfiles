@@ -224,3 +224,38 @@ UPDATE_NEOVIM_CONFIG() {
 		echo -e "\n 0 -> exit \n"
 
 	}
+	# install all software and dependencies
+	if [[ $INPUT == 1 ]]; then
+
+		echo -e "\n installing and configuring everything \n"
+
+		echo -e "\n updating system \n"
+
+		UPDATE_SYSTEM
+
+		INSTALL_DEV_DEPS
+
+		echo -e "\n installing homebrew \n"
+
+		# checks if homebrew is installed
+		if ! (command -v brew) >/dev/null 2>&1; then
+
+			echo -e "\n homebrew is not installed \n"
+
+			HOMEBREW_INSTALL
+
+		fi
+
+		echo -e "\n homebrew is installed \n"
+
+		INSTALL_SHELL
+
+		UPDATE_SHELL_CONFIG
+
+		TMUX_INSTALL
+
+		TMUX_CONFIG
+
+		INSTALL_NEOVIM
+
+		INSTALL_NEOVIM_CONFIG
