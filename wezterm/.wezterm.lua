@@ -58,7 +58,7 @@ wezterm.on("toggle-colorscheme", function(window, pane)
   local overrides = window:get_config_overrides() or {}
   if overrides.color_scheme == "Zenburn" then
     overrides.color_scheme = "Cloud (terminal.sexy)"
-  else
+
     overrides.color_scheme = "Zenburn"
   end
   window:set_config_overrides(overrides)
@@ -132,6 +132,31 @@ config.keys = {
     key = "V",
     mods = "CTRL",
     action = act.PasteFrom("Clipboard"),
+  },
+  {
+    key = "P",
+    mods = "CTRL|SHIFT",
+    action = wezterm.action.ActivateCommandPalette,
+  },
+  {
+    key = "h",
+    mods = "CTRL",
+    action = wezterm.action.ActivatePaneDirection("Left"),
+  },
+  {
+    key = "j",
+    mods = "CTRL",
+    action = wezterm.action.ActivatePaneDirection("Down"),
+  },
+  {
+    key = "k",
+    mods = "CTRL",
+    action = wezterm.action.ActivatePaneDirection("Up"),
+  },
+  {
+    key = "l",
+    mods = "CTRL",
+    action = wezterm.action.ActivatePaneDirection("Right"),
   },
 }
 
