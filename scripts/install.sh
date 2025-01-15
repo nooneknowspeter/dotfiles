@@ -20,328 +20,328 @@ sleep 1
 # update system
 UPDATE_SYSTEM() {
 
-	sudo pacman -Syu --noconfirm
+  sudo pacman -Syu --noconfirm
 
 }
 
 # install homebrew
 HOMEBREW_INSTALL() {
 
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-	test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
-	test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-	echo "eval ""$("$(brew --prefix)"/bin/brew shellenv)" >>~/.bashrc
+  # test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
+  # test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  # echo "eval ""$("$(brew --prefix)"/bin/brew shellenv)" >>~/.bashrc
 }
 
 # tmux install
 TMUX_INSTALL() {
 
-	echo -e "\n installing tmux \n"
+  echo -e "\n installing tmux \n"
 
-	sudo pacman -S tmux --noconfirm
+  sudo pacman -S tmux --noconfirm
 
-	sudo pacman -S tmate --noconfirm
+  sudo pacman -S tmate --noconfirm
 
 }
 
 # tmux function for installing config and tpm
 TMUX_CONFIG() {
 
-	TMUX_CONFIG_URL=https://raw.githubusercontent.com/nooneknowspeter/dotfiles/refs/heads/main/.tmux.conf
+  TMUX_CONFIG_URL=https://raw.githubusercontent.com/nooneknowspeter/dotfiles/refs/heads/main/.tmux.conf
 
-	# install tmux config
-	echo -e "\n installing tmux config \n"
+  # install tmux config
+  echo -e "\n installing tmux config \n"
 
-	echo -e "\n removing old config \n"
+  echo -e "\n removing old config \n"
 
-	rm ~/.tmux.conf
+  rm ~/.tmux.conf
 
-	echo -e "\n copying config \n"
+  echo -e "\n copying config \n"
 
-	curl -o ~/.tmux.conf "$TMUX_CONFIG_URL"
+  curl -o ~/.tmux.conf "$TMUX_CONFIG_URL"
 
-	echo -e "\n installed tmux config \n"
+  echo -e "\n installed tmux config \n"
 
-	# install tmux plugin manager
-	echo "installing tmux plugin manager"
+  # install tmux plugin manager
+  echo "installing tmux plugin manager"
 
-	rm -rf ~/.tmux/plugins/tpm
+  rm -rf ~/.tmux/plugins/tpm
 
-	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-	tmux source ~/.tmux.conf
+  tmux source ~/.tmux.conf
 
-	echo -e "\n installed tmux plugin manager \n"
+  echo -e "\n installed tmux plugin manager \n"
 
-	sleep 1
+  sleep 1
 
 }
 
 # install and configure SHELL
 INSTALL_SHELL() {
 
-	echo -e "\n zsh or bash? \n"
+  echo -e "\n zsh or bash? \n"
 
-	echo -e "\n 1 zsh, duh \n"
+  echo -e "\n 1 zsh, duh \n"
 
-	echo -e "\n 2 bash, ew \n"
+  echo -e "\n 2 bash, ew \n"
 
-	read -r SELECTED_SHELL
+  read -r SELECTED_SHELL
 
-	if [[ $SELECTED_SHELL == 1 ]]; then
+  if [[ $SELECTED_SHELL == 1 ]]; then
 
-		sudo pacman -S zsh zsh-syntax-highlighting zsh-lovers zsh-history-substring-search zsh-completions zsh-autosuggestions powerline --noconfirm
+    sudo pacman -S zsh zsh-syntax-highlighting zsh-lovers zsh-history-substring-search zsh-completions zsh-autosuggestions powerline --noconfirm
 
-		chsh -s /usr/bin/zsh "$USER"
+    chsh -s /usr/bin/zsh "$USER"
 
-	fi
+  fi
 
-	echo -e "\n ewww \n"
+  echo -e "\n ewww \n"
 
-	brew install jandedobbeleer/oh-my-posh/oh-my-posh
+  brew install jandedobbeleer/oh-my-posh/oh-my-posh
 
-	oh-my-posh font install
+  oh-my-posh font install
 
 }
 
 # updates shell configuration
 UPDATE_SHELL_CONFIG() {
 
-	ZSH_CONFIG_URL=https://raw.githubusercontent.com/nooneknowspeter/dotfiles/refs/heads/main/.zshrc
+  ZSH_CONFIG_URL=https://raw.githubusercontent.com/nooneknowspeter/dotfiles/refs/heads/main/.zshrc
 
-	BASH_CONFIG_URL=https://raw.githubusercontent.com/nooneknowspeter/dotfiles/refs/heads/main/.bashrc
+  BASH_CONFIG_URL=https://raw.githubusercontent.com/nooneknowspeter/dotfiles/refs/heads/main/.bashrc
 
-	SHELL_CONFIG_TYPE=0
+  SHELL_CONFIG_TYPE=0
 
-	SHELL_CONFIG_URL=0
+  SHELL_CONFIG_URL=0
 
-	# checks shell
-	if [[ $SHELL == /usr/bin/zsh ]]; then
+  # checks shell
+  if [[ $SHELL == /usr/bin/zsh ]]; then
 
-		SHELL_CONFIG_TYPE=zshrc
+    SHELL_CONFIG_TYPE=zshrc
 
-		SHELL_CONFIG_URL=$ZSH_CONFIG_URL
+    SHELL_CONFIG_URL=$ZSH_CONFIG_URL
 
-		echo -e "\n using zsh \n"
+    echo -e "\n using zsh \n"
 
-	else
+  else
 
-		SHELL_CONFIG_TYPE=bashrc
+    SHELL_CONFIG_TYPE=bashrc
 
-		SHELL_CONFIG_URL=$BASH_CONFIG_URL
+    SHELL_CONFIG_URL=$BASH_CONFIG_URL
 
-		echo -e "\n using bash \n"
+    echo -e "\n using bash \n"
 
-	fi
+  fi
 
-	curl -o ~/."$SHELL_CONFIG_TYPE" "$SHELL_CONFIG_URL"
+  curl -o ~/."$SHELL_CONFIG_TYPE" "$SHELL_CONFIG_URL"
 
-	echo -e "installed $SHELL_CONFIG_TYPE config"
+  echo -e "installed $SHELL_CONFIG_TYPE config"
 }
 
 # install neovim
 INSTALL_NEOVIM() {
 
-	echo -e "\n 1 pacman install, arch btw \n"
+  echo -e "\n 1 pacman install, arch btw \n"
 
-	echo -e "\n 2 homebrew install \n"
+  echo -e "\n 2 homebrew install \n"
 
-	read -r NEOVIM_INSTALL_METHOD
+  read -r NEOVIM_INSTALL_METHOD
 
-	if [[ $NEOVIM_INSTALL_METHOD == 1 ]]; then
+  if [[ $NEOVIM_INSTALL_METHOD == 1 ]]; then
 
-		sudo pacman -S neovim --noconfirm
+    sudo pacman -S neovim --noconfirm
 
-	else
+  else
 
-		brew install neovim
+    brew install neovim
 
-	fi
+  fi
 
 }
 
 # install dependencies; languages, packages, ...
 INSTALL_DEV_DEPS() {
 
-	# install yay
-	git clone https://aur.archlinux.org/yay.git
+  # install yay
+  git clone https://aur.archlinux.org/yay.git
 
-	cd yay || return
+  cd yay || return
 
-	makepkg -si
+  makepkg -si
 
-	# install developer essentials
-	sudo pacman -S git base-devel cmake python lua lua5.1 -noconfirm
+  # install developer essentials
+  sudo pacman -S git base-devel cmake python lua lua5.1 -noconfirm
 
-	yay -S python311 --noconfirm
+  yay -S python311 --noconfirm
 
 }
 
 # install neovim config
 INSTALL_NEOVIM_CONFIG() {
 
-	rm -rf ~/.config/nvim
+  rm -rf ~/.config/nvim
 
-	rm -rf ~/.local/state/nvim
+  rm -rf ~/.local/state/nvim
 
-	rm -rf ~/.local/share/nvim
+  rm -rf ~/.local/share/nvim
 
-	git clone https://github.com/nooneknowspeter/nvim.git ~/.config/nvim && nvim
+  git clone https://github.com/nooneknowspeter/nvim.git ~/.config/nvim && nvim
 
 }
 
 # update neovim config, does not delete installed packages
 UPDATE_NEOVIM_CONFIG() {
 
-	rm -rf ~/.config/nvim
+  rm -rf ~/.config/nvim
 
-	git clone https://github.com/nooneknowspeter/nvim.git ~/.config/nvim && nvim
+  git clone https://github.com/nooneknowspeter/nvim.git ~/.config/nvim && nvim
 
 }
 
 OPTIONS() {
 
-	# display options
-	DISPLAY_OPTIONS() {
+  # display options
+  DISPLAY_OPTIONS() {
 
-		echo -e "\n ???????????????????? \n"
+    echo -e "\n ???????????????????? \n"
 
-		sleep 0.5
+    sleep 0.5
 
-		echo -e "\n 1 -> install all \n"
+    echo -e "\n 1 -> install all \n"
 
-		echo -e "\n 2 -> install and configure tmux \n"
+    echo -e "\n 2 -> install and configure tmux \n"
 
-		echo -e "\n 3 -> install and configure shell \n"
+    echo -e "\n 3 -> install and configure shell \n"
 
-		echo -e "\n 4 -> install and configure neovim \n"
+    echo -e "\n 4 -> install and configure neovim \n"
 
-		echo -e "\n 5 -> update tmux config \n"
+    echo -e "\n 5 -> update tmux config \n"
 
-		echo -e "\n 6 -> update neovim config \n"
+    echo -e "\n 6 -> update neovim config \n"
 
-		echo -e "\n 7 -> update shell config \n"
+    echo -e "\n 7 -> update shell config \n"
 
-		echo -e "\n 0 -> exit \n"
+    echo -e "\n 0 -> exit \n"
 
-	}
+  }
 
-	DISPLAY_OPTIONS
+  DISPLAY_OPTIONS
 
-	read -r INPUT
+  read -r INPUT
 
-	# install all software and dependencies
-	if [[ $INPUT == 1 ]]; then
+  # install all software and dependencies
+  if [[ $INPUT == 1 ]]; then
 
-		echo -e "\n installing and configuring everything \n"
+    echo -e "\n installing and configuring everything \n"
 
-		echo -e "\n updating system \n"
+    echo -e "\n updating system \n"
 
-		UPDATE_SYSTEM
+    UPDATE_SYSTEM
 
-		INSTALL_DEV_DEPS
+    INSTALL_DEV_DEPS
 
-		echo -e "\n installing homebrew \n"
+    echo -e "\n installing homebrew \n"
 
-		# checks if homebrew is installed
-		if ! (command -v brew) >/dev/null 2>&1; then
+    # checks if homebrew is installed
+    if ! (command -v brew) >/dev/null 2>&1; then
 
-			echo -e "\n homebrew is not installed \n"
+      echo -e "\n homebrew is not installed \n"
 
-			HOMEBREW_INSTALL
+      HOMEBREW_INSTALL
 
-		fi
+    fi
 
-		echo -e "\n homebrew is installed \n"
+    echo -e "\n homebrew is installed \n"
 
-		INSTALL_SHELL
+    INSTALL_SHELL
 
-		UPDATE_SHELL_CONFIG
+    UPDATE_SHELL_CONFIG
 
-		TMUX_INSTALL
+    TMUX_INSTALL
 
-		TMUX_CONFIG
+    TMUX_CONFIG
 
-		INSTALL_NEOVIM
+    INSTALL_NEOVIM
 
-		INSTALL_NEOVIM_CONFIG
+    INSTALL_NEOVIM_CONFIG
 
-		# install and configure tmux
-	elif [[ $INPUT == 2 ]]; then
+    # install and configure tmux
+  elif [[ $INPUT == 2 ]]; then
 
-		echo -e "\n installing and configuring tmux \n"
+    echo -e "\n installing and configuring tmux \n"
 
-		TMUX_INSTALL
+    TMUX_INSTALL
 
-		TMUX_CONFIG
+    TMUX_CONFIG
 
-		# install and configure shell
-	elif [[ $INPUT == 3 ]]; then
+    # install and configure shell
+  elif [[ $INPUT == 3 ]]; then
 
-		echo -e "\n installing and configuring shell \n"
+    echo -e "\n installing and configuring shell \n"
 
-		INSTALL_SHELL
+    INSTALL_SHELL
 
-		UPDATE_SHELL_CONFIG
+    UPDATE_SHELL_CONFIG
 
-		# install and configure neovim
-	elif [[ $INPUT == 4 ]]; then
+    # install and configure neovim
+  elif [[ $INPUT == 4 ]]; then
 
-		echo -e "\n installing and configuring neovim \n"
+    echo -e "\n installing and configuring neovim \n"
 
-		UPDATE_SYSTEM
+    UPDATE_SYSTEM
 
-		INSTALL_DEV_DEPS
+    INSTALL_DEV_DEPS
 
-		# checks if homebrew is installed
-		if ! (command -v brew) >/dev/null 2>&1; then
+    # checks if homebrew is installed
+    if ! (command -v brew) >/dev/null 2>&1; then
 
-			echo -e "\n homebrew is not installed \n"
+      echo -e "\n homebrew is not installed \n"
 
-			HOMEBREW_INSTALL
+      HOMEBREW_INSTALL
 
-		fi
+    fi
 
-		echo -e "\n homebrew is installed \n"
+    echo -e "\n homebrew is installed \n"
 
-		INSTALL_NEOVIM
+    INSTALL_NEOVIM
 
-		INSTALL_NEOVIM_CONFIG
+    INSTALL_NEOVIM_CONFIG
 
-		# update tmux configuration
-	elif [[ $INPUT == 5 ]]; then
+    # update tmux configuration
+  elif [[ $INPUT == 5 ]]; then
 
-		echo -e "\n updating tmux configuration \n"
+    echo -e "\n updating tmux configuration \n"
 
-		TMUX_CONFIG
+    TMUX_CONFIG
 
-		# update neovim configurations
-	elif [[ $INPUT == 6 ]]; then
+    # update neovim configurations
+  elif [[ $INPUT == 6 ]]; then
 
-		echo -e "\n updating neovim configuration \n"
+    echo -e "\n updating neovim configuration \n"
 
-		UPDATE_NEOVIM_CONFIG
+    UPDATE_NEOVIM_CONFIG
 
-		# update shell configuration
-	elif [[ $INPUT == 7 ]]; then
+    # update shell configuration
+  elif [[ $INPUT == 7 ]]; then
 
-		echo -e "\n updating shell configuration \n"
+    echo -e "\n updating shell configuration \n"
 
-		UPDATE_SHELL_CONFIG
+    UPDATE_SHELL_CONFIG
 
-		# exit script
-	elif [[ $INPUT == 0 ]]; then
+    # exit script
+  elif [[ $INPUT == 0 ]]; then
 
-		echo -e "\n people fear what they don't know \n"
+    echo -e "\n people fear what they don't know \n"
 
-	else
+  else
 
-		echo -e "\n enter a valid option \n"
+    echo -e "\n enter a valid option \n"
 
-		OPTIONS
+    OPTIONS
 
-	fi
+  fi
 
 }
 
