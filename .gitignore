@@ -2,14 +2,14 @@
 *
 
 # But not these files...
-!.gitignore
-!.tmux.conf
-!README.md
-!.config/nvim
-!.zshrc
-!.bashrc
-!install/
-!install/install.sh
+# !.gitignore
+# !.tmux.conf
+# !README.md
+# !.config/nvim
+# !.zshrc
+# !.bashrc
+# !install/
+# !install/install.sh
 # etc...
 
 # ...even if they are in subdirectories
