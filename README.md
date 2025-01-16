@@ -1,7 +1,7 @@
 # arch linux dev setup
 
-![](https://imgur.com/1gvYkQv.png)
-![](https://imgur.com/3oX66rZ,gif)
+![](https://imgur.com/3oX66rZ.gif)
+![](https://imgur.com/mOLFKUi.png)
 ![](https://imgur.com/INQhcKH.png)
 
 - [ghostty](https://ghostty.org/)
