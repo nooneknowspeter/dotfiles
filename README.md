@@ -1,5 +1,6 @@
-# arch linux \ macos dev setup
+# arch linux dev setup
 
+![](https://imgur.com/1gvYkQv.png)
 ![](https://imgur.com/3oX66rZ,gif)
 ![](https://imgur.com/INQhcKH.png)
 
