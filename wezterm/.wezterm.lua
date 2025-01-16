@@ -66,7 +66,7 @@ config.keys = {
 
   -- split pane vertically
   {
-    key = "h",
+    key = "s",
     mods = "CTRL|SHIFT|ALT",
     action = wezterm.action.SplitPane({
       direction = "Down",
