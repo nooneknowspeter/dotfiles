@@ -27,8 +27,19 @@ export NVM_DIR="$HOME/.nvm"
 # Created by `pipx` on 2025-01-08 03:38:14
 export PATH="$PATH:/home/nooneknows/.local/bin"
 
+# tmux on term launch
 if [ -z "$TMUX" ]; then
     tmux new-session -A -s main
 fi
 
 bindkey -v
+
+# command completion
+autoload -Uz compinit
+compinit
+
+# auto completion menu 
+zstyle ':completion:*' menu select
+
+# completion with sudo
+zstyle ':completion::complete:*' gain-privileges 1
