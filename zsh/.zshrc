@@ -43,3 +43,6 @@ zstyle ':completion:*' menu select
 
 # completion with sudo
 zstyle ':completion::complete:*' gain-privileges 1
+
+# default editor
+export EDITOR=nvim
