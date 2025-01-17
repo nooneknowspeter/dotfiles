@@ -87,22 +87,22 @@ config.keys = {
 
   -- resize pane
   {
-    key = "H",
+    key = "U",
     mods = "CTRL|SHIFT|ALT",
     action = act.AdjustPaneSize({ "Left", 5 }),
   },
   {
-    key = "J",
+    key = "I",
     mods = "CTRL|SHIFT|ALT",
     action = act.AdjustPaneSize({ "Down", 5 }),
   },
   {
-    key = "K",
+    key = "O",
     mods = "CTRL|SHIFT|ALT",
     action = act.AdjustPaneSize({ "Up", 5 }),
   },
   {
-    key = "L",
+    key = "P",
     mods = "CTRL|SHIFT|ALT",
     action = act.AdjustPaneSize({ "Right", 5 }),
   },
@@ -114,22 +114,22 @@ config.keys = {
   -- select with hjkl, LDUR
   {
     key = "h",
-    mods = "CTRL",
+    mods = "CTRL|SHIFT|ALT",
     action = wezterm.action.ActivatePaneDirection("Left"),
   },
   {
     key = "j",
-    mods = "CTRL",
+    mods = "CTRL|SHIFT|ALT",
     action = wezterm.action.ActivatePaneDirection("Down"),
   },
   {
     key = "k",
-    mods = "CTRL",
+    mods = "CTRL|SHIFT|ALT",
     action = wezterm.action.ActivatePaneDirection("Up"),
   },
   {
     key = "l",
-    mods = "CTRL",
+    mods = "CTRL|SHIFT|ALT",
     action = wezterm.action.ActivatePaneDirection("Right"),
   },
 
