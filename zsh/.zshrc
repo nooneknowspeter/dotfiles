@@ -18,7 +18,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # ohmyposh
 eval "$(oh-my-posh init zsh)"
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/bubblesextra.omp.json)"
+eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/clean-detailed.omp.json)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -32,8 +32,6 @@ if [ -z "$TMUX" ]; then
     tmux new-session -A -s main
 fi
 
-bindkey -v
-
 # command completion
 autoload -Uz compinit
 compinit
@@ -46,3 +44,10 @@ zstyle ':completion::complete:*' gain-privileges 1
 
 # default editor
 export EDITOR=nvim
+
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+# vi plugin
+source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
