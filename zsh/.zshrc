@@ -51,3 +51,9 @@ export KEYTIMEOUT=1
 
 # vi plugin
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
+PATH="/home/nooneknows/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/nooneknows/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/nooneknows/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/nooneknows/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/nooneknows/perl5"; export PERL_MM_OPT;
