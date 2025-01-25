@@ -7,3 +7,6 @@
 [submodule "tmux/.tmux/plugins/tpm"]
 	path = tmux/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
+[submodule "alacrity/.config/alacritty"]
+	path = alacrity/.config/alacritty
+	url = https://github.com/nooneknowspeter/alacritty.git
