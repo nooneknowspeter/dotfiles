@@ -10,3 +10,6 @@
 [submodule "alacrity/.config/alacritty"]
 	path = alacrity/.config/alacritty
 	url = https://github.com/nooneknowspeter/alacritty.git
+[submodule "wezterm/.config/wezterm"]
+	path = wezterm/.config/wezterm
+	url = https://github.com/nooneknowspeter/wezterm
