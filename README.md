@@ -53,10 +53,12 @@ stow <config name>
 
 - [ATAC](https://github.com/Julien-cpsn/ATAC)
 - [curl](https://archlinux.org/packages/core/x86_64/curl/)
+- [curlie](https://github.com/rs/curlie)
 - [fzf](https://github.com/junegunn/fzf)
 - [grep](https://www.gnu.org/software/grep/manual/grep.html)
 - [LazyDocker](https://github.com/jesseduffield/lazydocker)
 - [LazyGit](https://github.com/jesseduffield/lazygit)
+- [posting](https://github.com/darrenburns/posting)
 - [stow](https://www.gnu.org/software/stow/)
 - [yazi](https://github.com/sxyazi/yazi)
 
