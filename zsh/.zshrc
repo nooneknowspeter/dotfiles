@@ -2,9 +2,17 @@
 # ~/.zshrc
 #
 
-# autocompletion
+# command completion
+autoload bashcompinit
+bashcompinit
 autoload -Uz compinit
 compinit
+
+# auto completion menu 
+zstyle ':completion:*' menu select
+
+# completion with sudo
+zstyle ':completion::complete:*' gain-privileges 1
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -36,15 +44,6 @@ if [ -z "$TMUX" ]; then
     tmux new-session -A -s main
 fi
 
-# command completion
-autoload -Uz compinit
-compinit
-
-# auto completion menu 
-zstyle ':completion:*' menu select
-
-# completion with sudo
-zstyle ':completion::complete:*' gain-privileges 1
 
 # default editor
 export EDITOR=nvim
@@ -58,6 +57,9 @@ source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # kubernetes autocompletion
 source <(kubectl completion zsh)
+
+# aws autocompletion
+export PATH=/usr/bin/aws_completer:$PATH
 
 PATH="/home/nooneknows/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/nooneknows/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
