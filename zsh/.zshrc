@@ -2,6 +2,10 @@
 # ~/.zshrc
 #
 
+# autocompletion
+autoload -Uz compinit
+compinit
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -51,6 +55,9 @@ export KEYTIMEOUT=1
 
 # vi plugin
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
+# kubernetes autocompletion
+source <(kubectl completion zsh)
 
 PATH="/home/nooneknows/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/nooneknows/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
