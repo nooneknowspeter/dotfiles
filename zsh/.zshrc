@@ -60,6 +60,7 @@ source <(kubectl completion zsh)
 
 # aws autocompletion
 export PATH=/usr/bin/aws_completer:$PATH
+complete -C '/usr/bin/aws_completer' aws
 
 PATH="/home/nooneknows/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/nooneknows/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
