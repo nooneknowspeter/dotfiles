@@ -39,10 +39,10 @@ export NVM_DIR="$HOME/.nvm"
 # Created by `pipx` on 2025-01-08 03:38:14
 export PATH="$PATH:/home/nooneknows/.local/bin"
 
-# tmux on term launch
-if [ -z "$TMUX" ]; then
-    tmux new-session -A -s main
-fi
+# # tmux on term launch
+# if [ -z "$TMUX" ]; then
+#     tmux new-session -A -s main
+# fi
 
 
 # default editor
