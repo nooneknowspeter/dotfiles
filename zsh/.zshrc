@@ -21,7 +21,20 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
-# x server display, hyper v ip and port
+# fish features
+# zsh-syntax-highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# zsh-autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# bash completion
+autoload -U +X bashcompinit && bashcompinit
+
+# vi mode
+bindkey -v
+export KEYTIMEOUT=1
+
+# x server display, hyper v ip and port; wsl
 export DISPLAY=172.23.144.1:0
 export LIBGL_ALWAYS_INDIRECT=1
 
@@ -44,13 +57,8 @@ export PATH="$PATH:/home/nooneknows/.local/bin"
 #     tmux new-session -A -s main
 # fi
 
-
 # default editor
 export EDITOR=nvim
-
-# vi mode
-bindkey -v
-export KEYTIMEOUT=1
 
 # vi plugin
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
@@ -68,5 +76,5 @@ PERL_LOCAL_LIB_ROOT="/home/nooneknows/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_
 PERL_MB_OPT="--install_base \"/home/nooneknows/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/nooneknows/perl5"; export PERL_MM_OPT;
 
-autoload -U +X bashcompinit && bashcompinit
+# terraform autocompletion
 complete -o nospace -C /usr/bin/terraform terraform
