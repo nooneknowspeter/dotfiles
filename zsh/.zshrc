@@ -24,6 +24,10 @@ PS1='[\u@\h \W]\$ '
 # fish features
 # zsh-syntax-highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# bind ctrl + space for autosuggest accept
+bindkey '^ ' autosuggest-accept
+
 # zsh-autosuggestions
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
