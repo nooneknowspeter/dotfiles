@@ -74,8 +74,10 @@ perl-file-homedir
 perl-unicode-linebreak
 perl-yaml-tiny
 picom
+pkgfile
 plocate
 postgresql
+python-django
 python-pip
 rainfrog
 reflector
