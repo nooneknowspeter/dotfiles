@@ -34,6 +34,9 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # bash completion
 autoload -U +X bashcompinit && bashcompinit
 
+#pkgfile
+source /usr/share/doc/pkgfile/command-not-found.zsh
+
 # vi mode
 bindkey -v
 export KEYTIMEOUT=1
