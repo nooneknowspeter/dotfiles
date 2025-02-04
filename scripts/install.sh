@@ -1,3 +1,10 @@
+# animation
+curl ascii.live/donut
+
+sleep 1
+
+clear
+
 # artwork
 echo -e "                                              
 \n
@@ -21,6 +28,24 @@ sleep 1
 UPDATE_SYSTEM() {
 
 	sudo pacman -Syu --noconfirm
+
+}
+
+INSTALL_YAY() {
+
+	cd
+	sudo pacman -S --needed git base-devel
+	git clone https://aur.archlinux.org/yay.git
+	cd yay
+	makepkg -si
+
+}
+
+# install packages
+INSTALL_PACKAGES() {
+
+	pacman -Sy --needed - <pkglist.txt
+	yay -S --needed - <pkglist_aur.txt
 
 }
 

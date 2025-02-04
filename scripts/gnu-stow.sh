@@ -25,6 +25,9 @@ STOW_CONFIGURATION() {
 }
 
 CONFIGURATION() {
+
+  cd ./..
+
   if [[ $SHELL == /usr/bin/zsh ]]; then
     echo -e "\n zsh \n"
 
