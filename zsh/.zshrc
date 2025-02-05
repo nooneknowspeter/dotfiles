@@ -2,6 +2,9 @@
 # ~/.zshrc
 #
 
+# clear terminal and tmux history
+alias clear="clear && tmux clear-history"
+
 # command completion
 autoload bashcompinit
 bashcompinit
