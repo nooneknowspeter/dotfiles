@@ -13,6 +13,9 @@ alias cmatrix="cmatrix -fkbrc"
 # tty-clock
 alias tty-clock="tty-clock -scbtBC5"
 
+# donut animation
+alias donut="curl ascii.live/donut"
+
 # command completion
 autoload bashcompinit
 bashcompinit
