@@ -35,6 +35,9 @@ zstyle ':completion::complete:*' gain-privileges 1
 # alias ls='ls --color=auto'
 alias ls="lsd --icon-theme=unicode"
 
+# cat
+alias cat="bat"
+
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
