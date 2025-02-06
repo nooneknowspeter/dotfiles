@@ -2,8 +2,10 @@
 # ~/.zshrc
 #
 
-# clear terminal and tmux history
-alias clear="clear && tmux clear-history"
+# clear terminal and tmux history when tmux is running
+if [ -z "$TMUX" ]; then
+  alias clear="clear && tmux clear-history"
+fi
 
 # command completion
 autoload bashcompinit
