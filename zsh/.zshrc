@@ -108,3 +108,6 @@ PERL_MM_OPT="INSTALL_BASE=/home/nooneknows/perl5"; export PERL_MM_OPT;
 
 # terraform autocompletion
 complete -o nospace -C /usr/bin/terraform terraform
+
+# thefuck
+eval $(thefuck --alias)
