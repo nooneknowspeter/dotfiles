@@ -10,6 +10,9 @@ fi
 # cmatrix
 alias cmatrix="cmatrix -fkbrc"
 
+# tty-clock
+alias tty-clock="tty-clock -scbtBC5"
+
 # command completion
 autoload bashcompinit
 bashcompinit
