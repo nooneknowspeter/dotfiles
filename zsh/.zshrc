@@ -38,6 +38,7 @@ alias ls="lsd --icon-theme=unicode"
 # cat
 alias cat="bat"
 
+# grep
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
@@ -92,6 +93,8 @@ source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 # kubernetes autocompletion
 source <(kubectl completion zsh)
+# minikube
+source <(minikube completion zsh)
 
 # aws autocompletion
 export PATH=/usr/bin/aws_completer:$PATH
