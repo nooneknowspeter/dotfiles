@@ -6,6 +6,9 @@
 if [ -z "$TMUX" ]; then
   alias clear="clear && tmux clear-history"
 fi
+  
+# cmatrix
+alias cmatrix="cmatrix -fkbrc"
 
 # command completion
 autoload bashcompinit
