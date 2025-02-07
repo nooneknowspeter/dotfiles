@@ -2,10 +2,8 @@
 # ~/.zshrc
 #
 
-# clear terminal and tmux history when tmux is running
-if [ -z "$TMUX" ]; then
-  alias clear="clear && tmux clear-history"
-fi
+# clear tmux histroy and clear terminal
+alias tc='clear; tmux clear-history; clear'
   
 # cmatrix
 alias cmatrix="cmatrix -fkbrc"
