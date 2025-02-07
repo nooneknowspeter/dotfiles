@@ -31,7 +31,7 @@ zstyle ':completion::complete:*' gain-privileges 1
 
 # ls
 # alias ls='ls --color=auto'
-alias ls="lsd --icon-theme=unicode"
+alias ls="lsd"
 
 # cat
 alias cat="bat"
