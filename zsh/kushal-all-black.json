@@ -82,7 +82,7 @@
 					"template": " \ue7a8 {{ .Full }} "
 				},
 				{
-					"background": "#1BD4CD",
+					"background": "#292929",
 					"background_templates": [
 						"{{ if or (.Working.Changed) (.Staging.Changed) }}#16B1AC{{ end }}",
 						"{{ if and (gt .Ahead 0) (gt .Behind 0) }}#16B1AC{{ end }}",
