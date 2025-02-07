@@ -3,7 +3,7 @@
 #
 
 # clear tmux histroy and clear terminal
-alias tc='clear; tmux clear-history; clear'
+alias clear='clear; tmux clear-history; clear'
   
 # cmatrix
 alias cmatrix="cmatrix -fkbrc"
@@ -69,7 +69,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # ohmyposh
 eval "$(oh-my-posh init zsh)"
-eval "$(oh-my-posh init zsh --config '~/kushal-all-black.json')"
+eval "$(oh-my-posh init zsh --config './kushal-all-black.json')"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
