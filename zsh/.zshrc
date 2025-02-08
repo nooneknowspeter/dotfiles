@@ -14,6 +14,9 @@ alias tty-clock="tty-clock -scbtBC5"
 # donut animation
 alias donut="curl ascii.live/donut"
 
+# alias
+alias tmux="TERM=xterm-256color tmux"
+
 # command completion
 autoload bashcompinit
 bashcompinit
