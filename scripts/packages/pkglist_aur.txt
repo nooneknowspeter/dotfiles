@@ -23,6 +23,7 @@ grpcurl
 imgui
 jqp
 lazydocker
+ltex-ls-bin
 ltex-ls-plus-bin
 markdown-oxide-git
 mongosh-bin

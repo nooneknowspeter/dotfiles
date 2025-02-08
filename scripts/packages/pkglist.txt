@@ -1,4 +1,5 @@
 alacritty
+ansible
 arch-wiki-docs
 arch-wiki-lite
 aspnet-runtime
@@ -59,6 +60,7 @@ lua
 lua-language-server
 lua51
 luajit
+luarocks
 lynx
 mc
 minikube
@@ -112,6 +114,7 @@ texlive-plaingeneric
 texlive-pstricks
 texlive-publishers
 texlive-xetex
+thefuck
 tigervnc
 tmate
 tmux
