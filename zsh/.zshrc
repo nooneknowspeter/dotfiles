@@ -11,8 +11,9 @@ alias cmatrix="cmatrix -fkbrc"
 # tty-clock
 alias tty-clock="tty-clock -scbtBC5"
 
-# donut animation
-alias donut="curl ascii.live/donut"
+# ascii.live animations
+alias donut="curl ascii.live/donut" # donut animation
+alias knot="curl ascii.live/knot" # knot animation
 
 # alias
 alias tmux="TERM=xterm-256color tmux"
