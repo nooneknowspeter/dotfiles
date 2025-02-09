@@ -1,8 +1,7 @@
 # Arch Dev Setup
 
-![](https://imgur.com/3oX66rZ.gif)
-![](https://imgur.com/mOLFKUi.png)
-![](https://imgur.com/INQhcKH.png)
+![wezterm, tmux](https://i.imgur.com/IxSuJFz.png)
+![alacritty, neovim](https://github.com/nooneknowspeter/nvim/blob/3bc9a2c14e05f0250a6c607ae962967a60ef4103/public/Screenshot%202025-02-07%20004857.png)
 
 ## Setup
 
@@ -30,17 +29,26 @@ stow <config name>
 
 ### Terminal Emulators
 
-- [alacritty](https://github.com/alacritty/alacritty) | my goto for windows
-- [ghostty](https://ghostty.org/) | goto for unix
+#### Windows
+
+I use either one depending on my mood
+
+- [alacritty](https://github.com/alacritty/alacritty)
+- [wezterm](https://github.com/wezterm/wezterm)
+
+#### Unix
+
+- [ghostty](https://ghostty.org/)
 
 ### Vim
 
-- [neovim](https://www.gnu.org/software/stow/)
+- [neovim](https://github.com/neovim/neovim)
+- [vim](https://www.vim.org/) => I use vanilla vim sometimes
 - [vimium for web browsing](https://vimium.github.io/)
 
 ### Tmux
 
-- [tmate](https://github.com/tmate-io/tmate)
+- [tmate](https://github.com/tmate-io/tmate) => for pair programming
 - [tmux](https://github.com/tmux/tmux)
 - [tmux plugin manager](https://github.com/tmux-plugins/tpm?tab=readme-ov-file)
 - [vim tmux navigator](https://github.com/christoomey/vim-tmux-navigator)
