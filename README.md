@@ -1,5 +1,6 @@
 # Arch Dev Setup
 
+![wezterm, neovim](https://i.imgur.com/FyaiNJZ.png)
 ![wezterm, tmux](https://i.imgur.com/IxSuJFz.png)
 ![alacritty, neovim](https://github.com/nooneknowspeter/nvim/blob/3bc9a2c14e05f0250a6c607ae962967a60ef4103/public/Screenshot%202025-02-07%20004857.png)
 
