@@ -73,7 +73,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # ohmyposh
 eval "$(oh-my-posh init zsh)"
-eval "$(oh-my-posh init zsh --config 'https://gist.githubusercontent.com/nooneknowspeter/381528d93e6b630d43d3f901f8ee4e25/raw/722e7e395a5061adaf1bb7cbd8f3f42706381fac/kushal-all-black.json')"
+eval "$(oh-my-posh init zsh --config '~/dotfiles/themes/oh-my-posh/kushal-dark.json')"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
