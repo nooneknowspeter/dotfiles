@@ -7,6 +7,7 @@ asciiville-aewan
 aws-cli-v2
 bashdb
 bb
+beautysh
 cbfmt-bin
 cbftp
 cmake-init
@@ -37,7 +38,10 @@ python-pynvim-git
 python311
 quarto-cli-bin
 resto
+rojo
+slides
 smassh-bin
+taskopen
 terraform-bin
 terraform-ls
 tty-clock

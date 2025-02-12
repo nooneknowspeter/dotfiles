@@ -95,6 +95,8 @@ stow
 stylua
 sudo
 supercollider
+task
+taskwarrior-tui
 tectonic
 texlab
 texlive-bibtexextra
