@@ -1,3 +1,4 @@
+7zip
 alacritty
 ansible
 arch-wiki-docs
@@ -28,6 +29,7 @@ dotnet-sdk
 dotnet-sdk-6.0
 eksctl
 fastfetch
+fd
 feh
 firefox
 fzf
@@ -84,6 +86,7 @@ python-pip
 rainfrog
 reflector
 remmina
+ripgrep
 rustup
 sc3-plugins
 scrcpy
@@ -186,6 +189,7 @@ zathura
 zathura-pdf-mupdf
 zig
 zls
+zoxide
 zsh
 zsh-autosuggestions
 zsh-completions

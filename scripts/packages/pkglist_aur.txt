@@ -10,6 +10,7 @@ bb
 beautysh
 cbfmt-bin
 cbftp
+cht.sh-git
 cmake-init
 cmatrix-git
 conan
