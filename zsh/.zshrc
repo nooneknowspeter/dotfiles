@@ -113,3 +113,6 @@ complete -o nospace -C /usr/bin/terraform terraform
 
 # thefuck
 eval $(thefuck --alias)
+
+# dotnet tools
+export PATH="$PATH:$HOME/.dotnet/tools/"
