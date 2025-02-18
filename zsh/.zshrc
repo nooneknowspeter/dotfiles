@@ -66,7 +66,7 @@ export KEYTIMEOUT=1
 
 # x server display, hyper v ip and port; wsl
 export DISPLAY=172.23.144.1:0
-export LIBGL_ALWAYS_INDIRECT=1
+export LIBGL_ALWAYS_INDIRECT=0
 
 # homebrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
