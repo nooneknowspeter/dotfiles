@@ -116,3 +116,6 @@ eval $(thefuck --alias)
 
 # dotnet tools
 export PATH="$PATH:$HOME/.dotnet/tools/"
+
+# rust
+export PATH="$PATH:$HOME/.cargo/bin"
