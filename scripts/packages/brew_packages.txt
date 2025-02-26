@@ -12,7 +12,6 @@ expat
 gcc
 gettext
 gmp
-go@1.22
 icu4c@76
 isl
 libedit

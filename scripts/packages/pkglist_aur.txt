@@ -25,12 +25,13 @@ grpcurl
 imgui
 jqp
 lazydocker
+lazysql
 ltex-ls-bin
 ltex-ls-plus-bin
 markdown-oxide-git
 mongosh-bin
+mssql-tools
 nerdctl-full-bin
-netcoredbg
 oneko
 patat-bin
 plugdata-bin
@@ -50,4 +51,5 @@ vscode-js-debug
 xrdp
 yay
 yay-debug
+zig-completion-git
 zsh-vi-mode
