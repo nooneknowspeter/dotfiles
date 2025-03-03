@@ -13,3 +13,6 @@
 [submodule "wezterm/.config/wezterm"]
 	path = wezterm/.config/wezterm
 	url = https://github.com/nooneknowspeter/wezterm
+[submodule "vim/.vim/pack/plugins/start/vim-tmux-navigator"]
+	path = vim/.vim/pack/plugins/start/vim-tmux-navigator
+	url = git@github.com:christoomey/vim-tmux-navigator.git
