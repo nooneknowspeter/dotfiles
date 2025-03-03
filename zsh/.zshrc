@@ -88,7 +88,7 @@ export PATH="$PATH:/home/nooneknows/.local/bin"
 # fi
 
 # default editor
-export EDITOR=nvim
+export EDITOR=vim
 
 # vi plugin
 source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
