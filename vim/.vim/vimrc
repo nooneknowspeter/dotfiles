@@ -1,14 +1,30 @@
 " set relativenumber and number
 set number relativenumber
 
-" colorscheme
-color habamax
-
-" transparent background
-hi Normal          ctermfg=252 ctermbg=none
+" syntax highlighting
+syntax on
 
 " clipboard
 set clipboard=unnamedplus
 
 " better escape
 imap jj <Esc>
+
+" wrap lines
+set wrap
+
+" stats
+set ruler
+
+" last line
+set showmode
+set showcmd
+
+" formatting
+map <leader>q gqip
+
+" colorscheme
+color quiet
+
+" transparent background
+hi Normal          ctermfg=252 ctermbg=none
