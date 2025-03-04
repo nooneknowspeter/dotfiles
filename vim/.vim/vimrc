@@ -8,6 +8,7 @@ syntax on
 set clipboard=unnamedplus
 
 " better escape
+imap jk <Esc>
 imap jj <Esc>
 
 " wrap lines
@@ -24,7 +25,10 @@ set showcmd
 map <leader>q gqip
 
 " colorscheme
-color quiet
+color sorbet
 
 " transparent background
-hi Normal          ctermfg=252 ctermbg=none
+hi normal ctermbg=none
+
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
