@@ -16,3 +16,6 @@
 [submodule "vim/.vim/pack/plugins/start/vim-tmux-navigator"]
 	path = vim/.vim/pack/plugins/start/vim-tmux-navigator
 	url = git@github.com:christoomey/vim-tmux-navigator.git
+[submodule "vim/.vim/pack/plugins/start/vim-visual-multi"]
+	path = vim/.vim/pack/plugins/start/vim-visual-multi
+	url = https://github.com/mg979/vim-visual-multi.git
