@@ -19,3 +19,6 @@
 [submodule "vim/.vim/pack/plugins/start/vim-visual-multi"]
 	path = vim/.vim/pack/plugins/start/vim-visual-multi
 	url = https://github.com/mg979/vim-visual-multi.git
+[submodule "vim/.vim/pack/plugins/start/vim-surround"]
+	path = vim/.vim/pack/plugins/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
