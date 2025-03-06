@@ -1,6 +1,9 @@
 " leader
 let mapleader = " "
 
+" enabled mouse in normal and visual mode
+set mouse=nv
+
 " set relativenumber and number
 set number relativenumber
 
