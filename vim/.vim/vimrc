@@ -32,3 +32,8 @@ hi normal ctermbg=none
 
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
+
+" multicursors
+let g:VM_maps = {}
+let g:VM_maps['Find Under'] = '<C-m>'
+let g:VM_maps['Find Subword Under'] = '<C-m>'
