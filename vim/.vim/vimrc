@@ -56,8 +56,6 @@ set ttyfast
 map <leader>q gqip
 
 " searching
-nnoremap / /\v
-vnoremap / /\v
 set hlsearch
 set incsearch
 set ignorecase
