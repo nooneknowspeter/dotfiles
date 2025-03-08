@@ -2,7 +2,7 @@
 	email = 157999171+nooneknowspeter@users.noreply.github.com
 	name = nooneknows
 [core]
-	editor = nvim
+	editor = vim
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
