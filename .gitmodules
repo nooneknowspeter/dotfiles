@@ -13,3 +13,6 @@
 [submodule "wezterm"]
 	path = wezterm/.config/wezterm
 	url = https://github.com/nooneknowspeter/wezterm
+[submodule "vim"]
+	path = vim/.vim
+	url = https://github.com/nooneknowspeter/.vim
