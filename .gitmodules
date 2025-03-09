@@ -1,27 +1,15 @@
-[submodule "nvim/.config/nvim"]
+[submodule "nvim"]
 	path = nvim/.config/nvim
 	url = https://github.com/nooneknowspeter/nvim.git
-[submodule "vscode/.config/Code/User"]
+[submodule "vscode"]
 	path = vscode/.config/Code/User
 	url = https://github.com/nooneknowspeter/vscode.git
-[submodule "tmux/.tmux/plugins/tpm"]
+[submodule "tmux"]
 	path = tmux/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
-[submodule "alacrity/.config/alacritty"]
+[submodule "alacritty"]
 	path = alacrity/.config/alacritty
 	url = https://github.com/nooneknowspeter/alacritty.git
-[submodule "wezterm/.config/wezterm"]
+[submodule "wezterm"]
 	path = wezterm/.config/wezterm
 	url = https://github.com/nooneknowspeter/wezterm
-[submodule "vim/.vim/pack/plugins/start/vim-tmux-navigator"]
-	path = vim/.vim/pack/plugins/start/vim-tmux-navigator
-	url = git@github.com:christoomey/vim-tmux-navigator.git
-[submodule "vim/.vim/pack/plugins/start/vim-visual-multi"]
-	path = vim/.vim/pack/plugins/start/vim-visual-multi
-	url = https://github.com/mg979/vim-visual-multi.git
-[submodule "vim/.vim/pack/plugins/start/vim-surround"]
-	path = vim/.vim/pack/plugins/start/vim-surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule "vim/.vim/pack/plugins/start/auto-pairs"]
-	path = vim/.vim/pack/plugins/start/auto-pairs
-	url = https://github.com/jiangmiao/auto-pairs.git
