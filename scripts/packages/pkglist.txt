@@ -46,6 +46,7 @@ glow
 gnu-netcat
 grpc
 grpc-cli
+gvim
 htop
 httpie
 i3-wm
@@ -136,6 +137,7 @@ supercollider
 task
 taskwarrior-tui
 tectonic
+television
 texlab
 texlive-bibtexextra
 texlive-binextra
@@ -156,6 +158,7 @@ texlive-publishers
 texlive-xetex
 thefuck
 tigervnc
+tldr
 tmate
 tmux
 tree
@@ -163,8 +166,6 @@ ueberzug
 unzip
 uwufetch
 vale
-vim
-vim-csound
 virtualbox
 virtualbox-host-dkms
 vscode-json-languageserver

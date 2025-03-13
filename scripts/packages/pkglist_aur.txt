@@ -28,6 +28,7 @@ lazydocker
 lazysql
 ltex-ls-bin
 ltex-ls-plus-bin
+lune
 markdown-oxide-git
 mongosh-bin
 mssql-tools
@@ -41,6 +42,7 @@ python311
 quarto-cli-bin
 resto
 rojo
+scope-tui
 slides
 smassh-bin
 taskopen
