@@ -119,3 +119,10 @@ export PATH="$PATH:$HOME/.dotnet/tools/"
 
 # rust
 export PATH="$PATH:$HOME/.cargo/bin"
+
+# bun completions
+[ -s "/home/nooneknows/.bun/_bun" ] && source "/home/nooneknows/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
