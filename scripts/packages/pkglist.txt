@@ -53,6 +53,9 @@ i3-wm
 i3blocks
 i3lock
 i3status
+jupyter-notebook
+jupyterlab
+jupyterlab-widgets
 k9s
 kitty
 kubeadm
@@ -81,6 +84,7 @@ nano
 neofetch
 net-tools
 nginx
+nmap
 nvidia-container-toolkit
 nvidia-open-dkms
 pandoc-cli
@@ -91,7 +95,10 @@ picom
 pkgfile
 plocate
 postgresql
+pyenv
 python-django
+python-ipykernel
+python-ipympl
 python-pip
 qt5-3d
 qt5-charts
