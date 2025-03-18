@@ -38,6 +38,8 @@ oneko
 patat-bin
 plugdata-bin
 posting
+python-jupyterlab-vim
+python-jupytext
 python-pynvim-git
 python311
 quarto-cli-bin
