@@ -18,6 +18,7 @@ docker-scout
 endoh1
 epub-thumbnailer-git
 fontpreview
+fzf-tab-git
 gh-dash
 gitmux
 google-chrome
