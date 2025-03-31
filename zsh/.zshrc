@@ -90,4 +90,4 @@ export DISPLAY=172.23.144.1:0
 export LIBGL_ALWAYS_INDIRECT=0
 
 # default editor
-export EDITOR=vim
+export EDITOR=nvim
