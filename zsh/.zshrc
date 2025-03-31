@@ -42,6 +42,7 @@ plugins=(
     rust
     safe-paste
     ssh
+    starship
     sudo
     systemd
     terraform
