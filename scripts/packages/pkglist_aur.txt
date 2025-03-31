@@ -4,6 +4,7 @@ ascii-rain-git
 asciigames
 asciiquarium-transparent-git
 asciiville-aewan
+asdf-vm-git
 aws-cli-v2
 bashdb
 bb
@@ -13,6 +14,7 @@ cbftp
 cht.sh-git
 cmake-init
 cmatrix-git
+cointop
 conan
 docker-scout
 endoh1
@@ -27,6 +29,7 @@ imgui
 jqp
 lazydocker
 lazysql
+leetcode-cli
 ltex-ls-bin
 ltex-ls-plus-bin
 lune
@@ -34,6 +37,8 @@ markdown-oxide-git
 mongosh-bin
 mssql-tools
 nerdctl-full-bin
+nvitop
+oh-my-zsh-git
 oneko
 patat-bin
 plugdata-bin
@@ -49,12 +54,11 @@ scope-tui
 slides
 smassh-bin
 taskopen
-terraform-bin
-terraform-ls
+tracker
 tty-clock
 vscode-js-debug
 xrdp
 yay
 yay-debug
 zig-completion-git
-zsh-vi-mode
+zig-nightly-bin
