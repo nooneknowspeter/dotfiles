@@ -46,7 +46,6 @@ plugins=(
     sudo
     systemd
     terraform
-    thefuck
     themes
     tmux
     vi-mode
