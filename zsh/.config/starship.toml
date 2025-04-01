@@ -150,6 +150,7 @@ Void = " "
 Windows = "󰍲 "
 
 [package]
+disabled = true
 symbol = "󰏗 "
 
 [perl]
@@ -184,4 +185,3 @@ symbol = " "
 
 [gradle]
 symbol = " "
-
