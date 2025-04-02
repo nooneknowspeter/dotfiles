@@ -47,6 +47,7 @@ plugins=(
     systemd
     terraform
     themes
+    tldr
     tmux
     vi-mode
     zsh-autosuggestions
