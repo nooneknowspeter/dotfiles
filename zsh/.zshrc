@@ -19,6 +19,8 @@ plugins=(
     bun
     colorize
     cp
+    docker-compose
+    docker
     dotnet
     fzf
     fzf-tab
