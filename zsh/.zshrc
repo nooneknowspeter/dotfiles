@@ -88,6 +88,9 @@ alias cat="bat --theme=base16-256"
 # grep
 alias grep='rg --color=auto'
 
+# find
+alias find='fd'
+
 # x server display, hyper v ip and port; wsl
 export DISPLAY=172.23.144.1:0
 export LIBGL_ALWAYS_INDIRECT=0
