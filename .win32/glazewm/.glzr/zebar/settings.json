@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/glzr-io/zebar/v2.4.0/resources/settings-schema.json",
+  "startupConfigs": [
+    {
+      "path": "starter/with-glazewm.zebar.json",
+      "preset": "default"
+    }
+  ]
+}
