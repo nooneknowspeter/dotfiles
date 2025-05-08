@@ -2,4 +2,4 @@
 	email = 157999171+nooneknowspeter@users.noreply.github.com
 	name = nooneknows
 [core]
-	editor = vim
+	editor = nvim
