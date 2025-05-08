@@ -22,4 +22,6 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
-\scripts
+\.scripts
+\.win32 # windows only
+\.browser # browser extensions
