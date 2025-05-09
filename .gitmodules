@@ -1,21 +1,21 @@
 [submodule "nvim"]
 	path = nvim/.config/nvim
-	url = https://github.com/nooneknowspeter/nvim.git
+	url = git@github.com:nooneknowspeter/nvim.git
 [submodule "vscode"]
 	path = vscode/.config/Code/User
-	url = https://github.com/nooneknowspeter/vscode.git
+	url = git@github.com:nooneknowspeter/vscode.git
 [submodule "tmux"]
 	path = tmux/.tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm.git
+	url = git@github.com:tmux-plugins/tpm.git
 [submodule "alacritty"]
 	path = alacritty/.config/alacritty
-	url = https://github.com/nooneknowspeter/alacritty.git
+	url = git@github.com:nooneknowspeter/alacritty.git
 [submodule "wezterm"]
 	path = wezterm/.config/wezterm
-	url = https://github.com/nooneknowspeter/wezterm.git
+	url = git@github.com:nooneknowspeter/wezterm.git
 [submodule "vim"]
 	path = vim/.vim
-	url = https://github.com/nooneknowspeter/.vim.git
+	url = git@github.com:nooneknowspeter/.vim.git
 [submodule "zsh"]
 	path = zsh
-	url = https://github.com/nooneknowspeter/zsh.git
+	url = git@github.com:nooneknowspeter/zsh.git
