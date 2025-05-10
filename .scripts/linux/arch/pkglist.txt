@@ -15,7 +15,6 @@ btop
 carla
 chafa
 clang
-cmake
 cowsay
 csound
 csound-doc
@@ -24,6 +23,7 @@ cuda
 cuda-tools
 curlie
 cyme
+direnv
 docker
 docker-buildx
 eksctl
@@ -36,8 +36,10 @@ fzf
 gdb
 ghostty
 git
+git-annex
 git-cliff
 git-lfs
+glab
 glad
 glow
 gnu-netcat
@@ -46,6 +48,7 @@ grpc-cli
 gvim
 htop
 httpie
+hyprland
 i3-wm
 i3blocks
 i3lock
@@ -92,7 +95,6 @@ perl-yaml-tiny
 picom
 pkgfile
 plocate
-postgresql
 pyenv
 python-django
 python-ipykernel
@@ -226,6 +228,7 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 yazi
+yq
 zathura
 zathura-pdf-mupdf
 zoxide

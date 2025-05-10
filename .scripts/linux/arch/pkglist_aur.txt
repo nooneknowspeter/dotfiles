@@ -5,14 +5,13 @@ asciigames
 asciiquarium-transparent-git
 asciiville-aewan
 asdf-vm-git
-aws-cli-v2
 bashdb
 bb
 beautysh
 cbfmt-bin
 cbftp
+cbonsai
 cht.sh-git
-cmake-init
 cmatrix-git
 cointop
 conan
@@ -37,6 +36,7 @@ markdown-oxide-git
 mongosh-bin
 mssql-tools
 nerdctl-full-bin
+nodejs-localtunnel
 nvitop
 oh-my-zsh-git
 oneko
@@ -57,8 +57,6 @@ taskopen
 tracker
 tty-clock
 vscode-js-debug
-xrdp
 yay
 yay-debug
 zig-completion-git
-zig-nightly-bin
