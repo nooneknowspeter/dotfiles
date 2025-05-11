@@ -4,9 +4,6 @@
 [submodule "vscode"]
 	path = vscode/.config/Code/User
 	url = git@github.com:nooneknowspeter/vscode.git
-[submodule "tmux"]
-	path = tmux/.tmux/plugins/tpm
-	url = git@github.com:tmux-plugins/tpm.git
 [submodule "alacritty"]
 	path = alacritty/.config/alacritty
 	url = git@github.com:nooneknowspeter/alacritty.git
@@ -19,3 +16,6 @@
 [submodule "zsh"]
 	path = zsh
 	url = git@github.com:nooneknowspeter/zsh.git
+[submodule "tmux"]
+	path = tmux
+	url = git@github.com:nooneknowspeter/tmux.git
