@@ -1,0 +1,32 @@
+---
+- name: dotfiles
+- hosts: all
+  connection: localhost
+  become: true
+
+  pre_tasks:
+    - name: update system | arch
+      shell: echo "updating system | {{ ansible_distribution }}"
+      when: ansible_distribution == "Arch"
+
+    - name: update system | debian
+      shell: echo "updating system"
+      when: ansible_distribution in ["Ubuntu", "Debian", "Kali"]
+
+    - name: update system | nixos
+      shell: echo "updating system"
+      when: ansible_distribution == "NixOS"
+
+    - name: update system | mac
+      shell: echo "updating system"
+      when: ansible_distribution == "MacOSX"
+
+    - name: update system | windows
+      shell: echo "updating system"
+      when: ansible_distribution == "Windows"
+
+  tasks:
+    - name: test1
+      shell: echo "hello"
+    - name: test2
+      shell: echo "another one"
