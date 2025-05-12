@@ -6,14 +6,18 @@
 
   pre_tasks:
     - name: clone dotfiles
+      become_user: archbox
+      become: true
       ansible.builtin.git: 
         repo: git@github.com/nooneknowspeter/dotfiles.git
+        accept_hostkey: true
         dest: ~/dotfiles
         recursive: true
+        key_file: ~/.ssh/id_ed25519
 
   tasks:
     - name: update system | arch
-      ansible.builtin.import_playbook: .anisble/playbooks/test.yml
+      include_tasks: .anisble/playbooks/test.yml
       when: ansible_facts['os_family'] == "Archlinux"
 
     - name: update system | debian

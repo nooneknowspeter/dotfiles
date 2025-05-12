@@ -1,0 +1,9 @@
+- name: clone dotfiles
+  become_user: archbox
+  become: true
+  ansible.builtin.git: 
+    repo: git@github.com/nooneknowspeter/dotfiles.git
+    accept_hostkey: true
+    dest: ~/dotfiles
+    recursive: true
+    key_file: ~/.ssh/id_ed25519
