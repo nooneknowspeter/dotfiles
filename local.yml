@@ -7,23 +7,19 @@
   pre_tasks:
     - name: update system | arch
       shell: echo "updating system"
-      when: ansible_distribution == "Arch"
+      when: ansible_facts['os_family'] == "Archlinux"
 
     - name: update system | debian
       shell: echo "updating system"
-      when: ansible_distribution in ["Ubuntu", "Debian", "Kali"]
+      when: ansible_facts['os_family'] == "Debian"
 
     - name: update system | nixos
       shell: echo "updating system"
       when: ansible_distribution == "NixOS"
 
-    - name: update system | mac
-      shell: echo "updating system"
-      when: ansible_distribution == "MacOSX"
-
     - name: update system | windows
       shell: echo "updating system"
-      when: ansible_distribution == "Windows"
+      when: ansible_facts['os_family'] == "Windows"
 
   tasks:
     - name: test1
