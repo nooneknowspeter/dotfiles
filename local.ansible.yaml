@@ -1,6 +1,6 @@
 ---
 - name: dotfiles
-- hosts: all
+  hosts: localhost
   connection: localhost
   become: true
 
