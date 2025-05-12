@@ -6,8 +6,8 @@
 
   pre_tasks:
     - name: update system | arch
-      shell: echo "updating system | {{ ansible_distribution }}"
-      when: ansible_distribution == "Arch"
+      shell: echo "updating system"
+      when: ansible_distribution == "archlinux"
 
     - name: update system | debian
       shell: echo "updating system"
