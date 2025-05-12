@@ -5,8 +5,15 @@
   become: true
 
   pre_tasks:
+    - name: clone dotfiles
+      ansible.builtin.git: 
+        repo: git@github.com/nooneknowspeter/dotfiles.git
+        dest: ~/dotfiles
+        recursive: true
+
+  tasks:
     - name: update system | arch
-      shell: echo "updating system"
+      ansible.builtin.import_playbook: .anisble/playbooks/test.yml
       when: ansible_facts['os_family'] == "Archlinux"
 
     - name: update system | debian
@@ -20,9 +27,3 @@
     - name: update system | windows
       shell: echo "updating system"
       when: ansible_facts['os_family'] == "Windows"
-
-  tasks:
-    - name: test1
-      shell: echo "hello"
-    - name: test2
-      shell: echo "another one"
