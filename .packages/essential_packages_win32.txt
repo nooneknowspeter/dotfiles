@@ -1,0 +1,13 @@
+btop
+curl
+fastfetch
+git
+lazydocker
+lazygit
+scrcpy
+starship
+virtualbox
+vscode
+wezterm
+vcxsrv
+yazi
