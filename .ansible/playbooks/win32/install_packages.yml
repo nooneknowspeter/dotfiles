@@ -1,0 +1,51 @@
+- name: install btop
+  community.windows.win_scoop:
+    name: btop
+
+- name: install curl
+  community.windows.win_scoop:
+    name: curl
+
+- name: install fastfetch
+  community.windows.win_scoop:
+    name: fastfetch
+
+- name: install git
+  community.windows.win_scoop:
+    name: git
+
+- name: install lazydocker
+  community.windows.win_scoop:
+    name: lazydocker
+
+- name: install lazygit
+  community.windows.win_scoop:
+    name: lazygit
+
+- name: install scrcpy
+  community.windows.win_scoop:
+    name: scrcpy
+
+- name: install starship
+  community.windows.win_scoop:
+    name: starship
+
+- name: install virtualbox
+  community.windows.win_scoop:
+    name: virtualbox
+
+- name: install vscode
+  community.windows.win_scoop:
+    name: vscode
+
+- name: install wezterm
+  community.windows.win_scoop:
+    name: wezterm
+
+- name: install vcxsrv
+  community.windows.win_scoop:
+    name: vcxsrv
+
+- name: install yazi
+  community.windows.win_scoop:
+    name: yazi
