@@ -2,32 +2,44 @@
 - name: dotfiles
   hosts: localhost
   connection: localhost
-  become: true
 
   pre_tasks:
-    - name: clone dotfiles
-      become_user: archbox
+    - name: initialize | arch
+      ansible.builtin.include_tasks:
+        file: .ansible/playbooks/unix/linux/arch/init.yml
+      when: ansible_fact['os_family'] == "Archlinux"
+
+    - name: update system | debian
       become: true
-      ansible.builtin.git: 
+      shell: sudo apt update -y && sudo apt upgrade -y
+      when: ansible_facts['os_family'] == "Debian"
+
+    - name: update system | nixos
+      become: true
+      shell: sudo nixos-rebuild switch --upgrade
+      when: ansible_distribution == "NixOS"
+
+    - name: initialize | windows
+      become: true
+      ansible.builtin.include_tasks:
+      file: .ansible/playbooks/win32/init.yml
+      when: ansbile_facts['os_family'] == "Windows"
+
+    - name: clone dotfiles
+      become_user: "{{ ansible_facts['user_id'] }}"
+      become: true
+      ansible.builtin.git:
         repo: git@github.com/nooneknowspeter/dotfiles.git
         accept_hostkey: true
+        clone: true
         dest: ~/dotfiles
         recursive: true
         key_file: ~/.ssh/id_ed25519
 
   tasks:
-    - name: update system | arch
-      include_tasks: .anisble/playbooks/test.yml
-      when: ansible_facts['os_family'] == "Archlinux"
-
-    - name: update system | debian
-      shell: echo "updating system"
-      when: ansible_facts['os_family'] == "Debian"
-
-    - name: update system | nixos
-      shell: echo "updating system"
-      when: ansible_distribution == "NixOS"
-
-    - name: update system | windows
-      shell: echo "updating system"
-      when: ansible_facts['os_family'] == "Windows"
+    - name: install nix | unix
+      ansible.builtin.package:
+        name:
+          - nix
+        state: latest
+      when: not ansible_facts['os_family'] == "Windows"
