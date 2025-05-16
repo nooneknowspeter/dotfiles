@@ -1,0 +1,5 @@
+- name: install nix | unix
+  ansible.builtin.package:
+    name:
+      - nix
+    state: latest
