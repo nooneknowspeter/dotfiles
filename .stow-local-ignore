@@ -21,7 +21,16 @@ _darcs
 ^/README.*
 ^/LICENSE.*
 ^/COPYING
+^/TODO.*
+^/Makefile
+^/local.yml
+^/ansible.cfg
+^/.gitignore
+^/.gitmodules
 
+\.ansible
+\.browser # browser extensions
+\.git
+\.packages
 \.scripts
 \.win32 # windows only
-\.browser # browser extensions
