@@ -51,6 +51,7 @@ fastfetch
 fd
 feh
 firefox
+flyctl
 fontpreview
 freetds
 fzf
@@ -201,6 +202,7 @@ taskopen
 taskwarrior-tui
 tectonic
 television
+termshark
 texlab
 texlive-bibtexextra
 texlive-binextra
@@ -238,6 +240,7 @@ vscode-json-languageserver
 wavemon
 wezterm
 wget
+wireshark-qt
 xf86-video-vesa
 xh
 xorg-bdftopcf
@@ -287,7 +290,6 @@ xorg-xwd
 xorg-xwininfo
 xorg-xwud
 yay
-yay-debug
 yazi
 yq
 zathura
