@@ -18,6 +18,7 @@ conan
 docker-scout
 endoh1
 epub-thumbnailer-git
+flyctl
 fontpreview
 fzf-tab-git
 gh-dash
@@ -58,5 +59,4 @@ tracker
 tty-clock
 vscode-js-debug
 yay
-yay-debug
 zig-completion-git

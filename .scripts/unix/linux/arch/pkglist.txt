@@ -145,6 +145,7 @@ task
 taskwarrior-tui
 tectonic
 television
+termshark
 texlab
 texlive-bibtexextra
 texlive-binextra
@@ -179,6 +180,7 @@ vscode-json-languageserver
 wavemon
 wezterm
 wget
+wireshark-qt
 xf86-video-vesa
 xh
 xorg-bdftopcf
