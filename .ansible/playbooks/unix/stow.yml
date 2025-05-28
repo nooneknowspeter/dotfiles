@@ -1,0 +1,20 @@
+---
+- name: stow | unix
+  stow:
+    state: present
+    package: '{{ item }}'
+    dir: '$HOME/dotfiles/'
+    target: '$HOME'
+  with_items:
+    - alacritty
+    - ghostty
+    - git
+    - k9s
+    - nix
+    - nvim
+    - posting
+    - starship
+    - tmux
+    - vscode
+    - wezterm
+    - zsh
