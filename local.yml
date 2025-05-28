@@ -25,17 +25,6 @@
       file: .ansible/playbooks/win32/init.yml
       when: ansbile_facts['os_family'] == "Windows"
 
-    - name: clone dotfiles
-      become_user: "{{ ansible_facts['user_id'] }}"
-      become: true
-      ansible.builtin.git:
-        repo: git@github.com/nooneknowspeter/dotfiles.git
-        accept_hostkey: true
-        clone: true
-        dest: ~/dotfiles
-        recursive: true
-        key_file: ~/.ssh/id_ed25519
-
   tasks:
     - name: install nix | unix
       ansible.builtin.package:
