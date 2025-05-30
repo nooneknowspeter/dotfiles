@@ -1,7 +1,4 @@
-font-family = FiraCode Nerd Font 
-
-theme = Calamity
-
-background-opacity = 0
-
+theme = UltraDark
+font-family = FiraCode Nerd Font
+background-opacity = 0.8
 background-blur-radius = 10
