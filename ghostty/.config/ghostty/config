@@ -1,4 +1,5 @@
 theme = UltraDark
-font-family = FiraCode Nerd Font
+font-family = "FiraCode Nerd Font"
+font-size = 11
 background-opacity = 0.8
-background-blur-radius = 10
+background-blur = false
