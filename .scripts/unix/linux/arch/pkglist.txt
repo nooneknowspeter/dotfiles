@@ -15,6 +15,7 @@ btop
 carla
 chafa
 clang
+cloc
 cowsay
 csound
 csound-doc
@@ -26,6 +27,7 @@ cyme
 direnv
 docker
 docker-buildx
+docker-compose
 eksctl
 fastfetch
 fd
@@ -74,6 +76,7 @@ lua-language-server
 lua51
 luajit
 luarocks
+lvm2
 lynx
 mc
 mesa-docs
@@ -81,7 +84,6 @@ mesa-utils
 minikube
 mono-msbuild
 nano
-neofetch
 net-tools
 nginx
 nmap
@@ -103,7 +105,6 @@ python-pip
 qt5-3d
 qt5-charts
 qt5-connectivity
-qt5-datavis3d
 qt5-doc
 qt5-examples
 qt5-graphicaleffects

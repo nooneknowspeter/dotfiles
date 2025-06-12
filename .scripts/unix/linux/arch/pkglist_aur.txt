@@ -36,6 +36,7 @@ lune
 markdown-oxide-git
 mongosh-bin
 mssql-tools
+neofetch
 nerdctl-full-bin
 nodejs-localtunnel
 nvitop
@@ -48,6 +49,7 @@ python-jupyterlab-vim
 python-jupytext
 python-pynvim-git
 python311
+qt5-datavis3d
 quarto-cli-bin
 resto
 rojo
