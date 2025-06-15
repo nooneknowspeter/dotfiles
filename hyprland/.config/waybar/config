@@ -8,6 +8,7 @@
     ],
     "modules-center": ["hyprland/window"],
     "modules-right": [
+        "hyprland/submap",
         "pulseaudio", 
         "network", 
         "backlight", 
@@ -16,6 +17,7 @@
         "battery", 
         "battery#bat2", 
         "clock", 
+        "hyprland/language",
         "tray"
     ],
     "hyprland/workspaces": { 
@@ -23,6 +25,12 @@
      },
     "hyprland/mode": {
         "format": "<span style=\"italic\">{}</span>"
+    },
+    "hyprland/submap": {
+        "format": "{}"
+    },
+    "hyprland/language": {
+        "format": "{}"
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ ",

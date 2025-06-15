@@ -38,6 +38,7 @@ window#waybar {
   background-color: transparent;
 }
 
+#language,
 #clock,
 #battery,
 #cpu,
@@ -194,8 +195,8 @@ label:focus {
 }
 
 #language {
-  background: #bbccdd;
-  color: #333333;
+  background: transparent;
+  color: white;
   padding: 0 5px;
   margin: 6px 3px;
   min-width: 16px;
