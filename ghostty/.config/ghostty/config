@@ -4,7 +4,8 @@ font-size = 11
 background-opacity = 0.8
 background-blur = false
 confirm-close-surface = false
-mouse-hide-while-typing=true
+mouse-hide-while-typing = true
+command = TERM=xterm-256color /usr/bin/bash
 
 keybind = performable:ctrl+c=copy_to_clipboard
 keybind = performable:ctrl+v=paste_from_clipboard
