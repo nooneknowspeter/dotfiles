@@ -1,0 +1,7 @@
+brave-bin
+fnt
+gbm
+hyprsysteminfo
+linux-wallpaperengine-git
+yay
+yay-debug
