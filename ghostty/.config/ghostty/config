@@ -1,9 +1,10 @@
 theme = UltraDark
-font-family = "FiraCode Nerd Font"
+font-family = FiraCode Nerd Font
 font-size = 11
 background-opacity = 0.8
 background-blur = false
 confirm-close-surface = false
+mouse-hide-while-typing=true
 
 keybind = performable:ctrl+c=copy_to_clipboard
 keybind = performable:ctrl+v=paste_from_clipboard
