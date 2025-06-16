@@ -17,7 +17,6 @@
         "battery", 
         "battery#bat2", 
         "clock", 
-        "hyprland/language",
         "tray"
     ],
     "hyprland/workspaces": { 
