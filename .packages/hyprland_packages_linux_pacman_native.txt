@@ -37,6 +37,7 @@ nix
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
+openrgb
 openssh
 otf-aurulent-nerd
 otf-codenewroman-nerd

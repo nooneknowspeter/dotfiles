@@ -3,5 +3,7 @@ fnt
 gbm
 hyprsysteminfo
 linux-wallpaperengine-git
+openrgb-plugin-effects-git
+openrgb-plugin-razer-extras-git
 yay
 yay-debug
