@@ -1,9 +1,0 @@
----
-- name: stow nix-config | linux
-  stow:
-    state: present
-    package: '{{ item }}'
-    dir: '$HOME/dotfiles/'
-    target: '$HOME'
-  with_items:
-    - nix-linux

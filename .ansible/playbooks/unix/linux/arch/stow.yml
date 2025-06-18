@@ -1,9 +1,0 @@
----
-- name: stow | arch
-  stow:
-    state: present
-    package: '{{ item }}'
-    dir: '$HOME/dotfiles/'
-    target: '$HOME'
-  with_items:
-    - hyprland
