@@ -1,19 +1,19 @@
 Set-ExecutionPolicy RemoteSigned
 
 # git
-New-Item -ItemType SymbolicLink -Target "$HOME\dotfiles\git\.gitconfig" -Path "$HOME\.gitconfig"
+New-Item -ItemType SymbolicLink -Target "$HOME\dotfiles\home\packages\headless-essentials\git\.gitconfig" -Path "$HOME\.gitconfig"
 
 # glazewm
-New-Item -ItemType SymbolicLink -Target "$HOME\dotfiles\.win32\.glzr" -Path "$HOME\.glzr"
+New-Item -ItemType SymbolicLink -Target "$HOME\dotfiles\win32\packages\.glzr" -Path "$HOME\.glzr"
 
 # nvim - minimal setup
-New-Item -ItemType SymbolicLink -Target "$HOME\dotfiles\.win32\nvim" -Path "$env:LOCALAPPDATA\nvim"
+New-Item -ItemType SymbolicLink -Target "$HOME\dotfiles\win32\packages\nvim" -Path "$env:LOCALAPPDATA\nvim"
 
 # powershell
-New-Item -ItemType SymbolicLink -Target "$HOME\dotfiles\.win32\WindowsPowerShell" -Path "$HOME\OneDrive\Documents\WindowsPowerShell"
+New-Item -ItemType SymbolicLink -Target "$HOME\dotfiles\win32\packages\WindowsPowerShell" -Path "$HOME\OneDrive\Documents\WindowsPowerShell"
 
 # vscode
-New-Item -ItemType SymbolicLink -Target "$HOME\dotfiles\vscode\.config\Code\User" -Path "$env:APPDATA\Code\User"
+New-Item -ItemType SymbolicLink -Target "$HOME\dotfiles\home\packages\gui-devel\vscode\User" -Path "$env:APPDATA\Code\User"
 
 # wezterm
-New-Item -ItemType SymbolicLink -Target "$HOME\dotfiles\wezterm\.config\wezterm" -Path "$HOME\.config\wezterm"
+New-Item -ItemType SymbolicLink -Target "$HOME\dotfiles\home\packages\gui-devel\wezterm\wezterm" -Path "$HOME\.config\wezterm"
