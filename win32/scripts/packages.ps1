@@ -1,5 +1,6 @@
 # winget packages
 winget install cURL.cURL
+winget install Discord.Discord
 winget install Fastfetch-cli.Fastfetch
 winget install Git.Git
 winget install glzr-io.glazewm
