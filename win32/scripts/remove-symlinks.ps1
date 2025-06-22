@@ -1,6 +1,5 @@
 Set-ExecutionPolicy RemoteSigned
 
-rm -Force $env:APPDATA\alacritty
 rm -Force $HOME\.gitconfig
 rm -Force $HOME\.glzr
 rm -Force $env:LOCALAPPDATA\nvim

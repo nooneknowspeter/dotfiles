@@ -1,8 +1,5 @@
 Set-ExecutionPolicy RemoteSigned
 
-# alacritty
-New-Item -ItemType SymbolicLink -Target "$HOME\dotfiles\alacritty\.config\alacritty" -Path "$env:APPDATA\alacritty"
-
 # git
 New-Item -ItemType SymbolicLink -Target "$HOME\dotfiles\git\.gitconfig" -Path "$HOME\.gitconfig"
 
