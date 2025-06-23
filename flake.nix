@@ -22,11 +22,6 @@
     nixos-hardware = {
       url = "github:NixOS/nixos-hardware/master";
     };
-
-    # global system config
-    # system = "x86_64-linux";
-    timezone = "US/Eastern";
-    locale = "en_US.UTF-8";
   };
 
   outputs =
@@ -35,10 +30,10 @@
 
       # nixos
       nixosConfigurations = {
-        nooneknows-nixos = nixpkgs.lib.nixosSystem {
+        nooneknows = nixpkgs.lib.nixosSystem {
 
           modules = [
-            ./linux/nixos/configuration.nix
+            ./linux/nixos/x86-64/main/configuration.nix
 
             home-manager.nixosModules.home-manager
             {
