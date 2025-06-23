@@ -66,9 +66,4 @@
     EDITOR = "nvim";
   };
 
-  imports = [
-    ./packages/headless-essentials/headless-essentials.nix
-    ./packages/gui-essentials/gui-essentials.nix
-  ];
-
 }
