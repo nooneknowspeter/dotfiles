@@ -2,14 +2,11 @@
 
 ## Automate with Nix
 
-- [x] remove Ansible configuration
-- [x] learn nix
-- [ ] NixOS config
-  - [ ] configuration.nix
-  - [ ] hardware-configuration.nix
-- [ ] nix darwin
-  - [ ] configuration.nix
-- [x] home manager
+- [ ] make configurations for each environment in [flake.nix](./flake.nix)
+    - [ ] architecture
+    - [ ] kernel
+    - [ ] distro/OS
+    - [ ] purpose
 
 ## Dev
 - [ ] configure ghostty; after 1.2 release
