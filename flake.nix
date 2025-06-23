@@ -29,40 +29,22 @@
     {
 
       # nixos
+      # sudo nixos-rebuild switch --flake .#hostname
       nixosConfigurations = {
+        # main
         nooneknows = nixpkgs.lib.nixosSystem {
-
           modules = [
             ./linux/nixos/x86-64/main/configuration.nix
-
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.nooneknows = ./home/base.nix;
-
-              # Optionally, use home-manager.extraSpecialArgs to pass
-              # arguments to home.nix
-            }
           ];
         };
       };
 
       # nix-darwin
       darwinConfigurations = {
-        nooneknows-mac = nix-darwin.lib.darwinSystem {
-          system = "x86_64-darwin";
+        # macbook
+        nooneknows = nix-darwin.lib.darwinSystem {
           modules = [
-            ./nix-darwin/configuration.nix
-            home-manager.darwinModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.nooneknows = ./home/base.nix;
-
-              # Optionally, use home-manager.extraSpecialArgs to pass
-              # arguments to home.nix
-            }
+            ./nix-darwin/aarch/macbook/configuration.nix
           ];
         };
       };
@@ -71,21 +53,59 @@
       # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
 
-        # full blown arch setup
-        "nooneknows@nooneknows-arch" = home-manager.lib.homeManagerConfiguration {
+        # macos
+        "nooneknows@darwin" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs; };
           modules = [
-            ./home/base.nix
+            ./home/darwin-macbook.nix
           ];
         };
 
-        # arch wsl
-        "nooneknows@nooneknows-headless" = home-manager.lib.homeManagerConfiguration {
+
+        # base linux; w/ DE
+        "nooneknows@linux-base" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = { inherit inputs; };
           modules = [
-            ./home/base.nix
+            ./home/linux-base.nix
+          ];
+        };
+
+        # content creation linux; w/ DE, content creation tools
+        "nooneknows@linux-content" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit inputs; };
+          modules = [
+            ./home/linux-content.nix
+          ];
+        };
+
+        # full linux; w/ DE, dev tools, content creation tools
+        "nooneknows@linux-full" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit inputs; };
+          modules = [
+            ./home/linux-full.nix
+          ];
+        };
+
+
+        # wsl
+        "nooneknows@wsl" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit inputs; };
+          modules = [
+            ./home/wsl.nix
+          ];
+        };
+
+        # headless-devel
+        "nooneknows@tty" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit inputs; };
+          modules = [
+            ./home/tty.nix
           ];
         };
 
