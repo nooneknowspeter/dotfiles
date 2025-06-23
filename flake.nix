@@ -77,7 +77,6 @@
           extraSpecialArgs = { inherit inputs; };
           modules = [
             ./home/base.nix
-            ./home/packages/linux-desktopEnvironment/linux-desktopEnvironment.nix
           ];
         };
 

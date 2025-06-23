@@ -67,8 +67,8 @@
   };
 
   imports = [
-    ./packages/shared/headless-essentials/headless-essentials.nix
-    ./packages/shared/gui-essentials/gui-essentials.nix
+    ./packages/headless-essentials/headless-essentials.nix
+    ./packages/gui-essentials/gui-essentials.nix
   ];
 
 }
