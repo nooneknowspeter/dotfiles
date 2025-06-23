@@ -24,21 +24,18 @@
     };
 
     # global system config
-    system = "x86_64-linux";
+    # system = "x86_64-linux";
     timezone = "US/Eastern";
     locale = "en_US.UTF-8";
   };
 
   outputs =
-    { self, nixpkgs, home-manager, darwin, ... }:
+    inputs@{ self, nixpkgs, home-manager, nix-darwin, ... }:
     {
 
       # nixos
       nixosConfigurations = {
         nooneknows-nixos = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs;
-          };
 
           modules = [
             ./linux/nixos/configuration.nix
@@ -58,7 +55,7 @@
 
       # nix-darwin
       darwinConfigurations = {
-        nooneknows-mac = darwin.lib.darwinSystem {
+        nooneknows-mac = nix-darwin.lib.darwinSystem {
           system = "x86_64-darwin";
           modules = [
             ./nix-darwin/configuration.nix
