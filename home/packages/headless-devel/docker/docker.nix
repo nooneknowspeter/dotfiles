@@ -6,8 +6,8 @@
     docker
   ];
 
-  programs.docker = {
-    enable = true;
-  };
+  # programs.docker = {
+  #   enable = true;
+  # };
 
 }

@@ -6,8 +6,8 @@
     cbonsai
   ];
 
-  programs.cbonsai = {
-    enable = true;
-  };
+  # programs.cbonsai = {
+  #   enable = true;
+  # };
 
 }

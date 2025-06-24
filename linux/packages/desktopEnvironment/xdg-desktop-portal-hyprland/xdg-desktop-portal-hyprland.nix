@@ -6,8 +6,8 @@
     xdg-desktop-portal-hyprland
   ];
 
-  programs.xdg-desktop-portal-hyprland = {
-    enable = true;
-  };
+  # programs.xdg-desktop-portal-hyprland = {
+  #   enable = true;
+  # };
 
 }

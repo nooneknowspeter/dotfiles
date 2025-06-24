@@ -6,8 +6,8 @@
     nix
   ];
 
-  programs.nix = {
-    enable = true;
-  };
+  # programs.nix = {
+  #   enable = true;
+  # };
 
 }

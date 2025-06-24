@@ -6,8 +6,8 @@
     wiremix
   ];
 
-  programs.wiremix = {
-    enable = true;
-  };
+  # programs.wiremix = {
+  #   enable = true;
+  # };
 
 }

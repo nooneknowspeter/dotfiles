@@ -6,8 +6,8 @@
     gawkInteractive
   ];
 
-  programs.gawkInteractive = {
-    enable = true;
-  };
+  # programs.gawkInteractive = {
+  #   enable = true;
+  # };
 
 }

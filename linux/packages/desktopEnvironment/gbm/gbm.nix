@@ -6,8 +6,8 @@
     gbm
   ];
 
-  programs.gbm = {
-    enable = true;
-  };
+  # programs.gbm = {
+  #   enable = true;
+  # };
 
 }

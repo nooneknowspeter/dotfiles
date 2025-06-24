@@ -7,10 +7,6 @@
     zsh
   ];
 
-  programs.oh-my-zsh = {
-    enable = true;
-  };
-
   programs.zsh = {
     enable = true;
   };

@@ -6,8 +6,8 @@
     glab
   ];
 
-  programs.glab = {
-    enable = true;
-  };
+  # programs.glab = {
+  #   enable = true;
+  # };
 
 }

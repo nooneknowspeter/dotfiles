@@ -6,8 +6,8 @@
     asdf-vm
   ];
 
-  programs.asdf-vm = {
-    enable = true;
-  };
+  # programs.asdf-vm = {
+  #   enable = true;
+  # };
 
 }

@@ -6,8 +6,8 @@
     virtualbox
   ];
 
-  programs.virtualbox = {
-    enable = true;
-  };
+  # programs.virtualbox = {
+  #   enable = true;
+  # };
 
 }

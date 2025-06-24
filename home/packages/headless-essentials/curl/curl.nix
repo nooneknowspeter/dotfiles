@@ -6,8 +6,8 @@
     curl
   ];
 
-  programs.curl = {
-    enable = true;
-  };
+  # programs.curl = {
+  #   enable = true;
+  # };
 
 }

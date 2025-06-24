@@ -6,8 +6,8 @@
     openssh
   ];
 
-  programs.openssh = {
-    enable = true;
-  };
+  # programs.openssh = {
+  #   enable = true;
+  # };
 
 }

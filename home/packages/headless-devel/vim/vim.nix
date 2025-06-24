@@ -6,13 +6,13 @@
     vim
   ];
 
-  programs.vim = {
-    enable = true;
-  };
+  # programs.vim = {
+  #   enable = true;
+  # };
 
-  home.file.".vim" = {
-    source = ./.vim;
-    recursive = true;
-  };
+  # home.file.".vim" = {
+  #   source = ./.vim;
+  #   recursive = true;
+  # };
 
 }

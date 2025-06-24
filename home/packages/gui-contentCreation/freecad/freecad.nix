@@ -6,8 +6,8 @@
     freecad
   ];
 
-  programs.freecad = {
-    enable = true;
-  };
+  # programs.freecad = {
+  #   enable = true;
+  # };
 
 }

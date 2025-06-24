@@ -6,8 +6,8 @@
     blender
   ];
 
-  programs.blender = {
-    enable = true;
-  };
+  # programs.blender = {
+  #   enable = true;
+  # };
 
 }

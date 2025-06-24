@@ -6,8 +6,8 @@
     uwsm
   ];
 
-  programs.uwsm = {
-    enable = true;
-  };
+  # programs.uwsm = {
+  #   enable = true;
+  # };
 
 }

@@ -6,8 +6,8 @@
     screenkey
   ];
 
-  programs.screenkey = {
-    enable = true;
-  };
+  # programs.screenkey = {
+  #   enable = true;
+  # };
 
 }

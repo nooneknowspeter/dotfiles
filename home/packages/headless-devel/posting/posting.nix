@@ -6,13 +6,13 @@
     posting
   ];
 
-  programs.posting = {
-    enable = true;
-  };
+  # programs.posting = {
+  #   enable = true;
+  # };
 
-  home.file.".config/posting" = {
-    source = ./posting;
-    recursive = true;
-  };
+  # home.file.".config/posting" = {
+  #   source = ./posting;
+  #   recursive = true;
+  # };
 
 }

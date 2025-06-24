@@ -6,13 +6,13 @@
     wofi
   ];
 
-  programs.wofi = {
-    enable = true;
-  };
+  # programs.wofi = {
+  #   enable = true;
+  # };
 
-  home.file."./config/wofi" = {
-    source = ./wofi;
-    recursive = true;
-  };
+  # home.file."./config/wofi" = {
+  #   source = ./wofi;
+  #   recursive = true;
+  # };
 
 }

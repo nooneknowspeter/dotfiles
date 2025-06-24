@@ -6,8 +6,8 @@
     swaync
   ];
 
-  programs.swaync = {
-    enable = true;
-  };
+  # programs.swaync = {
+  #   enable = true;
+  # };
 
 }

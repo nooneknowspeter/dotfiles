@@ -6,8 +6,8 @@
     brightnessctl
   ];
 
-  programs.brightnessctl = {
-    enable = true;
-  };
+  # programs.brightnessctl = {
+  #   enable = true;
+  # };
 
 }

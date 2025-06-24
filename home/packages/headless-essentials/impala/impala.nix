@@ -6,8 +6,8 @@
     impala
   ];
 
-  programs.impala = {
-    enable = true;
-  };
+  # programs.impala = {
+  #   enable = true;
+  # };
 
 }

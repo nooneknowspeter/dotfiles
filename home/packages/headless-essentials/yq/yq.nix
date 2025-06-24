@@ -6,8 +6,8 @@
     yq
   ];
 
-  programs.yq = {
-    enable = true;
-  };
+  # programs.yq = {
+  #   enable = true;
+  # };
 
 }

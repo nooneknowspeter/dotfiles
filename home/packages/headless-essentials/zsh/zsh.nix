@@ -15,7 +15,9 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    autosuggestions = true;
+    autosuggestion = {
+      enable = true;
+    };
     syntaxHighlighting = { enable = true; };
     sessionVariables = {
       DISPLAY = "172.23.144.1:0";
@@ -24,23 +26,42 @@
       DOTFILES = "$HOME/dotfiles";
       NIX_CONFIG = "experimental-features = nix-command flakes";
     };
-    shellAliases = {
-      cat = "bat --theme=base16-256";
-      clear = "clear; tmux clear-history; clear";
-      cmatrix = "cmatrix -fkbrc";
-      donut = "curl ascii.live/donut";
-      find = "fd";
-      grep = "rg --color=auto";
-      knot = "curl ascii.live/knot";
-      ls = "lsd";
-      tmux = "TERM=xterm-256color tmux";
-    };
-    plugins = [
-      {
-        name = "fzf-tab";
-        src = "${pkgs.zsh-fzf-tab}/share/fzf-tab";
-      }
-    ];
+    initContent = ''
+      # fzf-tab
+      source ${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh
+      
+      # bind ctrl + space for autosuggest accept
+      bindkey '^ ' autosuggest-accept
+
+      # vi mode
+      VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+      VI_MODE_SET_CURSOR=true
+
+      # clear tmux histroy and clear terminal
+      alias clear='clear; tmux clear-history; clear'
+  
+      # cmatrix
+      alias cmatrix="cmatrix -fkbrc"
+
+      # ascii.live animations
+      alias donut="curl ascii.live/donut" # donut animation
+      alias knot="curl ascii.live/knot" # knot animation
+
+      # force launch tmux with 256 colors
+      alias tmux="TERM=xterm-256color tmux"
+
+      # ls
+      alias ls="lsd"
+
+      # cat
+      alias cat="bat --theme=base16-256"
+
+      # grep
+      alias grep='rg --color=auto'
+
+      # find
+      alias find='fd'
+    '';
     oh-my-zsh = {
       enable = true;
       theme = "robbyrussell";
@@ -58,7 +79,6 @@
         "docker"
         "dotnet"
         "fzf"
-        "fzf-tab"
         "gh"
         "git"
         "git-lfs"
@@ -91,9 +111,6 @@
       ];
       extraConfig = ''
         zstyle :omz:update mode remainder
-        
-        VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
-        VI_MODE_SET_CURSOR=true
       '';
     };
   };

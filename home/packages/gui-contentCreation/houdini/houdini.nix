@@ -6,8 +6,8 @@
     houdini
   ];
 
-  programs.houdini = {
-    enable = true;
-  };
+  # programs.houdini = {
+  #   enable = true;
+  # };
 
 }

@@ -6,8 +6,8 @@
     cliphist
   ];
 
-  programs.cliphist = {
-    enable = true;
-  };
+  # programs.cliphist = {
+  #   enable = true;
+  # };
 
 }

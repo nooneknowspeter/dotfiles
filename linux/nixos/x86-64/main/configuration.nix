@@ -2,13 +2,16 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, locale, timezone, ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
+
+  nix.extraOptions = '' experimental-features = nix-command flakes '';
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -17,28 +20,28 @@
   networking.hostName = "nooneknows"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   # Set your time zone.
-  time.timeZone = "US/Eastern";
+  time.timeZone = timezone;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-# console = {
-#   font = "Lat2-Terminus16";
-#   keyMap = "us";
-#   useXkbConfig = true; # use xkb.options in tty.
-# };
+  i18n.defaultLocale = locale;
+  # console = {
+  #   font = "Lat2-Terminus16";
+  #   keyMap = "us";
+  #   useXkbConfig = true; # use xkb.options in tty.
+  # };
 
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
 
-  
+
 
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
@@ -58,8 +61,21 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
+  # hyprland services
+  # services.greetd = {
+  #   enable = true;
+  #   settings = {
+  #     default_session = {
+  #       command = "hyprland";
+  #       user = "nooneknows";
+  #     };
+  #   };
+  # };
+
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.nooneknows = {
+    shell = pkgs.zsh;
     isNormalUser = true;
     extraGroups = [ "wheel" "sudo" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
@@ -67,15 +83,16 @@
     ];
   };
 
-  # programs.firefox.enable = true;
+  programs.zsh.enable = true;
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
-   environment.systemPackages = with pkgs; [
-     curl
-	git
-     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-   ];
+  environment.systemPackages = with pkgs; [
+    # curl
+    # git
+    # vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    # zsh
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
+let
+  configLocation = if pkgs.stdenv.isLinux then ".config/Code/User" else "Library/Application Support/Code/User";
+in
 {
 
   home.packages = with pkgs; [
@@ -44,30 +47,16 @@
     };
   };
 
-  # Linux
   # keybindings.json
-  home.file.".config/Code/User/keybindings.json" = {
-    source = ./User/keybindings.json;
-    recursive = false;
-  };
+  # home.file."${configLocation}/keybindings.json" = {
+  #   source = ./User/keybindings.json;
+  #   recursive = false;
+  # };
 
   # settings.json
-  home.file.".config/Code/User/settings.json" = {
-    source = ./User/settings.json;
-    recursive = false;
-  };
+  # home.file."${configLocation}/settings.json" = {
+  #   source = ./User/settings.json;
+  #   recursive = false;
+  # };
 
-
-  # Darwin
-  # keybindings.json
-  home.file."Library/Application Support/Code/User/keybindings.json" = {
-    source = ./User/keybindings.json;
-    recursive = false;
-  };
-
-  # settings.json
-  home.file."Library/Application Support/Code/User/settings.json" = {
-    source = ./User/settings.json;
-    recursive = false;
-  };
 }

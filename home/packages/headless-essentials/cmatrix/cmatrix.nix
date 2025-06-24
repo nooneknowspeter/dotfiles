@@ -6,8 +6,8 @@
     cmatrix
   ];
 
-  programs.cmatrix = {
-    enable = true;
-  };
+  # programs.cmatrix = {
+  #   enable = true;
+  # };
 
 }

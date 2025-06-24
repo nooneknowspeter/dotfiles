@@ -6,8 +6,8 @@
     nvitop
   ];
 
-  programs.nvitop = {
-    enable = true;
-  };
+  # programs.nvitop = {
+  #   enable = true;
+  # };
 
 }

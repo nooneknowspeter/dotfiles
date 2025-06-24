@@ -14,6 +14,7 @@
     ./fd/fd.nix
     ./fzf/fzf.nix
     ./git/git.nix
+    ./gnused/gnused.nix
     ./iftop/iftop.nix
     ./impala/impala.nix
     ./jq/jq.nix
@@ -24,7 +25,6 @@
     ./nvitop/nvitop.nix
     ./openssh/openssh.nix
     ./ripgrep/ripgrep.nix
-    ./sed/sed.nix
     ./starship/starship.nix
     ./tldr/tldr.nix
     ./yazi/yazi.nix

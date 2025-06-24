@@ -6,8 +6,8 @@
     eww
   ];
 
-  programs.eww = {
-    enable = true;
-  };
+  # programs.eww = {
+  #   enable = true;
+  # };
 
 }

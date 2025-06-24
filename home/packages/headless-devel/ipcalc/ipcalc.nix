@@ -6,8 +6,8 @@
     ipcalc
   ];
 
-  programs.ipcalc = {
-    enable = true;
-  };
+  # programs.ipcalc = {
+  #   enable = true;
+  # };
 
 }

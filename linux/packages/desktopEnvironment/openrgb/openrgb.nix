@@ -6,8 +6,8 @@
     openrgb-with-all-plugins
   ];
 
-  programs.openrgb-will-all-plugins = {
-    enable = true;
-  };
+  # programs.openrgb-will-all-plugins = {
+  #   enable = true;
+  # };
 
 }

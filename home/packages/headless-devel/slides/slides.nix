@@ -6,8 +6,8 @@
     slides
   ];
 
-  programs.slides = {
-    enable = true;
-  };
+  # programs.slides = {
+  #   enable = true;
+  # };
 
 }

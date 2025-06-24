@@ -3,11 +3,11 @@
 {
 
   home.packages = with pkgs; [
-    sed
+    gnused
   ];
 
-  programs.sed = {
-    enable = true;
-  };
+  # programs.gnused = {
+  #   enable = true;
+  # };
 
 }

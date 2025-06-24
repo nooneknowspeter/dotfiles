@@ -6,8 +6,8 @@
     pipewire
   ];
 
-  programs.pipewire = {
-    enable = true;
-  };
+  # programs.pipewire = {
+  #   enable = true;
+  # };
 
 }

@@ -6,8 +6,8 @@
     linux-wallpaperengine
   ];
 
-  programs.linux-wallpaperengine = {
-    enable = true;
-  };
+  # programs.linux-wallpaperengine = {
+  #   enable = true;
+  # };
 
 }

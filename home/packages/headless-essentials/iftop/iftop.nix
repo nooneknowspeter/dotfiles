@@ -6,8 +6,8 @@
     iftop
   ];
 
-  programs.iftop = {
-    enable = true;
-  };
+  # programs.iftop = {
+  #   enable = true;
+  # };
 
 }

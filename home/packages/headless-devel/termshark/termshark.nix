@@ -6,8 +6,8 @@
     termshark
   ];
 
-  programs.termshark = {
-    enable = true;
-  };
+  # programs.termshark = {
+  #   enable = true;
+  # };
 
 }

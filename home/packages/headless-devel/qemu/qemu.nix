@@ -6,8 +6,8 @@
     qemu
   ];
 
-  programs.qemu = {
-    enable = true;
-  };
+  # programs.qemu = {
+  #   enable = true;
+  # };
 
 }

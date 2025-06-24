@@ -6,8 +6,8 @@
     davinci-resolve
   ];
 
-  programs.davinci-resolve = {
-    enable = true;
-  };
+  # programs.davinci-resolve = {
+  #   enable = true;
+  # };
 
 }

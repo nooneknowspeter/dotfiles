@@ -6,8 +6,8 @@
     wireshark
   ];
 
-  programs.wireshark = {
-    enable = true;
-  };
+  # programs.wireshark = {
+  #   enable = true;
+  # };
 
 }

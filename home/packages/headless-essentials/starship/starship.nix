@@ -11,7 +11,7 @@
   };
 
   home.file.".config/starship" = {
-    soruce = ./starship;
+    source = ./starship;
     recursive = true;
   };
 

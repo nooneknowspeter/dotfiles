@@ -6,8 +6,8 @@
     plugdata
   ];
 
-  programs.plugdata = {
-    enable = true;
-  };
+  # programs.plugdata = {
+  #   enable = true;
+  # };
 
 }

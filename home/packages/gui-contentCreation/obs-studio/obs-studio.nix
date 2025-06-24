@@ -12,8 +12,8 @@
     plugins = with pkgs.obs-studio-plugins; [ wlrobs ];
   };
 
-  programs.obs-cli = {
-    enable = true;
-  };
+  # programs.obs-cli = {
+  #   enable = true;
+  # };
 
 }

@@ -6,8 +6,8 @@
     natron
   ];
 
-  programs.natron = {
-    enable = true;
-  };
+  # programs.natron = {
+  #   enable = true;
+  # };
 
 }

@@ -6,8 +6,8 @@
     can-utils
   ];
 
-  programs.can-utils = {
-    enable = true;
-  };
+  # programs.can-utils = {
+  #   enable = true;
+  # };
 
 }

@@ -8,16 +8,16 @@
     fcitx5-mozc
   ];
 
-  programs.fcitx5 = {
-    enable = true;
-  };
+  # programs.fcitx5 = {
+  #   enable = true;
+  # };
 
-  programs.fcitx5-configtool = {
-    enable = true;
-  };
+  # programs.fcitx5-configtool = {
+  #   enable = true;
+  # };
 
-  programs.fcitx5-mozc = {
-    enable = true;
-  };
+  # programs.fcitx5-mozc = {
+  #   enable = true;
+  # };
 
 }

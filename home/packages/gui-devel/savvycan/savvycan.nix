@@ -6,8 +6,8 @@
     savvycan
   ];
 
-  programs.savvycan = {
-    enable = true;
-  };
+  # programs.savvycan = {
+  #   enable = true;
+  # };
 
 }

@@ -8,13 +8,13 @@
 
     # home manager
     home-manager = {
-      url = "github:nix-community/home-manager/master";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # darwin
     nix-darwin = {
-      url = "github:lnl7/nix-darwin";
+      url = "github:lnl7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -25,7 +25,11 @@
   };
 
   outputs =
-    inputs@{ self, nixpkgs, home-manager, nix-darwin, ... }:
+    inputs@{ self, nixpkgs, home-manager, nix-darwin, nixos-hardware, ... }:
+    let
+      locale = "en_US.UTF-8";
+      timezone = "America/Phoenix";
+    in
     {
 
       # nixos
@@ -33,6 +37,12 @@
       nixosConfigurations = {
         # main
         nooneknows = nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs;
+            inherit locale;
+            inherit timezone;
+          };
+
           modules = [
             ./linux/nixos/x86-64/main/configuration.nix
           ];
@@ -43,6 +53,12 @@
       darwinConfigurations = {
         # macbook
         nooneknows = nix-darwin.lib.darwinSystem {
+          specialArgs = {
+            inherit inputs;
+            inherit locale;
+            inherit timezone;
+          };
+
           modules = [
             ./nix-darwin/aarch/macbook/configuration.nix
           ];
@@ -53,57 +69,14 @@
       # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
 
-        # macos
-        "nooneknows@darwin" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs; };
-          modules = [
-            ./home/darwin-macbook.nix
-          ];
-        };
-
-
-        # base linux; w/ DE
-        "nooneknows@linux-base" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs; };
-          modules = [
-            ./home/linux-base.nix
-          ];
-        };
-
-        # content creation linux; w/ DE, content creation tools
-        "nooneknows@linux-content" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs; };
-          modules = [
-            ./home/linux-content.nix
-          ];
-        };
-
-        # full linux; w/ DE, dev tools, content creation tools
-        "nooneknows@linux-full" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs; };
-          modules = [
-            ./home/linux-full.nix
-          ];
-        };
-
-
-        # wsl
-        "nooneknows@wsl" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs; };
-          modules = [
-            ./home/wsl.nix
-          ];
-        };
-
         # headless-devel
-        "nooneknows@tty" = home-manager.lib.homeManagerConfiguration {
+        "nooneknows@nooneknows" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs; };
+
+          extraSpecialArgs = {
+            inherit inputs;
+          };
+
           modules = [
             ./home/tty.nix
           ];

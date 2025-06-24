@@ -6,8 +6,8 @@
     ardour
   ];
 
-  programs.ardour = {
-    enable = true;
-  };
+  # programs.ardour = {
+  #   enable = true;
+  # };
 
 }

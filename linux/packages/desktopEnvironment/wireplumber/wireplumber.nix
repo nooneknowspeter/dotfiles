@@ -6,8 +6,8 @@
     wireplumber
   ];
 
-  programs.wireplumber = {
-    enable = true;
-  };
+  # programs.wireplumber = {
+  #   enable = true;
+  # };
 
 }

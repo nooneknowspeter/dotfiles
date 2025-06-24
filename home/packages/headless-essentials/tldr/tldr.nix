@@ -6,8 +6,8 @@
     tldr
   ];
 
-  programs.tldr = {
-    enable = true;
-  };
+  # programs.tldr = {
+  #   enable = true;
+  # };
 
 }

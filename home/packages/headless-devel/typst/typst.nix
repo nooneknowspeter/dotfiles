@@ -6,8 +6,8 @@
     typst
   ];
 
-  programs.typst = {
-    enable = true;
-  };
+  # programs.typst = {
+  #   enable = true;
+  # };
 
 }
