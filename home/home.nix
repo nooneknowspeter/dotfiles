@@ -25,8 +25,9 @@
   # environment.
   home.packages = with pkgs; [
     # fonts
-    (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" "Symbols" ]; })
-    fira-code-symbols
+    nerd-fonts.fira-code
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.symbols-only
     font-awesome
     rictydiminished-with-firacode
   ];
