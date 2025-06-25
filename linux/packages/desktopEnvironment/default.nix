@@ -6,7 +6,6 @@
     ./cliphist/cliphist.nix
     ./eww/eww.nix
     ./fcitx5/fcitx5.nix
-    ./gbm/gbm.nix
     ./greetd/greetd.nix
     ./hyprland/hyprland.nix
     ./imv/imv.nix
