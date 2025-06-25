@@ -10,9 +10,9 @@
     enable = true;
   };
 
-  # home.file.".config/btop" = {
-  #   source = ./btop;
-  #   recursive = true;
-  # };
+  home.file.".config/btop" = {
+    source = ./btop;
+    recursive = true;
+  };
 
 }

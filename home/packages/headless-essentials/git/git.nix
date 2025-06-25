@@ -10,9 +10,9 @@
     enable = true;
   };
 
-  # home.file.".gitconfig" = {
-  #   source = ./.gitconfig;
-  #   recursive = false;
-  # };
+  home.file.".gitconfig" = {
+    source = ./.gitconfig;
+    recursive = false;
+  };
 
 }

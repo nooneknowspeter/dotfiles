@@ -48,15 +48,15 @@ in
   };
 
   # keybindings.json
-  # home.file."${configLocation}/keybindings.json" = {
-  #   source = ./User/keybindings.json;
-  #   recursive = false;
-  # };
+  home.file."${configLocation}/keybindings.json" = {
+    source = ./User/keybindings.json;
+    recursive = false;
+  };
 
   # settings.json
-  # home.file."${configLocation}/settings.json" = {
-  #   source = ./User/settings.json;
-  #   recursive = false;
-  # };
+  home.file."${configLocation}/settings.json" = {
+    source = ./User/settings.json;
+    recursive = false;
+  };
 
 }
