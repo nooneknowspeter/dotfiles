@@ -35,10 +35,9 @@
       # nixos
       # sudo nixos-rebuild switch --flake .#hostname
       nixosConfigurations = {
-        # main
-        nooneknows =
+        peter-legion =
           let
-            hostname = "test";
+            hostname = "peter-legion";
           in
           nixpkgs.lib.nixosSystem {
             specialArgs = {
@@ -49,32 +48,34 @@
             };
 
             modules = [
-              ./linux/nixos/x86-64/main/configuration.nix
+              ./linux/hosts/x86-64/peter-legion/configuration.nix
             ];
           };
       };
 
       # nix-darwin
       darwinConfigurations = {
-        # macbook
-        nooneknows = nix-darwin.lib.darwinSystem {
-          specialArgs = {
-            inherit inputs;
-            inherit locale;
-            inherit timezone;
-          };
+        peter-macbook =
+          let
+            hostname = "peter-macbook";
+          in
+          nix-darwin.lib.darwinSystem {
+            specialArgs = {
+              inherit inputs;
+              inherit locale;
+              inherit timezone;
+            };
 
-          modules = [
-            ./nix-darwin/aarch/macbook/configuration.nix
-          ];
-        };
+            modules = [
+              ./darwin/hosts/aarch/peter-macbook/configuration.nix
+            ];
+          };
       };
 
       # home-manager configuration entrypoint
       # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
 
-        # headless-devel
         "nooneknows@nooneknows" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
@@ -83,7 +84,7 @@
           };
 
           modules = [
-            ./home/tty.nix
+            ./home/linux-base.nix
           ];
         };
 
