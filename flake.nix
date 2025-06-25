@@ -76,7 +76,7 @@
       # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
 
-        "nooneknows@nooneknows" = home-manager.lib.homeManagerConfiguration {
+        "nooneknows@headless" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
           extraSpecialArgs = {
@@ -84,7 +84,7 @@
           };
 
           modules = [
-            ./home/linux-base.nix
+            ./linux/hosts/x86-64/headless/home.nix
           ];
         };
 
