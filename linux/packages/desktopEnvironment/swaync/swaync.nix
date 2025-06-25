@@ -3,11 +3,8 @@
 {
 
   home.packages = with pkgs; [
-    swaync
+    libnotify
+    swaynotificationcenter
   ];
-
-  # programs.swaync = {
-  #   enable = true;
-  # };
 
 }
