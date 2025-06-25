@@ -28,7 +28,7 @@
     inputs@{ self, nixpkgs, home-manager, nix-darwin, nixos-hardware, ... }:
     let
       locale = "en_US.UTF-8";
-      timezone = "America/Phoenix";
+      timezone = "US/Eastern";
     in
     {
 
@@ -36,17 +36,22 @@
       # sudo nixos-rebuild switch --flake .#hostname
       nixosConfigurations = {
         # main
-        nooneknows = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs;
-            inherit locale;
-            inherit timezone;
-          };
+        nooneknows =
+          let
+            hostname = "test";
+          in
+          nixpkgs.lib.nixosSystem {
+            specialArgs = {
+              inherit hostname;
+              inherit inputs;
+              inherit locale;
+              inherit timezone;
+            };
 
-          modules = [
-            ./linux/nixos/x86-64/main/configuration.nix
-          ];
-        };
+            modules = [
+              ./linux/nixos/x86-64/main/configuration.nix
+            ];
+          };
       };
 
       # nix-darwin
