@@ -15,10 +15,8 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    autosuggestion = {
-      enable = true;
-    };
-    syntaxHighlighting = { enable = true; };
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
     sessionVariables = {
       DISPLAY = "172.23.144.1:0";
       LIBGL_ALWAYS_INDIRECT = 0;
@@ -32,10 +30,6 @@
       
       # bind ctrl + space for autosuggest accept
       bindkey '^ ' autosuggest-accept
-
-      # vi mode
-      VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
-      VI_MODE_SET_CURSOR=true
 
       # clear tmux histroy and clear terminal
       alias clear='clear; tmux clear-history; clear'
@@ -111,6 +105,13 @@
       ];
       extraConfig = ''
         zstyle :omz:update mode remainder
+        
+        # auto-correction
+        ENABLE_CORRECTION="true" 
+      
+        # vi mode
+        VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+        VI_MODE_SET_CURSOR=true
       '';
     };
   };
