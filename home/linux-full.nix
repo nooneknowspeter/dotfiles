@@ -5,15 +5,15 @@
   imports = [
     ./home.nix
 
-    ./packages/headless-essentials/headless-essentials.nix
-    ./packages/headless-devel/headless-devel.nix
+    ./packages/headless-essentials
+    ./packages/headless-devel
 
-    ./packages/gui-essentials/gui-essentials.nix
-    ./packages/gui-devel/gui-devel.nix
+    ./packages/gui-essentials
+    ./packages/gui-devel
 
-    ./packages/gui-contentCreation/gui-contentCreation.nix
+    ./packages/gui-contentCreation
 
-    ../linux/packages/desktopEnvironment/linux-desktopEnvironment.nix
+    ../linux/packages/desktopEnvironment
   ];
 
 }

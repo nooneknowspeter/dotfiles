@@ -7,7 +7,7 @@
     ./eww/eww.nix
     ./fcitx5/fcitx5.nix
     ./gbm/gbm.nix
-    ./greetd/config.toml
+    ./greetd/greetd.nix
     ./hyprland/hyprland.nix
     ./imv/imv.nix
     ./linux-wallpaperengine/linux-wallpaperengine.nix

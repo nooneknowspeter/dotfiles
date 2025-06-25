@@ -5,11 +5,11 @@
   imports = [
     ./home.nix
 
-    ./packages/headless-essentials/headless-essentials.nix
-    ./packages/headless-devel/headless-devel.nix
+    ./packages/headless-essentials
+    ./packages/headless-devel
 
-    ./packages/gui-essentials/gui-essentials.nix
-    ./packages/gui-devel/gui-devel.nix
+    ./packages/gui-essentials
+    ./packages/gui-devel
   ];
 
 }
