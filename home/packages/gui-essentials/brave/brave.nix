@@ -3,12 +3,11 @@
 {
 
   home.packages = with pkgs; [
-    brave
+    # brave
   ];
 
-  programs.chromium = {
+  programs.brave = {
     enable = true;
-    package = pkgs.brave;
     extensions = [
       # Bitwarden
       { id = "nngceckbapebfimnlniiiahkandclblb"; }
