@@ -15,6 +15,7 @@
     ./lazygit/lazygit.nix
     ./lazysql/lazysql.nix
     ./neovim/neovim.nix
+    ./nmap/nmap.nix
     ./pandoc/pandoc.nix
     ./posting/posting.nix
     ./qemu/qemu.nix
