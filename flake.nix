@@ -88,7 +88,7 @@
           ];
         };
 
-        "nooneknows@nixos" = home-manager.lib.homeManagerConfiguration {
+        "nooneknows@linux" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
           extraSpecialArgs = {
@@ -96,7 +96,7 @@
           };
 
           modules = [
-            ./home/home.nix
+            ./linux/hosts/x86-64/peter-legion/home.nix
           ];
         };
 
