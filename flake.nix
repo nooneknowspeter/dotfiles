@@ -76,6 +76,18 @@
       # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
 
+        "nooneknows@darwin" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+
+          extraSpecialArgs = {
+            inherit inputs;
+          };
+
+          modules = [
+            ./darwin/hosts/aarch/peter-macbook/home.nix
+          ];
+        };
+
         "nooneknows@headless" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
