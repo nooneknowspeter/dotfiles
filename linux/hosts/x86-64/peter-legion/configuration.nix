@@ -62,15 +62,15 @@
   services.libinput.enable = true;
 
   # hyprland services
-  # services.greetd = {
-  #   enable = true;
-  #   settings = {
-  #     default_session = {
-  #       command = "hyprland";
-  #       user = "nooneknows";
-  #     };
-  #   };
-  # };
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "hyprland";
+        user = "nooneknows";
+      };
+    };
+  };
 
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
