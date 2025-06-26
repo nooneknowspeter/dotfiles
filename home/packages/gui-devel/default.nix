@@ -4,7 +4,7 @@
 
   imports = [
     # gui-devel
-    ./ghostty/ghostty-symlink.nix
+    ./ghostty/ghostty.nix
     ./plugdata/plugdata.nix
     ./savvycan/savvycan.nix
     ./vscode/vscode.nix
