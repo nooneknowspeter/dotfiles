@@ -23,7 +23,6 @@
     ./termshark
     ./tmux
     ./typst
-    ./vim
   ];
 
 }

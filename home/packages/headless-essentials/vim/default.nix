@@ -80,6 +80,7 @@
       set ignorecase
       set smartcase
       set showmatch
+      noremap <Esc> :noh<CR>
 
       " access colors present in 256 colorspace
       let base16colorspace=256  

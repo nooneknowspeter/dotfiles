@@ -29,6 +29,7 @@
     ./ripgrep
     ./starship
     ./tldr
+    ./vim
     ./yazi
     ./yq
     ./zsh
