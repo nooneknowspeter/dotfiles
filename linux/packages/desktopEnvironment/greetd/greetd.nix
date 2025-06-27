@@ -4,10 +4,7 @@
 
   home.packages = with pkgs; [
     greetd.greetd
+    greetd.tuigreet
   ];
-
-  # programs.greetd.greetd = {
-  #   enable = true;
-  # };
 
 }
