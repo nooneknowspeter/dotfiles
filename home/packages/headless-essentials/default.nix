@@ -22,6 +22,7 @@
     ./less
     ./lsd
     ./man
+    ./nh
     ./nix
     ./nvitop
     ./openssh
