@@ -6,7 +6,7 @@
     waybar
   ];
 
-  home.file."./config/waybar" = {
+  home.file.".config/waybar" = {
     source = ./waybar;
     recursive = true;
   };
