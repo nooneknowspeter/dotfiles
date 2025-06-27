@@ -6,7 +6,7 @@
     wofi
   ];
 
-  home.file."./config/wofi" = {
+  home.file.".config/wofi" = {
     source = ./wofi;
     recursive = true;
   };
