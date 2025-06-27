@@ -25,6 +25,9 @@
   # ssh
   services.openssh.enable = true;
 
+  # peripherals
+  services.ratbagd.enable = true;
+
   # Enable sound.
   # services.pulseaudio.enable = true;
   # OR
