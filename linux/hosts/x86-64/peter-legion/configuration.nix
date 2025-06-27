@@ -15,7 +15,7 @@
       ./modules/console
       ./modules/environment
       ./modules/graphics
-      ./modules/i18n
+      ./modules/locale
       ./modules/misc
       ./modules/networking
       ./modules/programs
