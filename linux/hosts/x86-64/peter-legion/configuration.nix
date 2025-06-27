@@ -19,6 +19,7 @@
       ./modules/programs
       ./modules/services
       ./modules/system
+      ./modules/time
     ];
 
 }
