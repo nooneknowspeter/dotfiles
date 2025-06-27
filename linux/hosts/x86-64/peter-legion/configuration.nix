@@ -20,6 +20,7 @@
       ./modules/services
       ./modules/system
       ./modules/time
+      ./modules/users
     ];
 
 }
