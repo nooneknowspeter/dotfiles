@@ -15,6 +15,7 @@
       ./modules/graphics
       ./modules/i18n
       ./modules/misc
+      ./modules/networking
     ];
 
 }
