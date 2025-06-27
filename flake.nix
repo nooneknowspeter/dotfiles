@@ -2,6 +2,7 @@
   description = "nooneknows dotfiles";
 
   inputs = {
+    #nixpkgs
     nixpkgs = {
       url = "github:nixos/nixpkgs/nixos-unstable";
     };
@@ -18,14 +19,20 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # nixos
+    # nixos-hardware
     nixos-hardware = {
       url = "github:NixOS/nixos-hardware/master";
+    };
+
+    #stylix
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs =
-    inputs@{ self, nixpkgs, home-manager, nix-darwin, nixos-hardware, ... }:
+    inputs@{ self, nixpkgs, home-manager, nix-darwin, nixos-hardware, stylix, ... }:
     let
       locale = "en_US.UTF-8";
       timezone = "US/Eastern";
@@ -85,6 +92,7 @@
           };
 
           modules = [
+            stylix.homeModules.stylix
             ./darwin/hosts/aarch/peter-macbook/home.nix
           ];
         };
@@ -109,6 +117,7 @@
           };
 
           modules = [
+            stylix.homeModules.stylix
             ./linux/hosts/x86-64/peter-legion/home.nix
           ];
         };
