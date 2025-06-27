@@ -55,7 +55,7 @@
 
       # nix-darwin
       darwinConfigurations = {
-        peter-macbook =
+        macbook =
           let
             hostname = "peter-macbook";
           in
