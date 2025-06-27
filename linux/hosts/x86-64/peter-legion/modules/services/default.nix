@@ -19,6 +19,9 @@
     };
   };
 
+  # openrgb
+  services.hardware.openrgb.enable = true;
+
   # ssh
   services.openssh.enable = true;
 
