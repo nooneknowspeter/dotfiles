@@ -2,7 +2,7 @@
 
 {
 
-  home.packages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     steam-run
   ];
 
