@@ -28,6 +28,7 @@
     ./ripgrep
     ./starship
     ./tldr
+    ./tmux
     ./unimatrix
     ./vim
     ./yazi

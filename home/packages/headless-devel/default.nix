@@ -21,7 +21,6 @@
     ./qemu
     ./slides
     ./termshark
-    ./tmux
     ./typst
   ];
 

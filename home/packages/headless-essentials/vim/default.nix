@@ -90,7 +90,7 @@
       color base16-black-metal-dark-funeral
 
       " transparent background
-      hi normal ctermbg=none
+      hi Normal guibg=NONE ctermbg=NONE
 
       " blink cursor on error instead of beeping
       set visualbell
