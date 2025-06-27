@@ -32,29 +32,29 @@
       bindkey '^ ' autosuggest-accept
 
       # clear tmux histroy and clear terminal
-      alias clear='clear; tmux clear-history; clear'
+      # alias clear='clear; tmux clear-history; clear'
   
       # cmatrix
-      alias cmatrix="cmatrix -fkbrc"
+      # alias cmatrix="cmatrix -fkbrc"
 
       # ascii.live animations
-      alias donut="curl ascii.live/donut" # donut animation
-      alias knot="curl ascii.live/knot" # knot animation
+      # alias donut="curl ascii.live/donut" # donut animation
+      # alias knot="curl ascii.live/knot" # knot animation
 
       # force launch tmux with 256 colors
-      alias tmux="TERM=xterm-256color tmux"
+      # alias tmux="TERM=xterm-256color tmux"
 
       # ls
-      alias ls="lsd"
+      # alias ls="lsd"
 
       # cat
-      alias cat="bat --theme=base16-256"
+      # alias cat="bat --theme=base16-256"
 
       # grep
-      alias grep='rg --color=auto'
+      # alias grep='rg --color=auto'
 
       # find
-      alias find='fd'
+      # alias find='fd'
     '';
     oh-my-zsh = {
       enable = true;
@@ -64,7 +64,7 @@
         "aliases"
         "ansible"
         "archlinux"
-        "asdf"
+        # "asdf"
         "aws"
         "bun"
         "colorize"

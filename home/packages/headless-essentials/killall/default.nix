@@ -3,11 +3,7 @@
 {
 
   home.packages = with pkgs; [
-    discord
+    killall
   ];
-
-  # programs.discord = {
-  #   enable = true;
-  # };
 
 }

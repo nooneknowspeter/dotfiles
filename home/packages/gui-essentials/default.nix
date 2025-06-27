@@ -4,9 +4,9 @@
 
   imports = [
     # gui-essentials
-    ./brave/brave.nix
-    ./obsidian/obsidian.nix
-    ./zathura/zathura.nix
+    ./brave
+    ./obsidian
+    ./zathura
   ];
 
 }
