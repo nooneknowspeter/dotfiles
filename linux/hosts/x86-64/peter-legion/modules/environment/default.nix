@@ -2,7 +2,9 @@
 
 {
 
-  environment.systemPackages = with pkgs; [
+  imports = [
+    ../../../../../packages/nixos
+    ../../packages/lenovo-legion
   ];
 
 }
