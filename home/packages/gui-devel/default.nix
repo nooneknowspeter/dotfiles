@@ -7,7 +7,7 @@
     ./ghostty
     ./plugdata
     ./savvycan
-    ./vscode
+    # ./vscode
     ./wezterm
     ./wireshark
   ];

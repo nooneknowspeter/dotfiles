@@ -6,7 +6,7 @@ in
 {
 
   home.packages = with pkgs; [
-    vscode
+    vscode-with-extensions
   ];
 
   programs.vscode = {
