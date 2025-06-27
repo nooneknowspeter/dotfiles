@@ -1,0 +1,15 @@
+[Hotkey]
+# The key to trigger input method (default is Control+Space)
+# This can be a comma-separated list for multiple keys
+TriggerKeys=Super+space
+
+# Optional: Switch between input methods (for example, Chinese ↔ English)
+# This is a common default, can be adjusted as needed
+SwitchInputMethod=Alt+Shift_L
+
+# Optional: Key to deactivate Fcitx (if desired)
+DeactivateKeys=
+
+# Optional: Reactivate input method
+ReactivateKeys=
+

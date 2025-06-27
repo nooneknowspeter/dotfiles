@@ -17,29 +17,17 @@
         fcitx5-mozc
         fcitx5-configtool
       ];
-      settings = {
-        inputMethod = {
-          Group."0" = "Default";
-          "Groups/0" = {
-            Name = "Default";
-            "Default Layout" = "us";
-            DefaultIM = "mozc";
-          };
-          "Groups/0/Items/0".Name = "keyboard-us";
-          "Groups/0/Items/1".Name = "mozc";
-        };
-        globalOptions = {
-          Behaviour = {
-            ActiveByDefault = false;
-          };
-
-          Hotkey = {
-            TriggerKey = "SUPER_SPACE";
-            EnumerateWithTriggerKeys = true;
-          };
-        };
-      };
     };
+  };
+
+  home.file.".config/fcitx5/config" = {
+    source = ./fcitx5/config;
+    recursive = false;
+  };
+
+  home.file.".config/fcitx5/profile" = {
+    source = ./fcitx5/profile;
+    recursive = false;
   };
 
   home.sessionVariables = {
