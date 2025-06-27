@@ -14,6 +14,7 @@
       vim-surround
       vim-tmux-navigator
       vim-visual-multi
+      vim-wayland-clipboard
     ];
     settings = { ignorecase = true; };
     extraConfig = ''
