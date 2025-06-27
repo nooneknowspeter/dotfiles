@@ -12,6 +12,7 @@
       ./hardware-configuration.nix
       ./modules/boot
       ./modules/environment
+      ./modules/graphics
     ];
 
 }
