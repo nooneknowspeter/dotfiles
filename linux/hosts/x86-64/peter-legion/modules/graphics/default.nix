@@ -20,8 +20,8 @@
     # memory to /tmp/ instead 
     # of just the bare essentials.
     powerManagement = {
-      enable = true;
-      finegrained = true;
+      enable = false;
+      finegrained = false;
     };
 
     # Use the NVidia open source kernel module (not to be confused with the
