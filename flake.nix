@@ -49,6 +49,7 @@
 
             modules = [
               ./linux/hosts/x86-64/peter-legion/configuration.nix
+              nixos-hardware.nixosModules.lenovo-legion-16ithg6
             ];
           };
       };
