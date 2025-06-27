@@ -23,6 +23,15 @@
     # Whether to enable XWayland
     xwayland.enable = true;
 
+    plugins = with pkgs; [
+      xdg-desktop-portal-hyprland
+      hyprlandPlugins.csgo-vulkan-fix
+      hyprlandPlugins.borders-plus-plus
+      hyprlandPlugins.hypr-dynamic-cursors
+      hyprlandPlugins.hyprtrails
+      hyprlandPlugins.hyprwinwrap
+    ];
+
     systemd = {
       enable = true;
       enableXdgAutostart = true;
