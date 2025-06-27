@@ -14,6 +14,11 @@
     gamescopeSession = {
       enable = true;
     };
+    extraCompatPackages = with pkgs; [ proton-ge-bin ];
+    extraPackages = with pkgs; [ gamescope ];
+    protontricks = {
+      enable = true;
+    };
   };
 
   programs.gamemode.enable = true;
