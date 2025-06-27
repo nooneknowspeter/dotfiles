@@ -18,6 +18,7 @@
     ./iftop
     ./impala
     ./jq
+    ./killall
     ./less
     ./lsd
     ./man
