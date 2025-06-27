@@ -13,6 +13,7 @@
       ./modules/boot
       ./modules/environment
       ./modules/graphics
+      ./modules/i18n
     ];
 
 }
