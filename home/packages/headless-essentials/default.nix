@@ -6,6 +6,7 @@
     # headless-essentials
     ./awk
     ./bat
+    ./bitwarden-cli
     ./btop
     ./cbonsai
     ./cmatrix

@@ -4,6 +4,7 @@
 
   imports = [
     # gui-essentials
+    ./bitwarden-desktop
     ./brave
     ./discord
     ./obsidian
