@@ -14,6 +14,7 @@
     ./mangohud
     ./mpv
     ./openrgb
+    ./piper
     ./pipewire
     ./screenkey
     ./steam
