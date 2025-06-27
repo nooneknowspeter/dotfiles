@@ -35,7 +35,7 @@
       # nixos
       # sudo nixos-rebuild switch --flake .#hostname
       nixosConfigurations = {
-        peter-legion =
+        legion =
           let
             hostname = "peter-legion";
           in
