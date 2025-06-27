@@ -24,6 +24,13 @@
       DOTFILES = "$HOME/dotfiles";
       NIX_CONFIG = "experimental-features = nix-command flakes";
     };
+    shellAliases = {
+      # cmatrix
+      cmatrix = "${pkgs.cmatrix} -fbrc -u 2";
+
+      # cbonsai
+      cbonsai = "${pkgs.cbonsai} -li";
+    };
     initContent = ''
       # fzf-tab
       source ${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh
@@ -33,9 +40,6 @@
 
       # clear tmux histroy and clear terminal
       # alias clear='clear; tmux clear-history; clear'
-  
-      # cmatrix
-      # alias cmatrix="cmatrix -fkbrc"
 
       # ascii.live animations
       # alias donut="curl ascii.live/donut" # donut animation
