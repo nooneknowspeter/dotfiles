@@ -18,6 +18,7 @@
       ./modules/networking
       ./modules/programs
       ./modules/services
+      ./modules/system
     ];
 
 }
