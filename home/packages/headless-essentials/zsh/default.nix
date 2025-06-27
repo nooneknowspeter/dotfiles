@@ -42,7 +42,7 @@
       alias cbonsai="cbonsai -li"
 
       # cmatrix
-      alias cmatrix="cmatrix -fbrc -u 2"
+      alias unimatrix="unimatrix -nb -s 96 -l k"
 
       # clear tmux histroy and clear terminal
       alias clear="clear; tmux clear-history; clear"

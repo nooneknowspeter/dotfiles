@@ -3,11 +3,7 @@
 {
 
   home.packages = with pkgs; [
-    cmatrix
+    unimatrix
   ];
-
-  # programs.cmatrix = {
-  #   enable = true;
-  # };
 
 }

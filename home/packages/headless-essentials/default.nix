@@ -9,7 +9,6 @@
     ./bitwarden-cli
     ./btop
     ./cbonsai
-    ./cmatrix
     ./curl
     ./fastfetch
     ./fd
@@ -29,6 +28,7 @@
     ./ripgrep
     ./starship
     ./tldr
+    ./unimatrix
     ./vim
     ./yazi
     ./yq
