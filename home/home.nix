@@ -27,6 +27,7 @@
     nerd-fonts.symbols-only
     font-awesome
     rictydiminished-with-firacode
+    noto-fonts
   ];
 
   home.sessionVariables = {
