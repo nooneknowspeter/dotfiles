@@ -1,0 +1,15 @@
+[submodule "vim-tmux-navigator"]
+	path = pack/plugins/start/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "auto-pairs"]
+	path = pack/plugins/start/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "vim-surround"]
+	path = pack/plugins/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim-visual-multi"]
+	path = pack/plugins/start/vim-visual-multi
+	url = https://github.com/mg979/vim-visual-multi.git
+[submodule "pack/plugins/start/base16-black-metal-scheme"]
+	path = pack/plugins/start/base16-black-metal-scheme
+	url = https://github.com/metalelf0/base16-black-metal-scheme.git
