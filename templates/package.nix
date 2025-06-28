@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, dotfiles, ... }:
 
 {
 
@@ -6,7 +6,7 @@
   ];
 
   programs. = {
-  enable = true;
-};
+    enable = true;
+  };
 
 }
