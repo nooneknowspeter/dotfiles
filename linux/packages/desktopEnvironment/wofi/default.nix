@@ -7,7 +7,7 @@
   ];
 
   home.file.".config/wofi" = {
-    source = ./wofi;
+    source = ./cxOrz;
     recursive = true;
   };
 
