@@ -1,0 +1,28 @@
+[submodule "tpm"]
+	path = .tmux/plugins/tpm
+	url = git@github.com:tmux-plugins/tpm.git
+[submodule "tmux-continuum"]
+	path = .tmux/plugins/tmux-continuum
+	url = git@github.com/tmux-plugins/tmux-continuum.git
+[submodule "tmux-cpu-mem-monitor"]
+	path = .tmux/plugins/tmux-cpu-mem-monitor
+	url = git@github.com:hendrikmi/tmux-cpu-mem-monitor.git
+[submodule "tmux-logging"]
+	path = .tmux/plugins/tmux-logging
+	url = git@github.com:tmux-plugins/tmux-logging.git
+[submodule "tmux-pain-control"]
+	path = .tmux/plugins/tmux-pain-control
+	url = git@github.com:tmux-plugins/tmux-pain-control.git
+[submodule "tmux-prefix-highlight"]
+	path = .tmux/plugins/tmux-prefix-highlight
+	url = git@github.com:tmux-plugins/tmux-prefix-highlight.git
+[submodule "tmux-resurrect"]
+	path = .tmux/plugins/tmux-resurrect
+	url = git@github.com:tmux-plugins/tmux-resurrect.git
+[submodule "tmux-sensible"]
+	path = .tmux/plugins/tmux-sensible
+	url = git@github.com:tmux-plugins/tmux-sensible.git
+[submodule "vim-tmux-navigator"]
+	path = .tmux/plugins/vim-tmux-navigator
+	url = git@github.com:christoomey/vim-tmux-navigator.git
+
