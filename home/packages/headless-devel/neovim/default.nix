@@ -12,8 +12,8 @@
   };
 
   home.file.".config/nvim" = {
-    source = ./nvim;
-    recursive = true;
+    source = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/configs/nvim";
+    # recursive = true;
   };
 
 }
