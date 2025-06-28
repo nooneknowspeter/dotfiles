@@ -11,7 +11,6 @@
     ./hyprland
     ./imv
     ./linux-wallpaperengine
-    ./mangohud
     ./mpv
     ./openrgb
     ./pipewire
