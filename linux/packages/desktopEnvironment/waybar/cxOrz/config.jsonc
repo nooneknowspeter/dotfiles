@@ -30,8 +30,8 @@
 		}
 	},
 	"tray": {
-		"icon-size": 18,
-		"spacing": 20
+		"icon-size": 11,
+		"spacing": 13
 	},
 	"network": {
 		"format-icons": [

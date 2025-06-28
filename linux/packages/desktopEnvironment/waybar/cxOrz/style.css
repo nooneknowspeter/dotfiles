@@ -1,34 +1,33 @@
 * {
-    font-family: "JetBrainsMono Nerd Font, monospace, sans-serif";
+    font-family: "FiraCode Nerd Font, monospace, sans-serif";
     font-weight: bold;
-    font-size: 16px;
+    font-size: 11px;
 }
 
 window#waybar {
-    border-radius: 16px;
-    background: #0d1117;
-    color: #93B1A6;
+    border-radius: 11px;
+    background: transparent;
+    color: white;
 }
 
 tooltip {
-    background: #0d1117;
-    border-radius: 14px;
-    border: 1px solid #21262d
+    background: transparent;
+    border-radius: 11px;
 }
 
 tooltip label {
-    color: #93B1A6;
+    color: white;
 }
 
 #workspaces {
-    border-radius: 16px 24px 24px 16px;
+    border-radius: 11px;
     margin: 0;
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: transparent;
 }
 
 #workspaces button {
-    min-width: 28px;
-    border-radius: 20px;
+    min-width: 24px;
+    border-radius: 11px;
     margin: 8px 0;
 }
 
@@ -42,8 +41,8 @@ tooltip label {
 
 #workspaces button.active,
 #workspaces button.active:hover {
-    background: #5C8374;
-    color: #0d1117;
+    background: white;
+    color: black;
 }
 
 #clock,
@@ -54,12 +53,12 @@ tooltip label {
 #temperature,
 #workspaces,
 #backlight {
-    padding: 0px 14px;
+    padding: 0px 11px;
     background-color: rgba(255, 255, 255, 0.08);
 }
 
 #tray {
-    padding: 0px 16px;
+    padding: 0px 11px;
 }
 
 #network {
