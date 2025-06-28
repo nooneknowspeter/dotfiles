@@ -1,0 +1,3 @@
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_interval = 600

@@ -1,0 +1,14 @@
+general.import = [
+  # configs
+  "./configs/bell.toml",
+  "./configs/colors.toml",
+  "./configs/cursor.toml",
+  "./configs/env.toml",
+  "./configs/fonts.toml",
+  "./configs/keyboard.toml",
+  "./configs/mouse.toml",
+  "./configs/selection.toml",
+  "./configs/window.toml",
+  # themes
+  "./themes/Black Metal (Immortal).toml",
+]
