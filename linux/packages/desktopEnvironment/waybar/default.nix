@@ -7,7 +7,7 @@
   ];
 
   home.file.".config/waybar" = {
-    source = ./waybar;
+    source = ./cxOrz;
     recursive = true;
   };
 
