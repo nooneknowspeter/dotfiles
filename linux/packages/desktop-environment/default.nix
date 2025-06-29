@@ -4,6 +4,7 @@
   imports = [
     ./bottles
     ./brightnessctl
+    ./cava
     ./cliphist
     ./eww
     ./fcitx5
