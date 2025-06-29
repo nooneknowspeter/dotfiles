@@ -58,6 +58,8 @@
             hostname = "peter-legion";
           in
           nixpkgs.lib.nixosSystem {
+            system = "x86_64-linux";
+
             specialArgs = {
               inherit hostname;
               inherit inputs;
@@ -66,7 +68,7 @@
             };
 
             modules = [
-              ./linux/hosts/x86-64/peter-legion/configuration.nix
+              ./linux/hosts/x86-64/peter-legion
               lanzaboote.nixosModules.lanzaboote
               nixos-hardware.nixosModules.lenovo-legion-16ithg6
               musnix.nixosModules.musnix

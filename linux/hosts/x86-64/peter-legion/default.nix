@@ -3,7 +3,6 @@
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
 { config, lib, pkgs, hostname, locale, timezone, ... }:
-
 {
 
   imports =
@@ -11,6 +10,10 @@
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
 
+      # packages
+      ./packages
+
+      ./modules/audio
       ./modules/boot
       ./modules/console
       ./modules/environment
