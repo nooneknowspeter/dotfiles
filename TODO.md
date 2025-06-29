@@ -2,7 +2,7 @@
 
 ## Automate with Nix
 
-- [ ] make configurations for each environment in [flake.nix](./flake.nix)
+- [x] make configurations for each environment in [flake.nix](./flake.nix)
     - [x] architecture
     - [x] kernel
     - [x] distro/OS
@@ -15,6 +15,7 @@
 - [ ] arch setup
     - [ ] test out home manager setup on arch machine
     - [ ] bootstrap desktop environment
+    - [ ] nixgl
 
 - [ ] nix-on-droid
     - [ ] test out home manager setup
