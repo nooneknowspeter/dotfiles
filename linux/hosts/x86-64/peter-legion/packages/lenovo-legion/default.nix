@@ -3,7 +3,7 @@
 
   environment.systemPackages = with pkgs; [
     lenovo-legion
-    linuxKernel.packages.linux_6_6.lenovo-legion-module
+    # linuxKernel.packages.linux_6_6.lenovo-legion-module
   ];
 
 }
