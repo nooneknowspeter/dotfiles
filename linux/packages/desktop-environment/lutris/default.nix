@@ -5,7 +5,7 @@
     lutris
   ];
 
-  programs.lutrix = {
+  programs.lutris = {
     enable = true;
     steamPackage = pkgs.steam;
   };
