@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./sbctl
     ./steam-run
   ];
 }
