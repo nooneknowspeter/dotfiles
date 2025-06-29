@@ -47,7 +47,6 @@
     let
       locale = "en_US.UTF-8";
       timezone = "US/Eastern";
-      dotfiles = "/home/nooneknows/dotfiles";
     in
     {
 
@@ -105,7 +104,6 @@
 
           extraSpecialArgs = {
             inherit inputs;
-            inherit dotfiles;
           };
 
           modules = [
@@ -119,7 +117,6 @@
 
           extraSpecialArgs = {
             inherit inputs;
-            inherit dotfiles;
           };
 
           modules = [
@@ -132,7 +129,6 @@
 
           extraSpecialArgs = {
             inherit inputs;
-            inherit dotfiles;
           };
 
           modules = [
@@ -146,7 +142,6 @@
 
           extraSpecialArgs = {
             inherit inputs;
-            inherit dotfiles;
           };
 
           modules = [
