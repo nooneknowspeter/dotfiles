@@ -6,7 +6,7 @@
   };
 
   home.file.".config/wezterm" = {
-    source = config.lib.file.mkOutOfStoreSymlink /home/nooneknows/dotfiles/home/packages/gui-devel/wezterm/wezterm;
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/home/packages/gui-devel/wezterm/wezterm";
   };
 
 }

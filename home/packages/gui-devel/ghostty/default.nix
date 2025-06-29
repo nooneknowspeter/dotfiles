@@ -10,7 +10,7 @@
   };
 
   home.file.".config/ghostty" = {
-    source = config.lib.file.mkOutOfStoreSymlink /home/nooneknows/dotfiles/home/packages/gui-devel/ghostty/ghostty;
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/home/packages/gui-devel/ghostty/ghostty";
   };
 
 }

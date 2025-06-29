@@ -11,7 +11,7 @@
   };
 
   home.file.".config/nvim" = {
-    source = config.lib.file.mkOutOfStoreSymlink /home/nooneknows/dotfiles/home/packages/headless-devel/neovim/nvim;
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/home/packages/headless-devel/neovim/nvim";
   };
 
 }

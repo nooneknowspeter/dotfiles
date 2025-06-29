@@ -10,7 +10,7 @@
   };
 
   home.file.".config/starship" = {
-    source = config.lib.file.mkOutOfStoreSymlink /home/nooneknows/dotfiles/home/packages/headless-essentials/starship/starship;
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/home/packages/headless-essentials/starship/starship";
   };
 
 }
