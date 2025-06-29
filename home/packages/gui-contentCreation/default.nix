@@ -7,8 +7,8 @@
     ./blender
     ./davinci-resolve
     ./freecad
-    ./natron
     # ./houdini
+    # ./natron
     ./obs-studio
   ];
 
