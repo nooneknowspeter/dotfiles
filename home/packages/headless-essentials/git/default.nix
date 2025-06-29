@@ -10,8 +10,7 @@
   };
 
   home.file.".gitconfig" = {
-    source = ./.gitconfig;
-    recursive = false;
+    source = /home/nooneknows/dotfiles/home/packages/headless-essentials/git/.gitconfig;
   };
 
 }
