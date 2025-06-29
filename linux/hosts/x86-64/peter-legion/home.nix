@@ -10,7 +10,7 @@
     ../../../../home/packages/gui-essentials
     ../../../../home/packages/gui-devel
 
-    ../../../packages/desktopEnvironment
+    ../../../packages/desktop-environment
   ];
 
 }
