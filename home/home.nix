@@ -26,12 +26,13 @@
   # environment.
   home.packages = with pkgs; [
     # fonts
-    nerd-fonts.fira-code
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.symbols-only
-    font-awesome
-    rictydiminished-with-firacode
-    noto-fonts
+    # nerd-fonts.fira-code
+    # nerd-fonts.jetbrains-mono
+    # nerd-fonts.symbols-only
+    # font-awesome
+    # rictydiminished-with-firacode
+    # noto-fonts
+    # dejavu_fonts;
   ];
 
   home.sessionVariables = {
