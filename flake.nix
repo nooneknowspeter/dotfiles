@@ -29,10 +29,15 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # lanzaboote; secure boot
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v0.4.2";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    inputs@{ self, nixpkgs, home-manager, nix-darwin, nixos-hardware, stylix, ... }:
+    inputs@{ self, nixpkgs, home-manager, nix-darwin, nixos-hardware, stylix, nix-on-droid, musnix, lanzaboote, ... }:
     let
       locale = "en_US.UTF-8";
       timezone = "US/Eastern";
@@ -57,6 +62,7 @@
 
             modules = [
               ./linux/hosts/x86-64/peter-legion/configuration.nix
+              lanzaboote.nixosModules.lanzaboote
               nixos-hardware.nixosModules.lenovo-legion-16ithg6
             ];
           };
