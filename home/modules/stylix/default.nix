@@ -2,9 +2,17 @@
 {
   stylix = {
 
+    enable = true;
+
     autoEnable = true;
 
-    enable = true;
+    targets = {
+      btop.enable = false;
+      ghostty.enable = false;
+      k9s.enable = false;
+      neovim.enable = false;
+      wezterm.enable = false;
+    };
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/black-metal-dark-funeral.yaml";
 
