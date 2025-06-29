@@ -16,6 +16,7 @@
     ./lutris
     ./mangohud
     ./mpv
+    ./openrazer
     ./openrgb
     ./pipewire
     ./protonup
