@@ -69,6 +69,8 @@
             hostname = "peter-macbook";
           in
           nix-darwin.lib.darwinSystem {
+            system = "aarch64-darwin";
+
             specialArgs = {
               inherit inputs;
               inherit locale;
