@@ -10,8 +10,7 @@
   };
 
   home.file.".config/k9s" = {
-    source = ./k9s;
-    recursive = true;
+    source = /home/nooneknows/dotfiles/home/packages/headless-devel/k9s/k9s;
   };
 
 }
