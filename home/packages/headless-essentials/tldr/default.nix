@@ -1,9 +1,6 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    tldr
-  ];
+  home.packages = with pkgs; [ tldr ];
 
   # programs.tldr = {
   #   enable = true;

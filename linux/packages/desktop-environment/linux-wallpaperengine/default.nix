@@ -2,8 +2,6 @@
 
 {
 
-  home.packages = with pkgs; [
-    linux-wallpaperengine
-  ];
+  home.packages = with pkgs; [ linux-wallpaperengine ];
 
 }

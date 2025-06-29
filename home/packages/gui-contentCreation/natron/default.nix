@@ -1,9 +1,6 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    natron
-  ];
+  home.packages = with pkgs; [ natron ];
 
   # programs.natron = {
   #   enable = true;

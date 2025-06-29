@@ -1,12 +1,7 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    lazydocker
-  ];
+  home.packages = with pkgs; [ lazydocker ];
 
-  programs.lazydocker = {
-    enable = true;
-  };
+  programs.lazydocker = { enable = true; };
 
 }

@@ -1,12 +1,7 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    gh
-  ];
+  home.packages = with pkgs; [ gh ];
 
-  programs.gh = {
-    enable = true;
-  };
+  programs.gh = { enable = true; };
 
 }

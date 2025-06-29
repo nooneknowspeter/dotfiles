@@ -1,9 +1,6 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    iftop
-  ];
+  home.packages = with pkgs; [ iftop ];
 
   # programs.iftop = {
   #   enable = true;

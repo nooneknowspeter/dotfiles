@@ -1,9 +1,6 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    cbonsai
-  ];
+  home.packages = with pkgs; [ cbonsai ];
 
   # programs.cbonsai = {
   #   enable = true;

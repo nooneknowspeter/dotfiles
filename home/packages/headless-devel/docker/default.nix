@@ -1,9 +1,6 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    docker
-  ];
+  home.packages = with pkgs; [ docker ];
 
   # programs.docker = {
   #   enable = true;

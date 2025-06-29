@@ -1,9 +1,9 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    # vim
-  ];
+  home.packages = with pkgs;
+    [
+      # vim
+    ];
 
   programs.vim = {
     enable = true;
@@ -84,7 +84,7 @@
 
       " access colors present in 256 colorspace
       let base16colorspace=256  
-      
+
       " colorscheme
       color base16-black-metal-dark-funeral
 
@@ -106,21 +106,4 @@
   };
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

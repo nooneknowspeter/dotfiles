@@ -1,12 +1,5 @@
-{ config, lib, pkgs, ... }:
-{
+{ config, lib, pkgs, ... }: {
 
-  imports = [ 
-    ./greetd
-    ./libinput
-    ./openrgb
-    ./printing
-    ./ssh
-  ];
+  imports = [ ./greetd ./libinput ./openrgb ./printing ./ssh ];
 
 }

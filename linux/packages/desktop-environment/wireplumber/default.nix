@@ -2,8 +2,6 @@
 
 {
 
-  home.packages = with pkgs; [
-    wireplumber
-  ];
+  home.packages = with pkgs; [ wireplumber ];
 
 }

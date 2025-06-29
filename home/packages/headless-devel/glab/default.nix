@@ -1,9 +1,6 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    glab
-  ];
+  home.packages = with pkgs; [ glab ];
 
   # programs.glab = {
   #   enable = true;

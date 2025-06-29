@@ -1,7 +1,6 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  imports = [ 
+  imports = [
     ../../../../packages/nixos
 
     ./lenovo-legion

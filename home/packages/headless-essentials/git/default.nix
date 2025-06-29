@@ -1,16 +1,12 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    git
-  ];
+  home.packages = with pkgs; [ git ];
 
-  programs.git = {
-    enable = true;
-  };
+  programs.git = { enable = true; };
 
   home.file.".gitconfig" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/home/packages/headless-essentials/git/.gitconfig";
+    source = config.lib.file.mkOutOfStoreSymlink
+      "${config.home.homeDirectory}/dotfiles/home/packages/headless-essentials/git/.gitconfig";
   };
 
 }

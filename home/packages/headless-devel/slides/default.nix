@@ -1,9 +1,6 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    slides
-  ];
+  home.packages = with pkgs; [ slides ];
 
   # programs.slides = {
   #   enable = true;

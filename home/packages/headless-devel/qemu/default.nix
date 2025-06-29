@@ -1,9 +1,6 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    qemu
-  ];
+  home.packages = with pkgs; [ qemu ];
 
   # programs.qemu = {
   #   enable = true;

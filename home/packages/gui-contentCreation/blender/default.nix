@@ -1,9 +1,6 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    blender
-  ];
+  home.packages = with pkgs; [ blender ];
 
   # programs.blender = {
   #   enable = true;

@@ -1,12 +1,7 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    zathura
-  ];
+  home.packages = with pkgs; [ zathura ];
 
-  programs.zathura = {
-    enable = true;
-  };
+  programs.zathura = { enable = true; };
 
 }

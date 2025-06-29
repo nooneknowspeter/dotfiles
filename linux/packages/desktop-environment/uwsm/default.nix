@@ -2,8 +2,6 @@
 
 {
 
-  home.packages = with pkgs; [
-    uwsm
-  ];
+  home.packages = with pkgs; [ uwsm ];
 
 }

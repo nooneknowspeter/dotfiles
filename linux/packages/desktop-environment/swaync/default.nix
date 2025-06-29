@@ -2,9 +2,6 @@
 
 {
 
-  home.packages = with pkgs; [
-    libnotify
-    swaynotificationcenter
-  ];
+  home.packages = with pkgs; [ libnotify swaynotificationcenter ];
 
 }

@@ -3,9 +3,7 @@
 
   inputs = {
     #nixpkgs
-    nixpkgs = {
-      url = "github:nixos/nixpkgs/nixos-unstable";
-    };
+    nixpkgs = { url = "github:nixos/nixpkgs/nixos-unstable"; };
 
     # home manager
     home-manager = {
@@ -20,9 +18,7 @@
     };
 
     # nixos-hardware
-    nixos-hardware = {
-      url = "github:NixOS/nixos-hardware/master";
-    };
+    nixos-hardware = { url = "github:NixOS/nixos-hardware/master"; };
 
     #stylix
     stylix = {
@@ -37,9 +33,7 @@
     };
 
     # musnix
-    musnix  = {
-      url = "github:musnix/musnix"; 
-    };
+    musnix = { url = "github:musnix/musnix"; };
 
     # lanzaboote; secure boot
     lanzaboote = {
@@ -48,72 +42,58 @@
     };
   };
 
-  outputs =
-    inputs@{ self, nixpkgs, home-manager, nix-darwin, nixos-hardware, stylix, nix-on-droid, musnix, lanzaboote, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nix-darwin, nixos-hardware
+    , stylix, nix-on-droid, musnix, lanzaboote, ... }:
     let
       locale = "en_US.UTF-8";
       timezone = "US/Eastern";
-    in
-    {
+    in {
 
       # nixos
       # sudo nixos-rebuild switch --flake .#hostname
       nixosConfigurations = {
-        legion =
-          let
-            hostname = "peter-legion";
-          in
-          nixpkgs.lib.nixosSystem {
-            system = "x86_64-linux";
+        legion = let hostname = "peter-legion";
+        in nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
 
-            specialArgs = {
-              inherit hostname;
-              inherit inputs;
-              inherit locale;
-              inherit timezone;
-            };
-
-            modules = [
-              ./linux/hosts/x86-64/peter-legion
-              lanzaboote.nixosModules.lanzaboote
-              nixos-hardware.nixosModules.lenovo-legion-16ithg6
-              musnix.nixosModules.musnix
-            ];
+          specialArgs = {
+            inherit hostname;
+            inherit inputs;
+            inherit locale;
+            inherit timezone;
           };
+
+          modules = [
+            ./linux/hosts/x86-64/peter-legion
+            lanzaboote.nixosModules.lanzaboote
+            nixos-hardware.nixosModules.lenovo-legion-16ithg6
+            musnix.nixosModules.musnix
+          ];
+        };
       };
 
       # nix-darwin
       darwinConfigurations = {
-        macbook =
-          let
-            hostname = "peter-macbook";
-          in
-          nix-darwin.lib.darwinSystem {
-            system = "aarch64-darwin";
+        macbook = let hostname = "peter-macbook";
+        in nix-darwin.lib.darwinSystem {
+          system = "aarch64-darwin";
 
-            specialArgs = {
-              inherit inputs;
-              inherit locale;
-              inherit timezone;
-            };
-
-            modules = [
-              ./darwin/hosts/aarch/peter-macbook
-            ];
+          specialArgs = {
+            inherit inputs;
+            inherit locale;
+            inherit timezone;
           };
+
+          modules = [ ./darwin/hosts/aarch/peter-macbook ];
+        };
       };
 
       # nix-on-droid
       nixOnDroidConfigurations = {
-        note8 = 
-        let
-          hostname = "note8";
-        in
-        nix-on-droid.lib.nixOnDroidConfiguration {
+        note8 = let hostname = "note8";
+        in nix-on-droid.lib.nixOnDroidConfiguration {
           pkgs = nixpkgs.legacyPackages."aarch64-linux";
-          modules = [
-            ./linux/hosts/aarch64/note8 
-          ]; 
+          modules = [ ./linux/hosts/aarch64/note8 ];
         };
       };
 
@@ -126,20 +106,18 @@
 
           extraSpecialArgs = {
             inherit inputs;
+            inherit username;
+            inherit homeDirectory;
           };
 
-          modules = [
-            stylix.homeModules.stylix
-            ./linux/hosts/aarch64/note8/home.nix
-          ];
+          modules =
+            [ stylix.homeModules.stylix ./linux/hosts/aarch64/note8/home.nix ];
         };
 
         "nooneknows@darwin" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.aarch64-darwin;
 
-          extraSpecialArgs = {
-            inherit inputs;
-          };
+          extraSpecialArgs = { inherit inputs; };
 
           modules = [
             stylix.homeModules.stylix
@@ -150,9 +128,7 @@
         "nooneknows@headless" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
-          extraSpecialArgs = {
-            inherit inputs;
-          };
+          extraSpecialArgs = { inherit inputs; };
 
           modules = [
             stylix.homeModules.stylix
@@ -163,9 +139,7 @@
         "nooneknows@linux" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
-          extraSpecialArgs = {
-            inherit inputs;
-          };
+          extraSpecialArgs = { inherit inputs; };
 
           modules = [
             stylix.homeModules.stylix
@@ -176,9 +150,7 @@
         "nooneknows@wsl" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
-          extraSpecialArgs = {
-            inherit inputs;
-          };
+          extraSpecialArgs = { inherit inputs; };
 
           modules = [
             stylix.homeModules.stylix

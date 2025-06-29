@@ -1,9 +1,6 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    termshark
-  ];
+  home.packages = with pkgs; [ termshark ];
 
   # programs.termshark = {
   #   enable = true;

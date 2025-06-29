@@ -1,8 +1,5 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    bluetui
-  ];
+  home.packages = with pkgs; [ bluetui ];
 
 }

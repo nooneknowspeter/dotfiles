@@ -1,9 +1,6 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    asdf-vm
-  ];
+  home.packages = with pkgs; [ asdf-vm ];
 
   # programs.asdf-vm = {
   #   enable = true;

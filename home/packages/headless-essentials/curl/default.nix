@@ -1,9 +1,6 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    curl
-  ];
+  home.packages = with pkgs; [ curl ];
 
   # programs.curl = {
   #   enable = true;

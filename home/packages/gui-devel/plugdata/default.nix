@@ -1,9 +1,6 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    plugdata
-  ];
+  home.packages = with pkgs; [ plugdata ];
 
   # programs.plugdata = {
   #   enable = true;

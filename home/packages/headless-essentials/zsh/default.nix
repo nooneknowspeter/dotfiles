@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
   home.packages = with pkgs; [
     oh-my-zsh
@@ -33,7 +32,7 @@
     initContent = ''
       # fzf-tab
       source ${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh
-      
+
       # bind ctrl + space for autosuggest accept
       bindkey '^ ' autosuggest-accept
 
@@ -114,10 +113,10 @@
       ];
       extraConfig = ''
         zstyle :omz:update mode remainder
-        
+
         # auto-correction
         ENABLE_CORRECTION="true" 
-      
+
         # vi mode
         VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
         VI_MODE_SET_CURSOR=true

@@ -1,12 +1,7 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    fd
-  ];
+  home.packages = with pkgs; [ fd ];
 
-  programs.fd = {
-    enable = true;
-  };
+  programs.fd = { enable = true; };
 
 }

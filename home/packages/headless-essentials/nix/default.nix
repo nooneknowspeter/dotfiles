@@ -1,9 +1,6 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    nix
-  ];
+  home.packages = with pkgs; [ nix ];
 
   # programs.nix = {
   #   enable = true;

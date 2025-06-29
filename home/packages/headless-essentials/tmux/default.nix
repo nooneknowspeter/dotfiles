@@ -1,9 +1,9 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    # tmux
-  ];
+  home.packages = with pkgs;
+    [
+      # tmux
+    ];
 
   programs.tmux = {
     enable = true;
@@ -18,13 +18,17 @@
       cpu
       logging
       pain-control
-      prefix-highlight
+      # prefix-highlight
       resurrect
       sensible
       vim-tmux-navigator
       {
         plugin = resurrect;
         extraConfig = "set -g @resurrect-capture-pane-contents 'on'";
+      }
+      {
+        plugin = prefix-highlight;
+        extraConfig = "set -g status-left '#{prefix_highlight}   #S'";
       }
     ];
     extraConfig = ''
@@ -33,17 +37,17 @@
 
       # override cursor
       set -ga terminal-overrides ',*:Ss=\E[%p1%d q:Se=\E[2 q'
-      
+
       # general
       set -g set-clipboard on         # use system clipboard
       set -g detach-on-destroy off    # don't exit from tmux when closing a session
       set -g status-interval 1        # update the status bar every X seconds (default: 15 seconds)
       set -g allow-passthrough on   # allow programs in the pane to bypass tmux (e.g. for image preview)
-      
+
       bind -T copy-mode-vi v send -X begin-selection # bind v for visual select
       bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel # bind y to copy text 
       bind P paste-buffer # paste yanked text with "prefix + p" ("prefix + p" goes to previous window)
-      
+
       # splitting 
       bind s split-window -v -c "#{pane_current_path}"
       bind v split-window -h -c "#{pane_current_path}"
@@ -53,13 +57,13 @@
 
       # listing sessions
       bind q choose-session
-      
+
       # automatically renumber windows when one is closed
       set -g renumber-windows on 
-      
+
       # set status line position to the top
       set-option -g status-position top
-      
+
       # appearance
       set -g status-left-length 20
       set -g status-left "#{prefix_highlight}   #S"

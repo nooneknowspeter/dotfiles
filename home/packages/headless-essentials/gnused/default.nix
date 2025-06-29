@@ -1,9 +1,6 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    gnused
-  ];
+  home.packages = with pkgs; [ gnused ];
 
   # programs.gnused = {
   #   enable = true;

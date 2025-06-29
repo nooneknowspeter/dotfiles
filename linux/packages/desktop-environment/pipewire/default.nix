@@ -2,8 +2,6 @@
 
 {
 
-  home.packages = with pkgs; [
-    pipewire
-  ];
+  home.packages = with pkgs; [ pipewire ];
 
 }

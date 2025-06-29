@@ -1,16 +1,12 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    starship
-  ];
+  home.packages = with pkgs; [ starship ];
 
-  programs.starship = {
-    enable = true;
-  };
+  programs.starship = { enable = true; };
 
   home.file.".config/starship" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/home/packages/headless-essentials/starship/starship";
+    source = config.lib.file.mkOutOfStoreSymlink
+      "${config.home.homeDirectory}/dotfiles/home/packages/headless-essentials/starship/starship";
   };
 
 }

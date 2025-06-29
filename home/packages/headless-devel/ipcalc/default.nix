@@ -1,9 +1,6 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    ipcalc
-  ];
+  home.packages = with pkgs; [ ipcalc ];
 
   # programs.ipcalc = {
   #   enable = true;

@@ -1,8 +1,5 @@
-{ config, lib, pkgs, ... }:
-{
+{ config, lib, pkgs, ... }: {
 
-  programs.dconf = {
-    enable = true;
-  };
+  programs.dconf = { enable = true; };
 
 }

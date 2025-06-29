@@ -2,8 +2,6 @@
 
 {
 
-  home.packages = with pkgs; [
-    screenkey
-  ];
+  home.packages = with pkgs; [ screenkey ];
 
 }

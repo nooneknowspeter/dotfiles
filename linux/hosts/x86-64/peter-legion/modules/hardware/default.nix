@@ -1,7 +1,2 @@
-{ config, lib, pkgs, locale, ... }:
-{
-  imports = [
-    ./bluetooth
-  ];
-}
+{ config, lib, pkgs, locale, ... }: { imports = [ ./bluetooth ]; }
 

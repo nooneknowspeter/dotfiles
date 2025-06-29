@@ -1,5 +1,4 @@
-{config, pkgs, ...}:
-{
+{ config, pkgs, ... }: {
 
   android-integration = {
     termux-open.enable = true;
@@ -11,14 +10,13 @@
     xdg-open.enable = true;
   };
 
-  nix = {
-    extraOptions = "experimental-features = nix-command flakes";
-  };
-  
+  nix = { extraOptions = "experimental-features = nix-command flakes"; };
+
   system.stateVersion = "24.05";
 
   terminal = {
-    font = "${pkgs.nerd-fonts.fira-code}/share/fonts/truetype/FiraCodeNerdFont-Regular.ttf";
+    font =
+      "${pkgs.nerd-fonts.fira-code}/share/fonts/truetype/FiraCodeNerdFont-Regular.ttf";
   };
 
   time.timeZone = "US/Eastern";

@@ -1,9 +1,6 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    lutris
-  ];
+  home.packages = with pkgs; [ lutris ];
 
   programs.lutris = {
     enable = true;

@@ -1,8 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  imports = [
-    ./sbctl
-    ./steam-run
-  ];
+  imports = [ ./sbctl ./steam-run ];
 }

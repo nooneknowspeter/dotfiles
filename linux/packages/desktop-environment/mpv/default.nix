@@ -2,8 +2,6 @@
 
 {
 
-  home.packages = with pkgs; [
-    mpv
-  ];
+  home.packages = with pkgs; [ mpv ];
 
 }

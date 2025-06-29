@@ -1,7 +1,6 @@
-{ config, lib, pkgs, ... }:
-{
+{ config, lib, pkgs, ... }: {
 
-  nix.extraOptions = '' experimental-features = nix-command flakes '';
+  nix.extraOptions = "experimental-features = nix-command flakes ";
 
   nixpkgs.config.allowUnfree = true;
 

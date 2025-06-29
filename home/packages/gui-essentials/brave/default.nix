@@ -1,51 +1,81 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    # brave
-  ];
+  home.packages = with pkgs;
+    [
+      # brave
+    ];
 
   programs.brave = {
     enable = true;
     extensions = [
       # Bitwarden
-      { id = "nngceckbapebfimnlniiiahkandclblb"; }
+      {
+        id = "nngceckbapebfimnlniiiahkandclblb";
+      }
       # Change Case
-      { id = "lpakoahdokkkonadfppfgmednkknpgbm"; }
+      {
+        id = "lpakoahdokkkonadfppfgmednkknpgbm";
+      }
       # Dark Reader
-      { id = "eimadpbcbfnmbkopoojfekhnkhdbieeh"; }
+      {
+        id = "eimadpbcbfnmbkopoojfekhnkhdbieeh";
+      }
       # Email Tracker
-      { id = "bnompdfnhdbgdaoanapncknhmckenfog"; }
+      {
+        id = "bnompdfnhdbgdaoanapncknhmckenfog";
+      }
       # Google Translate
-      { id = "aapbdbdomjkkjkaonfhkkikfgjllcleb"; }
+      {
+        id = "aapbdbdomjkkjkaonfhkkikfgjllcleb";
+      }
       # Immersive Translate
-      { id = "bpoadfkcbjbfhfodiogcnhhhpibjhbnh"; }
+      {
+        id = "bpoadfkcbjbfhfodiogcnhhhpibjhbnh";
+      }
       # Keepa
-      { id = "neebplgakaahbhdphmkckjjcegoiijjo"; }
+      {
+        id = "neebplgakaahbhdphmkckjjcegoiijjo";
+      }
       # PDF Reader
-      { id = "ieepebpjnkhaiioojkepfniodjmjjihl"; }
+      {
+        id = "ieepebpjnkhaiioojkepfniodjmjjihl";
+      }
       # PDF24
-      { id = "eoinpcbakedlpilhibkbejdgkifenhfb"; }
+      {
+        id = "eoinpcbakedlpilhibkbejdgkifenhfb";
+      }
       # Picture in Picture
-      { id = "hkgfoiooedgoejojocmhlaklaeopbecg"; }
+      {
+        id = "hkgfoiooedgoejojocmhlaklaeopbecg";
+      }
       # Shazam
-      { id = "mmioliijnhnoblpgimnlajmefafdfilb"; }
+      {
+        id = "mmioliijnhnoblpgimnlajmefafdfilb";
+      }
       # Simplify
-      { id = "pbanhockgagggenencehbnadejlgchfc"; }
+      {
+        id = "pbanhockgagggenencehbnadejlgchfc";
+      }
       # Unhook
-      { id = "khncfooichmfjbepaaaebmommgaepoid"; }
+      {
+        id = "khncfooichmfjbepaaaebmommgaepoid";
+      }
       # Video Speed Controller
-      { id = "nffaoalbilbmmfgbnbgppjihopabppdk"; }
+      {
+        id = "nffaoalbilbmmfgbnbgppjihopabppdk";
+      }
       # vidIQ
-      { id = "pachckjkecffpdphbpmfolblodfkgbhl"; }
+      {
+        id = "pachckjkecffpdphbpmfolblodfkgbhl";
+      }
       # Vimium
-      { id = "dbepggeogbaibhgnhhndojpepiihcmeb"; }
+      {
+        id = "dbepggeogbaibhgnhhndojpepiihcmeb";
+      }
       # Wappalyzer
       { id = "gppongmhjkpfnbhagpmjfkannfbllamg"; }
     ];
-    commandLineArgs = [
-      "--ozone-platform-hint=auto"
-    ];
+    commandLineArgs = [ "--ozone-platform-hint=auto" ];
   };
 
 }

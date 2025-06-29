@@ -1,8 +1,5 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    unimatrix
-  ];
+  home.packages = with pkgs; [ unimatrix ];
 
 }

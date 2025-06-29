@@ -2,12 +2,11 @@
 
 {
 
-  home.packages = with pkgs; [
-    waybar
-  ];
+  home.packages = with pkgs; [ waybar ];
 
   home.file.".config/waybar" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/linux/packages/desktop-environment/waybar/minimal";
+    source = config.lib.file.mkOutOfStoreSymlink
+      "${config.home.homeDirectory}/dotfiles/linux/packages/desktop-environment/waybar/minimal";
   };
 
 }

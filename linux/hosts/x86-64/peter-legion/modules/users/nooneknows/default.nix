@@ -1,5 +1,4 @@
-{ config, lib, pkgs, ... }:
-{
+{ config, lib, pkgs, ... }: {
 
   users.users.nooneknows = {
     shell = pkgs.zsh;

@@ -1,9 +1,6 @@
-{ config, lib, pkgs, ... }:
-{
+{ config, lib, pkgs, ... }: {
 
   # enable touchpad
-  services.libinput = {
-    enable = true;
-  };
+  services.libinput = { enable = true; };
 
 }

@@ -1,11 +1,7 @@
-{ config, pkgs, ... }:
-{
 { config, pkgs, username ? "nooneknows", homeDirectory ? "/home/nooneknows", ...
 }: {
 
-  imports = [ 
-    ./modules/stylix 
-  ];
+  imports = [ ./modules/stylix ];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -36,9 +32,7 @@
     noto-fonts
   ];
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
+  home.sessionVariables = { EDITOR = "nvim"; };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

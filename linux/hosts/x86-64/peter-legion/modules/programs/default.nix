@@ -1,11 +1,5 @@
-{ config, lib, pkgs, ... }:
-{
+{ config, lib, pkgs, ... }: {
 
-  imports = [ 
-    ./dconf
-    ./hyprland
-    ./steam
-    ./zsh
-  ];
+  imports = [ ./dconf ./hyprland ./steam ./zsh ];
 
 }

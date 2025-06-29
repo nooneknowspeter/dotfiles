@@ -2,8 +2,6 @@
 
 {
 
-  home.packages = with pkgs; [
-    scrcpy
-  ];
+  home.packages = with pkgs; [ scrcpy ];
 
 }

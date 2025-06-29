@@ -1,8 +1,5 @@
-{ config, lib, pkgs, ... }:
-{
+{ config, lib, pkgs, ... }: {
 
-  imports = [
-    ./lanzaboote
-  ];
+  imports = [ ./lanzaboote ];
 
 }

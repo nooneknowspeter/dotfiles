@@ -24,7 +24,8 @@
   # };
 
   home.file.".config/fcitx5" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/linux/packages/desktop-environment/fcitx5/fcitx5";
+    source = config.lib.file.mkOutOfStoreSymlink
+      "${config.home.homeDirectory}/dotfiles/linux/packages/desktop-environment/fcitx5/fcitx5";
   };
 
   home.sessionVariables = {

@@ -1,9 +1,6 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    gawkInteractive
-  ];
+  home.packages = with pkgs; [ gawkInteractive ];
 
   # programs.gawkInteractive = {
   #   enable = true;

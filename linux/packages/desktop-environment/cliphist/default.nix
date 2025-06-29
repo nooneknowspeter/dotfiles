@@ -2,9 +2,6 @@
 
 {
 
-  home.packages = with pkgs; [
-    wl-clipboard
-    cliphist
-  ];
+  home.packages = with pkgs; [ wl-clipboard cliphist ];
 
 }

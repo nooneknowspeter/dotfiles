@@ -2,8 +2,6 @@
 
 {
 
-  environment.systemPackages = with pkgs; [
-    sbctl
-  ];
+  environment.systemPackages = with pkgs; [ sbctl ];
 
 }

@@ -2,8 +2,6 @@
 
 {
 
-  home.packages = with pkgs; [
-    virtualbox
-  ];
+  home.packages = with pkgs; [ virtualbox ];
 
 }
