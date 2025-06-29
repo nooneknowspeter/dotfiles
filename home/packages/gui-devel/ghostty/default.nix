@@ -10,8 +10,7 @@
   };
 
   home.file.".config/ghostty" = {
-    source = ./ghostty;
-    recursive = true;
+    source = /home/nooneknows/dotfiles/home/packages/gui-devel/ghostty/ghostty;
   };
 
 }
