@@ -58,7 +58,11 @@
       package = pkgs.papirus-icon-theme;
     };
 
-    image = /home/nooneknows/dotfiles/wallpapers/a_black_and_white_image_of_a_room.jpeg;
+    image = pkgs.fetchurl {
+      # https://github.com/dharmx/walls
+      url = "https://raw.githubusercontent.com/dharmx/walls/refs/heads/main/manga/a_black_and_white_image_of_a_room.jpeg";
+      hash = "sha256-/rFlNq12YkESwXXLn08JEn6SE3yiUVFYmEliU/9zDrs=";
+    };
 
     opacity = {
       desktop = 0.8;
