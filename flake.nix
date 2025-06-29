@@ -112,7 +112,6 @@
         nix-on-droid.lib.nixOnDroidConfiguration {
           pkgs = nixpkgs.legacyPackages."aarch64-linux";
           modules = [
-            stylix.nixOnDroidModules.stylix
             ./linux/hosts/aarch64/note8 
           ]; 
         };
@@ -156,6 +155,7 @@
           };
 
           modules = [
+            stylix.homeModules.stylix
             ./linux/hosts/x86-64/headless/home.nix
           ];
         };
@@ -181,6 +181,7 @@
           };
 
           modules = [
+            stylix.homeModules.stylix
             ./win32/hosts/x86-64/peter-legion/home.nix
           ];
         };
