@@ -30,6 +30,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # nix-on-droid
+    nix-on-droid = {
+      url = "github:nix-community/nix-on-droid";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # musnix
     musnix  = {
       url = "github:musnix/musnix"; 
@@ -95,6 +101,21 @@
               ./darwin/hosts/aarch/peter-macbook
             ];
           };
+      };
+
+      # nix-on-droid
+      nixOnDroidConfigurations = {
+        note8 = 
+        let
+          hostname = "note8";
+        in
+        nix-on-droid.lib.nixOnDroidConfiguration {
+          pkgs = nixpkgs.legacyPackages."aarch64-linux";
+          modules = [
+            stylix.nixOnDroidModules.stylix
+            ./linux/hosts/aarch64/note8 
+          ]; 
+        };
       };
 
       # home-manager configuration entrypoint
