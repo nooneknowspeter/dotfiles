@@ -42,6 +42,12 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  # enable experimental features; flakes
+  nix = {
+    package = pkgs.nix;
+    settings.experimental-features = [ "nix-command" "flakes" ];
+  };
+
   # allow unfree packages
   nixpkgs = {
     config = {
