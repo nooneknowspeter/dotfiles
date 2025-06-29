@@ -14,6 +14,8 @@
   nix = {
     extraOptions = "experimental-features = nix-command flakes";
   };
+  
+  system.stateVersion = "24.05";
 
   terminal = {
     font = "${pkgs.nerd-fonts.fira-code}/share/fonts/truetype/FiraCodeNerdFont-Regular.ttf";
@@ -25,4 +27,5 @@
     shell = pkgs.zsh;
     userName = "nooneknows";
   };
+
 }
