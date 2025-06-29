@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 let
-  configLocation = if pkgs.stdenv.isLinux then ".config/Code/User" else "Library/Application Support/Code/User";
+  configLocation = if pkgs.stdenv.isLinux then ".config/Code" else "Library/Application Support/Code";
 in
 {
 
@@ -34,16 +34,8 @@ in
     };
   };
 
-  # keybindings.json
-  home.file."${configLocation}/keybindings.json" = {
-    source = ./User/keybindings.json;
-    recursive = false;
-  };
-
-  # settings.json
-  home.file."${configLocation}/settings.json" = {
-    source = ./User/settings.json;
-    recursive = false;
+  home.file."${configLocation}" = {
+    source = /home/nooneknows/dotfiles/home/packages/gui-devel/vscode/Code;
   };
 
 }
