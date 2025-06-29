@@ -101,6 +101,25 @@
       # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
 
+        # remote / vps development
+        "anyone@headless" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+
+          extraSpecialArgs = let
+            username = "anyone";
+            homeDirectory = "/home/anyone";
+          in {
+            inherit inputs;
+            inherit username;
+            inherit homeDirectory;
+          };
+
+          modules = [
+            stylix.homeModules.stylix
+            ./linux/hosts/x86-64/headless/home.nix
+          ];
+        };
+
         "nooneknows@android" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.aarch64-linux;
 
