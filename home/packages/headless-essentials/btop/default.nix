@@ -10,7 +10,7 @@
   };
 
   home.file.".config/btop" = {
-    source = /home/nooneknows/dotfiles/home/packages/headless-essentials/btop/btop;
+      source = config.lib.file.mkOutOfStoreSymlink /home/nooneknows/dotfiles/home/packages/headless-essentials/btop/btop;
   };
 
 }

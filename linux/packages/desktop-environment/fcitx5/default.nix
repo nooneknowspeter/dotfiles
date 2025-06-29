@@ -23,8 +23,7 @@
   # };
 
   home.file.".config/fcitx5" = {
-    source = ./fcitx5;
-    recursive = true;
+    source = config.lib.file.mkOutOfStoreSymlink /home/nooneknows/dotfiles/linux/packages/desktop-environment/fcitx5/fcitx5;
   };
 
   home.sessionVariables = {

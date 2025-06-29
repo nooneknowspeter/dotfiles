@@ -10,7 +10,7 @@
   };
 
   home.file.".gitconfig" = {
-    source = /home/nooneknows/dotfiles/home/packages/headless-essentials/git/.gitconfig;
+    source = config.lib.file.mkOutOfStoreSymlink /home/nooneknows/dotfiles/home/packages/headless-essentials/git/.gitconfig;
   };
 
 }

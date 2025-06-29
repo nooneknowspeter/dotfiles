@@ -7,8 +7,7 @@
   ];
 
   home.file.".config/waybar" = {
-    source = ./minimal;
-    recursive = true;
+    source = config.lib.file.mkOutOfStoreSymlink /home/nooneknows/dotfiles/linux/packages/desktop-environment/waybar/minimal;
   };
 
 }

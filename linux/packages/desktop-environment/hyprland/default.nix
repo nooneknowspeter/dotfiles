@@ -50,9 +50,10 @@
   #   };
   # };
 
+  services.hyprpaper.enable = true;
+
   home.file.".config/hypr" = {
-    source = ./hypr;
-    recursive = true;
+    source = config.lib.file.mkOutOfStoreSymlink /home/nooneknows/dotfiles/linux/packages/desktop-environment/hyprland/hypr;
   };
 
 }

@@ -35,7 +35,7 @@ in
   };
 
   home.file."${configLocation}" = {
-    source = /home/nooneknows/dotfiles/home/packages/gui-devel/vscode/Code;
+    source = config.lib.file.mkOutOfStoreSymlink /home/nooneknows/dotfiles/home/packages/gui-devel/vscode/Code;
   };
 
 }
