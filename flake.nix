@@ -78,7 +78,7 @@
             };
 
             modules = [
-              ./darwin/hosts/aarch/peter-macbook/configuration.nix
+              ./darwin/hosts/aarch/peter-macbook
             ];
           };
       };
