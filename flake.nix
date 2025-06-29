@@ -29,6 +29,12 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # musnix
+    musnix  = {
+      url = "github:musnix/musnix"; 
+    };
+
     # lanzaboote; secure boot
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v0.4.2";
@@ -64,6 +70,7 @@
               ./linux/hosts/x86-64/peter-legion/configuration.nix
               lanzaboote.nixosModules.lanzaboote
               nixos-hardware.nixosModules.lenovo-legion-16ithg6
+              musnix.nixosModules.musnix
             ];
           };
       };
