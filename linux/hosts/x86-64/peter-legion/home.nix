@@ -10,6 +10,8 @@
     ../../../../home/packages/gui-essentials
     ../../../../home/packages/gui-devel
 
+    ../../../../home/packages/gui-contentCreation
+
     ../../../packages/desktop-environment
   ];
 
