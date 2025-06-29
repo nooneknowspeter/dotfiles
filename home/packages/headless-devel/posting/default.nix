@@ -6,8 +6,7 @@
   ];
 
   home.file.".config/posting" = {
-    source = ./posting;
-    recursive = true;
+    source = /home/nooneknows/dotfiles/home/packages/headless-devel/posting/posting;
   };
 
 }
