@@ -3,10 +3,11 @@
 {
 
   home.packages = with pkgs; [
-    fcitx5-with-addons
-    fcitx5-gtk
+    fcitx5
+    # fcitx5-with-addons
+    # fcitx5-gtk
     fcitx5-mozc
-    # fcitx5-configtool
+    fcitx5-configtool
   ];
 
   # i18n.inputMethod = {
