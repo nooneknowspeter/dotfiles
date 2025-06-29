@@ -10,7 +10,6 @@
     hyprland-protocols
     hyprland-qtutils
     hyprlock
-    hyprpanel
     hyprpaper
     hyprpicker
     hyprpolkitagent
@@ -33,7 +32,7 @@
   #   package = pkgs.hyprland;
   #   # Whether to enable XWayland
   #   xwayland.enable = true;
-
+  #
   #   plugins = with pkgs; [
   #     xdg-desktop-portal-hyprland
   #     hyprlandPlugins.csgo-vulkan-fix
@@ -42,18 +41,21 @@
   #     hyprlandPlugins.hyprtrails
   #     hyprlandPlugins.hyprwinwrap
   #   ];
-
+  #
   #   systemd = {
   #     enable = true;
   #     enableXdgAutostart = true;
   #     variables = ["--all"];
   #   };
+  #
+  #   extraConfig = ''
+  #
+  #   '';
   # };
 
-  services.hyprpaper.enable = true;
+  # services.hyprpaper.enable = true;
 
   home.file.".config/hypr" = {
     source = config.lib.file.mkOutOfStoreSymlink /home/nooneknows/dotfiles/linux/packages/desktop-environment/hyprland/hypr;
   };
-
 }
