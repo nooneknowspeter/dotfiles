@@ -10,8 +10,7 @@
   };
 
   home.file.".config/btop" = {
-    source = ./btop;
-    recursive = true;
+    source = /home/nooneknows/dotfiles/home/packages/headless-essentials/btop/btop;
   };
 
 }
