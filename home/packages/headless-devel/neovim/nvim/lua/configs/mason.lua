@@ -12,7 +12,7 @@ return {
   max_concurrent_installers = 10,
 
   -- local repo for development
-  registries = {
-    "file:~/projects/neovim/mason-registry/",
-  },
+  -- registries = {
+  --   "file:~/projects/neovim/mason-registry/",
+  -- },
 }
