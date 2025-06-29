@@ -123,7 +123,10 @@
         "nooneknows@android" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.aarch64-linux;
 
-          extraSpecialArgs = {
+          extraSpecialArgs = let
+            username = "nooneknows";
+            homeDirectory = "/data/data/com.termux.nix/files/home";
+          in {
             inherit inputs;
             inherit username;
             inherit homeDirectory;
@@ -136,7 +139,14 @@
         "nooneknows@darwin" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.aarch64-darwin;
 
-          extraSpecialArgs = { inherit inputs; };
+          extraSpecialArgs = let
+            username = "nooneknows";
+            homeDirectory = "/home/nooneknows";
+          in {
+            inherit inputs;
+            inherit username;
+            inherit homeDirectory;
+          };
 
           modules = [
             stylix.homeModules.stylix
@@ -147,7 +157,14 @@
         "nooneknows@headless" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
-          extraSpecialArgs = { inherit inputs; };
+          extraSpecialArgs = let
+            username = "nooneknows";
+            homeDirectory = "/home/nooneknows";
+          in {
+            inherit inputs;
+            inherit username;
+            inherit homeDirectory;
+          };
 
           modules = [
             stylix.homeModules.stylix
@@ -158,7 +175,14 @@
         "nooneknows@linux" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
-          extraSpecialArgs = { inherit inputs; };
+          extraSpecialArgs = let
+            username = "nooneknows";
+            homeDirectory = "/home/nooneknows";
+          in {
+            inherit inputs;
+            inherit username;
+            inherit homeDirectory;
+          };
 
           modules = [
             stylix.homeModules.stylix
@@ -169,7 +193,14 @@
         "nooneknows@wsl" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
-          extraSpecialArgs = { inherit inputs; };
+          extraSpecialArgs = let
+            username = "nooneknows";
+            homeDirectory = "/home/nooneknows";
+          in {
+            inherit inputs;
+            inherit username;
+            inherit homeDirectory;
+          };
 
           modules = [
             stylix.homeModules.stylix
