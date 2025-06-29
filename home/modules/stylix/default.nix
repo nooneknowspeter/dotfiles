@@ -58,10 +58,7 @@
       package = pkgs.papirus-icon-theme;
     };
 
-    image = pkgs.fetchurl {
-      url = "https://github.com/dharmx/walls/blob/main/manga/a_black_and_white_image_of_a_room.jpeg";
-      hash = "ed5864e529fe79d3c21d5b507e1c0273457094fa";
-    };
+    image = /home/nooneknows/dotfiles/wallpapers/a_black_and_white_image_of_a_room.jpeg;
 
     opacity = {
       desktop = 0.8;
