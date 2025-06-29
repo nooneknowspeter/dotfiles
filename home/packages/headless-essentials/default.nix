@@ -6,6 +6,7 @@
     ./awk
     ./bat
     ./bitwarden-cli
+    ./bluetui
     ./btop
     ./cbonsai
     ./curl
