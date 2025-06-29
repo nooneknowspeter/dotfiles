@@ -1,5 +1,4 @@
 { config, pkgs, ... }:
-
 let
   configLocation = if pkgs.stdenv.isLinux then ".config/Code/User" else "Library/Application Support/Code/User";
 in

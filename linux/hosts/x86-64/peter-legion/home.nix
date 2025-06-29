@@ -1,5 +1,4 @@
-{ config, pkgs, dotfiles, ... }:
-
+{ config, pkgs, ... }:
 {
 
   imports = [
