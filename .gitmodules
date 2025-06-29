@@ -1,0 +1,3 @@
+[submodule "nvim"]
+	path = home/packages/headless-devel/neovim/nvim
+	url = git@github.com:nooneknowspeter/nvim.git
