@@ -6,8 +6,7 @@
   };
 
   home.file.".config/wezterm" = {
-    source = ./wezterm;
-    recursive = true;
+    source = /home/nooneknows/dotfiles/home/packages/gui-devel/wezterm/wezterm;
   };
 
 }
