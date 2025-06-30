@@ -1,6 +1,10 @@
 { config, pkgs, ... }: {
 
-  home.packages = with pkgs; [ btop ];
+  home.packages = with pkgs; [
+    btop
+    btop-cuda
+    # btop-rocm
+  ];
 
   programs.btop = { enable = true; };
 
