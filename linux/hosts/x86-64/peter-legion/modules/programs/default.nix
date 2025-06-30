@@ -1,5 +1,5 @@
 { config, lib, pkgs, ... }: {
 
-  imports = [ ./dconf ./hyprland ./steam ./zsh ];
+  imports = [ ./dconf ./hyprland ./nix-ld ./steam ./zsh ];
 
 }
