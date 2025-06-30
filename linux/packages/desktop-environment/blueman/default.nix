@@ -1,7 +1,5 @@
 { config, pkgs, ... }: {
 
-  home.packages = with pkgs; [
-    blueman
-  ];
+  home.packages = with pkgs; [ blueman ];
 
 }
