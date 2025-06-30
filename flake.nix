@@ -48,6 +48,12 @@
       url = "github:nix-community/lanzaboote/v0.4.2";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # nix-ld
+    nix-ld = {
+      url = "github:Mic92/nix-ld";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, nix-darwin, nixos-hardware
@@ -73,6 +79,7 @@
 
           modules = [
             ./linux/hosts/x86-64/peter-legion
+            nix-ld.nixosModules.nix-ld
             lanzaboote.nixosModules.lanzaboote
             nixos-hardware.nixosModules.lenovo-legion-16ithg6
             musnix.nixosModules.musnix
