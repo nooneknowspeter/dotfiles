@@ -8,7 +8,6 @@
     ./brightnessctl
     ./cava
     ./cliphist
-    ./eww
     ./fcitx5
     ./greetd
     ./heroic
