@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./blueman
     ./bottles
     ./brightnessctl
     ./cava
