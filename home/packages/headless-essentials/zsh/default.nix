@@ -16,8 +16,6 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     sessionVariables = {
-      DISPLAY = "172.23.144.1:0";
-      LIBGL_ALWAYS_INDIRECT = 0;
       EDITOR = "nvim";
       DOTFILES = "$HOME/dotfiles";
       NIX_CONFIG = "experimental-features = nix-command flakes";
