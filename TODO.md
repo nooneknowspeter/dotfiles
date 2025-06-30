@@ -8,17 +8,17 @@
     - [x] distro/OS
     - [x] purpose
 
-- [ ] nvim
-    - [ ] init submodule
-    - [ ] reference git protocol in URI
+- [x] nvim
+    - [x] init submodule
+    - [x] reference git protocol in URI
 
 - [ ] arch setup
     - [ ] test out home manager setup on arch machine
     - [ ] bootstrap desktop environment
     - [ ] nixgl
 
-- [ ] nix-on-droid
-    - [ ] test out home manager setup
+- [x] nix-on-droid
+    - [x] test out home manager setup
 
 ## Dev
 - [ ] configure ghostty; after 1.2 release
