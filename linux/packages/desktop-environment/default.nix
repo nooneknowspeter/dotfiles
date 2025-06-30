@@ -24,6 +24,7 @@
     ./rofi
     ./scrcpy
     ./screenkey
+    ./spotify
     ./steam
     ./swaync
     ./uwsm
