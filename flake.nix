@@ -29,6 +29,11 @@
     # hyprland
     hyprland = { url = "github:hyprwm/Hyprland"; };
 
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
+
     # nix-on-droid
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid";
