@@ -36,3 +36,6 @@
 [submodule "zsh/zsh-autosuggestions"]
 	path = zsh/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "nvim"]
+	path = nvim/.config/nvim
+	url = git@github.com:nooneknowspeter/nvim.git
