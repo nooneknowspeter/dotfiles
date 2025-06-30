@@ -61,8 +61,8 @@
     image = pkgs.fetchurl {
       # https://github.com/dharmx/walls
       url =
-        "https://raw.githubusercontent.com/dharmx/walls/refs/heads/main/manga/a_black_and_white_image_of_a_room.jpeg";
-      hash = "sha256-/rFlNq12YkESwXXLn08JEn6SE3yiUVFYmEliU/9zDrs=";
+        "https://raw.githubusercontent.com/dharmx/walls/refs/heads/main/manga/a_black_and_white_drawing_of_a_person_holding_a_stick.jpg";
+      hash = "sha256-90eUTc9GBf+NWSzKL+AXwCp+kPlaHVx3/tpfAMLrZbQ=";
     };
 
     opacity = {
