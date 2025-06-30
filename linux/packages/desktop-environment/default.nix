@@ -20,6 +20,7 @@
     ./openrgb
     ./pipewire
     ./protonup
+    ./rofi
     ./scrcpy
     ./screenkey
     ./steam
