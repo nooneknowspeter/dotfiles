@@ -26,6 +26,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # hyprland
+    hyprland = { url = "github:hyprwm/Hyprland"; };
+
     # nix-on-droid
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid";
@@ -43,7 +46,7 @@
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, nix-darwin, nixos-hardware
-    , stylix, nix-on-droid, musnix, lanzaboote, ... }:
+    , stylix, nix-on-droid, musnix, lanzaboote, hyprland, nix-ld, ... }:
     let
       locale = "en_US.UTF-8";
       timezone = "US/Eastern";
