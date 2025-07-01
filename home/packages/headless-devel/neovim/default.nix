@@ -8,6 +8,7 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
+    extraPackages = with pkgs; [ imagemagick ];
   };
 
   home.file.".config/nvim" = {
