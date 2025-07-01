@@ -5,6 +5,7 @@
     ./bitwarden-desktop
     ./brave
     ./discord
+    ./obs-studio
     ./obsidian
     ./zathura
   ];

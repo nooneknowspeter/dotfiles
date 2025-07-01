@@ -8,7 +8,6 @@
     ./freecad
     # ./houdini
     # ./natron
-    ./obs-studio
   ];
 
 }
