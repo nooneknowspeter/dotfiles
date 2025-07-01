@@ -1,7 +1,7 @@
 theme = Black Metal (Dark Funeral)
 font-family = FiraCode Nerd Font
-background-opacity = 0.8
 font-size = 10
+background-opacity = 0.9
 background-blur = false
 confirm-close-surface = false
 mouse-hide-while-typing = true
