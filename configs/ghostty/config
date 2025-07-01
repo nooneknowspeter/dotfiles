@@ -5,7 +5,7 @@ font-size = 10
 
 background-opacity = 0.9
 background-blur = false
-cursor-opacity = 0.5
+cursor-opacity = 0.2
 
 
 window-vsync = true
