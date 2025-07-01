@@ -1,5 +1,9 @@
 # TODO
 
+## General
+
+- [x] move dot configs into a top-level folder in repo (easier access)
+
 ## Automate with Nix
 
 - [x] make configurations for each environment in [flake.nix](./flake.nix)
@@ -21,7 +25,7 @@
     - [x] test out home manager setup
 
 ## Dev
-- [ ] configure ghostty; after 1.2 release
+- [x] configure ghostty; after 1.2 release
 
 ## Documentation
 
