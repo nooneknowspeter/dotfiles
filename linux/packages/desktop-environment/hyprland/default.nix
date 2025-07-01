@@ -41,7 +41,7 @@
     ];
     extraConfig = ''
       # main
-      source = ~/dotfiles/linux/packages/desktop-environment/hyprland/hypr/main.conf
+      source = ~/dotfiles/configs/hypr/main.conf
     '';
   };
 
@@ -162,6 +162,6 @@
 
   # home.file.".config/hypr" = {
   #   source = config.lib.file.mkOutOfStoreSymlink
-  #     "${config.home.homeDirectory}/dotfiles/linux/packages/desktop-environment/hyprland/hypr";
+  #     "${config.home.homeDirectory}/dotfiles/configs/hypr";
   # };
 }

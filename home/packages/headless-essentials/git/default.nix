@@ -6,7 +6,7 @@
 
   home.file.".gitconfig" = {
     source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/dotfiles/home/packages/headless-essentials/git/.gitconfig";
+      "${config.home.homeDirectory}/dotfiles/configs/.gitconfig";
   };
 
 }

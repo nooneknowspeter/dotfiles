@@ -4,7 +4,7 @@
 
   home.file.".config/wezterm" = {
     source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/dotfiles/home/packages/gui-devel/wezterm/wezterm";
+      "${config.home.homeDirectory}/dotfiles/configs/wezterm";
   };
 
 }

@@ -36,7 +36,7 @@ in {
 
   home.file."${configLocation}" = {
     source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/dotfiles/home/packages/gui-devel/vscode/Code";
+      "${config.home.homeDirectory}/dotfiles/configs/Code";
   };
 
 }

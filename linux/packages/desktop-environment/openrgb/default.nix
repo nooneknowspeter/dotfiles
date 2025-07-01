@@ -6,7 +6,7 @@
 
   home.file.".config/OpenRGB" = {
     source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/dotfiles/linux/packages/desktop-environment/openrgb/OpenRGB";
+      "${config.home.homeDirectory}/dotfiles/configs/OpenRGB";
   };
 
 }

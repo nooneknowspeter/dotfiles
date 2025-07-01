@@ -6,7 +6,7 @@
 
   home.file.".config/starship" = {
     source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/dotfiles/home/packages/headless-essentials/starship/starship";
+      "${config.home.homeDirectory}/dotfiles/configs/starship";
   };
 
 }

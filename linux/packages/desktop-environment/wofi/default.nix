@@ -6,7 +6,7 @@
 
   home.file.".config/wofi" = {
     source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/dotfiles/linux/packages/desktop-environment/wofi/hayyaoe";
+      "${config.home.homeDirectory}/dotfiles/configs/wofi";
   };
 
 }

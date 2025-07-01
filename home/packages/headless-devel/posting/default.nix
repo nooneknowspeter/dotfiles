@@ -4,7 +4,7 @@
 
   home.file.".config/posting" = {
     source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/dotfiles/home/packages/headless-devel/posting/posting";
+      "${config.home.homeDirectory}/dotfiles/configs/posting";
   };
 
 }
