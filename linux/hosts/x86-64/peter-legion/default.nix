@@ -11,6 +11,10 @@
     # packages
     ./packages
 
+    # shared modules
+    ../../../modules/virtualization
+
+    # system specific modules
     ./modules/audio
     ./modules/boot
     ./modules/console
