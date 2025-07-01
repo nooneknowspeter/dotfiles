@@ -32,7 +32,13 @@
     noto-fonts
   ];
 
-  home.sessionVariables = { EDITOR = "nvim"; };
+  home.sessionVariables = {
+    XDG_DOCUMENTS_DIR = "${config.home.homeDirectory}/Documents";
+    XDG_DOWNLOADS_DIR = "${config.home.homeDirectory}/Downloads";
+    XDG_MUSIC_DIR = "${config.home.homeDirectory}/Music";
+    XDG_PICTURES_DIR = "${config.home.homeDirectory}/Pictures";
+    XDG_VIDEOS_DIR = "${config.home.homeDirectory}/Videos";
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
