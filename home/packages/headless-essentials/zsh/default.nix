@@ -75,6 +75,7 @@
         "bun"
         "colorize"
         "cp"
+        "direnv"
         "docker-compose"
         "docker"
         "dotnet"
