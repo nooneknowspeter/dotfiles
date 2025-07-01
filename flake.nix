@@ -34,6 +34,9 @@
       inputs.hyprland.follows = "hyprland";
     };
 
+    # ghostty
+    ghostty = { url = "github:ghostty-org/ghostty"; };
+
     # nix-on-droid
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid";
