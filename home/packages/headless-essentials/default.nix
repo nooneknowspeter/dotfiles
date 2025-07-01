@@ -9,6 +9,7 @@
     ./btop
     ./cbonsai
     ./curl
+    ./direnv
     ./fastfetch
     ./fd
     ./fzf
