@@ -1,7 +1,3 @@
 # encryption
 .env
 .secret.txt
-
-# tmux
-/tmux/.tmux/plugins
-!/tmux/.tmux/plugins/tpm/
