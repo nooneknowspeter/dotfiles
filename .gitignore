@@ -1,3 +1,6 @@
 # encryption
 .env
 .secret.txt
+
+# artifacts
+configs/OpenRGB/logs
