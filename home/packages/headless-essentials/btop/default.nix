@@ -6,8 +6,8 @@
     # btop-rocm
   ];
 
-  programs.btop = { 
-    enable = true; 
+  programs.btop = {
+    enable = true;
     settings = {
       # color_theme = "TTY";
       theme_background = false;
