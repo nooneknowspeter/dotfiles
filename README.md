@@ -196,33 +196,81 @@ like stow and provides easy top-level access to frequently-edited configurations
 ```
 
 ```mermaid
-graph TD
-    A[flake.nix]
-    A --> B[Home Manager]
-    B --> B1[User Packages]
-    B --> B2[GUI/Headless Configs]
-    B --> B3[Hyprland + WM Configs]
+---
+config:
+  theme: 'dark'
+---
+flowchart TD
+    subgraph home-manager [Home Manager]
+        usr_configs[User
+        Configurations]
 
-    A --> C[NixOS]
-    C --> C1[System Config]
-    C --> C2[Home Manager Integration]
+        user_pkgs[User
+        Packages]
+    end
 
-    A --> D[nix-darwin]
-    D --> D1[macOS System Config]
-    D --> D2[Home Manager]
+    home-manager hm1@----> archNode1User
+    home-manager hm2@----> nixosNode1User
+    home-manager hm4@----> androidNode1User
+    home-manager hm3@----> macosNode1User
 
-    A --> E[nix-on-droid]
-    E --> E1[Termux Config]
-    E --> E2[Home Manager]
+    subgraph linux [Linux]
+        subgraph linuxSharedModules [Shared Modules]
+        end
 
-    A --> F[WSL]
-    F --> F1[Arch WSL]
-    F --> F2[NixOS WSL]
-    F --> F3[Home Manager]
+        subgraph arch [Arch]
+            subgraph archNode1 [Arch Node 1]
+                direction TB
+                archNode1User[User]
+                archNode1SystemConfig[System Configuration]
+            end
+        end
 
-    A --> G[Imperative Linux]
-    G --> G1[System Script Config]
-    G --> G2[Home Manager]
+        subgraph nixos [NixOS]
+            subgraph nixosNode1 [NixOS Node 1]
+                direction TB
+                nixosNode1User[User]
+                nixosNode1SystemConfig[System Configuration]
+            end
+        end
+
+        subgraph android [Nix-on-Droid]
+            subgraph androidNode1 [Android Node 1]
+                direction TB
+                androidNode1User[User]
+                androidNode1SystemConfig[System Configuration]
+            end
+        end
+
+        linuxSharedModules <---> androidNode1SystemConfig
+        linuxSharedModules <---> nixosNode1SystemConfig
+        linuxSharedModules <---> archNode1SystemConfig
+
+    end
+
+    subgraph darwin [Darwin]
+        subgraph nix-darwin [macOS]
+            subgraph macosNode1 [macOS Node 1]
+                direction TB
+                macosNode1User[User]
+                macosNode1SystemConfig[System Configuration]
+            end
+        end
+    end
+
+    %% style
+    hm1@{ animate: true }
+    hm2@{ animate: true }
+    hm3@{ animate: true }
+    hm4@{ animate: true }
+    
+    style linux fill:transparent
+    style darwin fill:transparent
+
+    style android fill:green
+    style nixos fill:purple
+    style arch fill:lightblue
+    style nix-darwin fill:orange
 ```
 
 ## Setup
@@ -271,14 +319,24 @@ sudo nixos-rebuild --extra-experimental-features "nix-command flakes" switch --f
 nix-on-droid switch --flake /path/to/flake.nix#configName
 ```
 
-## Info
+## Systems Information
 
 My essentials packages can be found [here](./home/packages/) and raw dot configs [here](./configs/),
 but a quick overview on my daily driver:
 
+### NixOS
+
+![nixos, hyprland, waybar](https://i.imgur.com/ih9ZW83.jpeg)
+![nixos, hyprland, ghostty](https://i.imgur.com/dw879yc.png)
+
+[Desktop Environment Setup](./linux/packages/desktop-environment/)
+
+[NixOS Specific Configuration](./linux/hosts/x86-64/peter-legion/)
+
+---
 - OS: [NixOS](https://nixos.org/)
 - Window Manager: [Hyprland](https://github.com/hyprwm/Hyprland) w/ [plugins](https://github.com/hyprwm/hyprland-plugins)
-- Terminal: [Wezterm](https://github.com/wezterm/wezterm) (WSL) / [Ghostty](https://github.com/ghostty-org/ghostty) (Unix)
+- Terminal: [Ghostty](https://github.com/ghostty-org/ghostty) w/ [TMUX](https://github.com/tmux/tmux)
 - Shell: [zsh](https://www.zsh.org/) w/ [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
 - Bar: [Waybar](https://github.com/Alexays/Waybar)
 - App Launcher: [Wofi](https://github.com/SimplyCEO/wofi)
@@ -286,32 +344,36 @@ but a quick overview on my daily driver:
 - File Manager: [yazi](https://github.com/sxyazi/yazi)
 - Streaming / Recording: [OBS](https://github.com/obsproject/obs-studio)
 
-## Previews
-
-### NixOS
-
-![nixos, hyprland, waybar](https://i.imgur.com/ih9ZW83.jpeg)
-![nixos, hyprland, ghostty](https://i.imgur.com/dw879yc.png)
-
 ### WSL
 
 ![wezterm, archlinux wsl, tmux, neovim](https://i.imgur.com/FyaiNJZ.png)
 
+[Windows Setup](./win32/)
+
+---
+- OS: Windows 11
+- Window Manager: [GlazeWM](https://github.com/glzr-io/glazewm)
+- Terminal: [Wezterm](https://github.com/wezterm/wezterm) w/ [TMUX](https://github.com/tmux/tmux)
+- Shell: [zsh](https://www.zsh.org/) w/ [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
+- Bar: [Zebar](https://github.com/glzr-io/zebar)
+- App Launcher: [PowerToys](https://github.com/microsoft/PowerToys)
+- Editor: [Neovim](https://github.com/neovim/neovim) (Minimal config on Windows, Full config in WSL env)
+- File Manager: [yazi](https://github.com/sxyazi/yazi)
+- Streaming: [OBS](https://github.com/obsproject/obs-studio)
+- Recording: [NVIDIA ShadowPlay](https://www.nvidia.com/en-ph/geforce/geforce-experience/shadowplay/)
+
 ### Nix-on-droid
 
-<!-- TODO -->
+[scrcpy, android, termux, nix-on-droid, zsh](https://i.imgur.com/KSbeOne.png)
 
-### macOS
-
-<!-- TODO -->
+<!-- TODO: macOS -->
+<!-- ### macOS -->
 
 ## References
 
-[yannik sander's guide on nix shells](https://blog.ysndr.de/posts/guides/2021-12-01-nix-shells/)
+[NixOS for the confused](https://cola-gang.industries/nixos-for-the-confused-part-i)
 
 [Sample repo utilizing Nix](https://codeberg.org/justgivemeaname/.dotfiles/src/branch/main)
-
-[NixOS for the confused](https://cola-gang.industries/nixos-for-the-confused-part-i)
 
 [VeigPhunt dotfiles](https://github.com/ViegPhunt/Dotfiles)
 
@@ -320,3 +382,5 @@ but a quick overview on my daily driver:
 [hayyaoe dotfiles](https://github.com/hayyaoe/zenities/)
 
 [ryan4yin dotfiles](https://github.com/ryan4yin/nix-config)
+
+[yannik sander's guide on nix shells](https://blog.ysndr.de/posts/guides/2021-12-01-nix-shells/)
