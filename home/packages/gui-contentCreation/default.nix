@@ -6,7 +6,7 @@
     ./blender
     ./davinci-resolve
     ./freecad
-    # ./houdini
+    ./houdini
     # ./natron
   ];
 
