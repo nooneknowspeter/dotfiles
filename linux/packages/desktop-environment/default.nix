@@ -22,6 +22,7 @@
     ./pipewire
     ./protonup
     ./rofi
+    ./scope-tui
     ./scrcpy
     ./screenkey
     ./spotify
