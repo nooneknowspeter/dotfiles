@@ -32,6 +32,7 @@
     - [x] test out home manager setup
 
 - [ ] create modules for flake.nix outputs
+    - [ ] clean up flake.nix
     - [ ] home-manager configs
     - [ ] nixos configs
     - [ ] darwin configs
