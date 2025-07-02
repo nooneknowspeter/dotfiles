@@ -4,7 +4,7 @@
 
 - [x] move dot configs into a top-level folder in repo (easier access)
 - [ ] merge into main, tag 2.0.0
-- [ ] setup CI/CD pipeline; formating and linting code, commit `style (ci/cd): nixfmt`
+- [x] setup CI/CD pipeline; formating and linting code, commit `style (ci/cd): nixfmt`
 - [ ] set old submodules as archives or delete; [zsh submodule](https://github.com/nooneknowspeter/zsh), [tmux submodule](https://github.com/nooneknowspeter/tmux)
 
 ## Automate with Nix
