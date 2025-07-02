@@ -3,6 +3,9 @@
 ## General
 
 - [x] move dot configs into a top-level folder in repo (easier access)
+- [ ] merge into main, tag 2.0.0
+- [ ] setup CI/CD pipeline; formating and linting code, commit `style (ci/cd): nixfmt`
+- [ ] set old submodules as archives or delete; [zsh submodule](https://github.com/nooneknowspeter/zsh), [tmux submodule](https://github.com/nooneknowspeter/tmux)
 
 ## Automate with Nix
 
@@ -16,9 +19,9 @@
     - [x] init submodule
     - [x] reference git protocol in URI
 
-- [ ] home-manager
-    - [ ] properly setup xdg config in home-manager; user dirs (Downloads, Pictures)
-    - [ ] properly setup xdg mime; default applications
+- [x] home-manager
+    - [x] properly setup xdg config in home-manager; user dirs (Downloads, Pictures)
+    - [x] properly setup xdg mime; default applications
 
 - [ ] arch setup
     - [ ] test out home manager setup on arch machine
@@ -35,12 +38,22 @@
     - [ ] nix-on-droid configs
 
 ## Dev
-- [x] configure ghostty; after 1.2 release
+
+- [ ] ghostty
+    - [x] configure ghostty; after 1.2 release
+    - [ ] fix:
+    
+    ```sh
+    /nix/store/7maggaslszrp9an7iv6cjbzmk177v629-ghostty-1.1.4/share/ghostty/shell-integration/zsh/ghostty-integration:142: defining function based on alias `sudo'
+    /nix/store/7maggaslszrp9an7iv6cjbzmk177v629-ghostty-1.1.4/share/ghostty/shell-integration/zsh/ghostty-integration:226: parse error near `()'
+    ```
+    
+    ![ghostty issue](https://i.imgur.com/bLFGKFV.png)
 
 ## Documentation
 
-- [ ] update README.md
-    - [ ] add relevant commands
-    - [ ] explain code structure and design, philosphy
-    - [ ] screenshots
-- [ ] update repo description
+- [x] update README.md
+    - [x] add relevant commands
+    - [x] explain code structure and design, philosphy
+    - [x] screenshots
+- [x] update repo description
