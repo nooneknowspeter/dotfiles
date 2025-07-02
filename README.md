@@ -364,7 +364,7 @@ but a quick overview on my daily driver:
 
 ### Nix-on-droid
 
-[scrcpy, android, termux, nix-on-droid, zsh](https://i.imgur.com/KSbeOne.png)
+![scrcpy, android, termux, nix-on-droid, zsh](https://i.imgur.com/KSbeOne.png)
 
 <!-- TODO: macOS -->
 <!-- ### macOS -->
