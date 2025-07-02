@@ -16,45 +16,6 @@ This setup uses:
 - [WSL](https://learn.microsoft.com/en-us/windows/wsl/) integration (both NixOS and Arch-based environments).
 - Traditional imperative distros (primarily [Arch Linux](https://archlinux.org/))via bootstrapping scripts.
 
-## Setup
-
-### Initial Setup
-
-```sh
-git clone --recursive git@github.com:nooneknowspeter/dotfiles.git
-```
-### Home Manger Configuration
-
-Temorarily fetch and link home-manager in current shell instance
-
-> [!NOTE]
-> `home-manager` is loaded temporaily in the current shell instance,
-> if shell is exited without running `home-manager` 
-> (`home-manager` installs and manages itself after the initial bootstrap)
-> 
-> `--extra-experimental-features "nix-command flakes"` flag is used on the initial bootstrap of `home-manager`
-
-```sh
-nix --extra-experimental-features "nix-command flakes" shell nixpkgs#home-manager
-```
-
-Bootstrap config
-
-```sh
-#                                                                                                  username    env
-home-manager --extra-experimental-features "nix-command flakes" switch --flake /path/to/flake.nix#nooneknows@headless
-```
-
-### NixOS Configuration
-
-> [!NOTE]
-> Using `--extra-experimental-features "nix-command flakes"` can be ommitted
-> if `home-manager` was bootstraped prior
-
-```sh
-#                                                                                                   system configuration
-sudo nixos-rebuild --extra-experimental-features "nix-command flakes" switch --flake /path/to/flake.nix#peter-legion
-```
 
 ## Features
 
@@ -259,10 +220,71 @@ graph TD
     F --> F2[NixOS WSL]
     F --> F3[Home Manager]
 
-    A --> G[Imperative Linux (e.g., Arch)]
+    A --> G[Imperative Linux]
     G --> G1[System Script Config]
     G --> G2[Home Manager]
 ```
+
+## Setup
+
+### Initial Setup
+
+```sh
+git clone --recursive git@github.com:nooneknowspeter/dotfiles.git
+```
+### Home Manger Configuration
+
+Temorarily fetch and link home-manager in current shell instance
+
+> [!NOTE]
+> `home-manager` is loaded temporaily in the current shell instance,
+> if shell is exited without running `home-manager` 
+> (`home-manager` installs and manages itself after the initial bootstrap)
+> 
+> `--extra-experimental-features "nix-command flakes"` flag is used on the initial bootstrap of `home-manager`
+
+```sh
+nix --extra-experimental-features "nix-command flakes" shell nixpkgs#home-manager
+```
+
+Bootstrap config
+
+```sh
+#                                                                                                  username    env
+home-manager --extra-experimental-features "nix-command flakes" switch --flake /path/to/flake.nix#nooneknows@headless
+```
+
+### NixOS Configuration
+
+> [!NOTE]
+> Using `--extra-experimental-features "nix-command flakes"` can be ommitted
+> if `home-manager` was bootstraped prior
+
+```sh
+#                                                                                                   system configuration
+sudo nixos-rebuild --extra-experimental-features "nix-command flakes" switch --flake /path/to/flake.nix#peter-legion
+```
+
+### Nix-on-droid
+
+```sh
+nix-on-droid switch --flake /path/to/flake.nix#configName
+```
+
+## Info
+
+My essentials packages can be found [here](./home/packages/) and raw dot configs [here](./configs/),
+but a quick overview on my daily driver:
+
+- OS: [NixOS](https://nixos.org/)
+- Window Manager: [Hyprland](https://github.com/hyprwm/Hyprland) w/ [plugins](https://github.com/hyprwm/hyprland-plugins)
+- Terminal: [Wezterm](https://github.com/wezterm/wezterm) (WSL) / [Ghostty](https://github.com/ghostty-org/ghostty) (Unix)
+- Shell: [zsh](https://www.zsh.org/) w/ [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
+- Bar: [Waybar](https://github.com/Alexays/Waybar)
+- App Launcher: [Wofi](https://github.com/SimplyCEO/wofi)
+- Editor: [Neovim](https://github.com/neovim/neovim) (Development) / [Vim](https://github.com/vim/vim) (Backup and quick editing)
+- File Manager: [yazi](https://github.com/sxyazi/yazi)
+- Streaming / Recording: [OBS](https://github.com/obsproject/obs-studio)
 
 ## Previews
 
@@ -285,11 +307,16 @@ graph TD
 
 ## References
 
-https://blog.ysndr.de/posts/guides/2021-12-01-nix-shells/
-https://codeberg.org/brunoc/flakies
-https://codeberg.org/justgivemeaname/.dotfiles/src/branch/main
-https://cola-gang.industries/nixos-for-the-confused-part-i
-https://github.com/ViegPhunt/Dotfiles
-https://github.com/dharmx/walls
-https://github.com/hayyaoe/zenities/
-https://github.com/ryan4yin/nix-config
+[yannik sander's guide on nix shells](https://blog.ysndr.de/posts/guides/2021-12-01-nix-shells/)
+
+[Sample repo utilizing Nix](https://codeberg.org/justgivemeaname/.dotfiles/src/branch/main)
+
+[NixOS for the confused](https://cola-gang.industries/nixos-for-the-confused-part-i)
+
+[VeigPhunt dotfiles](https://github.com/ViegPhunt/Dotfiles)
+
+[Wallpapaers](https://github.com/dharmx/walls)
+
+[hayyaoe dotfiles](https://github.com/hayyaoe/zenities/)
+
+[ryan4yin dotfiles](https://github.com/ryan4yin/nix-config)
