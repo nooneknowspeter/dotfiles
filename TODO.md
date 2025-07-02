@@ -16,6 +16,10 @@
     - [x] init submodule
     - [x] reference git protocol in URI
 
+- [ ] home-manager
+    - [ ] properly setup xdg config in home-manager; user dirs (Downloads, Pictures)
+    - [ ] properly setup xdg mime; default applications
+
 - [ ] arch setup
     - [ ] test out home manager setup on arch machine
     - [ ] bootstrap desktop environment
