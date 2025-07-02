@@ -6,7 +6,7 @@
     autoEnable = true;
 
     targets = {
-      btop.enable = false;
+      # btop.enable = false;
       ghostty.enable = false;
       k9s.enable = false;
       neovim.enable = false;
