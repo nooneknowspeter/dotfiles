@@ -24,6 +24,12 @@
 - [x] nix-on-droid
     - [x] test out home manager setup
 
+- [ ] create modules for flake.nix outputs
+    - [ ] home-manager configs
+    - [ ] nixos configs
+    - [ ] darwin configs
+    - [ ] nix-on-droid configs
+
 ## Dev
 - [x] configure ghostty; after 1.2 release
 
