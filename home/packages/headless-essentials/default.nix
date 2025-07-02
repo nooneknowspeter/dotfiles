@@ -19,11 +19,9 @@
     ./impala
     ./jq
     ./killall
-    ./less
     ./lsd
     ./man
     ./nh
-    ./nix
     ./nvitop
     ./openssh
     ./ripgrep
