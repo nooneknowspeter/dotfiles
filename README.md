@@ -289,6 +289,8 @@ Temorarily fetch and link home-manager in current shell instance
 > if shell is exited without running `home-manager` 
 > (`home-manager` installs and manages itself after the initial bootstrap)
 > 
+
+> [!NOTE]
 > `--extra-experimental-features "nix-command flakes"` flag is used on the initial bootstrap of `home-manager`
 
 ```sh
@@ -311,6 +313,40 @@ home-manager --extra-experimental-features "nix-command flakes" switch --flake /
 ```sh
 #                                                                                                   system configuration
 sudo nixos-rebuild --extra-experimental-features "nix-command flakes" switch --flake /path/to/flake.nix#peter-legion
+```
+
+### Arch (Post Install) / Non-NixOS
+
+Setup Zsh
+
+> [!NOTE]
+> Zsh must be installed through pacman since the change is system level
+
+```sh
+sudo pacman install -S zsh --noconfirm
+```
+
+Install the Nix
+
+> [!NOTE]
+> The multi-user installation is recommended for daemon access; systemd control
+
+```sh
+sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --daemon
+```
+
+Bootstrap [`home-manager`](### Home Manger Configuration)
+
+or
+
+Use the post Arch setup [script](./linux/scripts/arch/main.sh) to bootstrap a headless developer environment
+
+```sh
+cd ~/dotfiles/
+
+chmod +x ./linux/scripts/*
+
+./linux/scripts/arch/main.sh
 ```
 
 ### Nix-on-droid
