@@ -18,6 +18,9 @@
 - [x] nvim
     - [x] init submodule
     - [x] reference git protocol in URI
+    - [ ] setup branch for minimal config; nvim on windows
+    - [ ] reconfigure nvim lsp; agnositic lsp setup (mason and nix)
+    - [ ] ditto with dap
 
 - [x] home-manager
     - [x] properly setup xdg config in home-manager; user dirs (Downloads, Pictures)
