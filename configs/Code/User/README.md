@@ -2,7 +2,7 @@
 
 my vscode essentials
 
-![](https://github.com/nooneknowspeter/vscode/blob/main/public/screenshot.png)
+![](https://i.imgur.com/M6eplva.png)
 
 ## installation
 
