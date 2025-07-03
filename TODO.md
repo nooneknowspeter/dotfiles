@@ -5,7 +5,7 @@
 - [x] move dot configs into a top-level folder in repo (easier access)
 - [ ] merge into main, tag 2.0.0
 - [x] setup CI/CD pipeline; formating and linting code, commit `style (ci/cd): nixfmt`
-- [ ] set old submodules as archives or delete; [zsh submodule](https://github.com/nooneknowspeter/zsh), [tmux submodule](https://github.com/nooneknowspeter/tmux)
+- [x] set old submodules as archives or delete; [zsh submodule](https://github.com/nooneknowspeter/zsh), [tmux submodule](https://github.com/nooneknowspeter/tmux)
 
 ## Automate with Nix
 
@@ -27,7 +27,8 @@
     - [x] properly setup xdg mime; default applications
 
 - [ ] arch setup
-    - [ ] test out home manager setup on arch machine
+    - [x] test out home manager setup on arch machine
+    - [x] headless environment
     - [ ] bootstrap desktop environment
     - [ ] nixgl
 
@@ -40,6 +41,11 @@
     - [ ] nixos configs
     - [ ] darwin configs
     - [ ] nix-on-droid configs
+
+## Windows
+
+- [ ] clean up windows powershell scripts
+- [ ] move windows package configs into their respective places
 
 ## Dev
 
