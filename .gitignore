@@ -4,3 +4,4 @@
 
 # artifacts
 configs/OpenRGB/logs
+.direnv
