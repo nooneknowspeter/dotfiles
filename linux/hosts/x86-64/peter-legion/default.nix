@@ -1,33 +1,24 @@
-# Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
+{ inputs, ... }:
+let
+  hostname = "peter-legion";
+  locale = "en_US.UTF-8";
+  timezone = "US/Eastern";
+in inputs.nixpkgs.lib.nixosSystem {
+  system = "x86_64-linux";
 
-{ config, lib, pkgs, hostname, locale, timezone, ... }: {
+  specialArgs = {
+    inherit hostname;
+    inherit inputs;
+    inherit locale;
+    inherit timezone;
+  };
 
-  imports = [
-    # Include the results of the hardware scan.
-    ./hardware-configuration.nix
+  modules = [
+    ./configuration.nix
 
-    # packages
-    ./packages
-
-    # shared modules
-    ../../../modules/virtualization
-
-    # system specific modules
-    ./modules/audio
-    ./modules/boot
-    ./modules/console
-    ./modules/environment
-    ./modules/locale
-    ./modules/misc
-    ./modules/networking
-    ./modules/programs
-    ./modules/services
-    ./modules/system
-    ./modules/time
-    ./modules/users
+    inputs.nix-ld.nixosModules.nix-ld
+    inputs.lanzaboote.nixosModules.lanzaboote
+    inputs.nixos-hardware.nixosModules.lenovo-legion-16ithg6
+    inputs.musnix.nixosModules.musnix
   ];
-
 }
-
