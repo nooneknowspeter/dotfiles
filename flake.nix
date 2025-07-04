@@ -59,8 +59,7 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nix-darwin, nixos-hardware
-    , stylix, nix-on-droid, musnix, lanzaboote, hyprland, nix-ld, ... }:
+  outputs = inputs@{ ... }:
     let
       locale = "en_US.UTF-8";
       timezone = "US/Eastern";
