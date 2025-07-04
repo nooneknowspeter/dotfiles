@@ -90,15 +90,6 @@
         };
       };
 
-      # nix-on-droid
-      nixOnDroidConfigurations = {
-        note8 = let hostname = "note8";
-        in nix-on-droid.lib.nixOnDroidConfiguration {
-          pkgs = nixpkgs.legacyPackages."aarch64-linux";
-          modules = [ ./linux/hosts/aarch64/note8 ];
-        };
-      };
-
       # home-manager configuration entrypoint
       # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
@@ -214,6 +205,9 @@
 
       darwinConfigurations =
         import ./modules/outputs/nix-darwin { inherit inputs; };
+
+      nixOnDroidConfigurations =
+        import ./modules/outputs/nix-on-droid { inherit inputs; };
 
     };
 }
