@@ -73,122 +73,17 @@
             # json
             prettier
 
-      # home-manager configuration entrypoint
-      # Available through 'home-manager --flake .#your-username@your-hostname'
-      homeConfigurations = {
-
-        # remote / vps development
-        "anyone@headless" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-
-          extraSpecialArgs = let
-            username = "anyone";
-            homeDirectory = "/home/anyone";
-          in {
-            inherit inputs;
-            inherit username;
-            inherit homeDirectory;
-          };
-
-          modules = [
-            stylix.homeModules.stylix
-            ./linux/hosts/x86-64/headless/home.nix
-          ];
-        };
             #hyprland
             hyprls
 
-        "nooneknows@android" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.aarch64-linux;
-
             # lua
-          extraSpecialArgs = let
-            username = "nooneknows";
-            homeDirectory = "/data/data/com.termux.nix/files/home";
-          in {
-            inherit inputs;
-            inherit username;
-            inherit homeDirectory;
-          };
-
-          modules =
-            [ stylix.homeModules.stylix ./linux/hosts/aarch64/note8/home.nix ];
-        };
-
-        "nooneknows@darwin" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.aarch64-darwin;
-
-          extraSpecialArgs = let
-            username = "nooneknows";
-            homeDirectory = "/home/nooneknows";
-          in {
-            inherit inputs;
-            inherit username;
-            inherit homeDirectory;
-          };
-
-          modules = [
-            stylix.homeModules.stylix
-            ./darwin/hosts/aarch/peter-macbook/home.nix
-          ];
             lua-language-server
-        };
             stylua
 
-        "nooneknows@headless" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-
-          extraSpecialArgs = let
-            username = "nooneknows";
-            homeDirectory = "/home/nooneknows";
-          in {
-            inherit inputs;
-            inherit username;
-            inherit homeDirectory;
-          };
-
-          modules = [
-            stylix.homeModules.stylix
-            ./linux/hosts/x86-64/headless/home.nix
-          ];
-        };
             # markdown
-
-        "nooneknows@linux" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-
-          extraSpecialArgs = let
-            username = "nooneknows";
-            homeDirectory = "/home/nooneknows";
-          in {
-            inherit inputs;
-            inherit username;
-            inherit homeDirectory;
-          };
-
-          modules = [
-            stylix.homeModules.stylix
-            ./linux/hosts/x86-64/peter-legion/home.nix
             marksman
-          ];
-        };
             nodejs
 
-        "nooneknows@wsl" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-
-          extraSpecialArgs = let
-            username = "nooneknows";
-            homeDirectory = "/home/nooneknows";
-          in {
-            inherit inputs;
-            inherit username;
-            inherit homeDirectory;
-          };
-
-          modules = [
-            stylix.homeModules.stylix
-            ./win32/hosts/x86-64/peter-legion/home.nix
             # nix
             nil
             nixd
@@ -198,7 +93,6 @@
         };
       });
 
-      };
       nixosConfigurations = import ./modules/outputs/nixos { inherit inputs; };
 
       darwinConfigurations =
@@ -207,5 +101,7 @@
       nixOnDroidConfigurations =
         import ./modules/outputs/nix-on-droid { inherit inputs; };
 
+      homeConfigurations =
+        import ./modules/outputs/home-manager { inherit inputs; };
     };
 }
