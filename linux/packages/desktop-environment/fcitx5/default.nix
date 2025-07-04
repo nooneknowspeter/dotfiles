@@ -2,17 +2,18 @@
 
 {
 
-  home.packages = with pkgs; [
-    # fcitx5
-    # fcitx5-with-addons
-    # fcitx5-gtk
-    # fcitx5-mozc
-    # fcitx5-configtool
-    # fcitx5-anthy
-    # rime-data
-    # fcitx5-rime
-  ];
-  
+  home.packages = with pkgs;
+    [
+      # fcitx5
+      # fcitx5-with-addons
+      # fcitx5-gtk
+      # fcitx5-mozc
+      # fcitx5-configtool
+      # fcitx5-anthy
+      # rime-data
+      # fcitx5-rime
+    ];
+
   i18n.inputMethod = {
     enable = true;
     type = "fcitx5";
@@ -30,10 +31,8 @@
             EnumerateWithTriggerKeys = true;
             EnumerateSkipFirst = false;
           };
-          
-          "Hotkey/TriggerKeys" = {
-            "0" = "Super+space";
-          };
+
+          "Hotkey/TriggerKeys" = { "0" = "Super+space"; };
         };
 
         inputMethod = {
