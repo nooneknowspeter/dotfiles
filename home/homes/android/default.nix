@@ -9,5 +9,5 @@ in inputs.home-manager.lib.homeManagerConfiguration {
     inherit homeDirectory;
   };
 
-  modules = [ ./home.nix ];
+  modules = [ inputs.stylix.homeModules.stylix ./home.nix ];
 }
