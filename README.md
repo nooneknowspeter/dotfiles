@@ -268,8 +268,8 @@ nix --extra-experimental-features "nix-command flakes" shell nixpkgs#home-manage
 Bootstrap config
 
 ```sh
-#                                                                                                  username    env
-home-manager --extra-experimental-features "nix-command flakes" switch --flake /path/to/flake.nix#nooneknows@headless
+#                                                                                                  username       env
+home-manager --extra-experimental-features "nix-command flakes" switch --flake /path/to/flake.nix#nooneknows@linux-headless
 ```
 
 ### NixOS Configuration
