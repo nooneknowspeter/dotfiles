@@ -44,8 +44,8 @@
 
 ## Windows
 
-- [ ] clean up windows powershell scripts
-- [ ] move windows package configs into their respective places
+- [x] clean up windows powershell scripts
+- [x] move windows package configs into their respective places
 
 ## Dev
 
