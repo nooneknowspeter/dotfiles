@@ -92,6 +92,9 @@
             nixd
             nixfmt
             statix
+
+            # yaml
+            yaml-language-server
           ];
         };
       });
