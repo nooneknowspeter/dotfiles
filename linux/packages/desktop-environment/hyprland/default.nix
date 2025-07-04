@@ -106,21 +106,21 @@
       #     valign = center
       # }
 
-      # USER
-      label {
-          monitor =
-          text =     $USER
-          color = rgba(216, 222, 233, 0.80)
-          outline_thickness = 2
-          dots_size = 0.2 # Scale of input-field height, 0.2 - 0.8
-          dots_spacing = 0.2 # Scale of dots' absolute size, 0.0 - 1.0
-          dots_center = true
-          font_size = 18
-          font_family = SF Pro Display Bold
-          position = 0, -130
-          halign = center
-          valign = center
-      }
+      # # USER
+      # label {
+      #     monitor =
+      #     text =     $USER
+      #     color = rgba(216, 222, 233, 0.80)
+      #     outline_thickness = 2
+      #     dots_size = 0.2 # Scale of input-field height, 0.2 - 0.8
+      #     dots_spacing = 0.2 # Scale of dots' absolute size, 0.0 - 1.0
+      #     dots_center = true
+      #     font_size = 18
+      #     font_family = SF Pro Display Bold
+      #     position = 0, -130
+      #     halign = center
+      #     valign = center
+      # }
 
       # # INPUT FIELD
       # input-field {
