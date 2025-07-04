@@ -64,6 +64,11 @@
     let
       locale = "en_US.UTF-8";
       timezone = "US/Eastern";
+      supportedSystems =
+        [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
+      forEachSupportedSystem = f:
+        inputs.nixpkgs.lib.genAttrs supportedSystems
+        (system: f { pkgs = import inputs.nixpkgs { inherit system; }; });
     in {
 
       # nixos
@@ -88,7 +93,12 @@
             musnix.nixosModules.musnix
           ];
         };
+      devShells = forEachSupportedSystem ({ pkgs }: {
+        default = pkgs.mkShell {
+          packages = with pkgs; [
       };
+            # json
+            prettier
 
       # home-manager configuration entrypoint
       # Available through 'home-manager --flake .#your-username@your-hostname'
@@ -112,10 +122,13 @@
             ./linux/hosts/x86-64/headless/home.nix
           ];
         };
+            #hyprland
+            hyprls
 
         "nooneknows@android" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.aarch64-linux;
 
+            # lua
           extraSpecialArgs = let
             username = "nooneknows";
             homeDirectory = "/data/data/com.termux.nix/files/home";
@@ -145,7 +158,9 @@
             stylix.homeModules.stylix
             ./darwin/hosts/aarch/peter-macbook/home.nix
           ];
+            lua-language-server
         };
+            stylua
 
         "nooneknows@headless" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
@@ -164,6 +179,7 @@
             ./linux/hosts/x86-64/headless/home.nix
           ];
         };
+            # markdown
 
         "nooneknows@linux" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
@@ -180,8 +196,10 @@
           modules = [
             stylix.homeModules.stylix
             ./linux/hosts/x86-64/peter-legion/home.nix
+            marksman
           ];
         };
+            nodejs
 
         "nooneknows@wsl" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
@@ -198,8 +216,14 @@
           modules = [
             stylix.homeModules.stylix
             ./win32/hosts/x86-64/peter-legion/home.nix
+            # nix
+            nil
+            nixd
+            nixfmt
+            statix
           ];
         };
+      });
 
       };
 
