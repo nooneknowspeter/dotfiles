@@ -70,6 +70,9 @@
       devShells = forEachSupportedSystem ({ pkgs }: {
         default = pkgs.mkShell {
           packages = with pkgs; [
+            #bash
+            bash-language-server
+
             # json
             prettier
 
