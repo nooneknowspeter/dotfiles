@@ -38,4 +38,4 @@ echo -e "install nix multi-user\n"
 "${NIX_INSTALL_SCRIPT}"
 
 echo -e "bootstraping home-manager headless linux environment\n"
-nix --extra-experimental-features "nix-command flakes" shell nixpkgs#home-manager -c home-manager --extra-experimental-features "nix-command flakes" switch --flake "${DOTFILES}"#nooneknows@headless
+nix --extra-experimental-features "nix-command flakes" shell nixpkgs#home-manager -c home-manager --extra-experimental-features "nix-command flakes" switch --flake "${DOTFILES}"#nooneknows@linux-headless
