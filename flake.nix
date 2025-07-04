@@ -90,22 +90,6 @@
         };
       };
 
-      # nix-darwin
-      darwinConfigurations = {
-        macbook = let hostname = "peter-macbook";
-        in nix-darwin.lib.darwinSystem {
-          system = "aarch64-darwin";
-
-          specialArgs = {
-            inherit inputs;
-            inherit locale;
-            inherit timezone;
-          };
-
-          modules = [ ./darwin/hosts/aarch/peter-macbook ];
-        };
-      };
-
       # nix-on-droid
       nixOnDroidConfigurations = {
         note8 = let hostname = "note8";
@@ -227,6 +211,9 @@
         };
 
       };
+
+      darwinConfigurations =
+        import ./modules/outputs/nix-darwin { inherit inputs; };
 
     };
 }
