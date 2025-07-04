@@ -71,28 +71,6 @@
         (system: f { pkgs = import inputs.nixpkgs { inherit system; }; });
     in {
 
-      # nixos
-      # sudo nixos-rebuild switch --flake .#hostname
-      nixosConfigurations = {
-        legion = let hostname = "peter-legion";
-        in nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-
-          specialArgs = {
-            inherit hostname;
-            inherit inputs;
-            inherit locale;
-            inherit timezone;
-          };
-
-          modules = [
-            ./linux/hosts/x86-64/peter-legion
-            nix-ld.nixosModules.nix-ld
-            lanzaboote.nixosModules.lanzaboote
-            nixos-hardware.nixosModules.lenovo-legion-16ithg6
-            musnix.nixosModules.musnix
-          ];
-        };
       devShells = forEachSupportedSystem ({ pkgs }: {
         default = pkgs.mkShell {
           packages = with pkgs; [
@@ -226,6 +204,7 @@
       });
 
       };
+      nixosConfigurations = import ./modules/outputs/nixos { inherit inputs; };
 
       darwinConfigurations =
         import ./modules/outputs/nix-darwin { inherit inputs; };
