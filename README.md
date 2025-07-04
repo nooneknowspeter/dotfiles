@@ -16,7 +16,6 @@ This setup uses:
 - [WSL](https://learn.microsoft.com/en-us/windows/wsl/) integration (both NixOS and Arch-based environments).
 - Traditional imperative distros (primarily [Arch Linux](https://archlinux.org/))via bootstrapping scripts.
 
-
 ## Features
 
 ### Home Manager
@@ -27,6 +26,7 @@ Utilized to bootstrap my home; packages, dot configurations, preparing base look
 It is agnostic to any distro (linux and wsl) and macos.
 
 Packages are seperated
+
 ```tree
 ├──  home
 │   ├──  modules (modular code for clean codebase based on functionality)
@@ -38,7 +38,6 @@ Packages are seperated
 │       └──  headless-essentials (cli and tui packages for general/daily use; git, ssh, shell)
 ```
 
-
 There are multiple configurations that can bootstrap packages by environment and class;
 
 ```sh
@@ -47,10 +46,9 @@ home-manager switch --flake /location/of/flake.nix#nooneknows@headless --impure 
 home-manager switch --flake /location/of/flake.nix#nooneknows@linux # all my cli, tui, gui packages, desktop environment (hyprland); fully functional dekstop environent
 ```
 
-There is also a [stylix](https://github.com/nix-community/stylix) module. 
-It unifies styling parameters, colorschemes and so on across my machines, consistent appearance; 
+There is also a [stylix](https://github.com/nix-community/stylix) module.
+It unifies styling parameters, colorschemes and so on across my machines, consistent appearance;
 font, colorscheme (Black Metal Theme), etc.
-
 
 ### Linux
 
@@ -77,38 +75,10 @@ font, colorscheme (Black Metal Theme), etc.
 - Utilizes Home Manager for user development environment; CLI and TUI packages
 
 #### Headless
+
 - Home Manager x86-64 based headless linux development environment
 - No system configurations
 - Uses top-level flake parameters for easy configuration for ephemiral setups
-<!-- (ignored as an artifact in `.gitignore`, `headless.nix`); -->
-
-```nix
-# remote / vps development
-{inputs, pkgs, config}: {
-    
-    let
-        username = "anyone";
-    in
-    "${username}@headless" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-
-        extraSpecialArgs = let
-            username = "${username}";
-            homeDirectory = "/home/${username}";
-        in {
-            inherit inputs;
-            inherit username;
-            inherit homeDirectory;
-        };
-
-        modules = [
-            inputs.stylix.homeModules.stylix
-            ./linux/hosts/x86-64/headless/home.nix
-        ];
-    };
-    
-}
-```
 
 ### macOS (nix-darwin)
 
@@ -126,8 +96,8 @@ font, colorscheme (Black Metal Theme), etc.
 
 ### Backwards Compatibility
 
-Although this repository is designed around Nix flakes and Home Manager(symlink bi-directionally using `config.lib.file.mkOutOfStoreSymlink`), 
-it maintains backwards compatibility with traditional dotfiles management tools 
+Although this repository is designed around Nix flakes and Home Manager(symlink bi-directionally using `config.lib.file.mkOutOfStoreSymlink`),
+it maintains backwards compatibility with traditional dotfiles management tools
 like stow and provides easy top-level access to frequently-edited configurations.
 
 - Commonly edited configs (e.g., nvim, tmux, git, etc.) are symlinked or surfaced in the top-level directory.
@@ -191,7 +161,7 @@ like stow and provides easy top-level access to frequently-edited configurations
 ├──  templates (nix code templates; defining packages)
 └──  win32
     ├── 󰀂 hosts (nixos wsl system configurations, ditto hierarchy for reference)
-    ├──  packages 
+    ├──  packages
     └──  scripts
 ```
 
@@ -263,7 +233,7 @@ flowchart TD
     hm2@{ animate: true }
     hm3@{ animate: true }
     hm4@{ animate: true }
-    
+
     style linux fill:transparent
     style darwin fill:transparent
 
@@ -280,18 +250,16 @@ flowchart TD
 ```sh
 git clone --recursive git@github.com:nooneknowspeter/dotfiles.git
 ```
+
 ### Home Manger Configuration
 
 Temorarily fetch and link home-manager in current shell instance
 
-> [!NOTE]
-> `home-manager` is loaded temporaily in the current shell instance,
-> if shell is exited without running `home-manager` 
+> [!NOTE] > `home-manager` is loaded temporaily in the current shell instance,
+> if shell is exited without running `home-manager`
 > (`home-manager` installs and manages itself after the initial bootstrap)
-> 
 
-> [!NOTE]
-> `--extra-experimental-features "nix-command flakes"` flag is used on the initial bootstrap of `home-manager`
+> [!NOTE] > `--extra-experimental-features "nix-command flakes"` flag is used on the initial bootstrap of `home-manager`
 
 ```sh
 nix --extra-experimental-features "nix-command flakes" shell nixpkgs#home-manager
@@ -370,6 +338,7 @@ but a quick overview on my daily driver:
 [NixOS Specific Configuration](./linux/hosts/x86-64/peter-legion/)
 
 ---
+
 - OS: [NixOS](https://nixos.org/)
 - Window Manager: [Hyprland](https://github.com/hyprwm/Hyprland) w/ [plugins](https://github.com/hyprwm/hyprland-plugins)
 - Terminal: [Ghostty](https://github.com/ghostty-org/ghostty) w/ [TMUX](https://github.com/tmux/tmux)
@@ -387,6 +356,7 @@ but a quick overview on my daily driver:
 [Windows Setup](./win32/)
 
 ---
+
 - OS: Windows 11
 - Window Manager: [GlazeWM](https://github.com/glzr-io/glazewm)
 - Terminal: [Wezterm](https://github.com/wezterm/wezterm) w/ [TMUX](https://github.com/tmux/tmux)
@@ -407,6 +377,8 @@ but a quick overview on my daily driver:
 
 ## References
 
+[NixOS and Flakes book](https://nixos-and-flakes.thiscute.world/)
+
 [NixOS for the confused](https://cola-gang.industries/nixos-for-the-confused-part-i)
 
 [Sample repo utilizing Nix](https://codeberg.org/justgivemeaname/.dotfiles/src/branch/main)
@@ -420,3 +392,7 @@ but a quick overview on my daily driver:
 [ryan4yin dotfiles](https://github.com/ryan4yin/nix-config)
 
 [yannik sander's guide on nix shells](https://blog.ysndr.de/posts/guides/2021-12-01-nix-shells/)
+
+[Nix Manual](https://nix.dev/)
+
+[Unofficial Nix Wiki](https://nixos.wiki/)
