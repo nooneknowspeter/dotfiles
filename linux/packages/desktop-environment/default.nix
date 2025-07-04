@@ -20,6 +20,7 @@
     ./openrazer
     ./openrgb
     ./pipewire
+    ./playerctl
     ./protonup
     ./rofi
     ./scope-tui
