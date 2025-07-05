@@ -5,6 +5,7 @@
     ./ardour
     ./blender
     ./davinci-resolve
+    ./djv
     ./freecad
     ./houdini
     # ./natron
