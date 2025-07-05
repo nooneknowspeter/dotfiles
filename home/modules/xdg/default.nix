@@ -6,7 +6,7 @@
       defaultApplications = let
         browser = [ "brave.desktop" "firefox.desktop" ];
         editor = [ "nvim.desktop" "code.desktop" ];
-        pdf = [ "zathura.desktop" ];
+        pdf = [ "org.pwmt.zathura-pdf-poppler.desktop" "zathura.desktop" ];
       in {
         "application/json" = browser;
         "application/pdf" = pdf;
