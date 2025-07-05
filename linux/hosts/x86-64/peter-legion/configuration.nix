@@ -19,6 +19,7 @@
     ./modules/boot
     ./modules/console
     ./modules/environment
+    ./modules/hardware
     ./modules/locale
     ./modules/misc
     ./modules/networking
