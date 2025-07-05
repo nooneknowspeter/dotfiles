@@ -1,4 +1,4 @@
-{ inputs, pkgs, config, }:
+{ inputs, ... }:
 let hostname = "note8";
 in inputs.nix-on-droid.lib.nixOnDroidConfiguration {
   pkgs = inputs.nixpkgs.legacyPackages."aarch64-linux";
