@@ -2,13 +2,13 @@
 
   home.packages = with pkgs;
     [
-      # ghostty 
+      # ghostty
     ];
 
   programs.ghostty = {
     enable = true;
     package =
-      inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default;
+      inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.ghostty-releasefast;
   };
 
   home.file.".config/ghostty" = {
