@@ -106,64 +106,64 @@ like stow and provides easy top-level access to frequently-edited configurations
 
 ## Project Structure (Philosophy)
 
-```tree
- dotfiles
-├──  .github
-│   └──  workflows (ci/cd; codebase formatting and linting)
-├──  configs (software configurations and behavior; .config)
-├──  darwin
-│   ├── 󰀂 hosts (each owned node/machine with independent configuration seperated by instruction set architecture, look below for an exploded view)
-│   ├──  modules (shared modules; configurations between darwin (macos) nodes)
-│   ├──  packages (shared system packages between nodes)
-│   └──  scripts (shared scripts between nodes)
-├──  home
-│   ├──  modules (modular code for clean codebase based on functionality)
-│   └──  packages
-│       ├──  gui-contentCreation (packages/suites used for content creation; blender, DAWs)
-│       ├──  gui-devel (gui packages used for development; vscode)
-│       ├──  gui-essentials (gui packages for general/daily use; browser, messaging)
-│       ├──  headless-devel (cli and tui packages for terminal/tty development; neovim)
-│       └──  headless-essentials (cli and tui packages for general/daily use; git, ssh, shell)
-├──  linux
-│   ├── 󰀂 hosts (exploded view)
-│   │   ├──  aarch64 (architecture)
-│   │   │   └──  system-codename
-│   │   │       └──  packages (system specific packages)
-│   │   └──  x86-64
-│   │       ├──  headless (headless development on x86-64 machines; remote ssh, vps)
-│   │       └──  system-codename
-│   │           ├──  modules (system specific modules)
-│   │           │   ├──  audio
-│   │           │   ├──  boot
-│   │           │   ├──  console
-│   │           │   ├──  environment
-│   │           │   ├──  hardware
-│   │           │   ├──  locale
-│   │           │   ├──  misc
-│   │           │   ├──  networking
-│   │           │   ├──  programs
-│   │           │   ├──  services
-│   │           │   ├──  system
-│   │           │   ├──  time
-│   │           │   └──  users
-│   │           └──  packages (system specific packages)
-│   ├──  modules (shared modules among nix system configured linux nodes; nixos, nix-on-droid)
-│   ├──  packages (shared packages among linux nodes)
-│   │   ├──  desktop-environment
-│   │   └──  nixos (shared packages among nixos linux nodes)
-│   │       ├──  sbctl
-│   │       └──  steam-run
-│   └──  scripts (shared scripts among linux nodes)
-│       ├──  arch
-│       └──  nixos
-├──  modules (shared modules among all hosts; linux, darwin, wsl)
-├──  scripts (project based scripts or shared scripts among all nodes)
-├──  templates (nix code templates; defining packages)
-└──  win32
-    ├── 󰀂 hosts (nixos wsl system configurations, ditto hierarchy for reference)
-    ├──  packages
-    └──  scripts
-```
+<!-- ```tree -->
+<!--  dotfiles -->
+<!-- ├──  .github -->
+<!-- │   └──  workflows (ci/cd; codebase formatting and linting) -->
+<!-- ├──  configs (software configurations and behavior; .config) -->
+<!-- ├──  darwin -->
+<!-- │   ├── 󰀂 hosts (each owned node/machine with independent configuration seperated by instruction set architecture, look below for an exploded view) -->
+<!-- │   ├──  modules (shared modules; configurations between darwin (macos) nodes) -->
+<!-- │   ├──  packages (shared system packages between nodes) -->
+<!-- │   └──  scripts (shared scripts between nodes) -->
+<!-- ├──  home -->
+<!-- │   ├──  modules (modular code for clean codebase based on functionality) -->
+<!-- │   └──  packages -->
+<!-- │       ├──  gui-contentCreation (packages/suites used for content creation; blender, DAWs) -->
+<!-- │       ├──  gui-devel (gui packages used for development; vscode) -->
+<!-- │       ├──  gui-essentials (gui packages for general/daily use; browser, messaging) -->
+<!-- │       ├──  headless-devel (cli and tui packages for terminal/tty development; neovim) -->
+<!-- │       └──  headless-essentials (cli and tui packages for general/daily use; git, ssh, shell) -->
+<!-- ├──  linux -->
+<!-- │   ├── 󰀂 hosts (exploded view) -->
+<!-- │   │   ├──  aarch64 (architecture) -->
+<!-- │   │   │   └──  system-codename -->
+<!-- │   │   │       └──  packages (system specific packages) -->
+<!-- │   │   └──  x86-64 -->
+<!-- │   │       ├──  headless (headless development on x86-64 machines; remote ssh, vps) -->
+<!-- │   │       └──  system-codename -->
+<!-- │   │           ├──  modules (system specific modules) -->
+<!-- │   │           │   ├──  audio -->
+<!-- │   │           │   ├──  boot -->
+<!-- │   │           │   ├──  console -->
+<!-- │   │           │   ├──  environment -->
+<!-- │   │           │   ├──  hardware -->
+<!-- │   │           │   ├──  locale -->
+<!-- │   │           │   ├──  misc -->
+<!-- │   │           │   ├──  networking -->
+<!-- │   │           │   ├──  programs -->
+<!-- │   │           │   ├──  services -->
+<!-- │   │           │   ├──  system -->
+<!-- │   │           │   ├──  time -->
+<!-- │   │           │   └──  users -->
+<!-- │   │           └──  packages (system specific packages) -->
+<!-- │   ├──  modules (shared modules among nix system configured linux nodes; nixos, nix-on-droid) -->
+<!-- │   ├──  packages (shared packages among linux nodes) -->
+<!-- │   │   ├──  desktop-environment -->
+<!-- │   │   └──  nixos (shared packages among nixos linux nodes) -->
+<!-- │   │       ├──  sbctl -->
+<!-- │   │       └──  steam-run -->
+<!-- │   └──  scripts (shared scripts among linux nodes) -->
+<!-- │       ├──  arch -->
+<!-- │       └──  nixos -->
+<!-- ├──  modules (shared modules among all hosts; linux, darwin, wsl) -->
+<!-- ├──  scripts (project based scripts or shared scripts among all nodes) -->
+<!-- ├──  templates (nix code templates; defining packages) -->
+<!-- └──  win32 -->
+<!--     ├── 󰀂 hosts (nixos wsl system configurations, ditto hierarchy for reference) -->
+<!--     ├──  packages -->
+<!--     └──  scripts -->
+<!-- ``` -->
 
 ```mermaid
 ---
