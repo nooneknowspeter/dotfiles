@@ -3,7 +3,7 @@
 ## General
 
 - [x] move dot configs into a top-level folder in repo (easier access)
-- [ ] merge into main, tag 2.0.0
+- [x] merge into main, tag 2.0.0
 - [x] setup CI/CD pipeline; formating and linting code, commit `style (ci/cd): nixfmt`
 - [x] set old submodules as archives or delete; [zsh submodule](https://github.com/nooneknowspeter/zsh), [tmux submodule](https://github.com/nooneknowspeter/tmux)
 
@@ -23,6 +23,8 @@
   - [x] setup branch for minimal config; nvim on windows
   - [ ] reconfigure nvim lsp; agnositic lsp setup (mason and nix)
   - [ ] ditto with dap
+  - [ ] ditto with formmatting
+  - [ ] ditto with linting
 
 - [x] home-manager
 
@@ -33,7 +35,7 @@
 
   - [x] test out home manager setup on arch machine
   - [x] headless environment
-  - [ ] bootstrap desktop environment
+  - [x] bootstrap desktop environment
   - [ ] nixgl
 
 - [ ] wsl setup
