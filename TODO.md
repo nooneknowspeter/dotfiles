@@ -6,6 +6,9 @@
 - [x] merge into main, tag 2.0.0
 - [x] setup CI/CD pipeline; formating and linting code, commit `style (ci/cd): nixfmt`
 - [x] set old submodules as archives or delete; [zsh submodule](https://github.com/nooneknowspeter/zsh), [tmux submodule](https://github.com/nooneknowspeter/tmux)
+- [x] qt issues
+    - [x] use wayland as default backend for qt platform; hyprland env vars
+    - [x] change freecad package to freecad-wayland
 
 ## Automate with Nix
 
@@ -21,10 +24,10 @@
   - [x] init submodule
   - [x] reference git protocol in URI
   - [x] setup branch for minimal config; nvim on windows
-  - [ ] reconfigure nvim lsp; agnositic lsp setup (mason and nix)
+  - [x] reconfigure nvim lsp; agnositic lsp setup (mason and nix)
   - [ ] ditto with dap
-  - [ ] ditto with formmatting
-  - [ ] ditto with linting
+  - [x] ditto with formmatting
+  - [x] ditto with linting
 
 - [x] home-manager
 
