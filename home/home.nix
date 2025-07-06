@@ -1,7 +1,7 @@
 { config, pkgs, username ? "nooneknows", homeDirectory ? "/home/nooneknows", ...
 }: {
 
-  imports = [ ./modules/stylix ./modules/xdg ];
+  imports = [ ./modules/nixGL ./modules/stylix ./modules/xdg ];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

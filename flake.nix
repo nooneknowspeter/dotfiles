@@ -57,6 +57,9 @@
       url = "github:Mic92/nix-ld";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # nixGL
+    nixgl = { url = "github:nix-community/nixGL"; };
   };
 
   outputs = inputs@{ ... }:
@@ -65,19 +68,23 @@
         [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
       forEachSupportedSystem = f:
         inputs.nixpkgs.lib.genAttrs supportedSystems
-        (system: f { pkgs = import inputs.nixpkgs { inherit system; }; });
-    in {
+          (system: f { pkgs = import inputs.nixpkgs { inherit system; }; });
+    in
+    {
       devShells = forEachSupportedSystem ({ pkgs }: {
         default = pkgs.mkShell {
           packages = with pkgs; [
-            #bash
+            # bash
             bash-language-server
+
+            # go
+            go
+
+            # hyprland
+            hyprls
 
             # json
             prettier
-
-            #hyprland
-            hyprls
 
             # lua
             lua-language-server
@@ -92,6 +99,16 @@
             nixd
             nixfmt
             statix
+
+            # python
+            python314
+
+            # rust
+            cargo
+            rustc
+            rustup
+            pkg-config
+            zlib
 
             # yaml
             yaml-language-server
