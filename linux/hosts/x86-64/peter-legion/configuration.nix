@@ -12,7 +12,7 @@
     ./packages
 
     # shared modules
-    ../../../modules/virtualization
+    ../../../modules/nixos/virtualization
 
     # system specific modules
     ./modules/audio
