@@ -12,6 +12,7 @@
     ./packages
 
     # shared modules
+    ../../../modules/nixos/nix
     ../../../modules/nixos/virtualization
 
     # system specific modules
@@ -21,7 +22,6 @@
     ./modules/environment
     ./modules/hardware
     ./modules/locale
-    ./modules/misc
     ./modules/networking
     ./modules/programs
     ./modules/services
