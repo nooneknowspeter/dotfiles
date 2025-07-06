@@ -8,7 +8,7 @@
   programs.ghostty = {
     enable = true;
     package =
-      inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.ghostty-releasefast;
+      inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default;
   };
 
   home.file.".config/ghostty" = {
