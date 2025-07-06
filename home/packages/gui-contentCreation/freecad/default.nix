@@ -1,5 +1,5 @@
 { config, pkgs, ... }: {
 
-  home.packages = with pkgs; [ freecad-wayland ];
+  home.packages = with pkgs; [ freecad ];
 
 }
