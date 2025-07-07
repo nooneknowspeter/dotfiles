@@ -14,7 +14,6 @@
     ./lazysql
     ./neovim
     ./nmap
-    ./pandoc
     ./posting
     ./qemu
     ./slides
