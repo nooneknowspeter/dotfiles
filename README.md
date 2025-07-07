@@ -312,9 +312,9 @@ Use the post Arch setup [script](./linux/scripts/arch/main.sh) to bootstrap a he
 ```sh
 cd ~/dotfiles/
 
-chmod +x ./linux/scripts/*
+chmod +x ./linux/scripts/*.sh
 
-./linux/scripts/arch/main.sh
+sudo ./linux/scripts/arch/main.sh
 ```
 
 ### Nix-on-droid
