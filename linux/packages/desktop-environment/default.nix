@@ -10,7 +10,6 @@
     ./cliphist
     ./fcitx5
     ./greetd
-    # ./gvfs
     ./heroic
     ./hyprland
     ./imv
