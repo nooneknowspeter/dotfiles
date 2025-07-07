@@ -25,6 +25,7 @@
     ./nh
     ./nvitop
     ./openssh
+    ./pandoc
     ./ripgrep
     ./starship
     ./tldr
