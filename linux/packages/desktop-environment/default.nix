@@ -32,6 +32,7 @@
     ./uwsm
     ./virtualbox
     ./waybar
+    ./wayvnc
     ./wiremix
     ./wireplumber
     ./wofi
