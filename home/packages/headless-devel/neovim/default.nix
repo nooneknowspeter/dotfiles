@@ -34,6 +34,7 @@
         pkg-config
         python314
         rustc
+        rustup
         stdenv.cc.cc
         zlib
       ]}"
@@ -47,6 +48,7 @@
         pkg-config
         python314
         rustc
+        rustup
         stdenv.cc.cc
         zlib
       ]}"
