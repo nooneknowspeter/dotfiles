@@ -14,6 +14,7 @@
     ./fd
     ./fzf
     ./git
+    ./gnumake
     ./gnused
     ./iftop
     ./impala
