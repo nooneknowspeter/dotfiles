@@ -2,6 +2,11 @@
 
   home.packages = with pkgs; [ zathura ];
 
-  programs.zathura = { enable = true; };
+  programs.zathura = {
+    enable = true;
+    extraConfig = ''
+      set selection-clipboard clipboard
+    '';
+  };
 
 }
