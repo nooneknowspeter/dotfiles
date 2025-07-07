@@ -27,6 +27,7 @@
     ./openssh
     ./pandoc
     ./ripgrep
+    ./slides
     ./starship
     ./tldr
     ./tmux

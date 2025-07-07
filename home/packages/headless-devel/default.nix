@@ -16,7 +16,6 @@
     ./nmap
     ./posting
     ./qemu
-    ./slides
     ./termshark
     ./typst
   ];
