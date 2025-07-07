@@ -31,6 +31,7 @@
     ./starship
     ./tldr
     ./tmux
+    ./typst
     ./unimatrix
     ./vim
     ./yazi
