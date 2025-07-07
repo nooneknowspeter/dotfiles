@@ -7,6 +7,7 @@
     extraConfig = ''
       set selection-clipboard clipboard
     '';
+    mappings = { "[normal] i" = "recolor"; };
   };
 
 }
