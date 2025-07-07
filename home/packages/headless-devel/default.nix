@@ -17,7 +17,6 @@
     ./posting
     ./qemu
     ./termshark
-    ./typst
   ];
 
 }
