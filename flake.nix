@@ -2,31 +2,25 @@
   description = "nooneknows dotfiles";
 
   inputs = {
-    #nixpkgs
     nixpkgs = { url = "github:nixos/nixpkgs/nixos-unstable"; };
 
-    # home manager
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # darwin
     nix-darwin = {
       url = "github:lnl7/nix-darwin/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # nixos-hardware
     nixos-hardware = { url = "github:NixOS/nixos-hardware/master"; };
 
-    #stylix
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # hyprland
     hyprland = { url = "github:hyprwm/Hyprland"; };
 
     hyprland-plugins = {
@@ -34,31 +28,25 @@
       inputs.hyprland.follows = "hyprland";
     };
 
-    # ghostty
     ghostty = { url = "github:ghostty-org/ghostty"; };
 
-    # nix-on-droid
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # musnix
     musnix = { url = "github:musnix/musnix"; };
 
-    # lanzaboote; secure boot
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v0.4.2";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # nix-ld
     nix-ld = {
       url = "github:Mic92/nix-ld";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # nixGL
     nixgl = { url = "github:nix-community/nixGL"; };
   };
 
@@ -68,8 +56,9 @@
         [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
       forEachSupportedSystem = f:
         inputs.nixpkgs.lib.genAttrs supportedSystems
-        (system: f { pkgs = import inputs.nixpkgs { inherit system; }; });
-    in {
+          (system: f { pkgs = import inputs.nixpkgs { inherit system; }; });
+    in
+    {
       devShells = forEachSupportedSystem ({ pkgs }: {
         default = pkgs.mkShell {
           packages = with pkgs; [
