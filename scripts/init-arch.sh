@@ -26,16 +26,20 @@ export DOTFILES=~/dotfiles
 export ARCH_BOOTSTRAP_SCRIPTS=~/dotfiles/linux/scripts/arch
 export NIX_INSTALL_SCRIPT=~/dotfiles/linux/scripts/install-nix.sh
 
-chmod +x ~/dotfiles/linux/scripts/*
+chmod +x ~/dotfiles/linux/scripts/*.sh
+chmod +x ~/dotfiles/linux/scripts/arch/*.sh
+
+echo -e "installing curl\n"
+"${ARCH_BOOTSTRAP_SCRIPTS}/install-curl.sh"
 
 echo -e "installing and changing default shell to zsh\n"
-"${ARCH_BOOTSTRAP_SCRIPTS}/install/install-zsh.sh"
+"${ARCH_BOOTSTRAP_SCRIPTS}/install-zsh.sh"
 
 echo -e "install yay\n"
-"${ARCH_BOOTSTRAP_SCRIPTS}/install/install-yay.sh"
+"${ARCH_BOOTSTRAP_SCRIPTS}/install-yay.sh"
 
 echo -e "install nix multi-user\n"
 "${NIX_INSTALL_SCRIPT}"
 
 echo -e "bootstraping home-manager headless linux environment\n"
-nix --extra-experimental-features "nix-command flakes" shell nixpkgs#home-manager -c home-manager --extra-experimental-features "nix-command flakes" switch --flake "${DOTFILES}"#nooneknows@linux-headless
+"${ARCH_BOOTSTRAP_SCRIPTS}/setup-home.sh"
