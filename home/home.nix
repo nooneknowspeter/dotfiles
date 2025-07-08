@@ -1,4 +1,8 @@
-{ config, pkgs, username ? "nooneknows", homeDirectory ? "/home/nooneknows", ...
+{ config
+, pkgs
+, username ? "nooneknows"
+, homeDirectory ? "/home/nooneknows"
+, ...
 }: {
 
   imports = [ ./modules/nixGL ./modules/stylix ./modules/xdg ];
@@ -31,6 +35,9 @@
     rictydiminished-with-firacode
     noto-fonts
   ];
+
+  home.sessionVariables = { EDITOR = "nvim"; };
+  home.shellAliases = { EDITOR = "nvim"; };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
