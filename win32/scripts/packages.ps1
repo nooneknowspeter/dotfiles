@@ -19,6 +19,7 @@ winget install Microsoft.VisualStudioCode
 winget install wez.wezterm
 winget install marha.VcXsrv
 winget install sxyazi.yazi
+winget install usbipd
 
 # scoop packages
 scoop bucket add main
