@@ -1,6 +1,5 @@
 { config, lib, pkgs, ... }: {
 
-  imports = [ ./musnix ];
+  imports = [ ./pipewire ./musnix ];
 
 }
-
