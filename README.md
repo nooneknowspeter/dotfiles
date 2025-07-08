@@ -310,13 +310,11 @@ or
 Use the post Arch setup [script](./linux/scripts/arch/main.sh) to bootstrap a headless developer environment
 
 ```sh
-cd ~/dotfiles/
+cd ~/dotfiles
 
-chmod +x ./linux/scripts/*.sh
-chmod +x ./linux/scripts/arch/*.sh
-chmod +x ./linux/scripts/arch/install/*.sh
+chmod +x ./scripts/*.sh
 
-sudo ./linux/scripts/arch/main.sh
+sudo ./scripts/init-arch.sh
 ```
 
 ### Nix-on-droid
