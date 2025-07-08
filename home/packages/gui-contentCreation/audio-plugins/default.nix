@@ -1,5 +1,11 @@
 { config, pkgs, ... }: {
 
-  home.packages = with pkgs; [ cardinal yabridge yabridgectl ];
+  home.packages = with pkgs; [
+    cardinal
+    lsp-plugins
+    vital
+    yabridge
+    yabridgectl
+  ];
 
 }
