@@ -3,7 +3,7 @@
   users.users.nooneknows = {
     shell = pkgs.zsh;
     isNormalUser = true;
-    extraGroups = [ "wheel" "sudo" "audio" ];
+    extraGroups = [ "wheel" "sudo" ];
     packages = with pkgs; [ ];
   };
 
