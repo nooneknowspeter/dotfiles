@@ -8,6 +8,7 @@
     ./bluetui
     ./btop
     ./cbonsai
+    ./cloc
     ./curl
     ./direnv
     ./fastfetch
