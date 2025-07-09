@@ -13,7 +13,7 @@
 
     # shared modules
     ../../../modules/nixos/nix
-    ../../../modules/nixos/virtualization
+    ../../../modules/nixos/virtualisation
 
     # system specific modules
     ./modules/audio

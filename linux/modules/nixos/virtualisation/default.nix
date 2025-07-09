@@ -2,19 +2,24 @@
 
   programs.dconf.enable = true;
 
-  users.users.nooneknows.extraGroups = [ "libvirtd" ];
+  users.users.nooneknows.extraGroups = [ "libvirtd" "docker" ];
 
   environment.systemPackages = with pkgs; [
-    virt-manager
-    virt-viewer
+    docker
     spice
     spice-gtk
     spice-protocol
-    win-virtio
+    virt-manager
+    virt-viewer
     win-spice
+    win-virtio
   ];
 
   virtualisation = {
+    docker = {
+      enable = true;
+      enableOnBoot = true;
+    };
     libvirtd = {
       enable = true;
       qemu = {
@@ -27,5 +32,7 @@
   };
 
   services.spice-vdagentd.enable = true;
+
+  hardware.nvidia-container-toolkit.enable = true;
 
 }
