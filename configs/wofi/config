@@ -7,7 +7,7 @@ lines=4
 prompt=find the zen
 show=drun
 insensitive=true
-allow_images=false
+allow_images=true
 hide_scroll=true
 
 aways_parse_args=true
