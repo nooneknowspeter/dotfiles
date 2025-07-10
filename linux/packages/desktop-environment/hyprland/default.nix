@@ -17,8 +17,11 @@
     hyprsysteminfo
     hyprutils
     hyprwayland-scanner
+    kdePackages.qtwayland
     pyprland
     wayland-utils
+    xdg-desktop-portal
+    xdg-desktop-portal-gtk
   ];
 
   wayland.windowManager.hyprland = {
@@ -39,10 +42,16 @@
       inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.hyprwinwrap
       inputs.hyprland-plugins.packages.${pkgs.stdenv.hostPlatform.system}.xtra-dispatchers
     ];
+    systemd = { enableXdgAutostart = true; };
     extraConfig = ''
       # main
       source = ~/dotfiles/configs/hypr/main.conf
     '';
+  };
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [ xdg-desktop-portal xdg-desktop-portal-gtk ];
   };
 
   programs.hyprlock = {
