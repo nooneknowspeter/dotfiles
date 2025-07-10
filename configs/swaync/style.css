@@ -112,7 +112,7 @@
 
 .control-center .notification-row .notification-background .notification .notification-content .summary,
 .floating-notifications.background .notification-background .notification .notification-content .summary {
-  font-family: "CodeNewRoman Nerd Font Propo";
+  font-family: "FiraCode Nerd Font Propo";
   font-size: 0.9909rem;
   font-weight: 500;
 }
@@ -127,7 +127,7 @@
 
 .control-center .notification-row .notification-background .notification .notification-content .body,
 .floating-notifications.background .notification-background .notification .notification-content .body {
-  font-family: "CodeNewRoman Nerd Font Propo";
+  font-family: "FiraCode Nerd Font Propo";
   font-size: 0.8891rem;
   font-weight: 400;
   margin-top: 0.31rem;
@@ -275,7 +275,7 @@
 }
 
 .widget-buttons-grid {
-  font-family: "CodeNewRoman Nerd Font Propo";
+  font-family: "FiraCode Nerd Font Propo";
   padding-left: 8px;
   padding-right: 8px;
   padding-bottom: 8px;
