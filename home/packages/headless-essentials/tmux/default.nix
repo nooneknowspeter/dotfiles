@@ -32,6 +32,10 @@
       }
     ];
     extraConfig = ''
+      # binding prefix + r to reload config
+      unbind r
+      bind r source-file ~/.config/tmux/tmux.conf
+
       # override to enable true-color for compatible terminals
       set -ga terminal-overrides ",*256col*:Tc"       
 
