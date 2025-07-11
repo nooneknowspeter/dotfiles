@@ -2,7 +2,7 @@ term=alacritty
 location=top
 yoffset=250
 width=40%
-lines=4
+lines=6
 
 prompt=find the zen
 show=drun
