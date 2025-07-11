@@ -28,7 +28,9 @@
       }
       {
         plugin = prefix-highlight;
-        extraConfig = "set -g status-left '#{prefix_highlight}   #S'";
+        extraConfig = ''
+          set -g status-left '#{prefix_highlight}   #S'
+        '';
       }
     ];
     extraConfig = ''
@@ -70,7 +72,6 @@
 
       # appearance
       set -g status-left-length 20
-      set -g status-left "#{prefix_highlight}   #S"
       set -g status-justify centre
       set -g window-status-format "#I:#W"
       set -g window-status-current-format " #I:#W"
