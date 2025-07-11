@@ -10,5 +10,5 @@ insensitive=true
 allow_images=true
 hide_scroll=true
 
-aways_parse_args=true
+always_parse_args=true
 show_all=true
