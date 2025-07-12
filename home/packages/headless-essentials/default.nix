@@ -20,6 +20,7 @@
     ./git
     ./gnumake
     ./gnused
+    ./hyperfine
     ./iftop
     ./impala
     ./jq
