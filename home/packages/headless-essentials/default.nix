@@ -12,6 +12,7 @@
     ./curl
     ./direnv
     ./duf
+    ./dust
     ./eza
     ./fastfetch
     ./fd
