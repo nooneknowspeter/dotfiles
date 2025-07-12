@@ -11,6 +11,7 @@
     ./cloc
     ./curl
     ./direnv
+    ./duf
     ./eza
     ./fastfetch
     ./fd
