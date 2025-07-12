@@ -36,5 +36,6 @@
     ./wiremix
     ./wireplumber
     ./wofi
+    ./wvkbd
   ];
 }
