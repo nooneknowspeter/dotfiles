@@ -11,6 +11,7 @@
     ./cloc
     ./curl
     ./direnv
+    ./eza
     ./fastfetch
     ./fd
     ./fzf
@@ -21,7 +22,6 @@
     ./impala
     ./jq
     ./killall
-    ./lsd
     ./man
     ./nh
     ./nvitop
