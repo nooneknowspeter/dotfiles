@@ -51,7 +51,7 @@
       alias tmux="TERM=xterm-256color tmux"
 
       # ls
-      alias ls="lsd"
+      alias ls="eza"
 
       # cat
       alias cat="bat --theme=base16-256"
