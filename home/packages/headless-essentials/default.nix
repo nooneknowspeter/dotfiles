@@ -37,6 +37,7 @@
     ./tmux
     ./typst
     ./unimatrix
+    ./unp
     ./vim
     ./yazi
     ./yq
