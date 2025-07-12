@@ -13,6 +13,7 @@
 
     # shared modules
     ../../../modules/nixos/nix
+    ../../../modules/nixos/sunshine
     ../../../modules/nixos/virtualisation
 
     # system specific modules
