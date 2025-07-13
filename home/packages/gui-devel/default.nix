@@ -2,6 +2,7 @@
 
   imports = [
     # gui-devel
+    ./cardinal
     ./ghostty
     ./plugdata
     ./savvycan
