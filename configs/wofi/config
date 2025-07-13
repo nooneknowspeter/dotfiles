@@ -1,4 +1,4 @@
-term=alacritty
+term=ghostty
 location=top
 yoffset=250
 width=40%
