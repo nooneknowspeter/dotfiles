@@ -10,6 +10,7 @@
     ./freecad
     ./houdini
     # ./natron
+    ./musescore
   ];
 
 }
