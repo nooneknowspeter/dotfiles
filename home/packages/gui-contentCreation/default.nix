@@ -7,7 +7,6 @@
     ./blender
     ./davinci-resolve
     ./djv
-    ./freecad
     ./houdini
     ./musescore
     ./pianobooster
