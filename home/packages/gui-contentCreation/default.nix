@@ -9,8 +9,8 @@
     ./djv
     ./freecad
     ./houdini
-    # ./natron
     ./musescore
+    ./pianobooster
   ];
 
 }
