@@ -4,24 +4,21 @@
   home.packages = with pkgs;
     [
       # houdini
-      (
-        let
-          inherit (config.home) username;
-          inherit (lib) getExe;
-          houdiniExe = getExe houdini;
-          sesinetdExe = "${houdini}/houdini/sbin/sesinetd";
-          licenseDir = "${config.xdg.dataHome}/houdini/licenses";
-        in
-        writeShellApplication {
-          name = "houdini";
-          runtimeInputs = [ ];
-          text = ''
-            mkdir -p ${licenseDir}
-            ${sesinetdExe} ${licenseDir} --user ${username} --group ${username}
-            ${houdiniExe}
-          '';
-        }
-      )
+      (let
+        inherit (config.home) username;
+        inherit (lib) getExe;
+        houdiniExe = getExe houdini;
+        sesinetdExe = "${houdini}/houdini/sbin/sesinetd";
+        licenseDir = "${config.xdg.dataHome}/houdini/licenses";
+      in writeShellApplication {
+        name = "houdini";
+        runtimeInputs = [ ];
+        text = ''
+          mkdir -p ${licenseDir}
+          ${sesinetdExe} ${licenseDir} --user ${username} --group ${username}
+          ${houdiniExe}
+        '';
+      })
     ];
 
 }
