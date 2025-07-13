@@ -32,7 +32,7 @@
         go
         openssl
         pkg-config
-        python314
+        python3
         rustc
         rustup
         stdenv.cc.cc
@@ -46,7 +46,7 @@
         go
         openssl
         pkg-config
-        python314
+        python3
         rustc
         rustup
         stdenv.cc.cc
