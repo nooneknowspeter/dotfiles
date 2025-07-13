@@ -3,6 +3,7 @@
   imports = [
     # gui-devel
     ./cardinal
+    ./freecad
     ./ghostty
     ./plugdata
     ./savvycan
