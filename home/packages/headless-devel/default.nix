@@ -13,6 +13,7 @@
     ./lazygit
     ./lazysql
     ./neovim
+    ./nix-init
     ./nmap
     ./posting
     ./qemu
