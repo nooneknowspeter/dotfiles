@@ -1,5 +1,5 @@
 { config, lib, pkgs, ... }: {
 
-  imports = [ ./greetd ./libinput ./openrgb ./printing ./ssh ];
+  imports = [ ./thinkfan ./greetd ./libinput ./openrgb ./printing ./ssh ];
 
 }
