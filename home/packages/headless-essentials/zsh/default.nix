@@ -95,6 +95,7 @@
         "node"
         "perl"
         "pip"
+        "poetry"
         "postgres"
         "python"
         "rust"
