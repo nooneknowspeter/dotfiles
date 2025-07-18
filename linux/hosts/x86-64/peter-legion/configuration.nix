@@ -12,6 +12,7 @@
     ./packages
 
     # shared modules
+    ../../../modules/nixos/logind
     ../../../modules/nixos/nix
     ../../../modules/nixos/virtualisation
     ../../../modules/nixos/vnc
