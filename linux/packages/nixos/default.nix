@@ -1,5 +1,5 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./sbctl ./steam-run ];
+  imports = [ ./openrazer ./sbctl ./steam-run ];
 }

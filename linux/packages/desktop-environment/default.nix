@@ -17,7 +17,6 @@
     ./lutris
     ./mangohud
     ./mpv
-    ./openrazer
     ./openrgb
     ./pipewire
     ./playerctl
