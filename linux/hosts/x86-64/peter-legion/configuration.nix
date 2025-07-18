@@ -13,8 +13,8 @@
 
     # shared modules
     ../../../modules/nixos/nix
-    ../../../modules/nixos/sunshine
     ../../../modules/nixos/virtualisation
+    ../../../modules/nixos/vnc
 
     # system specific modules
     ./modules/audio
