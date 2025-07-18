@@ -1,10 +1,9 @@
 { config, lib, pkgs, ... }: {
 
   console = {
-    font = "Lat2-Terminus16";
+    font = "972";
     # keyMap = "us";
     # useXkbConfig = true; # use xkb.options in tty.
   };
 
 }
-
