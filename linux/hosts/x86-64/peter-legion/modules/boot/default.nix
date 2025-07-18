@@ -1,5 +1,5 @@
 { config, lib, pkgs, ... }: {
 
-  imports = [ ./lanzaboote ];
+  imports = [ ./lenovo-legion ./lanzaboote ];
 
 }
