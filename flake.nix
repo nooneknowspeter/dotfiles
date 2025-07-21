@@ -106,7 +106,7 @@
               # nix
               nil
               nixd
-              nixfmt
+              nixfmt-classic
               statix
 
               # python
