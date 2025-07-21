@@ -1,7 +1,10 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
   home.packages = with pkgs; [ fastfetch ];
 
-  programs.fastfetch = { enable = true; };
+  programs.fastfetch = {
+    enable = true;
+  };
 
 }

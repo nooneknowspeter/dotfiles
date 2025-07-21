@@ -1,10 +1,10 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
-  home.packages = with pkgs;
-    [
-      # obs-studio
-      obs-cli
-    ];
+  home.packages = with pkgs; [
+    # obs-studio
+    obs-cli
+  ];
 
   programs.obs-studio = {
     enable = true;

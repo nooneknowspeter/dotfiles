@@ -1,7 +1,17 @@
-{ config, pkgs, username ? "nooneknows", homeDirectory ? "/home/nooneknows", ...
-}: {
+{
+  config,
+  pkgs,
+  username ? "nooneknows",
+  homeDirectory ? "/home/nooneknows",
+  ...
+}:
+{
 
-  imports = [ ./modules/nixGL ./modules/stylix ./modules/xdg ];
+  imports = [
+    ./modules/nixGL
+    ./modules/stylix
+    ./modules/xdg
+  ];
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -32,8 +42,12 @@
     noto-fonts
   ];
 
-  home.sessionVariables = { EDITOR = "nvim"; };
-  home.shellAliases = { EDITOR = "nvim"; };
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
+  home.shellAliases = {
+    EDITOR = "nvim";
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -41,7 +55,10 @@
   # enable experimental features; flakes
   nix = {
     package = pkgs.nix;
-    settings.experimental-features = [ "nix-command" "flakes" ];
+    settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
   };
 
   # allow unfree packages

@@ -1,9 +1,9 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
-  home.packages = with pkgs;
-    [
-      # vim
-    ];
+  home.packages = with pkgs; [
+    # vim
+  ];
 
   programs.vim = {
     enable = true;
@@ -15,7 +15,9 @@
       vim-visual-multi
       vim-wayland-clipboard
     ];
-    settings = { ignorecase = true; };
+    settings = {
+      ignorecase = true;
+    };
     extraConfig = ''
       " leader
       let mapleader = " "
@@ -106,4 +108,3 @@
   };
 
 }
-

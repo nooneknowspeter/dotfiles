@@ -1,5 +1,9 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
-  home.packages = with pkgs; [ ardour zenity ];
+  home.packages = with pkgs; [
+    ardour
+    zenity
+  ];
 
 }

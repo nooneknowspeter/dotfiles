@@ -2,11 +2,16 @@
 
 {
 
-  environment.systemPackages = with pkgs; [ openrazer-daemon polychromatic ];
+  environment.systemPackages = with pkgs; [
+    openrazer-daemon
+    polychromatic
+  ];
 
   hardware.openrazer = {
     enable = true;
-    batteryNotifier = { percentage = 20; };
+    batteryNotifier = {
+      percentage = 20;
+    };
     users = [ "nooneknows" ];
     verboseLogging = true;
   };

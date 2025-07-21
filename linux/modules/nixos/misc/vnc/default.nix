@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
 
   services.sunshine = {
     enable = true;

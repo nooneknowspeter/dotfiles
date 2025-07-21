@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   stylix = {
 
     enable = true;
@@ -13,8 +14,7 @@
       wezterm.enable = false;
     };
 
-    base16Scheme =
-      "${pkgs.base16-schemes}/share/themes/black-metal-dark-funeral.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/black-metal-dark-funeral.yaml";
 
     polarity = "dark";
 
@@ -60,8 +60,7 @@
 
     image = pkgs.fetchurl {
       # https://github.com/dharmx/walls
-      url =
-        "https://raw.githubusercontent.com/dharmx/walls/refs/heads/main/manga/a_black_and_white_drawing_of_a_person_holding_a_stick.jpg";
+      url = "https://raw.githubusercontent.com/dharmx/walls/refs/heads/main/manga/a_black_and_white_drawing_of_a_person_holding_a_stick.jpg";
       hash = "sha256-90eUTc9GBf+NWSzKL+AXwCp+kPlaHVx3/tpfAMLrZbQ=";
     };
 

@@ -1,9 +1,13 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
 
   users.users.nooneknows = {
     shell = pkgs.zsh;
     isNormalUser = true;
-    extraGroups = [ "wheel" "sudo" ];
+    extraGroups = [
+      "wheel"
+      "sudo"
+    ];
     packages = with pkgs; [ ];
   };
 

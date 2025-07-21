@@ -1,8 +1,16 @@
-{ config, lib, pkgs, ... }: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
 
   nix = {
     extraOptions = "experimental-features = nix-command flakes ";
-    settings = { auto-optimise-store = true; };
+    settings = {
+      auto-optimise-store = true;
+    };
   };
 
   nixpkgs = {

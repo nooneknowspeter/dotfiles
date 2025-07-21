@@ -1,1 +1,9 @@
-{ config, lib, pkgs, ... }: { services.thinkfan.enable = true; }
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
+  services.thinkfan.enable = true;
+}

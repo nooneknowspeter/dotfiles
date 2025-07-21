@@ -1,1 +1,4 @@
-{ ... }: { hardware.nvidia.modesetting.enable = true; }
+{ ... }:
+{
+  hardware.nvidia.modesetting.enable = true;
+}

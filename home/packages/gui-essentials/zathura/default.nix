@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
   home.packages = with pkgs; [ zathura ];
 
@@ -7,7 +8,9 @@
     extraConfig = ''
       set selection-clipboard clipboard
     '';
-    mappings = { "[normal] i" = "recolor"; };
+    mappings = {
+      "[normal] i" = "recolor";
+    };
   };
 
 }

@@ -1,7 +1,10 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
   home.packages = with pkgs; [ lazysql ];
 
-  programs.lazysql = { enable = true; };
+  programs.lazysql = {
+    enable = true;
+  };
 
 }

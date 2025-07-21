@@ -1,8 +1,12 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
 
   programs.dconf.enable = true;
 
-  users.users.nooneknows.extraGroups = [ "libvirtd" "docker" ];
+  users.users.nooneknows.extraGroups = [
+    "libvirtd"
+    "docker"
+  ];
 
   environment.systemPackages = with pkgs; [
     docker

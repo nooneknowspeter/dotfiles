@@ -1,9 +1,9 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
-  home.packages = with pkgs;
-    [
-      # brave
-    ];
+  home.packages = with pkgs; [
+    # brave
+  ];
 
   programs.brave = {
     enable = true;

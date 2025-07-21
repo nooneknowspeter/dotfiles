@@ -1,10 +1,8 @@
 { config, pkgs, ... }:
 let
-  configLocation = if pkgs.stdenv.isLinux then
-    ".config/Code"
-  else
-    "Library/Application Support/Code";
-in {
+  configLocation = if pkgs.stdenv.isLinux then ".config/Code" else "Library/Application Support/Code";
+in
+{
 
   home.packages = with pkgs; [ vscode-with-extensions ];
 
@@ -35,8 +33,7 @@ in {
   };
 
   home.file."${configLocation}" = {
-    source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/dotfiles/configs/Code";
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/configs/Code";
   };
 
 }

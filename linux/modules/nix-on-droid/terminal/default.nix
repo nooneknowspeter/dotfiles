@@ -1,8 +1,8 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
   terminal = {
-    font =
-      "${pkgs.nerd-fonts.fira-code}/share/fonts/truetype/FiraCodeNerdFont-Regular.ttf";
+    font = "${pkgs.nerd-fonts.fira-code}/share/fonts/truetype/FiraCodeNerdFont-Regular.ttf";
     colors = {
       background = "#000000";
       foreground = "#c1c1c1";

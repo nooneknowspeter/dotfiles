@@ -1,7 +1,15 @@
-{ config, lib, pkgs, ... }: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+{
 
   environment.systemPackages = with pkgs; [ ];
 
-  programs.program = { enable = true; };
+  programs.program = {
+    enable = true;
+  };
 
 }

@@ -3,7 +3,8 @@ let
   hostname = "peter-legion";
   locale = "en_US.UTF-8";
   timezone = "US/Eastern";
-in inputs.nixpkgs.lib.nixosSystem {
+in
+inputs.nixpkgs.lib.nixosSystem {
   system = "x86_64-linux";
 
   specialArgs = {

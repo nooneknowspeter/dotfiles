@@ -1,9 +1,9 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
-  home.packages = with pkgs;
-    [
-      # tmux
-    ];
+  home.packages = with pkgs; [
+    # tmux
+  ];
 
   programs.tmux = {
     enable = true;

@@ -1,7 +1,8 @@
-{ ... }: {
+{ ... }:
+{
 
   imports = [
-    # shared modules  
+    # shared modules
     ../../../../../modules/nixos/environment/hyprland-fix
   ];
 

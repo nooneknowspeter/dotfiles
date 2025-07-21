@@ -1,7 +1,10 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
   home.packages = with pkgs; [ obsidian ];
 
-  programs.obsidian = { enable = true; };
+  programs.obsidian = {
+    enable = true;
+  };
 
 }

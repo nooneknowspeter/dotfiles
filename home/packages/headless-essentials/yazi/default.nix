@@ -1,7 +1,10 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
   home.packages = with pkgs; [ yazi ];
 
-  programs.yazi = { enable = true; };
+  programs.yazi = {
+    enable = true;
+  };
 
 }

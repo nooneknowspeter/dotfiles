@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
 
   musnix.enable = true;
 

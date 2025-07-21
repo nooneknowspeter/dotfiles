@@ -1,4 +1,5 @@
-{ hostname, ... }: {
+{ hostname, ... }:
+{
 
   # hostname
   networking.hostName = hostname;

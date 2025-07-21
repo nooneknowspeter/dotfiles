@@ -1,6 +1,8 @@
 { inputs, username, ... }:
-let homeDirectory = "/data/data/com.termux.nix/files/home";
-in inputs.home-manager.lib.homeManagerConfiguration {
+let
+  homeDirectory = "/data/data/com.termux.nix/files/home";
+in
+inputs.home-manager.lib.homeManagerConfiguration {
   pkgs = inputs.nixpkgs.legacyPackages.aarch64-linux;
 
   extraSpecialArgs = {
@@ -9,5 +11,8 @@ in inputs.home-manager.lib.homeManagerConfiguration {
     inherit homeDirectory;
   };
 
-  modules = [ inputs.stylix.homeModules.stylix ./home.nix ];
+  modules = [
+    inputs.stylix.homeModules.stylix
+    ./home.nix
+  ];
 }

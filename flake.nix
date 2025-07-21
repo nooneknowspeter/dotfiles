@@ -2,7 +2,9 @@
   description = "nooneknows dotfiles";
 
   inputs = {
-    nixpkgs = { url = "github:nixos/nixpkgs/nixos-unstable"; };
+    nixpkgs = {
+      url = "github:nixos/nixpkgs/nixos-unstable";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -14,28 +16,36 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixos-hardware = { url = "github:NixOS/nixos-hardware/master"; };
+    nixos-hardware = {
+      url = "github:NixOS/nixos-hardware/master";
+    };
 
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland = { url = "github:hyprwm/Hyprland"; };
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+    };
 
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
 
-    ghostty = { url = "github:ghostty-org/ghostty"; };
+    ghostty = {
+      url = "github:ghostty-org/ghostty";
+    };
 
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    musnix = { url = "github:musnix/musnix"; };
+    musnix = {
+      url = "github:musnix/musnix";
+    };
 
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v0.4.2";
@@ -47,71 +57,81 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixgl = { url = "github:nix-community/nixGL"; };
+    nixgl = {
+      url = "github:nix-community/nixGL";
+    };
   };
 
-  outputs = inputs@{ ... }:
+  outputs =
+    inputs@{ ... }:
     let
-      supportedSystems =
-        [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
-      forEachSupportedSystem = f:
-        inputs.nixpkgs.lib.genAttrs supportedSystems
-        (system: f { pkgs = import inputs.nixpkgs { inherit system; }; });
-    in {
-      devShells = forEachSupportedSystem ({ pkgs }: {
-        default = pkgs.mkShell {
-          packages = with pkgs; [
-            # bash
-            bash-language-server
+      supportedSystems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ];
+      forEachSupportedSystem =
+        f:
+        inputs.nixpkgs.lib.genAttrs supportedSystems (
+          system: f { pkgs = import inputs.nixpkgs { inherit system; }; }
+        );
+    in
+    {
+      devShells = forEachSupportedSystem (
+        { pkgs }:
+        {
+          default = pkgs.mkShell {
+            packages = with pkgs; [
+              # bash
+              bash-language-server
 
-            # go
-            go
+              # go
+              go
 
-            # hyprland
-            hyprls
+              # hyprland
+              hyprls
 
-            # json
-            prettier
+              # json
+              prettier
 
-            # lua
-            lua-language-server
-            stylua
+              # lua
+              lua-language-server
+              stylua
 
-            # markdown
-            marksman
-            nodejs
+              # markdown
+              marksman
+              nodejs
 
-            # nix
-            nil
-            nixd
-            nixfmt
-            statix
+              # nix
+              nil
+              nixd
+              nixfmt
+              statix
 
-            # python
-            python314
+              # python
+              python314
 
-            # rust
-            cargo
-            rustc
-            rustup
-            pkg-config
-            zlib
+              # rust
+              cargo
+              rustc
+              rustup
+              pkg-config
+              zlib
 
-            # yaml
-            yaml-language-server
-          ];
-        };
-      });
+              # yaml
+              yaml-language-server
+            ];
+          };
+        }
+      );
 
       nixosConfigurations = import ./modules/outputs/nixos { inherit inputs; };
 
-      darwinConfigurations =
-        import ./modules/outputs/nix-darwin { inherit inputs; };
+      darwinConfigurations = import ./modules/outputs/nix-darwin { inherit inputs; };
 
-      nixOnDroidConfigurations =
-        import ./modules/outputs/nix-on-droid { inherit inputs; };
+      nixOnDroidConfigurations = import ./modules/outputs/nix-on-droid { inherit inputs; };
 
-      homeConfigurations =
-        import ./modules/outputs/home-manager { inherit inputs; };
+      homeConfigurations = import ./modules/outputs/home-manager { inherit inputs; };
     };
 }

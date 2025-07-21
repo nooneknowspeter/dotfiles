@@ -1,12 +1,17 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
-  home.packages = with pkgs; [ git git-lfs ];
+  home.packages = with pkgs; [
+    git
+    git-lfs
+  ];
 
-  programs.git = { enable = true; };
+  programs.git = {
+    enable = true;
+  };
 
   home.file.".gitconfig" = {
-    source = config.lib.file.mkOutOfStoreSymlink
-      "${config.home.homeDirectory}/dotfiles/configs/.gitconfig";
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/dotfiles/configs/.gitconfig";
   };
 
 }

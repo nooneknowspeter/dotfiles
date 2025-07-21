@@ -1,7 +1,10 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
   home.packages = with pkgs; [ jq ];
 
-  programs.jq = { enable = true; };
+  programs.jq = {
+    enable = true;
+  };
 
 }
