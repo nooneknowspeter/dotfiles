@@ -3,7 +3,7 @@
 
   imports = [
     # shared modules
-    ../../../../../modules/nixos/environment/hyprland-fix
+    # ../../../../../modules/nixos/environment/hyprland-fix
   ];
 
 }
