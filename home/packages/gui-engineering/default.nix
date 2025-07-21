@@ -3,6 +3,7 @@
   imports = [
     # gui-engineering
     ./freecad
+    ./googleearth-pro
   ];
 
 }
