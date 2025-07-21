@@ -8,23 +8,19 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
 
-    # packages
+    # system-specific packages
     ./packages
 
-    # shared modules
-    ../../../modules/nixos/logind
-    ../../../modules/nixos/nix
-    ../../../modules/nixos/virtualisation
-    ../../../modules/nixos/vnc
-
-    # system specific modules
+    # modules
     ./modules/audio
     ./modules/boot
     ./modules/console
     ./modules/environment
     ./modules/hardware
-    ./modules/locale
+    ./modules/i18n
+    ./modules/misc
     ./modules/networking
+    ./modules/nix
     ./modules/programs
     ./modules/services
     ./modules/system

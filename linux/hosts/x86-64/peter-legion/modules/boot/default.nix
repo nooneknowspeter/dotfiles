@@ -1,5 +1,11 @@
-{ config, lib, pkgs, ... }: {
+{ ... }: {
 
-  imports = [ ./lenovo-legion ./lanzaboote ];
+  imports = [
+    # system specific
+    ./lenovo-legion
+
+    # shared modules
+    ../../../../../modules/nixos/boot/lanzaboote
+  ];
 
 }

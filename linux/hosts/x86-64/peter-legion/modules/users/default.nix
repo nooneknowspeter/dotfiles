@@ -1,5 +1,8 @@
-{ config, lib, pkgs, ... }: {
+{ ... }: {
 
-  imports = [ ./nooneknows ];
+  imports = [
+    # shared modules
+    ../../../../../modules/nixos/users/nooneknows
+  ];
 
 }

@@ -1,6 +1,8 @@
-{ config, lib, pkgs, timezone, ... }: {
+{ ... }: {
 
-  # timezone
-  time.timeZone = timezone;
+  imports = [
+    # shared modules
+    ../../../../../modules/nixos/time
+  ];
 
 }

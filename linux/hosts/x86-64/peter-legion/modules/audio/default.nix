@@ -1,5 +1,9 @@
-{ config, lib, pkgs, ... }: {
+{ ... }: {
 
-  imports = [ ./pipewire ./musnix ];
+  imports = [
+    # shared modules
+    ../../../../../modules/nixos/audio/musnix
+    ../../../../../modules/nixos/audio/pipewire
+  ];
 
 }

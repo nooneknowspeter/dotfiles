@@ -2,7 +2,7 @@
 
   imports = [
     # shared modules
-    ../../../../../modules/nixos/console
+    ../../../../../modules/nixos/i18n
   ];
 
 }

@@ -1,5 +1,11 @@
-{ config, lib, pkgs, ... }: {
+{ ... }: {
 
-  imports = [ ./dconf ./nix-ld ./steam ./zsh ];
+  imports = [
+    # shared modules
+    ../../../../../modules/nixos/programs/dconf
+    ../../../../../modules/nixos/programs/nix-ld
+    ../../../../../modules/nixos/programs/steam
+    ../../../../../modules/nixos/programs/zsh
+  ];
 
 }
