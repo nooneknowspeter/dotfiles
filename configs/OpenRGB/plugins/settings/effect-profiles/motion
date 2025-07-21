@@ -6,32 +6,6 @@
             "Brightness": 100,
             "ControllerZones": [
                 {
-                    "description": "Razer Device, Black",
-                    "is_segment": false,
-                    "location": "HID: /dev/hidraw1",
-                    "name": "Razer Viper Ultimate (Wireless)",
-                    "reverse": false,
-                    "segment_idx": -1,
-                    "self_brightness": 100,
-                    "serial": "                      ",
-                    "vendor": "Razer",
-                    "version": "v0.0",
-                    "zone_idx": 0
-                },
-                {
-                    "description": "Razer Device, US (ANSI), Black",
-                    "is_segment": false,
-                    "location": "HID: /dev/hidraw6",
-                    "name": "Razer Huntsman Tournament Edition",
-                    "reverse": false,
-                    "segment_idx": -1,
-                    "self_brightness": 100,
-                    "serial": "PM2125F36100120       ",
-                    "vendor": "Razer",
-                    "version": "v1.12",
-                    "zone_idx": 0
-                },
-                {
                     "description": "Lenovo Y760 ANSI",
                     "is_segment": false,
                     "location": "",
