@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
   imports = [
     ../../home.nix
@@ -11,6 +10,8 @@
     ../../packages/gui-devel
 
     ../../packages/gui-contentCreation
+
+    ../../packages/gui-engineering
 
     ../../../linux/packages/desktop-environment
   ];
