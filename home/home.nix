@@ -3,8 +3,7 @@
 , username ? "nooneknows"
 , homeDirectory ? "/home/nooneknows"
 , ...
-}:
-{
+}: {
 
   imports = [
     ./modules/fonts
@@ -28,12 +27,13 @@
   # release notes.
   home.stateVersion = "25.05"; # Please read the comment before changing.
 
-
   home.sessionVariables = {
     EDITOR = "nvim";
+    BROWSER = "brave";
   };
   home.shellAliases = {
     EDITOR = "nvim";
+    BROWSER = "brave";
   };
 
   # Let Home Manager install and manage itself.
@@ -42,10 +42,7 @@
   # enable experimental features; flakes
   nix = {
     package = pkgs.nix;
-    settings.experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
+    settings.experimental-features = [ "nix-command" "flakes" ];
   };
 
 }
