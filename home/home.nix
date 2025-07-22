@@ -10,6 +10,7 @@
   imports = [
     ./modules/fonts
     ./modules/nixGL
+    ./modules/nixpkgs
     ./modules/stylix
     ./modules/xdg
   ];
@@ -48,13 +49,4 @@
     ];
   };
 
-  # allow unfree packages
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-      allowUnfreePredicate = (_: true);
-      allowBroken = true;
-      cudaSupport = true;
-    };
-  };
 }
