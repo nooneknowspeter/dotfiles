@@ -8,18 +8,18 @@ jobs:
   format:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: cachix/install-nix-action@v31
-      with:
-        github_access_token: ${{ secrets.CICD }}
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v31
+        with:
+          github_access_token: ${{ secrets.CICD }}
 
-    - name: nixfmt
-      run: nix shell nixpkgs#nixfmt -c nixfmt .
+      - name: nixfmt
+        run: nix shell nixpkgs#nixpkgs-fmt -c nixpkgs-fmt .
 
-    - name: push
-      uses: github-actions-x/commit@v2.9
-      with:
-        github-token: ${{ secrets.CICD }}
-        commit-message: 'style (ci/cd): nixfmt'
-        name: github-actions[bot]
-        email: github-actions[bot]@users.noreply.github.com 
+      - name: push
+        uses: github-actions-x/commit@v2.9
+        with:
+          github-token: ${{ secrets.CICD }}
+          commit-message: "style (ci/cd): nixfmtpkgs-fmt"
+          name: github-actions[bot]
+          email: github-actions[bot]@users.noreply.github.com
