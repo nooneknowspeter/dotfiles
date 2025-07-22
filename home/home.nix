@@ -8,6 +8,7 @@
 {
 
   imports = [
+    ./modules/fonts
     ./modules/nixGL
     ./modules/stylix
     ./modules/xdg
@@ -27,20 +28,6 @@
   # release notes.
   home.stateVersion = "25.05"; # Please read the comment before changing.
 
-  # font config
-  fonts.fontconfig.enable = true;
-
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
-  home.packages = with pkgs; [
-    # fonts
-    nerd-fonts.fira-code
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.symbols-only
-    font-awesome
-    rictydiminished-with-firacode
-    noto-fonts
-  ];
 
   home.sessionVariables = {
     EDITOR = "nvim";
