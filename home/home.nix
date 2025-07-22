@@ -1,9 +1,8 @@
-{
-  config,
-  pkgs,
-  username ? "nooneknows",
-  homeDirectory ? "/home/nooneknows",
-  ...
+{ config
+, pkgs
+, username ? "nooneknows"
+, homeDirectory ? "/home/nooneknows"
+, ...
 }:
 {
 

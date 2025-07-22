@@ -1,7 +1,7 @@
-{
-  inputs,
-  config,
-  pkgs,
+{ inputs
+, config
+, pkgs
+,
 }:
 let
   hostname = "peter-macbook";
