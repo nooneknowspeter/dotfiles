@@ -64,6 +64,9 @@
 
       # lsusb
       alias lsusb="cyme"
+
+      #du
+      alias du="dust"
     '';
     oh-my-zsh = {
       enable = true;
