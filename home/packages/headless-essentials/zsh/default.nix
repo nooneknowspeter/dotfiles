@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
   home.packages = with pkgs; [
     oh-my-zsh
@@ -62,6 +61,9 @@
 
       # find
       alias find="fd"
+
+      # lsusb
+      alias lsusb="cyme"
     '';
     oh-my-zsh = {
       enable = true;
