@@ -26,6 +26,7 @@
     ./impala
     ./jq
     ./killall
+    ./libimobiledevice
     ./man
     ./nettools
     ./nh
