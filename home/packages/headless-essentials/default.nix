@@ -27,6 +27,7 @@
     ./jq
     ./killall
     ./man
+    ./nettools
     ./nh
     ./nvitop
     ./openssh
