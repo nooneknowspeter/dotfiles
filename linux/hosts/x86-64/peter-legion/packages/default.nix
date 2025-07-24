@@ -1,10 +1,8 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
   imports = [
+    # shared packages
     ../../../../packages/nixos
-
-    ./lenovo-legion
   ];
 
 }
