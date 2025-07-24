@@ -1,5 +1,4 @@
-{ ... }:
-{
+{ ... }: {
 
   imports = [
     # system specific
@@ -13,6 +12,7 @@
     ../../../../../modules/nixos/services/openrgb
     ../../../../../modules/nixos/services/printing
     ../../../../../modules/nixos/services/ssh
+    ../../../../../modules/nixos/services/usbmuxd
   ];
 
 }
