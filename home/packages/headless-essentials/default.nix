@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
 
   imports = [
     # headless-essentials
@@ -11,6 +10,7 @@
     ./cbonsai
     ./cloc
     ./curl
+    ./cyme
     ./direnv
     ./duf
     ./dust
