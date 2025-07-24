@@ -1,17 +1,12 @@
-{ config
-, lib
-, pkgs
-, ...
-}:
-{
+{ config, lib, pkgs, ... }: {
 
   services.logind = {
-    lidSwitch = "sleep";
-    powerKey = "sleep";
+    lidSwitch = "hybrid-sleep";
+    powerKey = "hybrid-sleep";
     powerKeyLongPress = "reboot";
-    rebootKey = "sleep";
+    rebootKey = "hybrid-sleep";
     rebootKeyLongPress = "reboot";
-    suspendKey = "sleep";
+    suspendKey = "hybrid-sleep";
     suspendKeyLongPress = "reboot";
   };
 
