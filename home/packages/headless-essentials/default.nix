@@ -38,6 +38,7 @@
     ./starship
     ./tldr
     ./tmux
+    ./ncurses
     ./typst
     ./unimatrix
     ./unp
