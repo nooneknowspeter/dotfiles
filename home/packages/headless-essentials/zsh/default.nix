@@ -67,6 +67,9 @@
 
       #du
       alias du="dust"
+
+      #df
+      alias df="duf -theme 'ansi'"
     '';
     oh-my-zsh = {
       enable = true;
