@@ -1,9 +1,6 @@
 { ... }: {
 
   imports = [
-    # system specific
-    ./thinkfan
-
     # shared modules
     ../../../../../modules/nixos/services/greetd
     ../../../../../modules/nixos/services/libinput
