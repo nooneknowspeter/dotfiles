@@ -111,7 +111,8 @@
               # nix
               nil
               nixd
-              nixfmt-classic
+              nixfmt-rfc-style
+              nixfmt-tree
               statix
 
               # python
