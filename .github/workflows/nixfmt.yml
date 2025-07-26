@@ -14,12 +14,12 @@ jobs:
           github_access_token: ${{ secrets.CICD }}
 
       - name: nixfmt
-        run: nix shell nixpkgs#nixpkgs-fmt -c nixpkgs-fmt .
+        run: nix shell nixpkgs#nixfmt-tree -c treefmt
 
       - name: push
         uses: github-actions-x/commit@v2.9
         with:
           github-token: ${{ secrets.CICD }}
-          commit-message: "style(ci/cd): nixpkgs-fmt"
+          commit-message: "style(ci/cd): nixfmt"
           name: github-actions[bot]
           email: github-actions[bot]@users.noreply.github.com
