@@ -221,11 +221,15 @@ git clone --recursive git@github.com:nooneknowspeter/dotfiles.git
 
 Temorarily fetch and link home-manager in current shell instance
 
-> [!NOTE] > `home-manager` is loaded temporaily in the current shell instance,
+> [!NOTE]
+>
+> `home-manager` is loaded temporaily in the current shell instance,
 > if shell is exited without running `home-manager`
 > (`home-manager` installs and manages itself after the initial bootstrap)
 
-> [!NOTE] > `--extra-experimental-features "nix-command flakes"` flag is used on the initial bootstrap of `home-manager`
+> [!NOTE]
+>
+> `--extra-experimental-features "nix-command flakes"` flag is used on the initial bootstrap of `home-manager`
 
 ```sh
 nix --extra-experimental-features "nix-command flakes" shell nixpkgs#home-manager
@@ -241,6 +245,7 @@ home-manager --extra-experimental-features "nix-command flakes" switch --flake /
 ### NixOS Configuration
 
 > [!NOTE]
+>
 > Using `--extra-experimental-features "nix-command flakes"` can be ommitted
 > if `home-manager` was bootstraped prior
 
@@ -254,6 +259,7 @@ sudo nixos-rebuild --extra-experimental-features "nix-command flakes" switch --f
 Setup Zsh
 
 > [!NOTE]
+>
 > Zsh must be installed through pacman since the change is system level
 
 ```sh
@@ -263,6 +269,7 @@ sudo pacman install -S zsh --noconfirm
 Install the Nix
 
 > [!NOTE]
+>
 > The multi-user installation is recommended for daemon access; systemd control
 
 ```sh
