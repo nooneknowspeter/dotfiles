@@ -1,1 +1,6 @@
-{ ... }: { services.usbmuxd = { enable = true; }; }
+{ ... }:
+{
+  services.usbmuxd = {
+    enable = true;
+  };
+}

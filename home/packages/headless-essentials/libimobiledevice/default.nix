@@ -1,5 +1,10 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
-  home.packages = with pkgs; [ ideviceinstaller ifuse usbmuxd ];
+  home.packages = with pkgs; [
+    ideviceinstaller
+    ifuse
+    usbmuxd
+  ];
 
 }

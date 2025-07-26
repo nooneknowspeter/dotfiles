@@ -1,9 +1,11 @@
-{ config
-, pkgs
-, username ? "nooneknows"
-, homeDirectory ? "/home/nooneknows"
-, ...
-}: {
+{
+  config,
+  pkgs,
+  username ? "nooneknows",
+  homeDirectory ? "/home/nooneknows",
+  ...
+}:
+{
 
   imports = [
     ./modules/fonts
@@ -42,7 +44,10 @@
   # enable experimental features; flakes
   nix = {
     package = pkgs.nix;
-    settings.experimental-features = [ "nix-command" "flakes" ];
+    settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
   };
 
 }
