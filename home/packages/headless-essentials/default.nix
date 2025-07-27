@@ -29,6 +29,8 @@
     ./killall
     ./libimobiledevice
     ./man
+    ./mtpfs
+    ./ncurses
     ./nettools
     ./nh
     ./nvitop
@@ -39,7 +41,6 @@
     ./starship
     ./tldr
     ./tmux
-    ./ncurses
     ./typst
     ./unimatrix
     ./unp
