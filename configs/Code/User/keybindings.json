@@ -22,7 +22,7 @@
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
-    "key": "space n",
+    "key": "ctrl-n",
     "command": "runCommands",
     "args": {
       "commands": [
@@ -33,7 +33,7 @@
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus"
   },
   {
-    "key": "space n",
+    "key": "ctrl-n",
     "command": "runCommands",
     "args": {
       "commands": [
@@ -58,7 +58,6 @@
     "command": "workbench.action.previousEditorInGroup",
     "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
   },
-
   // coding
   {
     "key": "shift-j",
