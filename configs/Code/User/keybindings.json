@@ -129,11 +129,10 @@
     }
   },
   {
-    "key": "n",
+    "key": "ctrl-m",
     "command": "editor.action.addSelectionToNextFindMatch",
     "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
   },
-
   // file explorer
   {
     "key": "r",
