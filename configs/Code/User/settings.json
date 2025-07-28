@@ -58,6 +58,9 @@
       ]
     }
   ],
+  "vim.flash": {
+    "enable": true,
+  },
   "security.allowedUNCHosts": [
     "wsl.localhost"
   ],
