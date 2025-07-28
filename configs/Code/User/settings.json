@@ -73,5 +73,8 @@
     "vscode-kubernetes.helm-path-linux": "/home/gitpod/.local/state/vs-kubernetes/tools/helm/linux-amd64/helm",
     "vscode-kubernetes.minikube-path-linux": "/home/gitpod/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube"
   },
-  "editor.guides.indentation": true
+  "editor.guides.indentation": true,
+  "remote.SSH.remotePlatform": {
+    "*.gitpod.io": "linux"
+  }
 }

@@ -23,6 +23,7 @@ $HOME/Library/Application Support/Code/User/
 ```
 
 ### windows
+
 ```
 rm %APPDATA%\Code\User\settings.json
 
@@ -47,8 +48,7 @@ rm %APPDATA%\Code\User\settings.json
 - [vscode vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)
 
 ```sh
-code -r --install-extension aaron-bond.better-comments 
-code -r --install-extension asvetliakov.vscode-neovim 
+code -r --install-extension aaron-bond.better-comments
 code -r --install-extension davidanson.vscode-markdownlint
 code -r --install-extension docker.docker
 code -r --install-extension esbenp.prettier-vscode
@@ -56,11 +56,18 @@ code -r --install-extension felixzeller.markdown-oxide
 code -r --install-extension github.github-vscode-theme
 code -r --install-extension gitpod.gitpod-desktop
 code -r --install-extension henrytsz.nvim
+code -r --install-extension ms-azuretools.vscode-containers
 code -r --install-extension ms-azuretools.vscode-docker
 code -r --install-extension ms-kubernetes-tools.vscode-kubernetes-tools
 code -r --install-extension ms-python.debugpy
 code -r --install-extension ms-python.python
 code -r --install-extension ms-python.vscode-pylance
+code -r --install-extension ms-python.vscode-python-envs
+code -r --install-extension ms-toolsai.jupyter
+code -r --install-extension ms-toolsai.jupyter-keymap
+code -r --install-extension ms-toolsai.jupyter-renderers
+code -r --install-extension ms-toolsai.vscode-jupyter-cell-tags
+code -r --install-extension ms-toolsai.vscode-jupyter-slideshow
 code -r --install-extension ms-vscode-remote.remote-containers
 code -r --install-extension ms-vscode-remote.remote-ssh
 code -r --install-extension ms-vscode-remote.remote-ssh-edit
@@ -75,6 +82,7 @@ code -r --install-extension streetsidesoftware.code-spell-checker
 code -r --install-extension sumneko.lua
 code -r --install-extension tal7aouy.icons
 code -r --install-extension tek256.simple-dark
-code -r --install-extension vincesalvino.dark-plus-black 
-code -r --install-extension wayou.vscode-todo-highlight 
+code -r --install-extension vincesalvino.dark-plus-black
+code -r --install-extension wayou.vscode-todo-highlight
+
 ```
