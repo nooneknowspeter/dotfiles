@@ -17,6 +17,7 @@
       imagemagick
       ripgrep
       unzip
+      tinyxxd
     ];
     withNodeJs = true;
     withPython3 = true;
