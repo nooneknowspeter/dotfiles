@@ -4,6 +4,7 @@
   imports = [
     # gui-devel
     ./cardinal
+    ./ghidra
     ./ghostty
     ./imhex
     ./plugdata
