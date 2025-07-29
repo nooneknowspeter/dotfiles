@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    qalculate-gtk
+    qalculate-qt
     libqalculate
   ];
 }
