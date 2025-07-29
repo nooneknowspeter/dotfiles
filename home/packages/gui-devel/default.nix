@@ -5,6 +5,7 @@
     # gui-devel
     ./cardinal
     ./ghostty
+    ./imhex
     ./plugdata
     ./savvycan
     ./vscode
