@@ -1,14 +1,9 @@
-{
-  config,
-  pkgs,
-  username ? "nooneknows",
-  homeDirectory ? "/home/nooneknows",
-  ...
-}:
-{
+{ config, pkgs, username ? "nooneknows", homeDirectory ? "/home/nooneknows", ...
+}: {
 
   imports = [
     ./modules/fonts
+    ./modules/nix
     ./modules/nixGL
     ./modules/nixpkgs
     ./modules/stylix
@@ -40,14 +35,5 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
-  # enable experimental features; flakes
-  nix = {
-    package = pkgs.nix;
-    settings.experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
-  };
 
 }
