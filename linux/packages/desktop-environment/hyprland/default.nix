@@ -51,7 +51,7 @@
     };
     extraConfig = ''
       # main
-      source = ~/dotfiles/configs/hypr/main.conf
+      source = ~/dotfiles/configs/hypr/hyprland.conf
     '';
   };
 
