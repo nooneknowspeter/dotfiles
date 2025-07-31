@@ -166,4 +166,7 @@
   #   source = config.lib.file.mkOutOfStoreSymlink
   #     "${config.home.homeDirectory}/dotfiles/configs/hypr";
   # };
+  services.hypridle = {
+    enable = true;
+  };
 }
