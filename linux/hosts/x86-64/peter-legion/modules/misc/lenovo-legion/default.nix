@@ -11,6 +11,10 @@
   boot = {
     extraModulePackages = with config.boot.kernelPackages; [ lenovo-legion-module ];
     kernelModules = [ "lenovo-legion-module" ];
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = true;
   };
 
 }
