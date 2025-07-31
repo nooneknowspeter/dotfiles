@@ -11,6 +11,8 @@
   boot = {
     extraModulePackages = with config.boot.kernelPackages; [ lenovo-legion-module ];
     kernelModules = [ "lenovo-legion-module" ];
+    kernelParams = [ "nvidia.NVreg_PreserveVideoMemoryAllocations=1" ];
+  };
 
   hardware.nvidia = {
     modesetting.enable = true;
