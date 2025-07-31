@@ -5,7 +5,7 @@
   # https://discourse.nixos.org/t/how-do-i-control-my-laptops-fan-speeds/45964/4
   environment.systemPackages = with pkgs; [
     lenovo-legion
-    linuxKernel.packages.linux_latest_libre.lenovo-legion-module
+    linuxKernel.packages.linux_zen.lenovo-legion-module
   ];
 
   boot = {
