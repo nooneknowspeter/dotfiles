@@ -75,6 +75,26 @@
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
+    "key": "k",
+    "command": "editor.action.scrollUpHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "j",
+    "command": "editor.action.scrollDownHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "ctrl-j",
+    "command": "editor.action.hideHover",
+    "when": "editorHoverFocused"
+  },
+  {
+    "key": "ctrl-k",
+    "command": "editor.action.hideHover",
+    "when": "editorHoverFocused"
+  },
+  {
     "key": "space c a",
     "command": "editor.action.codeAction",
     "when": "vim.mode == 'Normal' && editorTextFocus"
