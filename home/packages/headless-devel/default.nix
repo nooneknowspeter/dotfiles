@@ -13,6 +13,7 @@
     ./lazydocker
     ./lazygit
     ./lazysql
+    ./metasploit
     ./neovim
     ./nix-init
     ./nmap
