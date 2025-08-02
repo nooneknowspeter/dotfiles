@@ -9,6 +9,7 @@
     ./gh
     ./glab
     ./ipcalc
+    ./ipinfo
     ./k9s
     ./lazydocker
     ./lazygit
