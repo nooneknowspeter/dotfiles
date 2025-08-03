@@ -40,6 +40,7 @@
     ./ripgrep
     ./slides
     ./starship
+    ./termusic
     ./tldr
     ./tmux
     ./typst
