@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 {
 
-  home.packages = with pkgs; [ mtpfs ];
+  home.packages = with pkgs; [ go-mtpfs ];
 
 }
