@@ -18,6 +18,7 @@
     ./mangohud
     ./mpv
     ./nautilus
+    ./networkmanagerapplet
     ./openrgb
     ./pipewire
     ./playerctl
