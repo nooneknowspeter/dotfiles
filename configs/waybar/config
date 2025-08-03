@@ -4,7 +4,7 @@
         "reload_style_on_change": true,
         "modules-left": ["custom/notification","clock"],
         "modules-center": ["hyprland/workspaces"],
-        "modules-right": ["hyprland/submap","group/expand","network","battery","tray"],
+        "modules-right": ["cpu", "memory", "temperature", "hyprland/submap", "group/expand", "network", "battery", "tray"],
         
         "hyprland/submap": {
             "format": "{}"
@@ -59,7 +59,7 @@
             "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
             "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
             "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
-            "on-click-right": "ghostty -e bluetui",
+            "on-click-right": "rfkill unblock bluetooth && ghostty -e bluetui",
         }, 
         "battery": {
             "interval":30,
@@ -81,40 +81,6 @@
             "󰁹"
             ],
         },
-        "custom/pacman": {
-            "format": "󰅢 {}",
-            "interval": 30,   
-            "exec": "checkupdates | wc -l",
-            "exec-if": "exit 0",
-            "on-click": "ghostty -e sh -c 'yay -Syu; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar",
-            "signal": 8,
-            "tooltip": false,
-        },
-        "custom/expand": {
-            "format": "",
-            "tooltip": false
-        },
-        "custom/endpoint":{
-            "format": "|",
-            "tooltip": false
-        },
-        "group/expand": {
-            "orientation": "horizontal",
-            "drawer": {
-                "transition-duration": 600,
-                "transition-to-left": true,
-                "click-to-reveal": true
-            },
-            "modules": ["custom/expand", "custom/colorpicker","cpu","memory","temperature","custom/endpoint"],
-        },
-        "custom/colorpicker": {
-            "format": "{}",
-            "return-type": "json",
-            "interval": "once",
-            "exec": "~/.config/waybar/scripts/colorpicker.sh -j",
-            "on-click": "~/.config/waybar/scripts/colorpicker.sh",
-            "signal": 1
-        },
         "cpu": {
             "format": "󰻠",
             "tooltip": true
@@ -131,4 +97,3 @@
             "spacing": 10
         },
 } 
-
