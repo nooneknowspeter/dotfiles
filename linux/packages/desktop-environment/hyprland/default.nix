@@ -116,4 +116,8 @@
       };
     };
   };
+
+  services.hyprpolkitagent = {
+    enable = true;
+  };
 }
