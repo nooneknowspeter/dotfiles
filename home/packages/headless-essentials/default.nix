@@ -27,6 +27,7 @@
     ./impala
     ./jq
     ./killall
+    ./lazyjournal
     ./libimobiledevice
     ./man
     ./mtpfs
