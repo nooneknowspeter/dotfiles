@@ -39,6 +39,7 @@
     ./qalculate
     ./ripgrep
     ./slides
+    ./spotdl
     ./starship
     ./termusic
     ./tldr
