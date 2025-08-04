@@ -9,6 +9,7 @@
     ./moonlight
     ./obs-studio
     ./obsidian
+    ./tor-browser
     ./zathura
   ];
 
