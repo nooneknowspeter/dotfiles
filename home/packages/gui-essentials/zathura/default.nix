@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
 
   home.packages = with pkgs; [ zathura ];
@@ -10,6 +15,10 @@
     '';
     mappings = {
       "[normal] i" = "recolor";
+    };
+    options = lib.mkForce {
+      recolor-darkcolor = "#FFFFFF";
+      recolor-lightcolor = "#000000";
     };
   };
 
