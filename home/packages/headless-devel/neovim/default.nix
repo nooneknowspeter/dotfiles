@@ -33,10 +33,11 @@
         go
         openssl
         pkg-config
-        python3
+        python313
         rustc
         rustup
         stdenv.cc.cc
+        tslib
         zlib
       ]}"
       "--suffix"
@@ -47,10 +48,11 @@
         go
         openssl
         pkg-config
-        python3
+        python313
         rustc
         rustup
         stdenv.cc.cc
+        tslib
         zlib
       ]}"
     ];
