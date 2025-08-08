@@ -6,6 +6,7 @@
     ./bitwarden-desktop
     ./brave
     ./discord
+    ./f3d
     ./moonlight
     ./obs-studio
     ./obsidian
