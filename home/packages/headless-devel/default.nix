@@ -4,6 +4,7 @@
   imports = [
     # headless-devel
     ./asdf-vm
+    ./atac
     ./can-utils
     ./docker
     ./gh
