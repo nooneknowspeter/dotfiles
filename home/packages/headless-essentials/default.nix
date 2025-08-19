@@ -37,6 +37,7 @@
     ./nvitop
     ./openssh
     ./pandoc
+    ./pipes
     ./qalculate
     ./ripgrep
     ./slides
