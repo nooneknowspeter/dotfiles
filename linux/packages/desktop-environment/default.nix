@@ -27,7 +27,6 @@
     ./scope-tui
     ./scrcpy
     ./screenkey
-    ./spotify
     ./steam
     ./swaync
     ./uwsm
