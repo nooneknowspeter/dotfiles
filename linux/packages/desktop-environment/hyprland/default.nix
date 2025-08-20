@@ -8,6 +8,7 @@
 {
 
   home.packages = with pkgs; [
+    adwaita-qt
     hyprcursor
     hyprgraphics
     hypridle
@@ -23,7 +24,10 @@
     hyprutils
     hyprwayland-scanner
     kdePackages.qtwayland
+    libsForQt5.qt5ct
+    libsForQt5.qtstyleplugin-kvantum
     pyprland
+    qt6ct
     wayland-utils
     xdg-desktop-portal
     xdg-desktop-portal-gtk
@@ -122,4 +126,10 @@
   services.hyprpolkitagent = {
     enable = true;
   };
+
+  qt = {
+    enable = true;
+    platformTheme.name = "qtct";
+  };
+
 }
