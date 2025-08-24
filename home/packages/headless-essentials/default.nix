@@ -18,6 +18,7 @@
     ./eza
     ./fastfetch
     ./fd
+    ./ffmpeg
     ./fzf
     ./git
     ./gnumake
