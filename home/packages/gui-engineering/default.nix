@@ -5,6 +5,7 @@
     # gui-engineering
     ./freecad
     ./googleearth-pro
+    ./kicad
     ./qgis
   ];
 
