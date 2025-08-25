@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./coolercontrol
     ./lm-sensors
     ./openrazer
     ./sbctl
