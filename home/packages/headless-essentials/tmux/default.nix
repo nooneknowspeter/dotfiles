@@ -61,9 +61,6 @@
       # new window in same path
       bind c new-window -c "#{pane_current_path}"
 
-      # listing sessions
-      bind q choose-session
-
       # automatically renumber windows when one is closed
       set -g renumber-windows on 
 
