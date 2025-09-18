@@ -78,45 +78,27 @@
         {
           default = pkgs.mkShell {
             packages = with pkgs; [
-              # bash
-              bash-language-server
-
-              # go
-              go
-
-              # hyprland
-              hyprls
-
-              # json
-              prettier
-
-              # lua
-              lua-language-server
-              stylua
-
-              # markdown
-              marksman
-              nodejs
-
-              # nix
-              nil
-              nixd
-              nixfmt-rfc-style
-              nixfmt-tree
-              statix
-
-              # python
-              python314
-
-              # rust
+              # runtime & compilers
               cargo
+              go
+              nodejs
+              pkg-config
               rustc
+              python314
               rustup
               pkg-config
               zlib
 
-              # yaml
-              yaml-language-server
+              # formatters
+              beautysh
+              mdformat
+              nixfmt-rfc-style
+              prettier
+              stylua
+              taplo
+
+              # tools
+              treefmt
             ];
           };
         }
