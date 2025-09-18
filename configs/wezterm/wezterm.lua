@@ -10,7 +10,7 @@ local windows = "x86_64-pc-windows-msvc"
 
 -- run powershell if windows is detected
 if wezterm.target_triple == windows then
-  config.default_prog = { "powershell.exe", "-NoLogo" }
+	config.default_prog = { "powershell.exe", "-NoLogo" }
 end
 
 -- graphics and rendering
@@ -38,10 +38,10 @@ config.window_background_opacity = 0.9
 
 -- window_padding
 config.window_padding = {
-  left = 0,
-  right = 0,
-  top = 0,
-  bottom = 0,
+	left = 0,
+	right = 0,
+	top = 0,
+	bottom = 0,
 }
 
 -- remove title bar and enable resize window
@@ -56,121 +56,121 @@ local act = wezterm.action
 
 -- toggling opacity
 local toggle_opacity = wezterm.action_callback(function(window, _)
-  local overrides = window:get_config_overrides() or {}
-  if overrides.window_background_opacity == 1.0 then
-    overrides.window_background_opacity = 0.9
-  else
-    overrides.window_background_opacity = 1.0
-  end
-  window:set_config_overrides(overrides)
+	local overrides = window:get_config_overrides() or {}
+	if overrides.window_background_opacity == 1.0 then
+		overrides.window_background_opacity = 0.9
+	else
+		overrides.window_background_opacity = 1.0
+	end
+	window:set_config_overrides(overrides)
 end)
 
 -- keybindings
 config.keys = {
 
-  -- split pane horizontally
-  {
-    key = "v",
-    mods = "CTRL|SHIFT|ALT",
-    action = wezterm.action.SplitPane({
-      direction = "Right",
-      size = { Percent = 50 },
-    }),
-  },
+	-- split pane horizontally
+	{
+		key = "v",
+		mods = "CTRL|SHIFT|ALT",
+		action = wezterm.action.SplitPane({
+			direction = "Right",
+			size = { Percent = 50 },
+		}),
+	},
 
-  -- split pane vertically
-  {
-    key = "s",
-    mods = "CTRL|SHIFT|ALT",
-    action = wezterm.action.SplitPane({
-      direction = "Down",
-      size = { Percent = 50 },
-    }),
-  },
+	-- split pane vertically
+	{
+		key = "s",
+		mods = "CTRL|SHIFT|ALT",
+		action = wezterm.action.SplitPane({
+			direction = "Down",
+			size = { Percent = 50 },
+		}),
+	},
 
-  -- resize pane
-  {
-    key = "U",
-    mods = "CTRL|SHIFT|ALT",
-    action = act.AdjustPaneSize({ "Left", 5 }),
-  },
-  {
-    key = "I",
-    mods = "CTRL|SHIFT|ALT",
-    action = act.AdjustPaneSize({ "Down", 5 }),
-  },
-  {
-    key = "O",
-    mods = "CTRL|SHIFT|ALT",
-    action = act.AdjustPaneSize({ "Up", 5 }),
-  },
-  {
-    key = "P",
-    mods = "CTRL|SHIFT|ALT",
-    action = act.AdjustPaneSize({ "Right", 5 }),
-  },
+	-- resize pane
+	{
+		key = "U",
+		mods = "CTRL|SHIFT|ALT",
+		action = act.AdjustPaneSize({ "Left", 5 }),
+	},
+	{
+		key = "I",
+		mods = "CTRL|SHIFT|ALT",
+		action = act.AdjustPaneSize({ "Down", 5 }),
+	},
+	{
+		key = "O",
+		mods = "CTRL|SHIFT|ALT",
+		action = act.AdjustPaneSize({ "Up", 5 }),
+	},
+	{
+		key = "P",
+		mods = "CTRL|SHIFT|ALT",
+		action = act.AdjustPaneSize({ "Right", 5 }),
+	},
 
-  -- select pane
-  -- options
-  { key = "9", mods = "CTRL", action = act.PaneSelect },
+	-- select pane
+	-- options
+	{ key = "9", mods = "CTRL", action = act.PaneSelect },
 
-  -- select with hjkl, LDUR
-  {
-    key = "h",
-    mods = "CTRL|SHIFT|ALT",
-    action = wezterm.action.ActivatePaneDirection("Left"),
-  },
-  {
-    key = "j",
-    mods = "CTRL|SHIFT|ALT",
-    action = wezterm.action.ActivatePaneDirection("Down"),
-  },
-  {
-    key = "k",
-    mods = "CTRL|SHIFT|ALT",
-    action = wezterm.action.ActivatePaneDirection("Up"),
-  },
-  {
-    key = "l",
-    mods = "CTRL|SHIFT|ALT",
-    action = wezterm.action.ActivatePaneDirection("Right"),
-  },
+	-- select with hjkl, LDUR
+	{
+		key = "h",
+		mods = "CTRL|SHIFT|ALT",
+		action = wezterm.action.ActivatePaneDirection("Left"),
+	},
+	{
+		key = "j",
+		mods = "CTRL|SHIFT|ALT",
+		action = wezterm.action.ActivatePaneDirection("Down"),
+	},
+	{
+		key = "k",
+		mods = "CTRL|SHIFT|ALT",
+		action = wezterm.action.ActivatePaneDirection("Up"),
+	},
+	{
+		key = "l",
+		mods = "CTRL|SHIFT|ALT",
+		action = wezterm.action.ActivatePaneDirection("Right"),
+	},
 
-  -- wezterm debugging
-  { key = "L", mods = "CTRL", action = act.ShowDebugOverlay },
+	-- wezterm debugging
+	{ key = "L", mods = "CTRL", action = act.ShowDebugOverlay },
 
-  -- toggle_opacity
-  {
-    key = "O",
-    mods = "CTRL|ALT",
-    action = toggle_opacity,
-  },
+	-- toggle_opacity
+	{
+		key = "O",
+		mods = "CTRL|ALT",
+		action = toggle_opacity,
+	},
 
-  -- paste with control+v instead of shift+insert
-  {
-    key = "v",
-    mods = "CTRL",
-    action = wezterm.action.DisableDefaultAssignment,
-  },
-  {
-    key = "v",
-    mods = "CTRL",
-    action = act.PasteFrom("Clipboard"),
-  },
+	-- paste with control+v instead of shift+insert
+	{
+		key = "v",
+		mods = "CTRL",
+		action = wezterm.action.DisableDefaultAssignment,
+	},
+	{
+		key = "v",
+		mods = "CTRL",
+		action = act.PasteFrom("Clipboard"),
+	},
 
-  -- command palette window activation
-  {
-    key = "P",
-    mods = "CTRL|SHIFT",
-    action = wezterm.action.ActivateCommandPalette,
-  },
+	-- command palette window activation
+	{
+		key = "P",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.ActivateCommandPalette,
+	},
 
-  -- vi mode
-  {
-    key = "Space",
-    mods = "CTRL|SHIFT",
-    action = wezterm.action.ActivateCopyMode,
-  },
+	-- vi mode
+	{
+		key = "Space",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.ActivateCopyMode,
+	},
 }
 
 return config

@@ -38,38 +38,22 @@
   "fountain.general.parentheticalNewLineHelper": false,
   "vim.insertModeKeyBindings": [
     {
-      "before": [
-        "j",
-        "k"
-      ],
-      "after": [
-        "<esc>"
-      ]
+      "before": ["j", "k"],
+      "after": ["<esc>"]
     }
   ],
   "vim.visualModeKeyBindings": [
     {
-      "before": [
-        "j",
-        "k"
-      ],
-      "after": [
-        "<esc>"
-      ]
+      "before": ["j", "k"],
+      "after": ["<esc>"]
     }
   ],
   "vim.flash": {
-    "enable": true,
+    "enable": true
   },
-  "security.allowedUNCHosts": [
-    "wsl.localhost"
-  ],
-  "remote.SSH.defaultExtensions": [
-    "gitpod.gitpod-remote-ssh"
-  ],
-  "dev.containers.defaultExtensions": [
-    "gitpod.gitpod-remote-ssh"
-  ],
+  "security.allowedUNCHosts": ["wsl.localhost"],
+  "remote.SSH.defaultExtensions": ["gitpod.gitpod-remote-ssh"],
+  "dev.containers.defaultExtensions": ["gitpod.gitpod-remote-ssh"],
   "redhat.telemetry.enabled": true,
   "vs-kubernetes": {
     "vscode-kubernetes.kubectl-path-linux": "/home/gitpod/.local/state/vs-kubernetes/tools/kubectl/kubectl",

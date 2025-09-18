@@ -10,4 +10,3 @@ config.animation_fps = 1
 config.cursor_blink_rate = 600 -- in ms
 config.term = "xterm-256color"
 config.prefer_egl = true
-
