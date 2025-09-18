@@ -1,9 +1,11 @@
 name: "nixfmt"
 on:
   pull_request:
-    branches: ["main", "nix"]
+    branches:
+      - main
   push:
-    branches: ["main", "nix"]
+    branches:
+      - main
 jobs:
   format:
     runs-on: ubuntu-latest
@@ -14,12 +16,13 @@ jobs:
           github_access_token: ${{ secrets.CICD }}
 
       - name: nixfmt
-        run: nix shell nixpkgs#nixfmt-tree -c treefmt
+        run: |
+          nix develop --impure -c treefmt
 
       - name: push
         uses: github-actions-x/commit@v2.9
         with:
           github-token: ${{ secrets.CICD }}
-          commit-message: "style(ci/cd): nixfmt"
+          commit-message: "style(ci/cd): treefmt"
           name: github-actions[bot]
           email: github-actions[bot]@users.noreply.github.com
