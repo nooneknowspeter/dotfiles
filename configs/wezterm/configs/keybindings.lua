@@ -1,6 +1,5 @@
 local wezterm = require("wezterm")
 
-
 -- keybindings
 return {
 

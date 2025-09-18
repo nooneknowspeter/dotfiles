@@ -13,12 +13,14 @@
 ## Automate with Nix
 
 - [x] make configurations for each environment in [flake.nix](./flake.nix)
+
   - [x] architecture
   - [x] kernel
   - [x] distro/OS
   - [x] purpose
 
 - [x] nvim
+
   - [x] init submodule
   - [x] reference git protocol in URI
   - [x] setup branch for minimal config; nvim on windows
@@ -28,19 +30,23 @@
   - [x] ditto with linting
 
 - [x] home-manager
+
   - [x] properly setup xdg config in home-manager; user dirs (Downloads, Pictures)
   - [x] properly setup xdg mime; default applications
 
 - [x] arch setup
+
   - [x] test out home manager setup on arch machine
   - [x] headless environment
   - [x] bootstrap desktop environment
   - [ ] nixgl
 
 - [x] wsl setup
+
   - [x] arch wslg and home manager setup
 
 - [x] nix-on-droid
+
   - [x] test out home manager setup
 
 - [x] create modules for flake.nix outputs
@@ -58,6 +64,7 @@
 ## Dev
 
 - [ ] ghostty
+
   - [x] configure ghostty; after 1.2 release
   - [ ] fix:
 
@@ -71,6 +78,7 @@
 ## Documentation
 
 - [x] update README.md
+
   - [x] add relevant commands
   - [x] explain code structure and design, philosphy
   - [x] screenshots

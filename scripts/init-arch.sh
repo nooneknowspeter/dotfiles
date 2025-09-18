@@ -1,25 +1,25 @@
 #!/usr/bin/env bash
 
 echo -e "\e[34m
-                     -                    
-                    -o+                   
-                   \`ooo/                  
-                  \`+oooo:                 
-                 \`+oooooo:                
-                 -+oooooo+:               
-               \`/:--:++oooo+:             
-              \`/++++/++++++/:             
-             \`/++++++++++++++:            
-            \`/+++ooooooooooooo/           
-           ./ooosssso++osssssso+          
-          .oossssso-''''/ossssss+         
-         -osssssso.      :ssssssso.       
-        :osssssss/        osssso++.       
-       /ossssssss/        +ssssooo/       
-     \`/ossssso+/:-        -:/+ossss'-     
-    \`+sso+:-\`             \`.-/+oso:    
-   \`++:.so                       \`-/+/   
-  .\`                                 \`    
+                     -
+                    -o+
+                   \`ooo/
+                  \`+oooo:
+                 \`+oooooo:
+                 -+oooooo+:
+               \`/:--:++oooo+:
+              \`/++++/++++++/:
+             \`/++++++++++++++:
+            \`/+++ooooooooooooo/
+           ./ooosssso++osssssso+
+          .oossssso-''''/ossssss+
+         -osssssso.      :ssssssso.
+        :osssssss/        osssso++.
+       /ossssssss/        +ssssooo/
+     \`/ossssso+/:-        -:/+ossss'-
+    \`+sso+:-\`             \`.-/+oso:
+   \`++:.so                       \`-/+/
+  .\`                                 \`
 \e[0m"
 
 export DOTFILES=~/dotfiles

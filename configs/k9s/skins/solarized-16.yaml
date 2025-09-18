@@ -21,28 +21,28 @@
 #	"aqua":                 ColorAqua,         brightcyan       base1
 #	"white":                ColorWhite,        brightwhite      base3
 
-base03:       &base03   gray          # base03    brightblack
-base02:       &base02   black         # base02    black
-base01:       &base01   lime          # base01    brightgreen
-base00:       &base00   yellow        # base00    brightyellow
-base0:        &base0    blue          # base0     brightblue
-base1:        &base1    aqua          # base1     brightcyan
-base2:        &base2    silver        # base2     white
-base3:        &base3    white         # base3     brightwhite
-yellow:       &yellow   olive         # accent    yellow        #b58900
-orange:       &orange   red           # accent    orange        #cb4b16
-red:          &red      maroon        # accent    red           #dc322f
-magenta:      &magenta  purple        # accent    magenta       #d33682
-violet:       &violet   fuchsia       # accent    violet        #6c71c4
-blue:         &blue     navy          # accent    blue          #268bd2
-cyan:         &cyan     teal          # accent    cyan          #2aa198
-green:        &green    green         # accent    green         #859900
+base03: &base03 gray # base03    brightblack
+base02: &base02 black # base02    black
+base01: &base01 lime # base01    brightgreen
+base00: &base00 yellow # base00    brightyellow
+base0: &base0 blue # base0     brightblue
+base1: &base1 aqua # base1     brightcyan
+base2: &base2 silver # base2     white
+base3: &base3 white # base3     brightwhite
+yellow: &yellow olive # accent    yellow        #b58900
+orange: &orange red # accent    orange        #cb4b16
+red: &red maroon # accent    red           #dc322f
+magenta: &magenta purple # accent    magenta       #d33682
+violet: &violet fuchsia # accent    violet        #6c71c4
+blue: &blue navy # accent    blue          #268bd2
+cyan: &cyan teal # accent    cyan          #2aa198
+green: &green green # accent    green         #859900
 
-background:   &background   default   # transparent
-foreground:   &foreground   yellow    # base00
-current_line: &current_line white     # base2
-selection:    &selection    silver    # base2
-comment:      &comment      aqua      # base1
+background: &background default # transparent
+foreground: &foreground yellow # base00
+current_line: &current_line white # base2
+selection: &selection silver # base2
+comment: &comment aqua # base1
 
 k9s:
   body:
