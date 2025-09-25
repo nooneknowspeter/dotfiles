@@ -3,6 +3,7 @@
 
   imports = [
     # headless-essentials
+    ./asciinema
     ./awk
     ./bat
     ./bitwarden-cli
