@@ -8,7 +8,6 @@
       networkmanager-fortisslvpn
       networkmanager-l2tp
       networkmanager-openvpn
-      networkmanager_strongswan
     ];
   };
 
@@ -16,29 +15,16 @@
     nm-applet = {
       enable = true;
     };
-    openvpn3 = {
+  };
+
+  services = {
+    strongswan = {
       enable = true;
     };
   };
 
-  services = {
-    mullvad-vpn = {
-      enable = true;
-    };
-    softether = {
-      enable = true;
-    };
-    strongswan = {
-      enable = true;
-    };
-    tailscale = {
-      enable = true;
-    };
-    wg-netmanager = {
-      enable = true;
-    };
-    xl2tpd = {
-      enable = true;
-    };
+  environment.etc."strongswan.conf" = {
+    text = '''';
   };
+
 }
