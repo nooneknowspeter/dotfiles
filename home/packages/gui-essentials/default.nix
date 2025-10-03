@@ -11,6 +11,7 @@
     ./obsidian
     ./spotify
     ./tor-browser
+    ./tradinview
     ./zathura
   ];
 
