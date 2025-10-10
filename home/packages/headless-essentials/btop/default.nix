@@ -18,6 +18,8 @@
       rounded_corners = true;
       graph_symbol = "braille";
       update_ms = 100;
+      shown_boxes = "cpu mem net proc gpu0";
+      background_update = false;
     };
   };
 
