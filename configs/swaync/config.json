@@ -59,7 +59,7 @@
       "actions": [
         {
           "label": "󰝟",
-          "command": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+          "command": "wpctl set-mute @DEFAULT_SINK@ toggle",
           "type": "toggle"
         },
         {
@@ -83,7 +83,7 @@
         },
         {
           "label": "󰀟",
-          "command": "gnome-network-displays"
+          "command": "ghostty -e hyprctl monitors"
         },
         {
           "label": "",
