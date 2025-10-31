@@ -1,6 +1,8 @@
 [user]
 	email = 157999171+nooneknowspeter@users.noreply.github.com
 	name = nooneknows
+[includeIf "gitdir:~/projects/orbtronics/"]
+	path = ~/projects/orbtronics/.gitconfig
 [core]
 	editor = nvim
 [filter "lfs"]
