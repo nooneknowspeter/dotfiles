@@ -1088,6 +1088,22 @@
     },
     "nixpkgs_6": {
       "locked": {
+        "lastModified": 1761880412,
+        "narHash": "sha256-QoJjGd4NstnyOG4mm4KXF+weBzA2AH/7gn1Pmpfcb0A=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "a7fc11be66bdfb5cdde611ee5ce381c183da8386",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_7": {
+      "locked": {
         "lastModified": 1755186698,
         "narHash": "sha256-wNO3+Ks2jZJ4nTHMuks+cxAiVBGNuEBXsT29Bz6HASo=",
         "owner": "NixOS",
@@ -1140,6 +1156,24 @@
         "type": "gitlab"
       }
     },
+    "nooneknowspeter": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_6"
+      },
+      "locked": {
+        "lastModified": 1762089670,
+        "narHash": "sha256-hXpyLblKsUteQ8B8oRljzpGHOr8YuXAl0JXUF3egbyY=",
+        "owner": "nooneknowspeter",
+        "repo": "nurpkgs",
+        "rev": "6b2aa064864e9ab89fe16fba01d874f4d2de63d8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nooneknowspeter",
+        "repo": "nurpkgs",
+        "type": "github"
+      }
+    },
     "nur": {
       "inputs": {
         "flake-parts": "flake-parts_2",
@@ -1148,11 +1182,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1753525598,
-        "narHash": "sha256-lZwAXUMqyorMgykSzm/6QMICFuFONigGla+fZeZfK+E=",
+        "lastModified": 1762089330,
+        "narHash": "sha256-PWVJQo1j3MWEm4zuridSaHebtZ7eNYnTQlN1IbLYvNA=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "20bef1577803a8178bf908d1b3fed43e8919bc48",
+        "rev": "6640be7493d02779addc2ca2120f0e5ec87b6f04",
         "type": "github"
       },
       "original": {
@@ -1251,6 +1285,7 @@
         "nixgl": "nixgl",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_5",
+        "nooneknowspeter": "nooneknowspeter",
         "nur": "nur",
         "spicetify-nix": "spicetify-nix",
         "stylix": "stylix"
@@ -1295,7 +1330,7 @@
     },
     "spicetify-nix": {
       "inputs": {
-        "nixpkgs": "nixpkgs_6",
+        "nixpkgs": "nixpkgs_7",
         "systems": "systems_4"
       },
       "locked": {
