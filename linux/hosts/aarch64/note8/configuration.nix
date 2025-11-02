@@ -8,8 +8,6 @@
     ../../../modules/nix-on-droid/terminal
   ];
 
-  time.timeZone = "US/Eastern";
-
   user = {
     # NOTE: slow load up time with zsh enabled
     # shell = pkgs.zsh;

@@ -8,7 +8,6 @@
   pkgs,
   hostname,
   locale,
-  timezone,
   ...
 }:
 {
@@ -33,7 +32,6 @@
     ./modules/programs
     ./modules/services
     ./modules/system
-    ./modules/time
     ./modules/users
   ];
 
