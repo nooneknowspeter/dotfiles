@@ -1,4 +1,9 @@
-{ pkgs, config, ... }:
+{
+  inputs,
+  pkgs,
+  config,
+  ...
+}:
 {
 
   # https://discourse.nixos.org/t/help-loading-kernel-module-from-store/44230
@@ -6,6 +11,7 @@
   environment.systemPackages = with pkgs; [
     lenovo-legion
     linuxKernel.packages.linux_zen.lenovo-legion-module
+    inputs.nooneknowspeter.packages.x86_64-linux.legionlinuxtui-git
   ];
 
   boot = {
