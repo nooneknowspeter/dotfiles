@@ -42,6 +42,7 @@
     ./pipes
     ./qalculate
     ./ripgrep
+    ./scim
     ./slides
     ./spotdl
     ./starship
