@@ -118,6 +118,7 @@
         "themes"
         "tldr"
         "tmux"
+        "uv"
         "vi-mode"
         "zsh-interactive-cd"
       ];
