@@ -25,6 +25,7 @@
     ./git
     ./gnumake
     ./gnused
+    ./grex
     ./hyperfine
     ./iftop
     ./impala
