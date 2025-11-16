@@ -51,6 +51,7 @@
     ./termusic
     ./tldr
     ./tmux
+    ./ttyd
     ./typst
     ./unimatrix
     ./unp
