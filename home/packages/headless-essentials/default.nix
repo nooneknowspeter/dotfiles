@@ -11,6 +11,7 @@
     ./btop
     ./cbonsai
     ./cloc
+    ./croc
     ./curl
     ./cyme
     ./direnv
