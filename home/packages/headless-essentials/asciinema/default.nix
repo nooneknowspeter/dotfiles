@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 {
 
-  home.packages = with pkgs; [ asciinema ];
+  home.packages = with pkgs; [
+    asciinema
+    asciinema-agg
+  ];
 
 }
