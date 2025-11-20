@@ -3,12 +3,12 @@
 
   imports = [
     # gui-contentCreation
-    ./ardour
-    ./audio-plugins
-    ./blender
+    # ./ardour
+    # ./audio-plugins
+    # ./blender
     ./davinci-resolve
     ./djv
-    ./houdini
+    # ./houdini
     ./musescore
   ];
 
