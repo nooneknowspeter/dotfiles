@@ -10,7 +10,6 @@
     ./djv
     ./houdini
     ./musescore
-    ./pianobooster
   ];
 
 }
