@@ -21,10 +21,13 @@
     strongswan = {
       enable = true;
     };
+    tailscale = {
+      enable = true;
+    };
   };
 
   environment.etc."strongswan.conf" = {
-    text = '''';
+    text = "";
   };
 
 }
