@@ -42,6 +42,7 @@
     ./openssh
     ./pandoc
     ./pipes
+    ./presenterm
     ./qalculate
     ./ripgrep
     ./scim
