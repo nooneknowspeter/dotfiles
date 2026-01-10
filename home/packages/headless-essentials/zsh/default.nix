@@ -103,6 +103,7 @@
         "minikube"
         "nmap"
         "node"
+        "opentofu"
         "perl"
         "pip"
         "poetry"
