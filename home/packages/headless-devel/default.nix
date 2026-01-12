@@ -19,6 +19,7 @@
     ./neovim
     ./nix-init
     ./nmap
+    ./opencode
     ./posting
     ./qemu
     ./termshark
