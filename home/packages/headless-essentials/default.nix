@@ -49,6 +49,7 @@
     ./slides
     ./spotdl
     ./starship
+    ./sysstat
     ./termusic
     ./tldr
     ./tmux
