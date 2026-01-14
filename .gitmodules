@@ -1,3 +1,7 @@
 [submodule "nvim"]
 	path = configs/nvim
 	url = git@github.com:nooneknowspeter/nvim.git
+[submodule "corne"]
+	path = peripherals/corne
+	url = git@github.com:nooneknowspeter/crkbd.git
+	branch = main
