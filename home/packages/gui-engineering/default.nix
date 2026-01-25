@@ -6,6 +6,7 @@
     ./freecad
     ./googleearth-pro
     ./kicad
+    ./lightburn
     ./orca-slicer
     ./qgis
   ];
