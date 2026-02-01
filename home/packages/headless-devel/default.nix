@@ -11,6 +11,7 @@
     ./glab
     ./ipcalc
     ./ipinfo
+    ./just
     ./k9s
     ./lazydocker
     ./lazygit
