@@ -100,6 +100,7 @@
         "history"
         "k9s"
         "kubectl"
+        "laravel5"
         "minikube"
         "nmap"
         "node"
