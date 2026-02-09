@@ -1,15 +1,16 @@
-{ inputs, username, ... }:
+{
+  inputs,
+  username,
+  pkgs,
+  ...
+}:
 let
   homeDirectory = "/home/${username}";
 in
 inputs.home-manager.lib.homeManagerConfiguration {
-  pkgs = inputs.nixpkgs.legacyPackages.aarch64-darwin;
+  inherit pkgs;
 
-  extraSpecialArgs = {
-    inherit inputs;
-    inherit username;
-    inherit homeDirectory;
-  };
+  extraSpecialArgs = { inherit inputs username homeDirectory; };
 
   modules = [
     inputs.stylix.homeModules.stylix

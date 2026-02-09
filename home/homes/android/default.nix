@@ -1,15 +1,16 @@
-{ inputs, username, ... }:
+{
+  inputs,
+  username,
+  pkgs,
+  ...
+}:
 let
   homeDirectory = "/data/data/com.termux.nix/files/home";
 in
 inputs.home-manager.lib.homeManagerConfiguration {
-  pkgs = inputs.nixpkgs.legacyPackages.aarch64-linux;
+  inherit pkgs;
 
-  extraSpecialArgs = {
-    inherit inputs;
-    inherit username;
-    inherit homeDirectory;
-  };
+  extraSpecialArgs = { inherit inputs username homeDirectory; };
 
   modules = [
     inputs.stylix.homeModules.stylix

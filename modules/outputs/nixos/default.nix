@@ -1,4 +1,4 @@
-{ inputs }:
+{ inputs, system }:
 {
-  peter-legion = import ../../../linux/hosts/x86-64/peter-legion { inherit inputs; };
+  peter-legion = import ../../../linux/hosts/x86-64/peter-legion { inherit inputs system; };
 }

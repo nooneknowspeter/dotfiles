@@ -1,16 +1,12 @@
-{ inputs, ... }:
+{ inputs, system, ... }:
 let
   hostname = "peter-legion";
   locale = "en_US.UTF-8";
 in
 inputs.nixpkgs.lib.nixosSystem {
-  system = "x86_64-linux";
+  inherit system;
 
-  specialArgs = {
-    inherit hostname;
-    inherit inputs;
-    inherit locale;
-  };
+  specialArgs = { inherit inputs hostname locale; };
 
   modules = [
     ./configuration.nix

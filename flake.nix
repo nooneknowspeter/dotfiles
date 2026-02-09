@@ -69,11 +69,26 @@
         "x86_64-darwin"
         "aarch64-darwin"
       ];
+
+      mkPkgs =
+        system:
+        import inputs.nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        };
+
       forEachSupportedSystem =
         f:
         inputs.nixpkgs.lib.genAttrs supportedSystems (
-          system: f { pkgs = import inputs.nixpkgs { inherit system; }; }
+          system:
+          f {
+            pkgs = mkPkgs system;
+          }
         );
+
+      system = builtins.currentSystem; # NOTE: needs --impure flag
+
+      pkgs = mkPkgs system;
     in
     {
       devShells = forEachSupportedSystem (
@@ -101,18 +116,19 @@
               taplo
 
               # tools
+              just
               treefmt
             ];
           };
         }
       );
 
-      nixosConfigurations = import ./modules/outputs/nixos { inherit inputs; };
+      nixosConfigurations = import ./modules/outputs/nixos { inherit inputs system; };
 
-      darwinConfigurations = import ./modules/outputs/nix-darwin { inherit inputs; };
+      darwinConfigurations = import ./modules/outputs/nix-darwin { inherit inputs system; };
 
-      nixOnDroidConfigurations = import ./modules/outputs/nix-on-droid { inherit inputs; };
+      nixOnDroidConfigurations = import ./modules/outputs/nix-on-droid { inherit inputs system pkgs; };
 
-      homeConfigurations = import ./modules/outputs/home-manager { inherit inputs; };
+      homeConfigurations = import ./modules/outputs/home-manager { inherit inputs system pkgs; };
     };
 }

@@ -1,20 +1,12 @@
-{
-  inputs,
-  config,
-  pkgs,
-}:
+{ inputs, system }:
 let
   hostname = "peter-macbook";
   locale = "en_US.UTF-8";
 in
 inputs.nix-darwin.lib.darwinSystem {
-  system = "aarch64-darwin";
+  inherit system;
 
-  specialArgs = {
-    inherit hostname;
-    inherit inputs;
-    inherit locale;
-  };
+  specialArgs = { inherit inputs hostname locale; };
 
   modules = [ ./configuration.nix ];
 }
