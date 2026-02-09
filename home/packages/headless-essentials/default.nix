@@ -1,66 +1,7 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
-
-  imports = [
-    # headless-essentials
-    ./asciinema
-    ./awk
-    ./bat
-    ./bitwarden-cli
-    ./bluetui
-    ./btop
-    ./cbonsai
-    ./cloc
-    ./croc
-    ./curl
-    ./cyme
-    ./direnv
-    ./duf
-    ./dust
-    ./eza
-    ./fastfetch
-    ./fd
-    ./ffmpeg
-    ./fzf
-    ./git
-    ./gnumake
-    ./gnused
-    ./grex
-    ./hyperfine
-    ./iftop
-    ./impala
-    ./jq
-    ./killall
-    ./lazyjournal
-    ./libimobiledevice
-    ./man
-    ./mtpfs
-    ./ncurses
-    ./nettools
-    ./nh
-    ./nvitop
-    ./openssh
-    ./pandoc
-    ./pipes
-    ./presenterm
-    ./qalculate
-    ./ripgrep
-    ./scim
-    ./slides
-    ./spotdl
-    ./starship
-    ./sysstat
-    ./termusic
-    ./tldr
-    ./tmux
-    ./ttyd
-    ./typst
-    ./unimatrix
-    ./unp
-    ./vim
-    ./yazi
-    ./yq
-    ./zsh
-  ];
-
+  imports = import ../../../lib/iterate-dirs.nix {
+    directory = ./.;
+    blacklistArray = [ ];
+  };
 }

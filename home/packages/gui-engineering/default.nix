@@ -1,14 +1,7 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
-
-  imports = [
-    # gui-engineering
-    ./freecad
-    ./googleearth-pro
-    ./kicad
-    ./lightburn
-    ./orca-slicer
-    ./qgis
-  ];
-
+  imports = import ../../../lib/iterate-dirs.nix {
+    directory = ./.;
+    blacklistArray = [ ];
+  };
 }

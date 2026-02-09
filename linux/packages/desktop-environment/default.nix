@@ -1,41 +1,7 @@
-{ config, pkgs, ... }:
-
+{ ... }:
 {
-  imports = [
-    ./blueman
-    ./bluez
-    ./bottles
-    ./brightnessctl
-    ./cava
-    ./cliphist
-    ./fcitx5
-    ./greetd
-    ./heroic
-    ./hyprland
-    ./imv
-    ./linux-wallpaperengine
-    ./lutris
-    ./mangohud
-    ./mpv
-    ./nautilus
-    ./networkmanager
-    ./openrgb
-    ./pipewire
-    ./playerctl
-    ./protonup
-    ./rofi
-    ./scope-tui
-    ./scrcpy
-    ./screenkey
-    ./steam
-    ./swaync
-    ./uwsm
-    ./virtualbox
-    ./waybar
-    ./wayvnc
-    ./wiremix
-    ./wireplumber
-    ./wofi
-    ./wvkbd
-  ];
+  imports = import ../../../lib/iterate-dirs.nix {
+    directory = ./.;
+    blacklistArray = [ ];
+  };
 }

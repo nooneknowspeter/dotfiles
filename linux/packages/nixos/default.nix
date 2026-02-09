@@ -1,10 +1,7 @@
-{ config, pkgs, ... }:
-
+{ ... }:
 {
-  imports = [
-    ./lm-sensors
-    ./openrazer
-    ./sbctl
-    ./steam-run
-  ];
+  imports = import ../../../lib/iterate-dirs.nix {
+    directory = ./.;
+    blacklistArray = [ ];
+  };
 }

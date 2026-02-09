@@ -1,15 +1,13 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
-
-  imports = [
-    # gui-contentCreation
-    # ./ardour
-    # ./audio-plugins
-    # ./blender
-    ./davinci-resolve
-    ./djv
-    # ./houdini
-    ./musescore
-  ];
-
+  imports = import ../../../lib/iterate-dirs.nix {
+    directory = ./.;
+    blacklistArray = [
+      "ardour"
+      "audio-plugins"
+      "blender"
+      "houdini"
+      "natron"
+    ];
+  };
 }

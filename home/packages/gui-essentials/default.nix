@@ -1,18 +1,7 @@
-{ config, pkgs, ... }:
+{ ... }:
 {
-
-  imports = [
-    # gui-essentials
-    ./bitwarden-desktop
-    ./brave
-    ./discord
-    ./moonlight
-    ./obs-studio
-    ./obsidian
-    ./spotify
-    ./tor-browser
-    ./tradinview
-    ./zathura
-  ];
-
+  imports = import ../../../lib/iterate-dirs.nix {
+    directory = ./.;
+    blacklistArray = [ "f3d" ];
+  };
 }
