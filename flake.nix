@@ -18,18 +18,18 @@
     };
     lanzaboote = {
       url = "github:nix-community/lanzaboote/v0.4.2";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "system-nixpkgs";
     };
     musnix = {
       url = "github:musnix/musnix";
     };
     nix-darwin = {
       url = "github:lnl7/nix-darwin/master";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "system-nixpkgs";
     };
     nix-ld = {
       url = "github:Mic92/nix-ld";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "system-nixpkgs";
     };
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid";
@@ -42,7 +42,7 @@
       url = "github:NixOS/nixos-hardware/master";
     };
     nixpkgs = {
-      url = "github:nixos/nixpkgs/nixos-unstable";
+      url = "github:nixos/nixpkgs/nixos-unstable"; # user packages
     };
     nooneknowspeter = {
       url = "github:nooneknowspeter/nurpkgs";
@@ -58,6 +58,9 @@
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    system-nixpkgs = {
+      url = "github:nixos/nixpkgs/nixos-unstable"; # system packages; drivers, system packages
+    };
   };
 
   outputs =
@@ -71,24 +74,35 @@
       ];
 
       mkPkgs =
-        system:
-        import inputs.nixpkgs {
+        { system, input }:
+        input {
           inherit system;
           config.allowUnfree = true;
         };
+
+      system = builtins.currentSystem; # NOTE: needs --impure flag
 
       forEachSupportedSystem =
         f:
         inputs.nixpkgs.lib.genAttrs supportedSystems (
           system:
           f {
-            pkgs = mkPkgs system;
+            pkgs = mkPkgs {
+              inherit system;
+              input = import inputs.system-nixpkgs;
+            };
           }
         );
 
-      system = builtins.currentSystem; # NOTE: needs --impure flag
+      pkgs = mkPkgs {
+        inherit system;
+        input = import inputs.nixpkgs;
+      };
 
-      pkgs = mkPkgs system;
+      system-pkgs = mkPkgs {
+        inherit system;
+        input = import inputs.system-nixpkgs;
+      };
     in
     {
       devShells = forEachSupportedSystem (
@@ -111,7 +125,7 @@
               beautysh
               mdformat
               nixfmt-rfc-style
-              prettier
+              nodePackages.prettier
               stylua
               taplo
 

@@ -3,7 +3,7 @@ let
   hostname = "peter-legion";
   locale = "en_US.UTF-8";
 in
-inputs.nixpkgs.lib.nixosSystem {
+inputs.system-nixpkgs.lib.nixosSystem {
   inherit system;
 
   specialArgs = { inherit inputs hostname locale; };
