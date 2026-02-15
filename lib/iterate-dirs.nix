@@ -8,8 +8,7 @@ let
   blacklist = [
     ".git"
     "result"
-  ]
-  ++ blacklistArray;
+  ] ++ blacklistArray;
 
   dirs = builtins.filter (name: entries.${name} == "directory" && !(builtins.elem name blacklist)) (
     builtins.attrNames entries
