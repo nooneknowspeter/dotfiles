@@ -10,7 +10,7 @@
   imports = [
     ./modules/fonts
     ./modules/nix
-    ./modules/nixGL
+    ./modules/generic
     ./modules/nixpkgs
     ./modules/stylix
     ./modules/xdg
