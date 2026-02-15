@@ -27,7 +27,7 @@
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
     pyprland
-    qt6ct
+    qt6Packages.qt6ct
     wayland-utils
     xdg-desktop-portal
     xdg-desktop-portal-gtk
