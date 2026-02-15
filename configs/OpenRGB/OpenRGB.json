@@ -1245,6 +1245,20 @@
     "theme": "dark"
   },
   "UserInterface": {
+    "autoload_profiles": {
+      "exit_profile": {
+        "enabled": false,
+        "name": ""
+      },
+      "resume_profile": {
+        "enabled": false,
+        "name": ""
+      },
+      "suspend_profile": {
+        "enabled": false,
+        "name": ""
+      }
+    },
     "exit_profile": {
       "profile_name": "nooneknows",
       "set_on_exit": true

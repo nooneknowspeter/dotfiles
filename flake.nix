@@ -17,7 +17,7 @@
       inputs.hyprland.follows = "hyprland";
     };
     lanzaboote = {
-      url = "github:nix-community/lanzaboote/v0.4.2";
+      url = "github:nix-community/lanzaboote";
       inputs.nixpkgs.follows = "system-nixpkgs";
     };
     musnix = {
@@ -42,7 +42,7 @@
       url = "github:NixOS/nixos-hardware/master";
     };
     nixpkgs = {
-      url = "github:nixos/nixpkgs/nixos-unstable"; # user packages
+      url = "github:nixos/nixpkgs/nixpkgs-unstable"; # user packages
     };
     nooneknowspeter = {
       url = "github:nooneknowspeter/nurpkgs";
@@ -59,7 +59,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     system-nixpkgs = {
-      url = "github:nixos/nixpkgs/nixos-unstable"; # system packages; drivers, system packages
+      url = "github:nixos/nixpkgs/nixos-25.11"; # system packages; drivers, system packages
     };
   };
 
@@ -110,6 +110,10 @@
         {
           default = pkgs.mkShell {
             packages = with pkgs; [
+              curl
+              nh
+              openssl
+
               # runtime & compilers
               cargo
               go

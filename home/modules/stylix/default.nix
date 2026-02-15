@@ -42,7 +42,7 @@
       };
 
       emoji = {
-        package = pkgs.noto-fonts-emoji;
+        package = pkgs.noto-fonts-color-emoji;
         name = "Noto Color Emoji";
       };
 
@@ -53,7 +53,7 @@
       };
     };
 
-    iconTheme = {
+    icons = {
       enable = true;
       dark = "Papirus-Dark";
       package = pkgs.papirus-icon-theme;
