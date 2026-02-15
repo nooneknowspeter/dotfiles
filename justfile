@@ -20,7 +20,7 @@ list-hosts:
     @echo -e "note8"
 
 rebuild-home config:
-    @nh home switch . -c nooneknows@{{ config }} -b backup -- --impure
+    @nh home switch . -c nooneknows@{{ config }} -- --impure
 
 rebuild-os host:
     @nh os switch . -H {{ host }} -- --impure

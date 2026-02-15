@@ -6,14 +6,14 @@
 }:
 {
 
-  services.logind = {
-    lidSwitch = "hybrid-sleep";
-    powerKey = "hybrid-sleep";
-    powerKeyLongPress = "reboot";
-    rebootKey = "hybrid-sleep";
-    rebootKeyLongPress = "reboot";
-    suspendKey = "hybrid-sleep";
-    suspendKeyLongPress = "reboot";
-  };
+  # services.logind.settings.Login = {
+  # 	HandleLidSwitch = "";
+  # 	HandleSuspendKeyLongPress = "";
+  # 	HandleSuspendKey = "";
+  # 	HandleRebootKeyLongPress = "";
+  # 	HandleRebootKey = "";
+  # 	HandlePowerKeyLongPress = "";
+  # 	HandlePowerKey = "";
+  # };
 
 }
