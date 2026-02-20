@@ -9,5 +9,7 @@
     font-awesome
     rictydiminished-with-firacode
     noto-fonts
+    helvetica-neue-lt-std
+    the-neue-black
   ];
 }
