@@ -5,6 +5,7 @@ list-configs:
     @echo -e "android"
     @echo -e "linux-full"
     @echo -e "linux-headless"
+    @echo -e "linux-dev"
     @echo -e "linux-lite"
     @echo -e "soyboydev"
     @echo -e "soyboydevlite"

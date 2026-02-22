@@ -39,6 +39,17 @@ in
       ;
   };
 
+  # dev linux
+  # desktop environment with headless dev tools
+  "${username}@linux-dev" = import ../../../home/homes/linux-dev {
+    inherit
+      inputs
+      username
+      system
+      pkgs
+      ;
+  };
+
   # "lite" linux
   # desktop environment, no dev tools
   "${username}@linux-lite" = import ../../../home/homes/linux-lite {
