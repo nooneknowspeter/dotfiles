@@ -59,11 +59,11 @@
       package = pkgs.papirus-icon-theme;
     };
 
-    image = pkgs.fetchurl {
-      # https://github.com/dharmx/walls
-      url = "https://raw.githubusercontent.com/dharmx/walls/refs/heads/main/monochrome/a_black_and_white_image_of_a_hill.jpg";
-      hash = "sha256-Y+D/4GqOuxmg74oHmVRLtu37PFyaDqtfnXjsAQOGUUo=";
-    };
+    # image = pkgs.fetchurl {
+    #   # https://github.com/dharmx/walls
+    #   url = "https://raw.githubusercontent.com/dharmx/walls/refs/heads/main/monochrome/a_black_and_white_image_of_a_hill.jpg";
+    #   hash = "sha256-Y+D/4GqOuxmg74oHmVRLtu37PFyaDqtfnXjsAQOGUUo=";
+    # };
 
     opacity = {
       desktop = 0.8;
