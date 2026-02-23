@@ -34,3 +34,6 @@ show:
 
 format:
     @treefmt
+
+wallpaper wallpaper-id:
+    @linux-wallpaperengine -s --scaling fill -r eDP-1 --bg {{ wallpaper-id }}
