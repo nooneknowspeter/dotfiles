@@ -12,7 +12,7 @@
 
   programs.ghostty = {
     enable = true;
-    package = inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default;
+    package = inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.ghostty-releasefast;
     enableZshIntegration = false;
   };
 
