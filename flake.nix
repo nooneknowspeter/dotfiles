@@ -42,7 +42,7 @@
       url = "github:NixOS/nixos-hardware/master";
     };
     nixpkgs = {
-      url = "github:nixos/nixpkgs/nixpkgs-unstable"; # user packages
+      url = "github:nixos/nixpkgs/nixos-unstable"; # user packages
     };
     nooneknowspeter = {
       url = "github:nooneknowspeter/nurpkgs";
