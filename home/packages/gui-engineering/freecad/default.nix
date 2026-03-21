@@ -7,6 +7,7 @@
     elmerfem
     freecad
     gmsh
+    graphviz
     netgen
   ];
 
