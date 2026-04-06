@@ -2,7 +2,7 @@
 {
   home.packages = with pkgs; [
     kicad
-    kikit
-    kicadAddons.kikit
+    # kikit
+    # kicadAddons.kikit
   ];
 }
