@@ -5,6 +5,7 @@
     # shared modules
     ../../../../../modules/nixos/hardware/bluetooth
     ../../../../../modules/nixos/hardware
+    ../../../../../modules/nixos/hardware/nvidia
   ];
 
 }
