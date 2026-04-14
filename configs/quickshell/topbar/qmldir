@@ -1,0 +1,14 @@
+module topbar
+TopBar 1.0 TopBar.qml
+NotificationButton 1.0 NotificationButton.qml
+Workspaces 1.0 Workspaces.qml
+Clock 1.0 Clock.qml
+CpuMonitor 1.0 CpuMonitor.qml
+MemoryMonitor 1.0 MemoryMonitor.qml
+TemperatureMonitor 1.0 TemperatureMonitor.qml
+NetworkMonitor 1.0 NetworkMonitor.qml
+BluetoothMonitor 1.0 BluetoothMonitor.qml
+VolumeMonitor 1.0 VolumeMonitor.qml
+BacklightMonitor 1.0 BacklightMonitor.qml
+BatteryMonitor 1.0 BatteryMonitor.qml
+SystemTray 1.0 SystemTray.qml
