@@ -1,0 +1,7 @@
+environment {
+    // Set a variable like this:
+    // QT_QPA_PLATFORM "wayland"
+
+    // Remove a variable by using null as the value:
+    // DISPLAY null
+}
