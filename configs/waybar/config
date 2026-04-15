@@ -1,117 +1,151 @@
 {
-        "layer": "top",
-        "position": "top",
-        "reload_style_on_change": true,
-        "modules-left": [ "custom/notification", "hyprland/workspaces"],
-        "modules-right": ["hyprland/submap", "cpu", "memory", "temperature", "network", "bluetooth", "wireplumber" ,"backlight", "battery", "tray", "clock"],
-				
-        "custom/notification": {
-            "tooltip": false,
-            "format": " |",
-            "on-click": "swaync-client -t -sw",
-            "escape": true
-        },
-			 "hyprland/workspaces": {
-            "persistent-workspaces": {
-                "*": [ 1,2,3,4,5,6,7,8,9,10 ]
-            }
-        },
-        "hyprland/submap": {
-            "format": "{}|",
-        },
-				"cpu": {
-						"format": "{}%  |",
-						"tooltip": true,
-						"on-click": "ghostty -e btop"
-				},
-        "memory": {
-            "format": "{}%  |",
-						"tooltip": true,
-						"on-click": "ghostty -e btop"
-        },
-        "temperature": {
-            "critical-threshold": 80,
-            "format": "{}%  |",
-						"tooltip": true
-        },
-				"network": {
-						"format": "{ipaddr}/{cidr} |",
-						"format-disconnected": " |",
-						"tooltip-format": "SSID: {essid} ({signalStrength}% | {frequency} GHz)\nInterface: {ifname}\nIP Address: {ipaddr}\nGateway Address: {gwaddr}\nUpload: {bandwidthUpBytes}\nDownload: {bandwidthDownBytes}\nTotal: {bandwidthTotalBytes}",
-						"tooltip-format-disconnected": "Disconnected",
-						"on-click": "nm-connection-editor"
-				},
-        "bluetooth": {
-            "format-on": "󰂯 |",
-            "format-off": "󰂲 |",
-            "format-disabled": "󰂲 |",
-            "format-connected-battery": "{device_battery_percentage}% 󰂯 |",
-						"format-connected": "{num_connections} 󰂯 |",
-            "format-alt": "󰂯 |",
-            "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-            "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-            "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
-            "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
-						"on-click": "rfkill unblock bluetooth && ghostty -e bluetui",
-            "on-click-right": "rfkill toggle bluetooth",
-        }, 
-				"wireplumber": {
-					"format": "{volume}% {icon}|",
-					"format-muted": " ",
-					"on-click": "ghostty -e wiremix",
-					"format-icons": [" ", " ", " "]
-				},
-				"backlight": {
-					"format": "{percent}% {icon}|",
-					"format-icons": ["󰃟 "],
-				},
-        "battery": {
-            "interval":30,
-            "states": {
-                "good": 95,
-                "warning": 30,
-                "critical": 20
-            },
-            "format": "{capacity}% {icon}",
-            "format-charging": "{capacity}% 󰂄 |",
-            "format-plugged": "{capacity}% 󰂄  |",
-            "format-alt": "{time} {icon}",
-            "format-icons": [
-                "󰁻 |",
-            "󰁼 |",
-            "󰁾 |",
-            "󰂀 |",
-            "󰂂 |",
-            "󰁹 |"
-            ],
-        },
-        "clock": {
-            "format": "| {:%Y-%m-%d %I:%M:%S %p}",
-            "interval": 1,   
-            "tooltip-format": "<tt>{calendar}</tt>",
-				"calendar": {
-                    "mode"          : "year",
-                    "mode-mon-col"  : 3,
-                    "weeks-pos"     : "right",
-                    "on-scroll"     : 1,
-                    "format": {
-                              "months":     "<span >{}</span>",
-                              "days":       "<span >{}</span>",
-                              "weeks":      "<span >W{}</span>",
-                              "weekdays":   "<span >{}</span>",
-                              "today":      "<span ><b><i><u>{}</u></i></b></span>"
-                              }
-						},
-            "actions": {
-                "on-click-right": "shift_down",
-                "on-click": "shift_up"
-            }
-        },
-        "tray": {
-            "icon-size": 12,
-            "spacing": 6,
-						"reverse-direction": true,
-						"icons": {
-						}
-        },
-} 
+	"layer": "top",
+	"position": "top",
+	"reload_style_on_change": true,
+	"modules-left": [
+		"custom/notification",
+		"hyprland/workspaces",
+		"niri/workspaces"
+	],
+	"modules-right": [
+		"hyprland/submap",
+		"cpu",
+		"memory",
+		"temperature",
+		"network",
+		"bluetooth",
+		"wireplumber",
+		"backlight",
+		"battery",
+		"tray",
+		"clock"
+	],
+	"custom/notification": {
+		"tooltip": false,
+		"format": " |",
+		"on-click": "swaync-client -t -sw",
+		"escape": true
+	},
+	"hyprland/workspaces": {
+		"persistent-workspaces": {
+			"*": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10
+			]
+		}
+	},
+	"hyprland/submap": {
+		"format": "{}|"
+	},
+	"niri/workspaces": {
+		"format": "{value}"
+	},
+	"cpu": {
+		"format": "{}%  |",
+		"tooltip": true,
+		"on-click": "ghostty -e btop"
+	},
+	"memory": {
+		"format": "{}%  |",
+		"tooltip": true,
+		"on-click": "ghostty -e btop"
+	},
+	"temperature": {
+		"critical-threshold": 80,
+		"format": "{}%  |",
+		"tooltip": true
+	},
+	"network": {
+		"format": "{ipaddr}/{cidr} |",
+		"format-disconnected": " |",
+		"tooltip-format": "SSID: {essid} ({signalStrength}% | {frequency} GHz)\nInterface: {ifname}\nIP Address: {ipaddr}\nGateway Address: {gwaddr}\nUpload: {bandwidthUpBytes}\nDownload: {bandwidthDownBytes}\nTotal: {bandwidthTotalBytes}",
+		"tooltip-format-disconnected": "Disconnected",
+		"on-click": "nm-connection-editor"
+	},
+	"bluetooth": {
+		"format-on": "󰂯 |",
+		"format-off": "󰂲 |",
+		"format-disabled": "󰂲 |",
+		"format-connected-battery": "{device_battery_percentage}% 󰂯 |",
+		"format-connected": "{num_connections} 󰂯 |",
+		"format-alt": "󰂯 |",
+		"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
+		"tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
+		"on-click": "rfkill unblock bluetooth && ghostty -e bluetui",
+		"on-click-right": "rfkill toggle bluetooth",
+	},
+	"wireplumber": {
+		"format": "{volume}% {icon}|",
+		"format-muted": " ",
+		"on-click": "ghostty -e wiremix",
+		"format-icons": [
+			" ",
+			" ",
+			" "
+		]
+	},
+	"backlight": {
+		"format": "{percent}% {icon}|",
+		"format-icons": [
+			"󰃟 "
+		],
+	},
+	"battery": {
+		"interval": 30,
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 20
+		},
+		"format": "{capacity}% {icon}",
+		"format-charging": "{capacity}% 󰂄 |",
+		"format-plugged": "{capacity}% 󰂄  |",
+		"format-alt": "{time} {icon}",
+		"format-icons": [
+			"󰁻 |",
+			"󰁼 |",
+			"󰁾 |",
+			"󰂀 |",
+			"󰂂 |",
+			"󰁹 |"
+		],
+	},
+	"clock": {
+		"format": "| {:%Y-%m-%d %I:%M:%S %p}",
+		"interval": 1,
+		"tooltip-format": "<tt>{calendar}</tt>",
+		"calendar": {
+			"mode": "year",
+			"mode-mon-col": 3,
+			"weeks-pos": "right",
+			"on-scroll": 1,
+			"format": {
+				"months": "<span >{}</span>",
+				"days": "<span >{}</span>",
+				"weeks": "<span >W{}</span>",
+				"weekdays": "<span >{}</span>",
+				"today": "<span ><b><i><u>{}</u></i></b></span>"
+			}
+		},
+		"actions": {
+			"on-click-right": "shift_down",
+			"on-click": "shift_up"
+		}
+	},
+	"tray": {
+		"icon-size": 12,
+		"spacing": 6,
+		"reverse-direction": true,
+		"icons": {}
+	},
+}
