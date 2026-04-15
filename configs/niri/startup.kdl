@@ -1,0 +1,18 @@
+// Add lines like this to spawn processes at startup.
+// Note that running niri as a session supports xdg-desktop-autostart,
+// which may be more convenient to use.
+// See the binds section below for more spawn examples.
+// This line starts waybar, a commonly used bar for Wayland compositors.
+// spawn-at-startup "waybar"
+// spawn-at-startup "fcitx5"
+// spawn-at-startup "linux-wallpaperengine -s --scaling fill -r eDP-1 --bg 3411968181"
+// spawn-at-startup "obs --startupreplaybuffer --minimize-to-tray"
+// spawn-at-startup "swaync"
+
+ // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
+// spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
+spawn-sh-at-startup "waybar"
+spawn-sh-at-startup "fcitx5"
+spawn-sh-at-startup "linux-wallpaperengine -s --scaling fill -r eDP-1 --bg 3411968181"
+spawn-sh-at-startup "obs --startupreplaybuffer --minimize-to-tray"
+spawn-sh-at-startup "swaync"
