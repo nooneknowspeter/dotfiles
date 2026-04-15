@@ -11,7 +11,7 @@
   environment.systemPackages = with pkgs; [
     lenovo-legion
     linuxKernel.packages.linux_zen.lenovo-legion-module
-    inputs.nooneknowspeter.packages.x86_64-linux.legionlinuxtui-git
+    inputs.nooneknowspeter.packages.x86_64-linux.legionlinuxtui
   ];
 
   boot = {
