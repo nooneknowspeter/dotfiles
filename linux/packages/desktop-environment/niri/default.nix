@@ -7,8 +7,14 @@
 {
   home.packages = with pkgs; [
     alacritty
-    niri
+    dms-shell
     fuzzel
+    nautilus
+    niri
+    swaybg
+    waybar
+    xwayland-run
+    xwayland-satellite
   ];
 
   programs = {
