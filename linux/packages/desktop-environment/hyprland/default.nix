@@ -60,15 +60,6 @@
     '';
   };
 
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-wlr
-    ];
-  };
-
   programs.hyprlock = {
     enable = true;
     extraConfig = ''
