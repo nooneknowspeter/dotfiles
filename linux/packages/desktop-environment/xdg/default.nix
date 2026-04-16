@@ -34,6 +34,9 @@
           pdf = [
             "org.pwmt.zathura.desktop"
             "zathura.desktop"
+            "org.pwmt.zathura-pdf-poppler.desktop"
+            "zathura"
+            "${pkgs.zathura}"
           ];
         in
         {
