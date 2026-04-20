@@ -442,10 +442,10 @@ binds {
     }
 	
     // Move the focused window between the floating and the tiling layout.
-    Mod+V {
+    Mod+Shift+V {
         toggle-window-floating
     }
-    Mod+Shift+V {
+    Mod+Ctrl+Shift+V {
         switch-focus-between-floating-and-tiling
     }
 	
