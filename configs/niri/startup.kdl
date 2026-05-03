@@ -13,7 +13,7 @@
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 spawn-sh-at-startup "waybar"
 spawn-sh-at-startup "fcitx5"
-spawn-sh-at-startup "linux-wallpaperengine -s --scaling fill -r eDP-1 --bg 3411968181"
+// spawn-sh-at-startup "linux-wallpaperengine -s --scaling fill -r eDP-1 --bg 3411968181"
 spawn-sh-at-startup "obs --startupreplaybuffer --minimize-to-tray"
 spawn-sh-at-startup "swaync"
 spawn-sh-at-startup "wl-paste --watch cliphist store &"
