@@ -1,4 +1,7 @@
 { pkgs, ... }:
 {
-  home.packages = with pkgs; [ figma-linux ];
+  home.packages = with pkgs; [
+    figma-agent
+    figma-linux
+  ];
 }
