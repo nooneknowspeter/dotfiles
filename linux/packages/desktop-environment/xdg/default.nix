@@ -35,8 +35,6 @@
             "org.pwmt.zathura.desktop"
             "zathura.desktop"
             "org.pwmt.zathura-pdf-poppler.desktop"
-            "zathura"
-            "${pkgs.zathura}"
           ];
         in
         {
@@ -59,10 +57,10 @@
           "application/x-wine-extension-ini" = editor;
 
           # # define default applications for some url schemes.
-          # "x-scheme-handler/about" = browser; # open `about:` url with `browser`
-          # "x-scheme-handler/ftp" = browser; # open `ftp:` url with `browser`
-          # "x-scheme-handler/http" = browser;
-          # "x-scheme-handler/https" = browser;
+          "x-scheme-handler/about" = browser; # open `about:` url with `browser`
+          "x-scheme-handler/ftp" = browser; # open `ftp:` url with `browser`
+          "x-scheme-handler/http" = browser;
+          "x-scheme-handler/https" = browser;
           # # https://github.com/microsoft/vscode/issues/146408
           # "x-scheme-handler/vscode" = ["code-url-handler.desktop"]; # open `vscode://` url with `code-url-handler.desktop`
           # "x-scheme-handler/vscode-insiders" = ["code-insiders-url-handler.desktop"]; # open `vscode-insiders://` url with `code-insiders-url-handler.desktop`
