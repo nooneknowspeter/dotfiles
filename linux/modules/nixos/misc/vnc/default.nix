@@ -1,3 +1,5 @@
+# https://nixos.wiki/wiki/Sunshine
+
 { pkgs, ... }:
 {
 
@@ -6,15 +8,22 @@
     autoStart = true;
     capSysAdmin = true;
     openFirewall = true;
-
-    package = pkgs.sunshine.override {
-      cudaSupport = true;
-      cudaPackages = pkgs.cudaPackages;
-    };
   };
 
-  services.udev.extraRules = ''
-    		KERNEL=="uinput", MODE="0660", GROUP="input", SYMLINK+="uinput"
-    	'';
+  security.wrappers.sunshine = {
+    owner = "root";
+    group = "root";
+    capabilities = "cap_sys_admin+p";
+    source = "${pkgs.sunshine}/bin/sunshine";
+  };
+
+  services.avahi.publish.enable = true;
+  services.avahi.publish.userServices = true;
+
+  # Enables the uinput kernel module and creates the uinput group
+  hardware.uinput.enable = true;
+
+  # Add your user to the uinput group
+  users.users.nooneknows.extraGroups = [ "uinput" ];
 
 }
