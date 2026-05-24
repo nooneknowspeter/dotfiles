@@ -18,9 +18,9 @@
   ];
 
   programs = {
-    swaylock = {
-      enable = true;
-    };
+    # swaylock = {
+    #   enable = true;
+    # };
   };
 
   services = {
@@ -28,9 +28,9 @@
       enable = true;
     };
 
-    mako = {
-      enable = true;
-    };
+    # mako = {
+    #   enable = true;
+    # };
 
     polkit-gnome = {
       enable = true;
