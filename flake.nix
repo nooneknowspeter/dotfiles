@@ -59,7 +59,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     system-nixpkgs = {
-      url = "github:nixos/nixpkgs/nixos-25.11"; # system packages; drivers, system packages
+      url = "github:nixos/nixpkgs/nixos-26.05"; # system packages; drivers, system packages
     };
   };
 
