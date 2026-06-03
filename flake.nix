@@ -128,8 +128,8 @@
               # formatters
               beautysh
               mdformat
-              nixfmt-rfc-style
-              nodePackages.prettier
+              nixfmt
+              prettier
               stylua
               taplo
 

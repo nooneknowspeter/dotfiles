@@ -4,6 +4,7 @@
     directory = ./.;
     blacklistArray = [
       "blender"
+      "davinci-resolve"
       "houdini"
       "natron"
     ];
