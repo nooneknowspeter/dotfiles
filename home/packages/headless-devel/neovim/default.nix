@@ -7,7 +7,9 @@
 
   programs.neovim = {
     enable = true;
-    package = pkgs.neovim-unwrapped;
+    # package = pkgs.neovim-unwrapped;
+    # package = pkgs.neovim;
+    sideloadInitLua = true;
     defaultEditor = true;
     extraPackages = with pkgs; [
       curl
