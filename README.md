@@ -301,49 +301,13 @@ nix-on-droid switch --flake /path/to/flake.nix#configName
 My essentials packages can be found [here](./home/packages/) and raw dot configs [here](./configs/),
 but a quick overview on my daily driver:
 
-### NixOS
-
-![nixos, hyprland, waybar](https://i.imgur.com/ih9ZW83.jpeg)
-![nixos, hyprland, ghostty](https://i.imgur.com/dw879yc.png)
-
 [Desktop Environment Setup](./linux/packages/desktop-environment/)
 
 [NixOS Specific Configuration](./linux/hosts/x86-64/peter-legion/)
 
----
-
-- OS: [NixOS](https://nixos.org/)
-- Window Manager: [Hyprland](https://github.com/hyprwm/Hyprland) w/ [plugins](https://github.com/hyprwm/hyprland-plugins)
-- Terminal: [Ghostty](https://github.com/ghostty-org/ghostty) w/ [TMUX](https://github.com/tmux/tmux)
-- Shell: [zsh](https://www.zsh.org/) w/ [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
-- Bar: [Waybar](https://github.com/Alexays/Waybar)
-- App Launcher: [Wofi](https://github.com/SimplyCEO/wofi)
-- Editor: [Neovim](https://github.com/neovim/neovim) (Development) / [Vim](https://github.com/vim/vim) (Backup and quick editing)
-- File Manager: [yazi](https://github.com/sxyazi/yazi)
-- Streaming / Recording: [OBS](https://github.com/obsproject/obs-studio)
-
 ### WSL
 
-![wezterm, archlinux wsl, tmux, neovim](https://i.imgur.com/FyaiNJZ.png)
-
 [Windows Setup](./win32/)
-
----
-
-- OS: Windows 11
-- Window Manager: [GlazeWM](https://github.com/glzr-io/glazewm)
-- Terminal: [Wezterm](https://github.com/wezterm/wezterm) w/ [TMUX](https://github.com/tmux/tmux)
-- Shell: [zsh](https://www.zsh.org/) w/ [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
-- Bar: [Zebar](https://github.com/glzr-io/zebar)
-- App Launcher: [PowerToys](https://github.com/microsoft/PowerToys)
-- Editor: [Neovim](https://github.com/neovim/neovim) (Minimal config on Windows, Full config in WSL env)
-- File Manager: [yazi](https://github.com/sxyazi/yazi)
-- Streaming: [OBS](https://github.com/obsproject/obs-studio)
-- Recording: [NVIDIA ShadowPlay](https://www.nvidia.com/en-ph/geforce/geforce-experience/shadowplay/)
-
-### Nix-on-droid
-
-![scrcpy, android, termux, nix-on-droid, zsh](https://i.imgur.com/KSbeOne.png)
 
 <!-- TODO: macOS -->
 <!-- ### macOS -->
