@@ -6,6 +6,25 @@
 
   networking.networkmanager = {
     enable = true;
+    # insertNameservers = [
+    #   "1.1.1.1"
+    #   "1.0.0.1"
+    # ];
+  };
+
+  # networking.nameservers = [
+  #   "1.1.1.1"
+  #   "1.0.0.1"
+  # ];
+
+  services.resolved = {
+    enable = true;
+
+    settings.Resolve = {
+      DNSSEC = true;
+      DNSOverTLS = true;
+      Domains = [ "~." ];
+    };
   };
 
   # Configure network proxy if necessary
