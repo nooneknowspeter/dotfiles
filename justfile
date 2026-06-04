@@ -20,8 +20,8 @@ list-hosts:
     @echo -e "peter-legion"
     @echo -e "note8"
 
-rebuild-home config:
-    @nh home switch . -c nooneknows@{{ config }} -- --impure
+rebuild-home config cores="8" max_jobs="1":
+    @nh home switch . -c nooneknows@{{ config }} --max-jobs {{ max_jobs }} -- --cores {{ cores }} --impure
 
 rebuild-os host:
     @nh os switch . -H {{ host }} -- --impure
