@@ -1,0 +1,42 @@
+// https://docs.noctalia.dev/v4/getting-started/compositor-settings/niri/
+
+window-rule {
+  // Rounded corners for a modern look.
+  geometry-corner-radius 20
+
+  // Clips window contents to the rounded corner boundaries.
+  clip-to-geometry true
+}
+
+debug {
+  // Allows notification actions and window activation from Noctalia.
+  honor-xdg-activation-with-invalid-serial
+}
+
+// Set the overview wallpaper on the backdrop.
+layer-rule {
+  match namespace="^noctalia-overview*"
+  place-within-backdrop true
+}
+
+// https://docs.noctalia.dev/v4/getting-started/keybinds/
+binds {
+    // Core Noctalia binds
+    Mod+R { spawn-sh "noctalia-shell ipc call launcher toggle"; }
+    Mod+S { spawn-sh "noctalia-shell ipc call controlCenter toggle"; }
+    Mod+Comma { spawn-sh "noctalia-shell ipc call settings toggle"; }
+
+    // Audio & Brightness
+    XF86AudioRaiseVolume { spawn "noctalia-shell" "ipc" "call" "volume" "increase"; }
+    XF86AudioLowerVolume { spawn "noctalia-shell" "ipc" "call" "volume" "decrease"; }
+    XF86AudioMute { spawn "noctalia-shell" "ipc" "call" "volume" "muteOutput"; }
+    XF86MonBrightnessUp { spawn "noctalia-shell" "ipc" "call" "brightness" "increase"; }
+    XF86MonBrightnessDown { spawn "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
+
+
+    Super+Ctrl+L hotkey-overlay-title="screenlock" { spawn "noctalia-shell" "ipc" "call" "lockScreen" "lock"; }
+
+    Super+V hotkey-overlay-title="open clipboard history" { spawn "noctalia-shell" "ipc" "call" "launcher" "clipboard"; }
+
+    Super+N hotkey-overlay-title="open notification drawer" { spawn "noctalia-shell" "ipc" "call" "notifications" "toggleHistory"; }
+}
