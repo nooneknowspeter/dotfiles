@@ -105,6 +105,7 @@
         "nmap"
         "node"
         "opentofu"
+        "pass"
         "perl"
         "pip"
         "poetry"
