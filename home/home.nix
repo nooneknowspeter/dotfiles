@@ -12,6 +12,7 @@
     ./modules/nix
     ./modules/generic
     ./modules/nixpkgs
+    ./modules/security
     ./modules/stylix
   ];
 
