@@ -409,7 +409,7 @@
     "avatarImage": "/home/nooneknows/.face",
     "boxRadiusRatio": 1,
     "clockFormat": "hh\\nmm",
-    "clockStyle": "custom",
+    "clockStyle": "digital",
     "compactLockScreen": false,
     "dimmerOpacity": 0.2,
     "enableBlurBehind": true,
@@ -429,7 +429,7 @@
     },
     "language": "",
     "lockOnSuspend": true,
-    "lockScreenAnimations": false,
+    "lockScreenAnimations": true,
     "lockScreenBlur": 0,
     "lockScreenCountdownDuration": 10000,
     "lockScreenMonitors": [],
@@ -618,8 +618,8 @@
         "action": "userspaceReboot",
         "command": "",
         "countdownEnabled": true,
-        "enabled": false,
-        "keybind": ""
+        "enabled": true,
+        "keybind": "8"
       }
     ],
     "showHeader": true,
