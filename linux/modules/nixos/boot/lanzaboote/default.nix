@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, pkgs, ... }:
 {
 
   boot.loader.systemd-boot.enable = lib.mkForce false;
@@ -7,5 +7,7 @@
     enable = true;
     pkiBundle = "/var/lib/sbctl";
   };
+
+  environment.systemPackages = with pkgs; [ sbctl ];
 
 }

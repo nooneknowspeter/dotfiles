@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
 
   programs.steam = {
@@ -13,5 +13,7 @@
   programs.gamemode.enable = true;
 
   hardware.steam-hardware.enable = true;
+
+  environment.systemPackages = with pkgs; [ steam-run ];
 
 }
