@@ -1,4 +1,7 @@
 { config, pkgs, ... }:
+let
+  session = import ../../../modules/session;
+in
 {
 
   home.packages = with pkgs; [
@@ -16,18 +19,8 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    sessionVariables = {
-      EDITOR = "nvim";
-      DOTFILES = "$HOME/dotfiles";
-      NIX_CONFIG = "experimental-features = nix-command flakes";
-    };
-    shellAliases = {
-      # cmatrix
-      # cmatrix = "${pkgs.cmatrix} -fbrc -u 2";
-
-      # cbonsai
-      # cbonsai = "${pkgs.cbonsai} -li";
-    };
+    sessionVariables = session.sessionVariables;
+    shellAliases = session.shellAliases;
     initContent = ''
       # fzf-tab
       source ${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh

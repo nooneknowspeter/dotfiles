@@ -5,6 +5,9 @@
   homeDirectory ? "/home/nooneknows",
   ...
 }:
+let
+  session = import ./modules/session;
+in
 {
 
   imports = [
@@ -30,14 +33,8 @@
   # release notes.
   home.stateVersion = "26.05"; # Please read the comment before changing.
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
-    BROWSER = "brave";
-  };
-  home.shellAliases = {
-    EDITOR = "nvim";
-    BROWSER = "brave";
-  };
+  home.sessionVariables = session.sessionVariables;
+  home.shellAliases = session.shellAliases;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
