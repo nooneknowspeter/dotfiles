@@ -234,14 +234,14 @@
   },
   "colorSchemes": {
     "darkMode": true,
-    "generationMethod": "monochrome",
+    "generationMethod": "muted",
     "manualSunrise": "06:30",
     "manualSunset": "18:30",
     "monitorForColors": "",
     "predefinedScheme": "Mine",
     "schedulingMode": "off",
     "syncGsettings": true,
-    "useWallpaperColors": false
+    "useWallpaperColors": true
   },
   "controlCenter": {
     "cards": [
@@ -502,13 +502,13 @@
     "wifiDetailsViewMode": "list"
   },
   "nightLight": {
-    "autoSchedule": true,
+    "autoSchedule": false,
     "dayTemp": "6500",
-    "enabled": false,
+    "enabled": true,
     "forced": false,
     "manualSunrise": "06:30",
     "manualSunset": "18:30",
-    "nightTemp": "4000"
+    "nightTemp": "5485"
   },
   "noctaliaPerformance": {
     "disableDesktopWidgets": true,
@@ -665,13 +665,13 @@
     "settingsPanelMode": "attached",
     "settingsPanelSideBarCardStyle": false,
     "tooltipsEnabled": true,
-    "translucentWidgets": false
+    "translucentWidgets": true
   },
   "wallpaper": {
     "automationEnabled": false,
     "directory": "/home/nooneknows/Pictures/wallpapers",
     "enableMultiMonitorDirectories": false,
-    "enabled": false,
+    "enabled": true,
     "favorites": [],
     "fillColor": "#000000",
     "fillMode": "crop",
@@ -686,7 +686,7 @@
     "setWallpaperOnAllMonitors": true,
     "showHiddenFiles": false,
     "skipStartupTransition": false,
-    "solidColor": "#1a1a2e",
+    "solidColor": "#000000",
     "sortOrder": "name",
     "transitionDuration": 1500,
     "transitionEdgeSmoothness": 0.05,
@@ -700,13 +700,13 @@
     ],
     "useOriginalImages": false,
     "useSolidColor": false,
-    "useWallhaven": false,
+    "useWallhaven": true,
     "viewMode": "browse",
     "wallhavenApiKey": "",
     "wallhavenCategories": "111",
     "wallhavenOrder": "desc",
     "wallhavenPurity": "100",
-    "wallhavenQuery": "",
+    "wallhavenQuery": "berserk",
     "wallhavenRatios": "",
     "wallhavenResolutionHeight": "",
     "wallhavenResolutionMode": "atleast",
