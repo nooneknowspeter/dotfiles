@@ -5,3 +5,6 @@
 	path = peripherals/corne
 	url = git@github.com:nooneknowspeter/crkbd.git
 	branch = main
+[submodule "secrets"]
+	path = secrets
+	url = git@github.com:nooneknowspeter/secrets
