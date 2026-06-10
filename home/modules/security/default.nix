@@ -4,6 +4,7 @@
     age
     gnupg
     pass
+    passage
     pinentry-all
     sops
   ];
