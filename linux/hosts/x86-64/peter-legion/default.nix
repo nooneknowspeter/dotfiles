@@ -15,5 +15,6 @@ inputs.system-nixpkgs.lib.nixosSystem {
     inputs.lanzaboote.nixosModules.lanzaboote
     inputs.nixos-hardware.nixosModules.lenovo-legion-16ithg6
     inputs.musnix.nixosModules.musnix
+    inputs.sops-nix.nixosModules.sops
   ];
 }
