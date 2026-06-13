@@ -3,6 +3,7 @@
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
+    google-fonts
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
     nerd-fonts.symbols-only
