@@ -8,6 +8,9 @@
     age
     gnupg
     pass
+    passExtensions.pass-otp
+    passExtensions.pass-import
+    passExtensions.pass-update
     passage
     pinentry-all
     sops
