@@ -58,7 +58,7 @@ let
   ];
 
   services = [
-
+    ../../../modules/nixos/services/avahi
     ../../../modules/nixos/services/greetd
     ../../../modules/nixos/services/libinput
     ../../../modules/nixos/services/logind
