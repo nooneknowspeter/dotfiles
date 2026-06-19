@@ -6,12 +6,13 @@
 }:
 let
   audio = [
-    ../../../modules/nixos/audio/musnix
+    # ../../../modules/nixos/audio/musnix
     ../../../modules/nixos/audio/pipewire
   ];
 
   boot = [
-    ../../../modules/nixos/boot/lanzaboote
+    # ../../../modules/nixos/boot/lanzaboote
+    ../../../modules/nixos/boot/systemd
   ];
 
   console = [
@@ -31,9 +32,9 @@ let
 
   misc = [
     ../../../modules/nixos/misc/vial
-    ../../../modules/nixos/misc/virtualisation
-    ../../../modules/nixos/misc/vnc
-    ../../../modules/nixos/misc/vpn
+    # ../../../modules/nixos/misc/virtualisation
+    # ../../../modules/nixos/misc/vnc
+    # ../../../modules/nixos/misc/vpn
   ];
 
   networking = [
@@ -58,6 +59,7 @@ let
     ../../../modules/nixos/services/logind
     ../../../modules/nixos/services/printing
     ../../../modules/nixos/services/ssh
+    ../../../modules/nixos/services/upower
     ../../../modules/nixos/services/usbmuxd
   ];
 
