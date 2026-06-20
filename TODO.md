@@ -14,3 +14,7 @@
   - [ ] pull secrets repo, symlink with internal dotfiles repo
   - [ ] alternative: imperative script (second drive setup)
   - [ ] key bootstrapping; gpg, ssh
+
+- [x] update cicd pipeline
+  - [x] add treefmt lint config
+  - [x] update github workflow; static analysis
