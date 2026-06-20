@@ -114,6 +114,7 @@
         {
           default = pkgs.mkShell {
             packages = with pkgs; [
+              # dependencies
               curl
               nh
               openssl
@@ -131,14 +132,16 @@
 
               # formatters
               beautysh
-              mdformat
               nixfmt
               prettier
               stylua
               taplo
 
               # tools
+              git
               just
+              neovim
+              tmux
               treefmt
             ];
           };
