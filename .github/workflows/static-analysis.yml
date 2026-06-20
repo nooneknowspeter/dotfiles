@@ -1,0 +1,22 @@
+name: "static analysis"
+on:
+  pull_request:
+    branches:
+      - "**"
+  push:
+    branches:
+      - "**"
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v31
+
+      - name: lint
+        run: |
+          nix develop --impure -c just lint
+
+      - name: format
+        run: |
+          nix develop --impure -c just format
