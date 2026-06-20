@@ -31,6 +31,7 @@ let
   ];
 
   misc = [
+    ../../../modules/nixos/misc/biometrics
     ../../../modules/nixos/misc/vial
     # ../../../modules/nixos/misc/virtualisation
     # ../../../modules/nixos/misc/vnc
