@@ -3,13 +3,13 @@
 command = "beautysh"
 excludes = []
 includes = ["*.sh"]
-options = []
+options = ["--check"]
 
 [formatter.nixfmt-rfc-style]
 command = "nixfmt"
 excludes = []
 includes = ["*.nix"]
-options = []
+options = ["--check"]
 
 [formatter.prettier]
 command = "prettier"
@@ -32,16 +32,16 @@ includes = [
   "*.yaml",
   "*.yml",
 ]
-options = ["--write"]
+options = ["--check"]
 
 [formatter.stylua]
 command = "stylua"
 excludes = []
 includes = ["*.lua"]
-options = ["."]
+options = ["--check", "."]
 
 [formatter.taplo]
 command = "taplo"
 excludes = []
 includes = ["*.toml"]
-options = ["format"]
+options = ["check"]
