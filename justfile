@@ -1,24 +1,23 @@
+HOMES_DIR_PATH:="$DOTFILES/home/homes"
+
+LINUX_HOSTS_DIR_PATH:="$DOTFILES/linux/hosts"
+DARWIN_HOSTS_DIR_PATH:="$DOTFILES/darwin/hosts"
+SCRIPTS:="$DOTFILES/scripts"
+
 default:
     @just --list
 
 list-configs:
-    @echo -e "android"
-    @echo -e "linux-full"
-    @echo -e "linux-headless"
-    @echo -e "linux-dev"
-    @echo -e "linux-lite"
-    @echo -e "soyboydev"
-    @echo -e "soyboydevlite"
-    @echo -e "wsl"
+    @{{ SCRIPTS }}/list.sh $(echo {{ HOMES_DIR_PATH }})
 
 list-hosts:
-    @echo -e "darwin\n------"
-    @echo -e "peter-macbook"
-    @echo -e "\n"
+    @{{ SCRIPTS }}/list.sh $(echo {{ DARWIN_HOSTS_DIR_PATH }}) $(echo {{ LINUX_HOSTS_DIR_PATH }})
 
-    @echo -e "linux\n-----"
-    @echo -e "peter-legion"
-    @echo -e "note8"
+list-scripts:
+	@ls {{ SCRIPTS }}
+
+run-script script args="":
+	@{{ SCRIPTS }}/{{ script }} {{ args }}
 
 rebuild-home config cores="8" max_jobs="1" backup="backup_home":
     @nh home switch . -b {{ backup }} -c nooneknows@{{ config }} --max-jobs {{ max_jobs }} -- --cores {{ cores }} --impure
@@ -35,8 +34,11 @@ check:
 show:
     @nix flake show . --impure
 
-format:
-    @treefmt
+format args="":
+    @treefmt {{ args }} --config-file $DOTFILES/treefmt.toml
+
+lint args="":
+    @treefmt {{ args }} --config-file $DOTFILES/treefmt.lint.toml
 
 wallpaper wallpaper-id:
     @linux-wallpaperengine -s --scaling fill -r eDP-1 --bg {{ wallpaper-id }}
