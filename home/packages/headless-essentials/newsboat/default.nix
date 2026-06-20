@@ -31,6 +31,10 @@
         title = "fxstreet analysis";
         url = "https://www.fxstreet.com/rss";
       }
+      {
+        title = "hacker news newest";
+        url = "https://hnrss.org/newest";
+      }
     ];
   };
 }
