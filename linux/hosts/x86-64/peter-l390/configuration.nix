@@ -33,9 +33,8 @@ let
   misc = [
     ../../../modules/nixos/misc/biometrics
     ../../../modules/nixos/misc/vial
-    # ../../../modules/nixos/misc/virtualisation
-    # ../../../modules/nixos/misc/vnc
-    # ../../../modules/nixos/misc/vpn
+    ../../../modules/nixos/misc/virtualisation
+    ../../../modules/nixos/misc/vpn
   ];
 
   networking = [
@@ -94,5 +93,8 @@ in
     ./hardware-configuration.nix
   ]
   ++ modules;
+
+  # https://github.com/NixOS/nixos-hardware/blob/master/lenovo/thinkpad/yoga.nix
+  hardware.sensor.iio.enable = true;
 
 }
