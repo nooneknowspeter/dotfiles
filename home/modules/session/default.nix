@@ -7,10 +7,13 @@
 
     DOTFILES = "$HOME/dotfiles";
     RESOURCES = "$HOME/resources";
-    SECRETS = "$HOME/secrets";
-    PASSWORD_STORE_DIR = "$SECRETS";
+    SECRETS = "$DOTFILES/secrets";
     DOCS = "$HOME/docs";
     NOTES = "$HOME/notes";
+    PROJECTS = "$HOME/projects";
+    PLAYGROUND = "$HOME/playground";
+
+    PASSWORD_STORE_DIR = "$SECRETS";
   };
 
   shellAliases = {
