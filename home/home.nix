@@ -11,6 +11,7 @@ in
 {
 
   imports = [
+    ./modules/activation
     ./modules/fonts
     ./modules/nix
     ./modules/generic
