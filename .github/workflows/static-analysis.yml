@@ -15,8 +15,8 @@ jobs:
 
       - name: lint
         run: |
-          nix develop --impure -c just lint
+          nix develop -c treefmt --ci --config-file ./treefmt.lint.toml
 
       - name: format
         run: |
-          nix develop --impure -c just format
+          nix develop -c treefmt --ci --config-file ./treefmt.toml
