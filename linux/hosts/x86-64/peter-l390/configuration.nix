@@ -11,8 +11,8 @@ let
   ];
 
   boot = [
-    # ../../../modules/nixos/boot/lanzaboote
-    ../../../modules/nixos/boot/systemd
+    ../../../modules/nixos/boot/lanzaboote
+    # ../../../modules/nixos/boot/systemd
   ];
 
   console = [
