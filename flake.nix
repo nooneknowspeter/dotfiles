@@ -141,6 +141,7 @@
               git
               just
               neovim
+              sbctl
               tmux
               treefmt
             ];
