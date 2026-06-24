@@ -36,6 +36,7 @@ let
   ];
 
   misc = [
+    ../../../modules/nixos/misc/file-sharing
     ../../../modules/nixos/misc/vial
     ../../../modules/nixos/misc/virtualisation
     ../../../modules/nixos/misc/vnc
