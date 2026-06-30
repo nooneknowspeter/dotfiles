@@ -3,6 +3,11 @@
 { pkgs, ... }:
 {
 
+  services.rustdesk-server = {
+    enable = true;
+    openFirewall = true;
+  };
+
   services.sunshine = {
     enable = true;
     autoStart = true;
