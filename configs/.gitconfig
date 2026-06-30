@@ -12,3 +12,5 @@
 	required = true
 [init]
 	defaultBranch = main
+[receive]
+	denyCurrentBranch = updateInstead
