@@ -114,8 +114,6 @@ in
     ];
   };
 
-  hardware = { };
-
   services = {
     thinkfan = {
       enable = true;
