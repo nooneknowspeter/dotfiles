@@ -6,6 +6,13 @@
   services.rustdesk-server = {
     enable = true;
     openFirewall = true;
+    relay = {
+      enable = true;
+    };
+    signal = {
+      enable = true;
+      relayHosts = [ "127.0.0.1" ];
+    };
   };
 
   services.sunshine = {
@@ -15,12 +22,12 @@
     openFirewall = true;
   };
 
-  security.wrappers.sunshine = {
-    owner = "root";
-    group = "root";
-    capabilities = "cap_sys_admin+p";
-    source = "${pkgs.sunshine}/bin/sunshine";
-  };
+  # security.wrappers.sunshine = {
+  #   owner = "root";
+  #   group = "root";
+  #   capabilities = "cap_sys_admin+p";
+  #   source = "${pkgs.sunshine}/bin/sunshine";
+  # };
 
   services.avahi.publish.enable = true;
   services.avahi.publish.userServices = true;
