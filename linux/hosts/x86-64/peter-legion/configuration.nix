@@ -10,7 +10,7 @@
 }:
 let
   audio = [
-    ../../../modules/nixos/audio/musnix
+    # ../../../modules/nixos/audio/musnix
     ../../../modules/nixos/audio/pipewire
   ];
 
@@ -26,8 +26,8 @@ let
 
   hardware = [
     ../../../modules/nixos/hardware/bluetooth
-    ../../../modules/nixos/hardware
-    ../../../modules/nixos/hardware/nvidia
+    # ../../../modules/nixos/hardware
+    # ../../../modules/nixos/hardware/nvidia
     ../../../modules/nixos/hardware/graphics
   ];
 
@@ -66,6 +66,7 @@ let
     ../../../modules/nixos/services/openrgb
     ../../../modules/nixos/services/printing
     ../../../modules/nixos/services/ssh
+    ../../../modules/nixos/services/upower
     ../../../modules/nixos/services/usbmuxd
   ];
 
