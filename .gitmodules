@@ -8,3 +8,6 @@
 [submodule "secrets"]
 	path = secrets
 	url = git@github.com:nooneknowspeter/secrets
+[submodule "photogimp"]
+	path = configs/gimp/photogimp
+	url = https://github.com/Diolinux/Photogimp
