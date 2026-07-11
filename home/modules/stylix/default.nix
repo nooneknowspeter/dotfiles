@@ -1,4 +1,14 @@
-{ config, pkgs, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  ...
+}:
+let
+  system = pkgs.stdenv.hostPlatform.system;
+  jukebox_pkg = inputs.jukebox.packages.${system}.default;
+  theme = "dark-funeral-the-secrets-of-the-black-arts.yaml";
+in
 {
   stylix = {
 
@@ -15,7 +25,7 @@
       vscode.enable = false;
     };
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/black-metal-dark-funeral.yaml";
+    base16Scheme = "${jukebox_pkg}/share/themes/tinted-theming/${theme}";
 
     polarity = "dark";
 
