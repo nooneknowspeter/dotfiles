@@ -777,11 +777,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1783736764,
-        "narHash": "sha256-3w63ewNo6chiEwFlQYz57Y3fT38Ib7f+EnNIEDbKoV8=",
+        "lastModified": 1784167899,
+        "narHash": "sha256-LihtQs5gPTC3Fl0g9TXTEnAnY0gLHJwrAIk/RkU0rJE=",
         "owner": "nooneknowspeter",
         "repo": "jukebox",
-        "rev": "c93fc38f7f6bf8b1b315bfca8a5c57fbf1ad38fd",
+        "rev": "a43f291d1c7f7517817c149b57d8ec7bbab4bdbf",
         "type": "github"
       },
       "original": {

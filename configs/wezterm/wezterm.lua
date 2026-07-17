@@ -24,7 +24,7 @@ config.prefer_egl = true
 config.enable_wayland = false
 
 -- color_scheme
-config.color_scheme = "Black Metal (Dark Funeral) (base16)"
+config.color_scheme = "Black Metal (Venom) (base16)"
 
 -- font
 -- go-to -> JetBrainsMono Nerd Font / FiraCode Nerd Font

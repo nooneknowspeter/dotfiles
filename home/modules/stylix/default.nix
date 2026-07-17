@@ -7,7 +7,7 @@
 let
   system = pkgs.stdenv.hostPlatform.system;
   jukebox_pkg = inputs.jukebox.packages.${system}.default;
-  theme = "dark-funeral-the-secrets-of-the-black-arts.yaml";
+  theme = "mayhem-deathcrush.yaml";
 in
 {
   stylix = {
