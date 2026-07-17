@@ -16,10 +16,10 @@ config.window_background_opacity = 0.9
 
 -- window_padding
 config.window_padding = {
-	left = 0,
-	right = 0,
-	top = 0,
-	bottom = 0,
+    left = 0,
+    right = 0,
+    top = 0,
+    bottom = 0,
 }
 
 -- remove title bar and enable resize window

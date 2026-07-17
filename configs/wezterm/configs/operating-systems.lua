@@ -10,5 +10,5 @@ local windows = "x86_64-pc-windows-msvc"
 
 -- run powershell if windows is detected
 if wezterm.target_triple == windows then
-	config.default_prog = { "powershell.exe", "-NoLogo" }
+    config.default_prog = { "powershell.exe", "-NoLogo" }
 end
