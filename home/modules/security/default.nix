@@ -28,6 +28,8 @@
       pinentry = {
         package = pkgs.pinentry-curses;
       };
+      enableExtraSocket = true;
+      enableSshSupport = true;
     };
   };
 }
