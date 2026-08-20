@@ -90,8 +90,8 @@ font, colorscheme (Black Metal Theme), etc.
 
 - Powershell scripts to install windows packages; terminal, git and set up WSL
 - Options for:
-  - NixOS-based WSL environments
-  - Arch-based WSL environments
+    - NixOS-based WSL environments
+    - Arch-based WSL environments
 - Home Manager is used inside WSL to manage user space
 
 ### Backwards Compatibility

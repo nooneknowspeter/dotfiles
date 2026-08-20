@@ -45,84 +45,84 @@ selection: &selection silver # base2
 comment: &comment aqua # base1
 
 k9s:
-  body:
-    fgColor: *foreground
-    bgColor: *background
-    logoColor: *magenta
-  prompt:
-    fgColor: *foreground
-    bgColor: *background
-    suggestColor: *orange
-  info:
-    fgColor: *blue
-    sectionColor: *foreground
-  dialog:
-    fgColor: *foreground
-    bgColor: *background
-    buttonFgColor: *foreground
-    buttonBgColor: *magenta
-    buttonFocusFgColor: *base2
-    buttonFocusBgColor: *cyan
-    labelFgColor: *orange
-    fieldFgColor: *foreground
-  frame:
-    border:
-      fgColor: *selection
-      focusColor: *foreground
-    menu:
-      fgColor: *foreground
-      keyColor: *blue
-      numKeyColor: *green
-    crumbs:
-      fgColor: *base2
-      bgColor: *base0
-      activeColor: *blue
-    status:
-      newColor: *base00
-      modifyColor: *blue
-      addColor: *yellow
-      errorColor: *red
-      highlightColor: *orange
-      killColor: *violet
-      completedColor: *green
-    title:
-      fgColor: *foreground
-      bgColor: *background
-      highlightColor: *blue
-      counterColor: *magenta
-      filterColor: *magenta
-  views:
-    charts:
-      bgColor: default
-      defaultDialColors:
-        - *blue
-        - *red
-      defaultChartColors:
-        - *blue
-        - *red
-    table:
-      fgColor: *foreground
-      bgColor: *background
-      cursorFgColor: *base2
-      cursorBgColor: *background
-      markColor: *magenta
-      header:
+    body:
         fgColor: *foreground
         bgColor: *background
-        sorterColor: *magenta
-    xray:
-      fgColor: *foreground
-      bgColor: *background
-      cursorColor: *current_line
-      graphicColor: *blue
-      showIcons: false
-    yaml:
-      keyColor: *green
-      colonColor: *base02
-      valueColor: *foreground
-    logs:
-      fgColor: *foreground
-      bgColor: *background
-      indicator:
+        logoColor: *magenta
+    prompt:
         fgColor: *foreground
-        bgColor: *selection
+        bgColor: *background
+        suggestColor: *orange
+    info:
+        fgColor: *blue
+        sectionColor: *foreground
+    dialog:
+        fgColor: *foreground
+        bgColor: *background
+        buttonFgColor: *foreground
+        buttonBgColor: *magenta
+        buttonFocusFgColor: *base2
+        buttonFocusBgColor: *cyan
+        labelFgColor: *orange
+        fieldFgColor: *foreground
+    frame:
+        border:
+            fgColor: *selection
+            focusColor: *foreground
+        menu:
+            fgColor: *foreground
+            keyColor: *blue
+            numKeyColor: *green
+        crumbs:
+            fgColor: *base2
+            bgColor: *base0
+            activeColor: *blue
+        status:
+            newColor: *base00
+            modifyColor: *blue
+            addColor: *yellow
+            errorColor: *red
+            highlightColor: *orange
+            killColor: *violet
+            completedColor: *green
+        title:
+            fgColor: *foreground
+            bgColor: *background
+            highlightColor: *blue
+            counterColor: *magenta
+            filterColor: *magenta
+    views:
+        charts:
+            bgColor: default
+            defaultDialColors:
+                - *blue
+                - *red
+            defaultChartColors:
+                - *blue
+                - *red
+        table:
+            fgColor: *foreground
+            bgColor: *background
+            cursorFgColor: *base2
+            cursorBgColor: *background
+            markColor: *magenta
+            header:
+                fgColor: *foreground
+                bgColor: *background
+                sorterColor: *magenta
+        xray:
+            fgColor: *foreground
+            bgColor: *background
+            cursorColor: *current_line
+            graphicColor: *blue
+            showIcons: false
+        yaml:
+            keyColor: *green
+            colonColor: *base02
+            valueColor: *foreground
+        logs:
+            fgColor: *foreground
+            bgColor: *background
+            indicator:
+                fgColor: *foreground
+                bgColor: *selection

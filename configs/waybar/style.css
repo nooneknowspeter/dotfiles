@@ -1,71 +1,71 @@
 * {
-  background-color: transparent;
-  padding: 1px;
-  font-family: "FiraCode Nerd Font Propo";
-  font-size: 9pt;
-  /* Subtle outline for visibility on any background */
-  text-shadow:
+    background-color: transparent;
+    padding: 1px;
+    font-family: "FiraCode Nerd Font Propo";
+    font-size: 9pt;
+    /* Subtle outline for visibility on any background */
+    text-shadow:
     /* -1px -1px 0 rgba(0, 0, 0, 0.4), */
      /* 1px -1px 0 rgba(0, 0, 0, 0.4), */
     /* -1px  1px 0 rgba(0, 0, 0, 0.4), */ 1px
-    1px 0 rgba(0, 0, 0, 0.4);
+        1px 0 rgba(0, 0, 0, 0.4);
 }
 
 window#waybar {
-  all: unset;
-  background-color: rgba(128, 128, 128, 0.15);
+    all: unset;
+    background-color: rgba(128, 128, 128, 0.15);
 }
 
 .modules-left {
-  padding: 0px 4px;
+    padding: 0px 4px;
 }
 
 .modules-center {
 }
 
 .modules-right {
-  padding: 0px 4px;
+    padding: 0px 4px;
 }
 
 tooltip {
-  background-color: rgba(30, 30, 30, 0.9);
-  color: rgba(255, 255, 255, 0.95);
-  text-shadow: none;
+    background-color: rgba(30, 30, 30, 0.9);
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: none;
 }
 
 #workspaces button {
-  all: unset;
-  padding: 0px 4px;
-  color: rgba(240, 240, 240, 0.95);
-  transition: all 0.2s ease;
+    all: unset;
+    padding: 0px 4px;
+    color: rgba(240, 240, 240, 0.95);
+    transition: all 0.2s ease;
 }
 
 #workspaces button:hover {
-  color: rgba(180, 180, 180, 0.9);
-  border: none;
-  transition: all 0.3s ease;
+    color: rgba(180, 180, 180, 0.9);
+    border: none;
+    transition: all 0.3s ease;
 }
 
 #workspaces button.active {
-  color: rgba(255, 255, 255, 1);
-  border: none;
-  font-weight: bold;
+    color: rgba(255, 255, 255, 1);
+    border: none;
+    font-weight: bold;
 }
 
 #workspaces button.empty {
-  color: rgba(120, 120, 120, 0.8);
-  border: none;
+    color: rgba(120, 120, 120, 0.8);
+    border: none;
 }
 
 #workspaces button.empty:hover {
-  color: rgba(160, 160, 160, 0.9);
-  border: none;
-  transition: all 0.3s ease;
+    color: rgba(160, 160, 160, 0.9);
+    border: none;
+    transition: all 0.3s ease;
 }
 
 #workspaces button.empty.active {
-  color: rgba(180, 180, 180, 0.9);
-  border: none;
+    color: rgba(180, 180, 180, 0.9);
+    border: none;
 }
 
 #clock,
@@ -80,16 +80,16 @@ tooltip {
 #wireplumber,
 #custom-notification,
 #tray {
-  padding: 0px 6px;
-  color: rgba(240, 240, 240, 0.95);
+    padding: 0px 6px;
+    color: rgba(240, 240, 240, 0.95);
 }
 
 #tray menu {
-  background-color: rgba(30, 30, 30, 0.95);
-  text-shadow: none;
+    background-color: rgba(30, 30, 30, 0.95);
+    text-shadow: none;
 }
 
 #tray menu *:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  color: rgba(0, 0, 0, 1);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgba(0, 0, 0, 1);
 }

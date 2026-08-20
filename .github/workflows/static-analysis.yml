@@ -1,22 +1,22 @@
 name: "static analysis"
 on:
-  pull_request:
-    branches:
-      - "**"
-  push:
-    branches:
-      - "**"
+    pull_request:
+        branches:
+            - "**"
+    push:
+        branches:
+            - "**"
 jobs:
-  format:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: cachix/install-nix-action@v31
+    format:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - uses: cachix/install-nix-action@v31
 
-      - name: lint
-        run: |
-          nix develop -c treefmt --ci --config-file ./treefmt.lint.toml
+            - name: lint
+              run: |
+                  nix develop -c treefmt --ci --config-file ./treefmt.lint.toml
 
-      - name: format
-        run: |
-          nix develop -c treefmt --ci --config-file ./treefmt.toml
+            - name: format
+              run: |
+                  nix develop -c treefmt --ci --config-file ./treefmt.toml
