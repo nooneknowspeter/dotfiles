@@ -6,7 +6,10 @@
 }:
 {
 
-  home.packages = with pkgs; [ zathura ];
+  home.packages = with pkgs; [
+    zathura
+    poppler-utils
+  ];
 
   programs.zathura = {
     enable = true;
