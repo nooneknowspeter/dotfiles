@@ -29,7 +29,7 @@
         package = pkgs.pinentry-curses;
       };
       enableExtraSocket = true;
-      enableSshSupport = true;
+      # enableSshSupport = true;
       sshKeys = [ "EC38E5DFF80C9F801E96DF5DAF7CAC0287C2967A" ];
     };
   };
