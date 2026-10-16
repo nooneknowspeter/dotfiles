@@ -11,3 +11,6 @@
 [submodule "photogimp"]
 	path = configs/gimp/photogimp
 	url = https://github.com/Diolinux/Photogimp
+[submodule "baby_evo"]
+	path = vehicles/baby_evo
+	url = git@github.com:nooneknowspeter/baby_evo.git
